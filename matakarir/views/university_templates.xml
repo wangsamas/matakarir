@@ -1,0 +1,164 @@
+<odoo>
+    <data>
+        <template id="university" name="University">
+            <t t-call="portal.portal_layout">
+                <t t-if="partner_id.university_ids" t-call="matakarir.university_table"/>
+                <h1 t-if="univ_id" class="mt0">Edit University</h1>
+                <h1 t-else="" class="mt0">New University</h1>
+                <form t-attf-action="/save/university" method="post" role="form" class="tag_text js_website_submit_form">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <input t-if="univ_id" type="hidden" name="univ_id" t-att-value="univ_id.id"/>
+                    <p t-call="matakarir.university_form"/>
+                    <div align="center">
+                        <a href="/my/home" class="btn btn-default">Cancel</a>
+                        <button type="submit" t-attf-class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </t>
+        </template>
+        
+        <template id="university_form">
+            <table class="table o_area_selections">
+                <t t-if="univ_id">
+                    <tr>
+                        <td><strong>University Name</strong></td>
+                        <td colspan="2"><span t-field="object.name"/></td>
+                    </tr>
+                </t>
+                <t t-else="">
+                    <p t-call="matakarir.country_template" />
+                    <p t-call="matakarir.state_template" />
+                    <p t-call="matakarir.city_template" />
+                    <tr>
+                        <td><strong>University Name</strong></td>
+                        <td id="input_company" style="display:none;"><input type="text" class="form-control" name="company_name" placeholder="University Name..."/></td>
+                        <td>
+                            <select name="company" class="form-control">
+                                <option value="">University...</option>
+                                <t t-foreach="universities or []" t-as="l">
+                                    <option t-att-value="l.id" t-att-data-country="l.country_id.id" t-att-data-state="l.state_id.id" t-att-data-city="l.city_id.id">
+                                        <t t-esc="l.name" />
+                                    </option>
+                                </t>
+                            </select>
+                        </td>
+                        <td><a href="#new_company" id="new_company"><i class="fa fa-plus-square"/>Add new</a></td>
+                    </tr>
+                </t>
+                <tr class="o_edit_faculty">
+                    <td><strong>Faculty</strong></td>
+                    <td id="input_faculty" style="display:none;"><input type="text" class="form-control" name="faculty_name" placeholder="Faculty Name..."/></td>
+                    <td>
+                        <select name="faculty" class="form-control">
+                            <option value="">Faculty...</option>
+                            <t t-foreach="faculties or []" t-as="l">
+                                <option t-att-value="l.id" t-att-selected="l.id == univ_id.faculty_id.id if univ_id else l.id == ''">
+                                    <t t-esc="l.name" />
+                                </option>
+                            </t>
+                        </select>
+                    </td>
+                    <td><a href="#new_faculty" id="new_faculty"><i class="fa fa-plus-square"/>Add new</a></td>
+                </tr>
+                <tr class="o_edit_major">
+                    <td><strong>Major</strong></td>
+                    <td id="input_major" style="display:none;"><input type="text" class="form-control" name="major_name" placeholder="Major Name..."/></td>
+                    <td>
+                        <select name="major" class="form-control">
+                            <option value="">Major...</option>
+                            <t t-foreach="majors or []" t-as="l">
+                                <option t-att-value="l.id" t-att-selected="l.id == univ_id.major_id.id if univ_id else l.id == ''">
+                                    <t t-esc="l.name" />
+                                </option>
+                            </t>
+                        </select>
+                    </td>
+                    <td><a href="#new_major" id="new_major"><i class="fa fa-plus-square"/>Add new</a></td>
+                </tr>
+                <tr class="o_edit_degree">
+                    <td><strong>Degree</strong></td>
+                    <td id="input_degree" style="display:none;"><input type="text" class="form-control" name="degree_name" placeholder="Degree Name..."/></td>
+                    <td>
+                        <select name="degree" class="form-control">
+                            <option value="">Degree...</option>
+                            <t t-foreach="degrees or []" t-as="l">
+                                <option t-att-value="l.id" t-att-selected="l.id == univ_id.degree_id.id if univ_id else l.id == ''">
+                                    <t t-esc="l.name" />
+                                </option>
+                            </t>
+                        </select>
+                    </td>
+                    <td><a href="#new_degree" id="new_degree"><i class="fa fa-plus-square"/>Add new</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Status</strong></td>
+                    <td colspan="2">
+                        <select class="form-control" name="status" required="required">
+                            <option t-if="univ_id" t-att-value="univ_id.status">
+                                <t t-esc="{'graduate': 'Graduate', 
+                                          'drop': 'Drop', 
+                                          'progress': 'Progress'}[univ_id.status]" />
+                            </option>
+                            <option t-else="" value=""></option>
+                            <option value="graduate">Graduate</option>
+                            <option value="drop">Drop</option>
+                            <option value="progress">Progress</option>
+                        </select>
+                    </td>                         
+                </tr>
+                <tr>
+                    <td><strong>Since</strong></td>
+                    <td t-if="univ_id" colspan="2"><input type="date" name="since" class="form-control fa fa-calendar" t-att-value="univ_id.since or since" required="required" /></td>
+                    <td t-else='' colspan="2"><input type="date" name="since" class="form-control fa fa-calendar" t-att-value="since" required="required" /></td>
+                </tr>
+                <tr>
+                    <td><strong>Until</strong></td>
+                    <td t-if="univ_id" colspan="2"><input type="date" name="until" class="form-control fa fa-calendar" t-att-value="univ_id.until or until" /></td>
+                    <td t-else='' colspan="2"><input type="date" name="until" class="form-control fa fa-calendar" t-att-value="until" /></td>
+                </tr>
+                <tr>
+                    <td><strong>Score</strong></td>
+                    <td t-if="univ_id" colspan="2"><input type="tel" name="score" class="form-control" t-att-value="univ_id.score or score" /></td>
+                    <td t-else='' colspan="2"><input type="tel" name="score" class="form-control" t-att-value="score" /></td>
+                </tr>
+                <tr>
+                    <td><strong>Schollarship</strong></td>
+                    <td t-if="univ_id" colspan="2"><input type="checkbox" name="schollarship" t-att-checked="'checked' if univ_id.schollarship else None" /></td>
+                    <td t-else='' colspan="2"><input type="checkbox" name="schollarship" t-att-value="schollarship" /></td>
+                </tr>
+            </table>
+        </template>
+        
+        <template id="delete_university" name="Delete University">
+            <t t-call="portal.portal_layout">
+                <h1 class="mt0">Delete University</h1>
+                <form t-attf-action="/delete/university" method="post" role="form" class="tag_text js_website_submit_form">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <input type="hidden" name="univ_id" t-att-value="univ_id.id"/>
+                    <table class="table table-striped table-condensed well well-lg">
+                        <tr>
+                            <td><strong>University</strong></td>
+                            <td><span t-field="univ_id.university_id.name"/></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Faculty</strong></td>
+                            <td><span t-field="univ_id.faculty_id.name"/></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Major</strong></td>
+                            <td><span t-field="univ_id.major_id.name"/></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Degree</strong></td>
+                            <td><span t-field="univ_id.degree_id.name"/></td>
+                        </tr>
+                    </table>
+                    <h1 class="mt0">Are You sure?</h1>
+                    <a href="/my/home" class="btn btn-default">Cancel</a>
+                    <button type="submit" t-attf-class="btn btn-primary">Delete</button>
+                </form>
+            </t>
+        </template>
+        
+    </data>
+</odoo>

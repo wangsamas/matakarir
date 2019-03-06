@@ -1,0 +1,131 @@
+<odoo>
+    <data>
+        <template id="assets_frontend" inherit_id="web.assets_frontend" name="Portal Assets">
+            <xpath expr="//script[last()]" position="after">
+                <script type="text/javascript" src="/matakarir/static/cities.js"></script>
+                <script type="text/javascript" src="/matakarir/static/since_until.js"/>
+            </xpath>
+        </template>
+        
+        <template id="country_template">
+            <tr>
+                <td>Country</td>
+                <td id="input_country" style="display:none;"><input type="text" class="form-control" name="country_name"/></td>
+                <td>
+                    <select name="country" class="form-control">
+                        <option value="">Country...</option>
+                        <t t-foreach="countries or []" t-as="l">
+                            <option t-att-value="l.id" t-att-selected="l.id == object.country_id.id if object and object.country_id else l.code == 'ID'">
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="#new_country" id="new_country"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+        </template>
+        <template id="state_template">
+            <tr>
+                <td>Province</td>
+                <td id="input_state" style="display:none;"><input type="text" class="form-control" name="state_name"/></td>
+                <td>
+                    <select name="state" class="form-control">
+                        <option value="">Province...</option>
+                        <t t-foreach="states or []" t-as="l">
+                            <option t-att-value="l.id" style="display:none;" t-att-selected="l.id == object.state_id.id if object else l.id == ''" t-att-data-country="l.country_id.id">
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="#new_state" id="new_state"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+        </template>
+        <template id="city_template">
+            <tr>
+                <td>City</td>
+                <td id="input_city" style="display:none;"><input type="text" class="form-control" name="city_name"/></td>
+                <td>
+                    <select name="city" class="form-control">
+                        <option value="">City...</option>
+                        <t t-foreach="cities or []" t-as="l">
+                            <option t-att-value="l.id" style="display:none;" t-att-selected="l.id == object.city_id.id if object else l.id == ''" t-att-data-country="l.country_id.id" t-att-data-state="l.state_id.id">
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="#new_city" id="new_city"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+        </template>
+        <template id="district_template">
+            <tr>
+                <td>District</td>
+                <td id="input_district" style="display:none;"><input type="text" class="form-control" name="district_name"/></td>
+                <td>
+                    <select name="district" class="form-control">
+                        <option value="">District...</option>
+                        <t t-foreach="districts or []" t-as="l">
+                            <option t-att-value="l.id" style="display:none;" t-att-selected="l.id == object.district_id.id if object else l.id == ''" t-att-data-country="l.country_id.id" t-att-data-state="l.state_id.id" t-att-data-city="l.city_id.id">
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="#new_district" id="new_district"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+        </template>
+        <template id="village_template">
+            <tr>
+                <td>Village</td>
+                <td id="input_village" style="display:none;"><input type="text" class="form-control" name="village_name"/></td>
+                <td>
+                    <select name="village" class="form-control">
+                        <option value="">Village...</option>
+                        <t t-foreach="villages or []" t-as="l">
+                            <option t-att-value="l.id" style="display:none;" t-att-selected="l.id == object.village_id.id if object else l.id == ''" t-att-data-country="l.country_id.id" t-att-data-state="l.state_id.id" t-att-data-city="l.city_id.id" t-att-data-district="l.district_id.id">
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="#new_village" id="new_village"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+        </template>
+        <template id="area_template">
+            <tr>
+                <td>Area</td>
+                <td id="input_area" style="display:none;"><input type="text" class="form-control" name="area_name"/></td>
+                <td>
+                    <select name="area" class="form-control">
+                        <option value="">Area...</option>
+                        <t t-foreach="areas or []" t-as="l">
+                            <option t-att-value="l.id" style="display:none;" t-att-selected="l.id == object.area_id.id if object else l.id == ''" t-att-data-country="l.country_id.id" t-att-data-state="l.state_id.id" t-att-data-city="l.city_id.id" t-att-data-district="l.district_id.id" t-att-data-village="l.village_id.id">
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="#new_area" id="new_area"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+        </template>
+        <template id="zipcode_template">
+            <tr>
+                <td>Zip Code</td>
+                <td id="input_zipcode" style="display:none;"><input type="tel" class="form-control" name="zipcode_name"/></td>
+                <td>
+                    <select name="zipcode" class="form-control">
+                        <option value="">Zip Code...</option>
+                        <t t-foreach="zipcodes or []" t-as="l">
+                            <option t-att-value="l.id" style="display:none;" t-att-selected="l.id == object.zipcode_id.id if object else l.id == ''" t-att-data-country="l.country_id.id" t-att-data-state="l.state_id.id" t-att-data-city="l.city_id.id" t-att-data-district="l.district_id.id" t-att-data-village="l.village_id.id" t-att-data-area="l.area_id.id">
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="#new_zipcode" id="new_zipcode"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+        </template>
+
+    </data>
+</odoo>

@@ -1,0 +1,10 @@
+id,sequence,name
+Duration_1,10,per minute
+Duration_2,20,per hour
+Duration_3,30,per 8 hours
+Duration_4,40,per 12 hours
+Duration_5,50,per work day
+Duration_6,60,per day
+Duration_7,70,per week
+Duration_8,80,per month
+Duration_9,90,per year

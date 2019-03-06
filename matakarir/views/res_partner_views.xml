@@ -1,0 +1,104 @@
+<odoo>
+  <data>
+    
+    <record id="view_partner_form" model="ir.ui.view">
+      <field name="name">view_partner_form</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="base.view_partner_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='parent_id']" position="before">
+          <field name="alias_id" placeholder="Alias..." domain="[('is_company', '=', False)]"/>
+        </xpath>
+        <xpath expr="//div[hasclass('oe_title')]" position="after">
+          <div>
+            <field name="is_university"/>
+            <label for="is_university"/>
+            <field name="is_school"/>
+            <label for="is_school"/>
+            <field name="is_trainer"/>
+            <label for="is_trainer"/>
+            <field name="is_organization"/>
+            <label for="is_organization"/>
+          </div>
+        </xpath>
+        <xpath expr="//label[@for='street']" position="before">
+          <field name="description"/>
+        </xpath>
+        <xpath expr="//field[@name='function']" position="before">
+          <field name="companytype_id" attrs="{'invisible': ['|', '|', ('company_name', '=', False), ('company_name', '=', ''), ('is_company', '=', True)]}"/>
+        </xpath>
+        <xpath expr="//field[@name='title']" position="after">
+          <field name="birth_country_id" attrs="{'invisible': [('is_company','=', True)]}"/>
+          <field name="birth_state_id" attrs="{'invisible': [('is_company','=', True)]}"/>
+          <field name="birth_city_id" attrs="{'invisible': [('is_company','=', True)]}"/>
+          <field name="age" attrs="{'invisible': [('is_company','=', True)]}"/>
+          <field name="height" attrs="{'invisible': [('is_company','=', True)]}"/>
+          <field name="weight" attrs="{'invisible': [('is_company','=', True)]}"/>
+          <field name="gender" attrs="{'invisible': [('is_company','=', True)]}"/>
+          <field name="marital" attrs="{'invisible': [('is_company','=', True)]}"/>
+          <field name="dependents" attrs="{'invisible': [('is_company','=', True)]}"/>
+          <field name="blood" attrs="{'invisible': [('is_company','=', True)]}"/>
+          <field name="dependents" attrs="{'invisible': [('is_company','=', True)]}"/>
+        </xpath>
+        <xpath expr="//div[hasclass('o_address_format')]" position="replace">
+                            <div class="o_address_format">
+                                <div class="oe_edit_only">
+                                    <button name="open_parent" type="object" string="(edit)" class="oe_link"
+                                        attrs="{'invisible': ['|', ('parent_id', '=', False), ('type', '!=', 'contact')]}"/>
+                                </div>
+                                <field name="street" placeholder="Street..." class="o_address_street"
+                                    attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}"/>
+                                <field name="street2" placeholder="Street 2..." class="o_address_street"
+                                    attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}"/>
+                                <field name="country_id" placeholder="Country" class="o_address_country" options='{"no_open": True, "no_create": True}'
+                                    attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}"/>
+                                <field name="state_id" class="o_address_state" placeholder="State" options='{"no_open": True}'
+                                    attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}" context="{'country_id': country_id}"/>
+                                <field name="city_id" class="o_address_state" placeholder="City" options='{"no_open": True}'
+                                    attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}" context="{'state_id': state_id, 'country_id': country_id}"/>
+                                <field name="district_id" class="o_address_state" placeholder="District" options='{"no_open": True}'
+                                    attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}" context="{'city_id': city_id, 'state_id': state_id, 'country_id': country_id}"/>
+                                <field name="village_id" class="o_address_state" placeholder="Village" options='{"no_open": True}'
+                                    attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}" context="{'district_id': district_id, 'city_id': city_id, 'state_id': state_id, 'country_id': country_id}"/>
+                                <field name="area_id" class="o_address_state" placeholder="Area" options='{"no_open": True}'
+                                    attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}" context="{'village_id': village_id, 'district_id': district_id, 'city_id': city_id, 'state_id': state_id, 'country_id': country_id}"/>
+                                <field name="zipcode_id" class="o_address_state" placeholder="ZIP Code" options='{"no_open": True}'
+                                    attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}" context="{'area_id': area_id, 'village_id': village_id, 'district_id': district_id, 'city_id': city_id, 'state_id': state_id, 'country_id': country_id}"/>
+                                <field name="city" placeholder="City" class="o_address_city"
+                                    attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}"/>
+                                <field name="zip" placeholder="ZIP" class="o_address_zip"
+                                    attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}"/>
+                                <field name="rw" placeholder="RW" class="o_address_state"
+                                    attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}"/>
+                                <field name="rt" placeholder="RT" class="o_address_state"
+                                    attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}"/>
+                            </div>
+        </xpath>
+        <xpath expr="//field[@name='vat']" position="before">
+          <field name="address_status" attrs="{'invisible': [('is_company','=', True)]}"/>
+          <field name="identification_no" attrs="{'invisible': [('is_company','=', True)]}"/>
+          <field name="passport_no" attrs="{'invisible': [('is_company','=', True)]}"/>
+          <field name="permit_no" attrs="{'invisible': [('is_company','=', True)]}"/>
+          <field name="visa_no" attrs="{'invisible': [('is_company','=', True)]}"/>
+          <field name="ssnid" attrs="{'invisible': [('is_company','=', True)]}"/>
+          <field name="citizenship_id" attrs="{'invisible': [('is_company','=', True)]}"/>
+          <field name="ethnic_id" attrs="{'invisible': [('is_company','=', True)]}"/>
+          <field name="religion_id" attrs="{'invisible': [('is_company','=', True)]}"/>
+        </xpath>
+        <xpath expr="//page[@name='internal_notes']" position="inside">
+            <field name="experience_ids" mode="tree">
+                <tree string="Experiences" editable="bottom">
+                    <field name="job_name"/>
+                    <field name="company_id"/>
+                    <field name="level_id"/>
+                    <field name="department_id"/>
+                    <field name="since"/>
+                </tree>
+            </field>
+        </xpath>
+      </field>
+    </record>
+
+    
+  </data>
+</odoo>

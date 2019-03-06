@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="snippet_vacancy" name="Vacancy Section">
+		<section class="pt32 pb32" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 s_title pt16 pb16" style="text-align: center;">
+                        <h4 class="s_title_default"><font style="font-size: 62px;">Search Vacancies</font></h4>
+                        <form t-attf-action="/vacancies" method="post" class="navbar-search">
+                            <div class="form-group">
+                                <input type="text" name="search" class="search-query" placeholder="Search vacancy..."/>
+                                <button type="submit" t-attf-class="btn btn-primary btn-lg">Search</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+    
+	<template id="snippet_vacancy_bar" inherit_id="website.snippets" name="Vacancy Bar">
+		<xpath expr="//div[@id='snippet_structure']" position="after">
+			<div id="snippet_vacancy" class="o_panel">
+				<div class="o_panel_header">
+					<i class="fa fa-th"></i>
+					Vacancy Search
+				</div>
+				<div class="o_panel_body">
+                    <t t-snippet="hr_apply.snippet_vacancy" t-thumbnail="/website/static/src/img/snippets_thumbs/s_call_to_action.png"/>
+                </div>
+			</div>
+		</xpath>
+	</template>
+    
+    <template id="working_company" name="My Company">
+        <t t-call="hr_apply.activities_layout">
+            <h1 t-if="experience_id" class="mt0">Edit Company</h1>
+            <h1 t-else="" class="mt0">New Company</h1>
+            <form t-attf-action="/save/company" method="post" role="form" class="tag_text js_website_submit_form">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                <input t-if="experience_id" type="hidden" name="experience_id" t-att-value="experience_id.id"/>
+                <input t-if="word" type="hidden" name="word" t-att-value="word"/>
+                <p t-call="hr_apply.working_company_form"/>
+                <div align="center">
+                    <a href="/my/activities" class="btn btn-default">Cancel</a>
+                    <button type="submit" t-attf-class="btn btn-primary">Save</button>
+                </div>
+            </form>
+        </t>
+    </template>
+
+    <template id="working_company_form">
+        <table class="table o_area_selections">
+            <t t-if="experience_id">
+                <tr>
+                    <td><strong>Company Name</strong></td>
+                    <td colspan="2"><span t-field="object.name"/></td>
+                </tr>
+            </t>
+            <t t-else="">
+                <p t-call="matakarir.country_template" />
+                <p t-call="matakarir.state_template" />
+                <p t-call="matakarir.city_template" />
+                <p t-call="matakarir.district_template" />
+                <p t-call="matakarir.village_template" />
+                <p t-call="matakarir.area_template" />
+                <tr>
+                    <td><strong>Company Name</strong></td>
+                    <td id="input_company" style="display:none;"><input type="text" class="form-control" name="company_name" placeholder="Company Name..."/></td>
+                    <td>
+                        <select name="company" class="form-control">
+                            <option value="">Company...</option>
+                            <t t-foreach="companies or []" t-as="l">
+                                <option t-att-value="l.id" t-att-selected="l.id == object.id if object else l.id == ''" t-att-data-country="l.country_id.id" t-att-data-state="l.state_id.id" t-att-data-city="l.city_id.id" t-att-data-district="l.district_id.id" t-att-data-village="l.village_id.id" t-att-data-area="l.area_id.id">
+                                    <t t-esc="l.name" />
+                                </option>
+                            </t>
+                        </select>
+                    </td>
+                    <td><a href="#new_company" id="new_company"><i class="fa fa-plus-square"/>Add new</a></td>
+                </tr>
+            </t>
+            <t t-if="not experience_id" id="company_info" style="display:none;">
+                <tr style="display:none;" class="company_info">
+                    <td><strong>Company Address</strong></td>
+                    <td colspan="2"><input type="text" name="street" placeholder="Address" class="form-control" /></td>
+                </tr>
+                <tr style="display:none;" class="company_info">
+                    <td />
+                    <td colspan="2"><input type="text" name="street2" placeholder="Additional Address" class="form-control" /></td>
+                </tr>
+                <tr style="display:none;" class="company_info">
+                    <td><strong>Company Website</strong></td>
+                    <td colspan="2"><input type="text" name="website" class="form-control" /></td>
+                </tr>
+                <tr style="display:none;" class="company_info">
+                    <td><strong>Company Email</strong></td>
+                    <td colspan="2"><input type="text" name="email" class="form-control" /></td>
+                </tr>
+                <tr style="display:none;" class="company_info">
+                    <td><strong>Company Phone</strong></td>
+                    <td colspan="2"><input type="tel" name="phone" class="form-control" /></td>
+                </tr>
+                <tr style="display:none;" class="company_info o_edit_industry">
+                    <td><strong>Company Industry</strong></td>
+                    <td id="input_industry" style="display:none;"><input type="text" class="form-control" name="industry_name" placeholder="New Industry..."/></td>
+                    <td>
+                        <select name="industry" class="form-control">
+                            <option value="">Industry...</option>
+                            <t t-foreach="industries or []" t-as="l">
+                                <option t-att-value="l.id" t-att-selected="l.id == object.industry_id.id if object else l.id == ''">
+                                    <t t-esc="l.name" />
+                                </option>
+                            </t>
+                        </select>
+                    </td>
+                    <td><a href="#new_industry" id="new_industry"><i class="fa fa-plus-square"/>Add new</a></td>
+                </tr>
+                <tr style="display:none;" class="company_info o_edit_companytype">
+                    <td><strong>Company Type</strong></td>
+                    <td id="input_companytype" style="display:none;"><input type="text" class="form-control" name="companytype_name" placeholder="New Company Type..."/></td>
+                    <td>
+                        <select name="companytype" class="form-control">
+                            <option value="">Company Type...</option>
+                            <t t-foreach="companytypes or []" t-as="l">
+                                <option t-att-value="l.id" t-att-selected="l.id == object.companytype_id.id if object else l.id == ''">
+                                    <t t-esc="l.name" />
+                                </option>
+                            </t>
+                        </select>
+                    </td>
+                    <td><a href="#new_companytype" id="new_companytype"><i class="fa fa-plus-square"/>Add new</a></td>
+                </tr>
+            </t>
+            <tr>
+                <td><strong>Your Position in the Company</strong></td>
+                <td t-if="experience_id" colspan="2"><input type="text" name="job_name" class="form-control" t-att-value="experience_id.job_name or job_name" /></td>
+                <td t-else="" colspan="2"><input type="text" name="job_name" class="form-control" t-att-value="job_name" /></td>
+            </tr>
+            <tr>
+                <td><strong>Describe Your Position</strong></td>
+                <td t-if="experience_id" colspan="2">
+                    <textarea class="form-control" name="description"><t t-esc="experience_id.description or description" /></textarea>
+                </td>
+                <td t-else="" colspan="2">
+                    <textarea class="form-control" name="description"><t t-esc="description" /></textarea>
+                </td>
+            </tr>
+            <tr class="o_edit_job_level">
+                <td><strong>Your Level</strong></td>
+                <td id="input_level" style="display:none;"><input type="text" class="form-control" name="level_name" placeholder="Level Name..."/></td>
+                <td>
+                    <select name="level" class="form-control">
+                        <option value="">Level...</option>
+                        <t t-foreach="levels or []" t-as="l">
+                            <option t-att-value="l.id" t-att-selected="l.id == experience_id.level_id.id if experience_id else l.id == ''">
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="#new_level" id="new_level"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+            <tr class="o_edit_department">
+                <td><strong>Your Department</strong></td>
+                <td id="input_department" style="display:none;"><input type="text" class="form-control" name="department_name" placeholder="Department Name..."/></td>
+                <td>
+                    <select name="department" class="form-control">
+                        <option value="">Department...</option>
+                        <t t-foreach="departments or []" t-as="l">
+                            <option t-att-value="l.id" t-att-selected="l.id == experience_id.department_id.id if experience_id else l.id == ''">
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="#new_department" id="new_department"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+            <tr class="o_edit_e_status">
+                <td><strong>Your Status</strong></td>
+                <td id="input_e_status" style="display:none;"><input type="text" class="form-control" name="e_status_name" placeholder="Employment Status..."/></td>
+                <td>
+                    <select name="e_status" class="form-control">
+                        <option value="">Your Status...</option>
+                        <t t-foreach="e_statuses or []" t-as="l">
+                            <option t-att-value="l.id" t-att-selected="l.id == experience_id.e_status_id.id if experience_id else l.id == ''">
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="#new_e_status" id="new_e_status"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+            <tr>
+                <td><strong>Since</strong></td>
+                <td t-if="experience_id" colspan="2"><input type="date" name="since" class="form-control fa fa-calendar" t-att-value="experience_id.since or since" required="required" /></td>
+                <td t-else="" colspan="2"><input type="date" name="since" class="form-control fa fa-calendar" t-att-value="since" required="required" /></td>
+            </tr>
+        </table>
+    </template>
+
+    <template id="delete_working_company" name="Delete Company">
+        <t t-call="portal.portal_layout">
+            <h1 class="mt0">Delete Company</h1>
+            <form t-attf-action="/delete/company" method="post" role="form" class="tag_text js_website_submit_form">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                <input type="hidden" name="experience_id" t-att-value="experience_id.id"/>
+                <table class="table table-striped table-condensed well well-lg">
+                    <tr>
+                        <td><strong>Company Name</strong></td>
+                        <td><span t-field="experience_id.company_id.name"/></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Your Position</strong></td>
+                        <td><span t-field="experience_id.job_name"/></td>
+                    </tr>
+                </table>
+                <h1 class="mt0">Are You sure?</h1>
+                <a href="/my/activities" class="btn btn-default">Cancel</a>
+                <button type="submit" t-attf-class="btn btn-primary">Delete</button>
+            </form>
+        </t>
+    </template>
+
+    <template id="show_company" name="Company Profile">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="oe_structure bg-beta">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 pt16 pb16" style="text-align: center;">
+                                <h3>Company Profile</h3>
+                                <b><h2 t-field="company.name" /></b>
+                                <h5>
+                                    <span t-field="company.street" />
+                                    <t t-if="company.street2">, <span t-field="company.street2" /></t>
+                                </h5>
+                                <h5>
+                                    <span t-field="company.area_id" /> <span t-field="company.village_id" /> <span t-field="company.district_id" /> <span t-field="company.city_id" /> <span t-field="company.state_id" /> <span t-field="company.country_id" />
+                                </h5>
+                                <h5>
+                                    <span t-field="company.website" /> <span t-field="company.email" /> <span t-field="company.phone" />
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="o_google_map" align="center">
+                        <t t-if="company.google_map_img()">
+                            <a t-att-href="company.google_map_link()" target="_BLANK">
+                               <img t-att-src="company.google_map_img()" width="100%%" height="100"/>
+                            </a>
+                        </t>
+                        <t t-else="1">
+                            <a t-att-href="company.google_map_link()" target="_BLANK">Visualize on Google Maps</a>
+                        </t>
+                    </div>
+                </div>
+                <div class="oe_structure">
+                    <div class="container">
+                        <div class="col-lg-12 pt16 pb16">
+                            <table class="table">
+                                <tr>
+                                    <td colspan="2"><h3>Vacancies</h3></td>
+                                </tr>
+                                <tr t-foreach="jobs" t-as="j">
+                                    <td>
+                                        <h4><a t-attf-href="/vacancy/#{j.id}"><span t-field="j.name"/></a></h4>
+                                        <span t-esc="j.description" />
+                                    </td>
+                                    <td>
+                                        <span t-esc="j.no_of_recruitment" /> person(s)
+                                    </td>
+                                </tr>
+                            </table>
+                            <t t-call="website.pager" >
+                                <t t-set="classname">float-right</t>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="show_vacancy" name="Vacancy">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <title style="display:none"> <t t-esc="vacancy.name"/></title>
+                <div class="oe_structure bg-beta">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 pt16 pb16" style="text-align: center;">
+                                <h2>Vacancy</h2>
+                                <h1 class="page-header" t-field="vacancy.name" />
+                                <a t-attf-href="/profile/#{slug(company)}"><h4 t-field="company.name" /></a>
+                                <h5>
+                                    <span t-field="company.street" />
+                                    <t t-if="company.street2">, <span t-field="company.street2" /></t>
+                                </h5>
+                                <h5>
+                                    <span t-field="company.area_id" /> <span t-field="company.village_id" /> <span t-field="company.district_id" /> <span t-field="company.city_id" /> <span t-field="company.state_id" /> <span t-field="company.country_id" />
+                                </h5>
+                                <h5>
+                                    <span t-field="company.website" /> <span t-field="company.email" /> <span t-field="company.phone" />
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="oe_structure">
+                    <div class="container mb16">
+                        <div class="col-lg-12 pt16 pb16">
+                            <h4 class="page-header">
+                                <span>We are searching for <span t-field="vacancy.no_of_recruitment" /> person(s) to fill the position of <span t-field="vacancy.level_id" /> <span t-field="vacancy.department_id" />, </span>
+                                <span>in <t t-if="vacancy.area_id"><span t-field="vacancy.area_id" />, </t>
+                                    <t t-if="vacancy.village_id"><span t-field="vacancy.village_id" />, </t>
+                                    <t t-if="vacancy.district_id"><span t-field="vacancy.district_id" />, </t>
+                                    <t t-if="vacancy.city_id"><span t-field="vacancy.city_id" />, </t>
+                                    <t t-if="vacancy.state_id"><span t-field="vacancy.state_id" />, </t>
+                                    <t t-if="vacancy.country_id"><span t-field="vacancy.country_id" />.</t></span>
+                            </h4>
+                        </div>
+                        <div class="o_google_map" align="center">
+                            <t t-if="vacancy.google_map_img()">
+                                <a t-att-href="vacancy.google_map_link()" target="_BLANK">
+                                   <img t-att-src="vacancy.google_map_img()" width="100%%" height="100"/>
+                                </a>
+                            </t>
+                            <t t-else="1">
+                                <a t-att-href="vacancy.google_map_link()" target="_BLANK">Visualize on Google Maps</a>
+                            </t>
+                        </div>
+                        <div class="col-lg-12 pt16 pb16">
+                            <table class="table">
+                                <tr>
+                                    <td><h4>Job Description</h4></td>
+                                    <td><span t-field="vacancy.description" /></td>
+                                </tr>
+                                <tr>
+                                    <td><h4>Tasks</h4></td>
+                                    <td><span t-field="vacancy.tasks" /></td>
+                                </tr>
+                                <tr>
+                                    <td><h4>Income Range</h4></td>
+                                    <td><span t-field="vacancy.currency_id" /> <span t-field="vacancy.min_salary" /> - <span t-field="vacancy.max_salary" /> <span t-field="vacancy.duration_id" /> </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 pt16 pb16">
+                                <table class="table">
+                                    <tr>
+                                        <td t-if="vacancy.user_id.id == user.id" align="right" colspan="3" class="bg-beta"><h3>Qualifications</h3></td>
+                                        <td t-else="" align="right" colspan="2" class="bg-beta"><h3>Qualifications</h3></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h4>Age</h4></td>
+                                        <td t-if="vacancy.user_id.id == user.id" colspan="2"><span t-field="vacancy.min_age" /> - <span t-field="vacancy.max_age" /> </td>
+                                        <td t-else=""><span t-field="vacancy.min_age" /> - <span t-field="vacancy.max_age" /> </td>
+                                    </tr>
+                                    <tr t-if="vacancy.criteria_ids">
+                                        <td><h4>Personality Criteria</h4></td>
+                                        <td>
+                                            <p t-foreach="vacancy.criteria_ids" t-as="l">
+                                                - <span t-field="l.classification_id" />
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><h4>Experiences</h4></td>
+                                        <td>
+                                            <t t-if="vacancy.required_experience_ids">
+                                                <span t-foreach="vacancy.required_experience_ids" t-as="l">
+                                                    - <span t-field="l.min_exp" /> year(s) of work 
+                                                    <span t-if="l.joblevel_id">as <span t-field="l.joblevel_id.name" /> </span>
+                                                    <span t-if="l.department_id">in department of <span t-field="l.department_id.name" /> </span>
+                                                    <span t-if="l.industry_id">in industry of <span t-field="l.industry_id.name" /> </span><br />
+                                                </span>
+                                            </t>
+                                            <t t-else="">None </t>
+                                        </td>
+                                        <td t-if="vacancy.user_id.id == user.id">
+                                            <a t-attf-href="/vacancy/#{slug(vacancy)}/experience" class="btn btn-default">Modify</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><h4>Universities</h4></td>
+                                        <td>
+                                            <t t-if="vacancy.required_university_ids">
+                                                <span t-foreach="vacancy.required_university_ids" t-as="l">
+                                                    - <span t-field="l.degree_id.name" /> <span t-field="l.faculty_id.name" /> <span t-field="l.major_id.name" /><br />
+                                                </span>
+                                            </t>
+                                            <t t-else="">None </t>
+                                        </td>
+                                        <td t-if="vacancy.user_id.id == user.id">
+                                            <a t-attf-href="/vacancy/#{slug(vacancy)}/university" class="btn btn-default">Modify</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><h4>Schools</h4></td>
+                                        <td>
+                                            <t t-if="vacancy.required_school_ids">
+                                                <span t-foreach="vacancy.required_school_ids" t-as="l">
+                                                    - <span t-field="l.name" /><br />
+                                                </span>
+                                            </t>
+                                            <t t-else="">None </t>
+                                        </td>
+                                        <td t-if="vacancy.user_id.id == user.id">
+                                            <a t-attf-href="/vacancy/#{slug(vacancy)}/school" class="btn btn-default">Modify</a>
+                                        </td>
+                                    </tr>
+                                    <tr id="skill">
+                                        <td><h4>Skills</h4></td>
+                                        <td>
+                                            <t t-if="vacancy.required_skill_ids">
+                                                <span t-foreach="vacancy.required_skill_ids" t-as="l">
+                                                    - <span t-field="l.name" /><br />
+                                                </span>
+                                            </t>
+                                            <t t-else="">None </t>
+                                        </td>
+                                        <td t-if="vacancy.user_id.id == user.id">
+                                            <a t-attf-href="/vacancy/#{slug(vacancy)}/skill" class="btn btn-default">Modify</a>
+                                        </td>
+                                    </tr>
+                                    <tr id="langskill">
+                                        <td><h4>Language Skills</h4></td>
+                                        <td>
+                                            <t t-if="vacancy.required_langskill_ids">
+                                                <span t-foreach="vacancy.required_langskill_ids" t-as="l">
+                                                    - <span t-field="l.name" /><br />
+                                                </span>
+                                            </t>
+                                            <t t-else="">None </t>
+                                        </td>
+                                        <td t-if="vacancy.user_id.id == user.id">
+                                            <a t-attf-href="/vacancy/#{slug(vacancy)}/langskill" class="btn btn-default">Modify</a>
+                                        </td>
+                                    </tr>
+                                    <tr id="comskill">
+                                        <td><h4>Computer Skills</h4></td>
+                                        <td>
+                                            <t t-if="vacancy.required_comskill_ids">
+                                                <span t-foreach="vacancy.required_comskill_ids" t-as="l">
+                                                    - <span t-field="l.name" /><br />
+                                                </span>
+                                            </t>
+                                            <t t-else="">None </t>
+                                        </td>
+                                        <td t-if="vacancy.user_id.id == user.id">
+                                            <a t-attf-href="/vacancy/#{slug(vacancy)}/comskill" class="btn btn-default">Modify</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="o_my_sidebar" class="col-md-6 pt16 pb16">
+                                <table class="table">
+                                    <tr>
+                                        <td t-if="vacancy.user_id.id == user.id" align="right" colspan="3" class="bg-beta"><h3>Requirements</h3></td>
+                                        <td t-else="" align="right" colspan="2" class="bg-beta"><h3>Requirements</h3></td></tr>
+                                    <tr id="driving_lisence">
+                                        <td><h4>Driving Lisences</h4></td>
+                                        <td>
+                                            <t t-if="vacancy.required_driving_lisence_ids">
+                                                <span t-foreach="vacancy.required_driving_lisence_ids" t-as="l">
+                                                    - <span t-field="l.name" /><br />
+                                                </span>
+                                            </t>
+                                            <t t-else="">None </t>
+                                        </td>
+                                        <td t-if="vacancy.user_id.id == user.id">
+                                            <a t-attf-href="/vacancy/#{slug(vacancy)}/driving_lisence" class="btn btn-default">Modify</a>
+                                        </td>
+                                    </tr>
+                                    <tr id="lisence">
+                                        <td><h4>Lisences</h4></td>
+                                        <td>
+                                            <t t-if="vacancy.required_lisence_ids">
+                                                <span t-foreach="vacancy.required_lisence_ids" t-as="l">
+                                                    - <span t-field="l.name" /><br />
+                                                </span>
+                                            </t>
+                                            <t t-else="">None </t>
+                                        </td>
+                                        <td t-if="vacancy.user_id.id == user.id">
+                                            <a t-attf-href="/vacancy/#{slug(vacancy)}/lisence" class="btn btn-default">Modify</a>
+                                        </td>
+                                    </tr>
+                                    <tr id="certificate">
+                                        <td><h4>Certificates</h4></td>
+                                        <td>
+                                            <t t-if="vacancy.required_certificate_ids">
+                                                <span t-foreach="vacancy.required_certificate_ids" t-as="l">
+                                                    - <span t-field="l.name" /><br />
+                                                </span>
+                                            </t>
+                                            <t t-else="">None </t>
+                                        </td>
+                                        <td t-if="vacancy.user_id.id == user.id">
+                                            <a t-attf-href="/vacancy/#{slug(vacancy)}/certificate" class="btn btn-default">Modify</a>
+                                        </td>
+                                    </tr>
+                                    <tr id="tools">
+                                        <td><h4>Tools</h4></td>
+                                        <td>
+                                            <t t-if="vacancy.required_tools_ids">
+                                                <span t-foreach="vacancy.required_tools_ids" t-as="l">
+                                                    - <span t-field="l.name" /><br />
+                                                </span>
+                                            </t>
+                                            <t t-else="">None </t>
+                                        </td>
+                                        <td t-if="vacancy.user_id.id == user.id">
+                                            <a t-attf-href="/vacancy/#{slug(vacancy)}/tools" class="btn btn-default">Modify</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div align="center">
+                    <a t-if="vacancy.user_id.id == user.id" role="button" t-attf-href="/edit/vacancy/#{ slug(vacancy) }" class="btn btn-default btn-lg">Modify</a>
+                    <a role="button" t-attf-href="/apply/vacancy/#{ slug(vacancy) }" class="btn btn-primary btn-lg mb4">Apply Now!</a>
+                </div>
+                <div class="s_share col-lg-12 pt16 pb16" align="center">
+                    <h3>
+                        <span class="s_share_title">Share</span>
+                        <a target="_Blank" class="s_share_facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://matakarir.com/vacancy/{vacancy}">
+                            <i class="fa fa-facebook-square"/>
+                        </a>
+                        <a target="_Blank" class="s_share_twitter" href="https://twitter.com/intent/tweet?text={vacancy.name}&amp;url=https://matakarir.com/vacancy/{vacancy}">
+                            <i class="fa fa-twitter"/>
+                        </a>
+                        <a target="_Blank" class="s_share_linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://matakarir.com/vacancy/{vacancy}&amp;title={vacancy.name}&amp;">
+                            <i class="fa fa-linkedin"/>
+                        </a>
+                        <a target="_Blank" class="s_share_google" href="https://plus.google.com/share?url=https://matakarir.com/vacancy/{vacancy}">
+                            <i class="fa fa-google-plus-square"/>
+                        </a>
+                    </h3>
+                </div>
+            </div>
+        </t>
+    </template>
+
+</odoo>

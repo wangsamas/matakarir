@@ -1,0 +1,80 @@
+<odoo>
+    <data>
+        <!-- Classification Score -->
+        <record id="questionaire_classification_score_search" model="ir.ui.view">
+            <field name="name">questionaire_classification_score_search</field>
+            <field name="model">questionaire.classification_score</field>
+            <field name="arch" type="xml">
+                <search string="Search Classification">
+                    <field name="partner_id"/>
+                    <field name="questionaire_id"/>
+                    <field name="classification_id"/>
+                    <field name="classification_method_id"/>
+                    <field name="score"/>
+                </search>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="questionaire_classification_score_form">
+            <field name="name">questionaire_classification_score_form</field>
+            <field name="model">questionaire.classification_score</field>
+            <field name="arch" type="xml">
+                <form string="Questionaire Classification Score" create="false">
+                    <div>
+                        <label for="partner_id"/>
+                        <field name="partner_id"/>
+                    </div>
+                    <div>
+                        <label for="classification_method_id"/>
+                        <field name="classification_method_id"/>
+                    </div>
+                    <div>
+                        <label for="classification_id"/>
+                        <field name="classification_id"/>
+                    </div>
+                    <div>
+                        <label for="questionaire_id"/>
+                        <field name="questionaire_id"/>
+                    </div>
+                    <div>
+                        <label for="score"/>
+                        <field name="score"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="questionaire_classification_score_tree">
+            <field name="name">questionaire_classification_score_tree</field>
+            <field name="model">questionaire.classification_score</field>
+            <field name="arch" type="xml">
+                <tree string="Questionaire Classification Score" create="false">
+                    <field name="partner_id"/>
+                    <field name="classification_id"/>
+                    <field name="questionaire_id"/>
+                    <field name="score"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_questionaire_user_classification_score">
+            <field name="name">Classifications</field>
+            <field name="res_model">questionaire.classification_score</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="questionaire_classification_score_tree"></field>
+            <field name="search_view_id" ref="questionaire_classification_score_search"/>
+            <field name="help" type="html">
+                <p>No Classification Score yet.</p>
+            </field>
+        </record>
+        <record id="action_selected_questionaire_classification_score" model="ir.actions.act_window">
+            <field name="name">Questionaire Classification Score</field>
+            <field name="res_model">questionaire.classification_score</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="questionaire_classification_score_tree"></field>
+            <field name="search_view_id" ref="questionaire_classification_score_search"/>
+            <field name="help" type="html">
+                <p>No Classification Score yet.</p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,498 @@
+<odoo>
+    <data>
+        <template id="crime" name="Crime">
+            <t t-call="portal.portal_layout">
+                <t t-if="partner_id.crime_ids" t-call="matakarir.crime_table"/>
+                <form t-attf-action="/save/crime" method="post" role="form" class="tag_text js_website_submit_form">
+                    <h1>New Crime Record</h1>
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <p t-call="matakarir.crime_form"/>
+                    <div align="center">
+                        <a href="/my/home" class="btn btn-default">Cancel</a>
+                        <button type="submit" t-attf-class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </t>
+        </template>
+
+        <template id="crime_form">
+            <table class="table">
+                <tr>
+                    <td><strong>Crime Case</strong></td>
+                    <td t-if="crime_id"><input class="form-control" type="text" name="name" required="required" t-att-value="crime_id.name"/></td>
+                    <td t-else=""><input class="form-control" type="text" name="name" required="required"/></td>
+                </tr>
+                <tr>
+                    <td><strong>Since Test</strong></td>
+                    <td t-if="crime_id"><input class="form-control" type="month" name="since" t-att-value="crime_id.since"/></td>
+                    <td t-else=""><input class="form-control" type="month" name="since"/></td>
+                </tr>
+                <tr>
+                    <td><strong>Status</strong></td>
+                    <td t-if="crime_id"><input class="form-control" type="text" name="status" required="required" t-att-value="crime_id.status"/></td>
+                    <td t-else=""><input class="form-control" type="text" name="status" required="required"/></td>
+                </tr>
+            </table>
+        </template>
+
+        <template id="medical" name="Medical">
+            <t t-call="portal.portal_layout">
+                <t t-if="partner_id.medical_ids" t-call="matakarir.medical_table"/>
+                <form t-attf-action="/save/medical" method="post" role="form" class="tag_text js_website_submit_form">
+                    <h1>New Medical Record</h1>
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <p t-call="matakarir.medical_form"/>
+                    <div align="center">
+                        <a href="/my/home" class="btn btn-default">Cancel</a>
+                        <button type="submit" t-attf-class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </t>
+        </template>
+
+        <template id="medical_form">
+            <table class="table">
+                <tr>
+                    <td><strong>Case</strong></td>
+                    <td t-if="medical_id"><input class="form-control" type="text" name="name" required="required" t-att-value="medical_id.name"/></td>
+                    <td t-else=""><input class="form-control" type="text" name="name" required="required"/></td>
+                </tr>
+                <tr>
+                    <td><strong>Description</strong></td>
+                    <td t-if="medical_id"><textarea class="form-control" type="text" name="description">
+                        <t t-esc="medical_id.description" />
+                    </textarea></td>
+                    <td t-else=""><textarea class="form-control" type="text" name="description"/></td>
+                </tr>
+                <tr>
+                    <td><strong>Since</strong></td>
+                    <td t-if="medical_id"><input class="form-control" type="tel" name="since" t-att-value="medical_id.since"/></td>
+                    <td t-else=""><input class="form-control" type="tel" name="since"/></td>
+                </tr>
+                <tr>
+                    <td><strong>Status</strong></td>
+                    <td>
+                        <select class="form-control" name="status" required="required">
+                            <option t-if="medical_id" t-att-value="medical_id.status">
+                                <t t-esc="{'healed': 'Healed',
+                                          'uncurable': 'Uncurable',
+                                          'progress': 'Curing'}[medical_id.status]" />
+                            </option>
+                            <option t-else="" value=""></option>
+                            <option value="healed">Healed</option>
+                            <option value="uncurable">Uncurable</option>
+                            <option value="progress">Curing</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </template>
+
+        <template id="allergy" name="Allergy">
+            <t t-call="portal.portal_layout">
+                <t t-if="partner_id.allergy_ids" t-call="matakarir.allergy_table"/>
+                <form t-attf-action="/save/allergy" method="post" role="form" class="tag_text js_website_submit_form">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <table class="table">
+                        <td><h4>New Allergy</h4></td>
+                        <td><input class="form-control" type="text" name="allergy" required="required"/></td>
+                        <td align="right">
+                            <a href="/my/home" class="btn btn-default">Cancel</a>
+                            <button type="submit" t-attf-class="btn btn-primary">Save</button>
+                        </td>
+                    </table>
+                </form>
+            </t>
+        </template>
+        <template id="hobby" name="Hobby">
+            <t t-call="portal.portal_layout">
+                <t t-if="partner_id.hobby_ids" t-call="matakarir.hobby_table"/>
+                <form t-attf-action="/save/hobby" method="post" role="form" class="tag_text js_website_submit_form">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <table class="table">
+                        <td><h4>New Hobby</h4></td>
+                        <td><input class="form-control" type="text" name="hobby" required="required"/></td>
+                        <td align="right">
+                            <a href="/my/home" class="btn btn-default">Cancel</a>
+                            <button type="submit" t-attf-class="btn btn-primary">Save</button>
+                        </td>
+                    </table>
+                </form>
+            </t>
+        </template>
+        
+        <template id="langskill" name="Language Skill">
+            <t t-call="portal.portal_layout">
+                <t t-if="partner_id.langskill_ids" t-call="matakarir.language_skill_table"/>
+                <h1 t-if="langskill_id" class="mt0">Edit Language Skill</h1>
+                <h1 t-else="" class="mt0">New Language Skill</h1>
+                <form t-attf-action="/save/langskill" method="post" role="form" class="tag_text js_website_submit_form">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <input t-if="langskill_id" type="hidden" name="langskill_id" t-att-value="langskill_id.id"/>
+                    <p t-call="matakarir.langskill_form"/>
+                    <div align="center">
+                        <a href="/my/home" class="btn btn-default">Cancel</a>
+                        <button type="submit" t-attf-class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </t>
+        </template>
+        
+        <template id="langskill_form">
+            <table class="table o_add_skill">
+                <t t-if="langskill_id">
+                    <tr>
+                        <td><strong>Language Skill</strong></td>
+                        <td colspan="2"><span t-field="langskill_id.language_id.name" /></td>
+                    </tr>
+                </t>
+                <t t-else="">
+                    <tr>
+                        <td><strong>Language Skill</strong></td>
+                        <td id="input_skill" style="display:none;"><input type="text" class="form-control" name="skill_name" placeholder="Language Name..."/></td>
+                        <td>
+                            <select name="skill" class="form-control">
+                                <option value="">Language...</option>
+                                <t t-foreach="skills or []" t-as="l">
+                                    <option t-att-value="l.id">
+                                        <t t-esc="l.name" />
+                                    </option>
+                                </t>
+                            </select>
+                        </td>
+                        <td><a href="#new_skill" id="new_skill"><i class="fa fa-plus-square"/>Add new</a></td>
+                    </tr>
+                </t>
+                <tr>
+                    <td><strong>Listen</strong></td>
+                    <td colspan="2">
+                        <select class="form-control" name="listenskill" required="required">
+                            <option t-if="langskill_id" t-att-value="langskill_id.listenskill">
+                                <t t-esc="{'beginner': 'Beginner', 
+                                          'intermediate': 'Intermediate', 
+                                          'advanced': 'Expert'}[langskill_id.listenskill]" />
+                            </option>
+                            <option t-else="" value=""></option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Expert</option>
+                        </select>
+                    </td>                         
+                </tr>
+                <tr>
+                    <td><strong>Speak</strong></td>
+                    <td colspan="2">
+                        <select class="form-control" name="speakskill" required="required">
+                            <option t-if="langskill_id" t-att-value="langskill_id.speakskill">
+                                <t t-esc="{'beginner': 'Beginner', 
+                                          'intermediate': 'Intermediate', 
+                                          'advanced': 'Expert'}[langskill_id.speakskill]" />
+                            </option>
+                            <option t-else="" value=""></option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Expert</option>
+                        </select>
+                    </td>                         
+                </tr>
+                <tr>
+                    <td><strong>Read</strong></td>
+                    <td colspan="2">
+                        <select class="form-control" name="readskill" required="required">
+                            <option t-if="langskill_id" t-att-value="langskill_id.readskill">
+                                <t t-esc="{'beginner': 'Beginner', 
+                                          'intermediate': 'Intermediate', 
+                                          'advanced': 'Expert'}[langskill_id.readskill]" />
+                            </option>
+                            <option t-else="" value=""></option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Expert</option>
+                        </select>
+                    </td>                         
+                </tr>
+                <tr>
+                    <td><strong>Write</strong></td>
+                    <td colspan="2">
+                        <select class="form-control" name="writeskill" required="required">
+                            <option t-if="langskill_id" t-att-value="langskill_id.writeskill">
+                                <t t-esc="{'beginner': 'Beginner', 
+                                          'intermediate': 'Intermediate', 
+                                          'advanced': 'Expert'}[langskill_id.writeskill]" />
+                            </option>
+                            <option t-else="" value=""></option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Expert</option>
+                        </select>
+                    </td>                         
+                </tr>
+            </table>
+        </template>
+        
+        <template id="delete_langskill" name="Delete Language Skill">
+            <t t-call="portal.portal_layout">
+                <h1 class="mt0">Delete Language Skill</h1>
+                <form t-attf-action="/delete/langskill" method="post" role="form" class="tag_text js_website_submit_form">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <input type="hidden" name="langskill_id" t-att-value="langskill_id.id"/>
+                    <table class="table table-striped table-condensed well well-lg">
+                        <tr>
+                            <td><strong>Language Skill</strong></td>
+                            <td><span t-field="langskill_id.name"/></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Listen</strong></td>
+                            <td><span t-field="langskill_id.listenskill"/></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Speak</strong></td>
+                            <td><span t-field="langskill_id.speakskill"/></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Read</strong></td>
+                            <td><span t-field="langskill_id.readskill"/></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Write</strong></td>
+                            <td><span t-field="langskill_id.writeskill"/></td>
+                        </tr>
+                    </table>
+                    <h1 class="mt0">Are You sure?</h1>
+                    <a href="/my/home" class="btn btn-default">Cancel</a>
+                    <button type="submit" t-attf-class="btn btn-primary">Delete</button>
+                </form>
+            </t>
+        </template>
+
+        <template id="comskill" name="Computer Skill">
+            <t t-call="portal.portal_layout">
+                <t t-if="partner_id.comskill_ids" t-call="matakarir.computer_skill_table"/>
+                <h1 t-if="comskill_id" class="mt0">Edit Computer Skill</h1>
+                <h1 t-else="" class="mt0">New Computer Skill</h1>
+                <form t-attf-action="/save/comskill" method="post" role="form" class="tag_text js_website_submit_form">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <input t-if="comskill_id" type="hidden" name="comskill_id" t-att-value="comskill_id.id"/>
+                    <p t-call="matakarir.comskill_form"/>
+                    <div align="center">
+                        <a href="/my/home" class="btn btn-default">Cancel</a>
+                        <button type="submit" t-attf-class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </t>
+        </template>
+        
+        <template id="comskill_form">
+            <table class="table o_add_skill">
+                <t t-if="comskill_id">
+                    <tr>
+                        <td><strong>Computer Skill</strong></td>
+                        <td colspan="2"><span t-field="comskill_id.computer_id.name" /></td>
+                    </tr>
+                </t>
+                <t t-else="">
+                    <tr>
+                        <td><strong>Computer Skill</strong></td>
+                        <td id="input_skill" style="display:none;"><input type="text" class="form-control" name="skill_name" placeholder="Skill Name..."/></td>
+                        <td>
+                            <select name="skill" class="form-control">
+                                <option value="">Skill...</option>
+                                <t t-foreach="skills or []" t-as="l">
+                                    <option t-att-value="l.id">
+                                        <t t-esc="l.name" />
+                                    </option>
+                                </t>
+                            </select>
+                        </td>
+                        <td><a href="#new_skill" id="new_skill"><i class="fa fa-plus-square"/>Add new</a></td>
+                    </tr>
+                </t>
+                <tr>
+                    <td><strong>Level</strong></td>
+                    <td colspan="2">
+                        <select class="form-control" name="level" required="required">
+                            <option t-if="comskill_id" t-att-value="comskill_id.level">
+                                <t t-esc="{'beginner': 'Beginner', 
+                                          'intermediate': 'Intermediate', 
+                                          'advanced': 'Expert'}[comskill_id.level]" />
+                            </option>
+                            <option t-else="" value=""></option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Expert</option>
+                        </select>
+                    </td>                         
+                </tr>
+            </table>
+        </template>
+        
+        <template id="delete_comskill" name="Delete Computer Skill">
+            <t t-call="portal.portal_layout">
+                <h1 class="mt0">Delete Computer Skill</h1>
+                <form t-attf-action="/delete/comskill" method="post" role="form" class="tag_text js_website_submit_form">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <input type="hidden" name="comskill_id" t-att-value="comskill_id.id"/>
+                    <table class="table table-striped table-condensed well well-lg">
+                        <tr>
+                            <td><strong>Computer Skill</strong></td>
+                            <td><span t-field="comskill_id.name"/></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Level</strong></td>
+                            <td><span t-field="comskill_id.level"/></td>
+                        </tr>
+                    </table>
+                    <h1 class="mt0">Are You sure?</h1>
+                    <a href="/my/home" class="btn btn-default">Cancel</a>
+                    <button type="submit" t-attf-class="btn btn-primary">Delete</button>
+                </form>
+            </t>
+        </template>
+                
+        <template id="skill" name="Skills">
+            <t t-call="portal.portal_layout">
+                <t t-if="partner_id.skill_ids" t-call="matakarir.skill_table"/>
+                <h1 t-if="skill_id" class="mt0">Edit Skill</h1>
+                <h1 t-else="" class="mt0">New Skill</h1>
+                <form t-attf-action="/save/skill" method="post" role="form" class="tag_text js_website_submit_form">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <input t-if="skill_id" type="hidden" name="skill_id" t-att-value="skill_id.id"/>
+                    <p t-call="matakarir.skill_form"/>
+                    <div align="center">
+                        <a href="/my/home" class="btn btn-default">Cancel</a>
+                        <button type="submit" t-attf-class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </t>
+        </template>
+        
+        <template id="skill_form">
+            <table class="table o_add_skill">
+                <t t-if="skill_id">
+                    <tr>
+                        <td><strong>Skill</strong></td>
+                        <td colspan="2"><span t-field="skill_id.skill_id.name" /></td>
+                    </tr>
+                </t>
+                <t t-else="">
+                    <tr>
+                        <td><strong>Skill</strong></td>
+                        <td id="input_skill" style="display:none;"><input type="text" class="form-control" name="skill_name" placeholder="Skill Name..."/></td>
+                        <td>
+                            <select name="skill" class="form-control">
+                                <option value="">Skill...</option>
+                                <t t-foreach="skills or []" t-as="l">
+                                    <option t-att-value="l.id">
+                                        <t t-esc="l.name" />
+                                    </option>
+                                </t>
+                            </select>
+                        </td>
+                        <td><a href="#new_skill" id="new_skill"><i class="fa fa-plus-square"/>Add new</a></td>
+                    </tr>
+                </t>
+                <tr>
+                    <td><strong>Level</strong></td>
+                    <td colspan="2">
+                        <select class="form-control" name="level" required="required">
+                            <option t-if="skill_id" t-att-value="skill_id.level">
+                                <t t-esc="{'beginner': 'Beginner', 
+                                          'intermediate': 'Intermediate', 
+                                          'advanced': 'Expert'}[skill_id.level]" />
+                            </option>
+                            <option t-else="" value=""></option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Expert</option>
+                        </select>
+                    </td>                         
+                </tr>
+            </table>
+        </template>
+        
+        <template id="delete_skill" name="Delete skill">
+            <t t-call="portal.portal_layout">
+                <h1 class="mt0">Delete Skill</h1>
+                <form t-attf-action="/delete/skill" method="post" role="form" class="tag_text js_website_submit_form">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <input type="hidden" name="skill_id" t-att-value="skill_id.id"/>
+                    <table class="table table-striped table-condensed well well-lg">
+                        <tr>
+                            <td><strong>Skill</strong></td>
+                            <td><span t-field="skill_id.name"/></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Level</strong></td>
+                            <td><span t-field="skill_id.level"/></td>
+                        </tr>
+                    </table>
+                    <h1 class="mt0">Are You sure?</h1>
+                    <a href="/my/home" class="btn btn-default">Cancel</a>
+                    <button type="submit" t-attf-class="btn btn-primary">Delete</button>
+                </form>
+            </t>
+        </template>
+                
+        <template id="achievement" name="Achievements">
+            <t t-call="portal.portal_layout">
+                <t t-if="partner_id.achievement_ids" t-call="matakarir.achievement_table"/>
+                <h1 t-if="achievement_id" class="mt0">Edit Achievement</h1>
+                <h1 t-else="" class="mt0">New Achievement</h1>
+                <form t-attf-action="/save/achievement" method="post" role="form" class="tag_text js_website_submit_form">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <input t-if="achievement_id" type="hidden" name="achievement_id" t-att-value="achievement_id.id"/>
+                    <p t-call="matakarir.achievement_form"/>
+                    <div align="center">
+                        <a href="/my/home" class="btn btn-default">Cancel</a>
+                        <button type="submit" t-attf-class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </t>
+        </template>
+        
+        <template id="achievement_form">
+            <table class="table">
+                <tr>
+                    <td><strong>Achievement</strong></td>
+                    <td t-if="achievement_id"><input type="text" name="name" class="form-control" t-att-value="achievement_id.name or name" /></td>
+                    <td t-else=""><input type="text" name="name" class="form-control" /></td>
+                </tr>
+                <tr>
+                    <td><strong>Description</strong></td>
+                    <td>
+                        <textarea class="form-control" name="description"><t t-if="achievement_id" t-esc="achievement_id.description or description" /></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Since</strong></td>
+                    <td t-if="achievement_id"><input type="date" name="since" class="form-control fa fa-calendar" t-att-value="achievement_id.since or since" required="required" /></td>
+                    <td t-else=""><input type="date" name="since" class="form-control fa fa-calendar" /></td>
+                </tr>
+            </table>
+        </template>
+        
+        <template id="delete_achievement" name="Delete Achievement">
+            <t t-call="portal.portal_layout">
+                <h1 class="mt0">Delete Achievement</h1>
+                <form t-attf-action="/delete/achievement" method="post" role="form" class="tag_text js_website_submit_form">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <input type="hidden" name="achievement_id" t-att-value="achievement_id.id"/>
+                    <table class="table table-striped table-condensed well well-lg">
+                        <tr>
+                            <td><strong>Achievement</strong></td>
+                            <td><span t-field="achievement_id.name"/></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Description</strong></td>
+                            <td><span t-field="achievement_id.description"/></td>
+                        </tr>
+                    </table>
+                    <h1 class="mt0">Are You sure?</h1>
+                    <a href="/my/home" class="btn btn-default">Cancel</a>
+                    <button type="submit" t-attf-class="btn btn-primary">Delete</button>
+                </form>
+            </t>
+        </template>
+                
+    </data>
+</odoo>

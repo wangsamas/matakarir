@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="new_vacancy" model="mail.template">
+        <field name="name">New Vacancy</field>
+        <field name="model_id" ref="hr.model_hr_job"/>
+        <field name="email_from"><![CDATA["${object.company_id.name|safe}" <${(object.company_id.email)|safe}>]]></field>
+        <field name="email_to">${object.user_id.email|safe}</field>
+        <field name="subject"><![CDATA[New Vacancy: ${object.name}]]></field>
+        <field name="body_html"><![CDATA[
+<div style="padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777">
+    <p>Dear ${object.user_id.name},</p>
+    <p>Your new vacancy: ${object.name}, can be viewed by this link</p>
+    <div style="text-align: center; margin-top: 16px;">
+        <a href="https://matakarir.com/jobs/detail/${object.id}" style="padding: 5px 10px; font-size: 12px; line-height: 18px; color: #FFFFFF; border-color:#875A7B; text-decoration: none; display: inline-block; margin-bottom: 0px; font-weight: 400; text-align: center; vertical-align: middle; cursor: pointer; white-space: nowrap; background-image: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius:3px">View vacancy</a>
+    </div>
+    <p>If you do not expect this, you can safely ignore this email.</p>
+    <p>Best regards,</p>
+</div>
+<div style="padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777">
+    <p style="font-size: 11px; margin-top: 10px;">
+        <a href="www.matakarir.com"><img src="/logo.png" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${object.company_id.name}"></a>
+    </p>
+</div>]]>
+        </field>
+    </record>
+
+    <record id="testingmail" model="mail.template">
+        <field name="name">Testing email</field>
+        <field name="model_id" ref="hr.model_hr_job"/>
+        <field name="email_from"><![CDATA["${object.company_id.name|safe}" <${(object.company_id.email)|safe}>]]></field>
+        <field name="email_to">${object.user_id.email|safe}</field>
+        <field name="subject"><![CDATA[New Vacancy: ${object.name}]]></field>
+        <field name="body_html"><![CDATA[
+<div style="padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777">
+    <p>Dear ${object.user_id.name},${ctx['hr_user'].name}</p>
+    <p>There is a new unpublished vacancy: ${object.name}.</p>
+    <div style="text-align: center; margin-top: 16px;">
+        <a href="https://matakarir.com/jobs/detail/${object.id}" style="padding: 5px 10px; font-size: 12px; line-height: 18px; color: #FFFFFF; border-color:#875A7B; text-decoration: none; display: inline-block; margin-bottom: 0px; font-weight: 400; text-align: center; vertical-align: middle; cursor: pointer; white-space: nowrap; background-image: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius:3px">View application</a>
+    </div>
+    <p>If you do not expect this, you can safely ignore this email.</p>
+    <p>Best regards,</p>
+</div>
+<div style="padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777">
+    <p style="font-size: 11px; margin-top: 10px;">
+        <a href="www.matakarir.com"><img src="/logo.png" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${object.company_id.name}"></a>
+    </p>
+</div>]]>
+        </field>
+    </record>
+
+    <record id="email_applied" model="mail.template">
+        <field name="name">Job Applied</field>
+        <field name="model_id" ref="hr_apply.model_hr_apply_applicant"/>
+        <field name="email_from"><![CDATA["${object.job_id.company_id.name|safe}" <${(object.job_id.company_id.email)|safe}>]]></field>
+        <field name="email_to">${object.job_owner_id.email|safe}</field>
+        <field name="subject"><![CDATA[New applicant: ${object.name}]]></field>
+        <field name="body_html"><![CDATA[
+<div style="padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777">
+    <p>Dear ${object.job_owner_id.name},</p>
+    <p>You have a new application for ${object.job_id.name}.</p>
+    <div style="text-align: center; margin-top: 16px;">
+        <a href="https://matakarir.com/application/${object.id}" style="padding: 5px 10px; font-size: 12px; line-height: 18px; color: #FFFFFF; border-color:#875A7B; text-decoration: none; display: inline-block; margin-bottom: 0px; font-weight: 400; text-align: center; vertical-align: middle; cursor: pointer; white-space: nowrap; background-image: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius:3px">View application</a>
+    </div>
+    <p>If you do not expect this, you can safely ignore this email.</p>
+    <p>Best regards,</p>
+</div>
+<div style="padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777">
+    <p style="font-size: 11px; margin-top: 10px;">
+        <a href="www.matakarir.com"><img src="/logo.png" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${object.job_id.company_id.name}"></a>
+    </p>
+</div>]]>
+        </field>
+    </record>
+
+    <record id="email_rejected" model="mail.template">
+        <field name="name">Application Rejected</field>
+        <field name="model_id" ref="hr_apply.model_hr_apply_applicant"/>
+        <field name="email_from"><![CDATA["${object.job_id.company_id.name|safe}" <${(object.job_id.company_id.email)|safe}>]]></field>
+        <field name="email_to">${object.partner_id.email|safe}</field>
+        <field name="subject"><![CDATA[Information: ${object.name}]]></field>
+        <field name="body_html"><![CDATA[
+<div style="padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777">
+    <p>Dear ${object.partner_id.name},</p>
+    <p>We appreciate that you are interested to apply ${object.job_id.name}.</p>
+    <p>After reviewing your submitted application, the job owner have decided that your qualifications is not suit for the job and we have to decline your application.</p>
+
+    <p>We encourage you to search and apply for other jobs in our list, and use our tools to help you find jobs that suit your qualifications.</p>
+    <p>Best regards,</p>
+</div>
+<div style="padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777">
+    <p style="font-size: 11px; margin-top: 10px;">
+        <a href="www.matakarir.com"><img src="/logo.png" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${object.job_id.company_id.name}"></a>
+    </p>
+</div>]]>
+        </field>
+    </record>
+
+    <record id="email_hired" model="mail.template">
+        <field name="name">Application Hired</field>
+        <field name="model_id" ref="hr_apply.model_hr_apply_applicant"/>
+        <field name="email_from"><![CDATA["${object.job_id.company_id.name|safe}" <${(object.job_id.company_id.email)|safe}>]]></field>
+        <field name="email_to">${object.partner_id.email|safe}</field>
+        <field name="subject"><![CDATA[Congratulation: ${object.name}]]></field>
+        <field name="body_html"><![CDATA[
+<div style="padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777">
+    <p>Dear ${object.partner_id.name},</p>
+    <p>We are happy to inform you that your application: ${object.job_id.name} is succeed.</p>
+    <p>You are hired !</p>
+    <p>Please contact the employer for further instruction<p>
+    <div style="text-align: center; margin-top: 16px;">
+        <a href="https://matakarir.com/application/${object.id}" style="padding: 5px 10px; font-size: 12px; line-height: 18px; color: #FFFFFF; border-color:#875A7B; text-decoration: none; display: inline-block; margin-bottom: 0px; font-weight: 400; text-align: center; vertical-align: middle; cursor: pointer; white-space: nowrap; background-image: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius:3px">View application</a>
+    </div>
+    <p>Best regards,</p>
+</div>
+<div style="padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777">
+    <p style="font-size: 11px; margin-top: 10px;">
+        <a href="www.matakarir.com"><img src="/logo.png" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${object.job_id.company_id.name}"></a>
+    </p>
+</div>]]>
+        </field>
+    </record>
+
+    <record id="email_employer_response" model="mail.template">
+        <field name="name">Employer Responded</field>
+        <field name="model_id" ref="hr_apply.model_hr_apply_applicant"/>
+        <field name="email_from"><![CDATA["${object.job_id.company_id.name|safe}" <${(object.job_id.company_id.email)|safe}>]]></field>
+        <field name="email_to">${object.partner_id.email|safe}</field>
+        <field name="subject"><![CDATA[Application Response: ${object.name}]]></field>
+        <field name="body_html"><![CDATA[
+<div style="padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777">
+    <p>Dear ${object.partner_id.name},</p>
+    <p>You have new response for your application: ${object.job_id.name}.</p>
+    <div style="text-align: center; margin-top: 16px;">
+        <a href="https://matakarir.com/application/${object.id}" style="padding: 5px 10px; font-size: 12px; line-height: 18px; color: #FFFFFF; border-color:#875A7B; text-decoration: none; display: inline-block; margin-bottom: 0px; font-weight: 400; text-align: center; vertical-align: middle; cursor: pointer; white-space: nowrap; background-image: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius:3px">View application</a>
+    </div>
+    <p>Please click the link above to give your response.</p>
+    <p>Best regards,</p>
+</div>
+<div style="padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777">
+    <p style="font-size: 11px; margin-top: 10px;">
+        <a href="www.matakarir.com"><img src="/logo.png" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${object.job_id.company_id.name}"></a>
+    </p>
+</div>]]>
+        </field>
+    </record>
+
+    <record id="email_applicant_response" model="mail.template">
+        <field name="name">Applicant Responded</field>
+        <field name="model_id" ref="hr_apply.model_hr_apply_applicant"/>
+        <field name="email_from"><![CDATA["${object.job_id.company_id.name|safe}" <${(object.job_id.company_id.email)|safe}>]]></field>
+        <field name="email_to">${object.job_owner_id.email|safe}</field>
+        <field name="subject"><![CDATA[Applicant Response: ${object.name}]]></field>
+        <field name="body_html"><![CDATA[
+<div style="padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777">
+    <p>Dear ${object.job_owner_id.name},</p>
+    <p>You have new response for: ${object.job_id.name}.</p>
+    <div style="text-align: center; margin-top: 16px;">
+        <a href="https://matakarir.com/application/${object.id}" style="padding: 5px 10px; font-size: 12px; line-height: 18px; color: #FFFFFF; border-color:#875A7B; text-decoration: none; display: inline-block; margin-bottom: 0px; font-weight: 400; text-align: center; vertical-align: middle; cursor: pointer; white-space: nowrap; background-image: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius:3px">View application</a>
+    </div>
+    <p>Please click the link above to view.</p>
+    <p>Best regards,</p>
+</div>
+<div style="padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777">
+    <p style="font-size: 11px; margin-top: 10px;">
+        <a href="www.matakarir.com"><img src="/logo.png" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${object.job_id.company_id.name}"></a>
+    </p>
+</div>]]>
+        </field>
+    </record>
+
+</odoo>

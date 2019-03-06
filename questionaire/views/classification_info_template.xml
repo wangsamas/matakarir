@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="classification_info" name="Classification Info">
+        <t t-call="portal.portal_layout">
+            <div class="well bg-beta">
+                <h2 class="page-header"><b><t t-esc="classification.title"/></b></h2>
+            </div>
+            <div>
+                <tr>Your match with this classification : </tr>
+                <tr>
+                    <t t-set="val_integer" t-value="int(classification_score.score)"/>
+                    <t t-set="val_decimal" t-value="classification_score.score - val_integer"/>
+                    <div class="o_website_rating_static">
+                        <t t-foreach="val_integer" t-as="num">
+                            <i class="fa fa-star"></i>
+                        </t>
+                        <t t-if="val_decimal">
+                            <i class="fa fa-star-half-o"></i>
+                        </t>
+                    </div>
+                </tr>
+            </div><br/>
+            <div t-field="classification.description"/>
+            <div class="col-md-12 oe_structure"/>
+        </t>
+    </template>
+</odoo>

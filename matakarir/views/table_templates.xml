@@ -1,0 +1,343 @@
+<odoo>
+    <data>
+        <template id="tool_table">
+            <table class="table table-striped" t-if="user_id.partner_id and user_id.partner_id.tools_ids">
+              <t t-foreach="user_id.partner_id.tools_ids" t-as="line">
+                  <tr>
+                    <td class='td-name'>
+                        <span t-field="line.tooltype_id.name"/> <span t-field="line.name"/>
+                    </td>
+                    <td align="right">
+                      <a t-attf-href="/delete/tool/#{line.id}"> <small><i class='fa fa-trash-o'></i> Delete</small></a>
+                    </td>
+                  </tr>
+              </t>
+            </table>
+        </template>
+
+        <template id="reference_table">
+          <table class="table table-striped" id="reference_list" t-if="user_id.partner_id and user_id.partner_id.reference_ids">
+              <t t-foreach="user_id.partner_id.reference_ids" t-as="line">
+                  <tr>
+                    <td class='td-name'>
+                        <span t-field="line.name"/> (<span t-field="line.relation_id.name"/>)<br />
+                        <span t-field="line.email"/>, <span t-field="line.phone"/>
+                    </td>
+                    <td align="right">
+                      <a t-attf-href="/edit/reference/#{line.id}"> <small><i class='fa fa-edit'></i> Modify</small></a><br/>
+                      <a t-attf-href="/delete/reference/#{line.id}"> <small><i class='fa fa-trash-o'></i> Delete</small></a>
+                    </td>
+                  </tr>
+              </t>
+          </table>
+        </template>
+
+        <template id="allergy_table">
+          <table class="table table-striped" id="allergy_list" t-if="user_id.partner_id and user_id.partner_id.allergy_ids">
+              <t t-foreach="user_id.partner_id.allergy_ids" t-as="line">
+                  <tr>
+                    <td class='td-name'>
+                        <span t-field="line.name"/>
+                    </td>
+                    <td align="right">
+                      <a t-attf-href="/delete/allergy/#{line.id}"> <small><i class='fa fa-trash-o'></i> Delete</small></a>
+                    </td>
+                  </tr>
+              </t>
+          </table>
+        </template>
+        <template id="hobby_table">
+          <table class="table table-striped" id="hobby_list" t-if="user_id.partner_id and user_id.partner_id.hobby_ids">
+              <t t-foreach="user_id.partner_id.hobby_ids" t-as="line">
+                  <tr>
+                    <td class='td-name'>
+                        <span t-field="line.name"/>
+                    </td>
+                    <td align="right">
+                      <a t-attf-href="/delete/hobby/#{line.id}"> <small><i class='fa fa-trash-o'></i> Delete</small></a>
+                    </td>
+                  </tr>
+              </t>
+          </table>
+        </template>
+        
+        <template id="achievement_table">
+          <table class="table table-striped" id="achievement_list" t-if="user_id.partner_id and user_id.partner_id.achievement_ids">
+              <t t-foreach="user_id.partner_id.achievement_ids" t-as="line">
+                  <tr>
+                    <td class='td-name'>
+                        <span t-field="line.name"/> (<span t-field="line.since"/>)<br/>
+						<span t-field="line.description"/>
+                    </td>
+                    <td align="right">
+                      <a t-attf-href="/edit/achievement/#{line.id}"> <small><i class='fa fa-edit'></i> Modify</small></a><br/>
+                      <a t-attf-href="/delete/achievement/#{line.id}"> <small><i class='fa fa-trash-o'></i> Delete</small></a>
+                    </td>
+                  </tr>
+              </t>
+          </table>
+        </template>
+        <template id="driving_lisence_table">
+          <table class="table table-striped" id="drivinglisence_list" t-if="user_id.partner_id and user_id.partner_id.driving_lisence_ids">
+              <t t-foreach="user_id.partner_id.driving_lisence_ids" t-as="line">
+                  <tr>
+                    <td class='td-name'>
+                        <span t-field="line.lisence_type_id.name"/> <span t-if="line.number">: <span t-field="line.number"/></span><br/>
+						<span t-field="line.lisence_type_id.country_id"/>(<span t-field="line.since"/> - <span t-field="line.until"/>)
+                    </td>
+                    <td align="right">
+                      <a t-attf-href="/edit/driving_lisence/#{line.id}"> <small><i class='fa fa-edit'></i> Modify</small></a><br/>
+                      <a t-attf-href="/delete/driving_lisence/#{line.id}"> <small><i class='fa fa-trash-o'></i> Delete</small></a>
+                    </td>
+                  </tr>
+              </t>
+          </table>
+        </template>
+        <template id="lisence_table">
+          <table class="table table-striped" id="lisence_list" t-if="user_id.partner_id and user_id.partner_id.lisence_ids">
+              <t t-foreach="user_id.partner_id.lisence_ids" t-as="line">
+                  <tr>
+                    <td class='td-name'>
+                        <span t-field="line.name"/> <t t-if="line.number">: <span t-field="line.number"/></t>  by <span t-field="line.lisence_id.publisher_id"/>, <span t-field="line.lisence_id.country_id"/><br/>
+                        <span t-field="line.since"/> - <span t-field="line.until"/> (<span t-field="line.status"/>)
+                    </td>
+                    <td align="right">
+                      <a t-attf-href="/edit/lisence/#{line.id}"> <small><i class='fa fa-edit'></i> Modify</small></a><br/>
+                      <a t-attf-href="/delete/lisence/#{line.id}"> <small><i class='fa fa-trash-o'></i> Delete</small></a>
+                    </td>
+                  </tr>
+              </t>
+          </table>
+        </template>
+        <template id="crime_table">
+          <table class="table table-striped" id="crime_list" t-if="user_id.partner_id and user_id.partner_id.crime_ids">
+              <t t-foreach="user_id.partner_id.crime_ids" t-as="line">
+                  <tr>
+                    <td class='td-name'>
+                        <span t-field="line.name"/> in <span t-field="line.since"/> (<span t-field="line.status"/>)
+                    </td>
+                    <td align="right">
+                      <a t-attf-href="/delete/crime/#{line.id}"> <small><i class='fa fa-trash-o'></i> Delete</small></a>
+                    </td>
+                  </tr>
+              </t>
+          </table>
+        </template>
+        <template id="medical_table">
+          <table class="table table-striped" id="medical_list" t-if="user_id.partner_id and user_id.partner_id.medical_ids">
+              <t t-foreach="user_id.partner_id.medical_ids" t-as="line">
+                  <tr>
+                    <td class='td-name'>
+                        <span t-field="line.name"/> since <span t-field="line.since"/><br/>
+                        <span t-field="line.description"/> (<span t-field="line.status"/>)
+                    </td>
+                    <td align="right">
+                      <a t-attf-href="/edit/medical/#{line.id}"> <small><i class='fa fa-edit'></i> Modify</small></a><br/>
+                      <a t-attf-href="/delete/medical/#{line.id}"> <small><i class='fa fa-trash-o'></i> Delete</small></a>
+                    </td>
+                  </tr>
+              </t>
+          </table>
+        </template>
+        <template id="skill_table">
+          <table class="table table-striped" id="skill_list" t-if="user_id.partner_id and user_id.partner_id.skill_ids">
+              <t t-foreach="user_id.partner_id.skill_ids" t-as="line">
+                  <tr>
+                    <td class='td-name'>
+                      <span t-field="line.name"/>
+                    </td>
+                    <td class='td-level'>
+                      <span t-field="line.level"/> 
+                    </td>
+                    <td align="right">
+                      <a t-attf-href="/edit/skill/#{line.id}"> <small><i class='fa fa-edit'></i> Modify</small></a><br/>
+                      <a t-attf-href="/delete/skill/#{line.id}"> <small><i class='fa fa-trash-o'></i> Delete</small></a>
+                    </td>
+                  </tr>
+              </t>
+          </table>
+        </template>
+        <template id="computer_skill_table">
+          <table class="table table-striped" id="comskill_list" t-if="user_id.partner_id and user_id.partner_id.comskill_ids">
+              <t t-foreach="user_id.partner_id.comskill_ids" t-as="line">
+                  <tr>
+                    <td class='td-name'>
+                      <span t-field="line.name"/>
+                    </td>
+                    <td class='td-level'>
+                      <span t-field="line.level"/> 
+                    </td>
+                    <td align="right">
+                      <a t-attf-href="/edit/comskill/#{line.id}"> <small><i class='fa fa-edit'></i> Modify</small></a><br/>
+                      <a t-attf-href="/delete/comskill/#{line.id}"> <small><i class='fa fa-trash-o'></i> Delete</small></a>
+                    </td>
+                  </tr>
+              </t>
+          </table>
+        </template>
+        <template id="language_skill_table">
+          <table class="table table-striped" id="langskill_list" t-if="user_id.partner_id and user_id.partner_id.langskill_ids">
+              <t t-foreach="user_id.partner_id.langskill_ids" t-as="line">
+                  <tr>
+                    <td class='td-name'>
+                      <span t-field="line.name"/> (listening)<br/>
+                      <span t-field="line.name"/> (speaking)<br/>
+                      <span t-field="line.name"/> (reading)<br/>
+                      <span t-field="line.name"/> (writing)
+                    </td>
+                    <td class='td-listenskill'>
+                      <span t-field="line.listenskill"/><br/> 
+                      <span t-field="line.speakskill"/><br/>
+                      <span t-field="line.readskill"/><br/>
+                      <span t-field="line.writeskill"/>
+                    </td>
+                    <td align="right">
+                      <a t-attf-href="/edit/langskill/#{line.id}"> <small><i class='fa fa-edit'></i> Modify</small></a><br/>
+                      <a t-attf-href="/delete/langskill/#{line.id}"> <small><i class='fa fa-trash-o'></i> Delete</small></a>
+                    </td>
+                  </tr>
+              </t>
+          </table>
+        </template>
+        <template id="certificate_table">
+          <table class="table table-striped" id="certificate_list" t-if="user_id.partner_id and user_id.partner_id.certificate_ids">
+              <t t-foreach="user_id.partner_id.certificate_ids" t-as="line">
+                  <tr>
+                    <td class='td-title'>
+                      <span t-field="line.name"/> by <span t-field="line.certificate_id.publisher_id.name"/>, <span t-field="line.certificate_id.country_id"/> (<span t-field="line.since"/>)<br/>
+                       Certificate number: <span t-field="line.number"/> 
+                    </td>
+                    <td align="right">
+                      <a t-attf-href="/edit/certificate/#{line.id}"> <small><i class='fa fa-edit'></i> Modify</small></a><br/>
+                      <a t-attf-href="/delete/certificate/#{line.id}"> <small><i class='fa fa-trash-o'></i> Delete</small></a>
+                    </td>
+                  </tr>
+              </t>
+          </table>
+        </template>
+        <template id="award_table">
+          <table class="table table-striped" id="award_list" t-if="user_id.partner_id and user_id.partner_id.award_ids">
+              <t t-foreach="user_id.partner_id.award_ids" t-as="line">
+                  <tr>
+                    <td class='td-award'>
+                        <span t-field="line.title"/> by <span t-field="line.awarder_id.name"/>,
+                        <span t-if="line.awarder_id.city_id" t-field="line.awarder_id.city_id">, </span>
+                        <span t-field="line.awarder_id.country_id"/> (<span t-field="line.since"/>)
+                    </td>
+                    <td align="right">
+                      <a t-attf-href="/edit/award/#{line.id}"> <small><i class='fa fa-edit'></i> Modify</small></a><br/>
+                      <a t-attf-href="/delete/award/#{line.id}"> <small><i class='fa fa-trash-o'></i> Delete</small></a>
+                    </td>
+                  </tr>
+              </t>
+          </table>
+        </template>
+        <template id="organization_table">
+          <table class="table table-striped table-condensed well well-lg" id="organization_list" t-if="user_id.partner_id and user_id.partner_id.organization_ids">
+                  <t t-foreach="user_id.partner_id.organization_ids" t-as="line">
+                      <tr>
+                        <td class='td-stage'>
+                            <b><span t-field="line.role"/> <span t-field="line.name"/> </b><t t-if="line.organization_id.city_id"><span t-field="line.organization_id.city_id" /> </t> 
+                            <span t-field="line.organization_id.country_id"/> <br/>
+                            <t t-if="line.status"><span t-field="line.role_description"/> <br/></t>
+                            <t t-if="line.organization_id.description"><span t-field="line.organization_id.description" /><br/></t>
+                            <span t-field="line.since"/> - <span t-field="line.until"/>
+                            <t t-if="line.status"> (<span t-field="line.status"/>)</t>
+                            <span t-if="line.volunteer"> (Volunteer) </span>
+                        </td>
+                        <td align="right">
+                          <a t-attf-href="/edit/organization/#{line.id}"> <small><i class='fa fa-edit'></i> Modify</small></a><br/>
+                          <a t-attf-href="/delete/organization/#{line.id}"> <small><i class='fa fa-trash-o'></i> Delete</small></a>
+                        </td>
+                      </tr>
+                  </t>
+          </table>
+        </template>
+        <template id="training_table">
+        <table class="table table-striped table-condensed well well-lg" id="training_list" t-if="user_id.partner_id and user_id.partner_id.training_ids">
+                <t t-foreach="user_id.partner_id.training_ids" t-as="line">
+                    <tr>
+                      <td class='td-training'>
+                        <span t-field="line.title"/> by <span t-field="line.trainer_id.name"/> <span t-if="line.trainer_id.city_id" t-field="line.trainer_id.city_id">, </span>
+                        <span t-field="line.trainer_id.country_id"/><br/>
+                        <span t-field="line.since"/> - <span t-field="line.until"/> (<span t-field="line.status"/>)<br/>
+                        Score: <span t-field="line.score"/> <span t-if="line.schollarship">(Schollarship)</span>  
+                      </td>
+                      <td align="right">
+                        <a t-attf-href="/edit/training/#{line.id}"> <small><i class='fa fa-edit'></i> Modify</small></a><br/>
+                        <a t-attf-href="/delete/training/#{line.id}"> <small><i class='fa fa-trash-o'></i> Delete</small></a>
+                      </td>
+                    </tr>
+                </t>
+        </table>
+        </template>
+        <template id="school_table">
+        <table class="table table-striped table-condensed well well-lg" id="school_list" t-if="user_id.partner_id and user_id.partner_id.school_ids">
+                <t t-foreach="user_id.partner_id.school_ids" t-as="line">
+                    <tr>
+                      <td class='td-stage'>
+                        <span t-field="line.name"/> (<span t-field="line.stage_id"/> )<br/>
+                        <span t-if="line.school_id.city_id" t-field="line.school_id.city_id">, </span>
+                        <span t-field="line.school_id.country_id"/><br/>
+                        <span t-field="line.since"/> - <span t-field="line.until"/> (<span t-field="line.status"/>)<br/>
+                        Score: <span t-field="line.score"/> <span t-if="line.schollarship">(Schollarship)</span>
+                      </td>
+                      <td align="right">
+                        <a t-attf-href="/edit/school/#{line.id}"> <small><i class='fa fa-edit'></i> Modify</small></a><br/>
+                        <a t-attf-href="/delete/school/#{line.id}"> <small><i class='fa fa-trash-o'></i> Delete</small></a>
+                      </td>
+                    </tr>
+                </t>
+        </table>
+        </template>
+        <template id="university_table">
+        <table class="table table-striped table-condensed well well-lg" id="university_list" t-if="user_id.partner_id and user_id.partner_id.university_ids">
+                <t t-foreach="user_id.partner_id.university_ids" t-as="line">
+                    <tr>
+                      <td class='td-degree'>
+                        <span t-field="line.degree_id"/> <span t-field="line.faculty_id"/> <span t-field="line.major_id"/><br/>
+                        <span t-field="line.name"/> <span t-if="line.university_id.city_id" t-field="line.university_id.city_id">, </span>
+                        <span t-field="line.university_id.country_id"/><br/>
+                        <span t-field="line.since"/> - <span t-field="line.until"/> (<span t-field="line.status"/>)<br/>
+                        Score: <span t-field="line.score"/> <span t-if="line.schollarship">(Schollarship)</span>
+                      </td>
+                      <td align="right">
+                        <a t-attf-href="/edit/university/#{line.id}"> <small><i class='fa fa-edit'></i> Modify</small></a><br/>
+                        <a t-attf-href="/delete/university/#{line.id}"> <small><i class='fa fa-trash-o'></i> Delete</small></a>
+                      </td>
+                    </tr>
+                </t>
+        </table>
+        </template>
+        <template id="experience_table">
+        <table class="table table-striped table-condensed well well-lg" id="experience_list" t-if="user_id.partner_id and user_id.partner_id.experience_ids">
+                <t t-foreach="user_id.partner_id.experience_ids" t-as="line">
+                    <tr>
+                      <td class='td-name'>
+                          <b><span t-field="line.job_name"/></b><br/>
+                          <t t-if="line.level_id"><span t-field="line.level_id"> </span></t>
+                          <t t-if="line.department_id"><span t-field="line.department_id"/></t>
+                          <t t-if="line.e_status_id"> (<span t-field="line.e_status_id"/>)<br/></t>
+                          <span t-if="line.description" t-field="line.description"/><br/>
+                          <b><span t-field="line.name"/> </b>
+                          <span t-if="line.company_id.city_id" t-field="line.company_id.city_id">, </span>
+                          <span t-field="line.company_id.country_id"/> <span t-field="line.company_id.phone"/><br/>
+                          <span t-field="line.since"/> - <span t-field="line.until"/>
+                          <t t-if="line.status"> (<span t-field="line.status"/>)</t><br/>
+                          <span><b>Salary: </b></span>
+                          <span t-field="line.salary"/><br/>
+                          <span t-if="line.allowance"><b>Allowance: </b></span>
+                          <span t-if="line.allowance" t-field="line.allowance"/><br/>
+                          <span t-if="line.bonus"><b>Bonus: </b></span>
+                          <span t-if="line.bonus" t-field="line.bonus"/>
+                      </td>
+                      <td align="right">
+                        <a t-attf-href="/edit/experience/#{line.id}"> <small><i class='fa fa-edit'></i> Modify</small></a><br/>
+                        <a t-attf-href="/delete/experience/#{line.id}"> <small><i class='fa fa-trash-o'></i> Delete</small></a>
+                      </td>
+                    </tr>
+                </t>
+        </table>
+        </template>
+    </data>
+</odoo>

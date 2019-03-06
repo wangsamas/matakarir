@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="my_activities_frontend" inherit_id="portal.frontend_layout">
+        <xpath expr="//li[@id='my_home']" position="before">
+            <li id="my_activities" t-ignore="true" t-if="not user_id._is_public()"><a href="/my/activities" class="nav-link" role="menuitem">My Activities</a></li>
+        </xpath>
+    </template>
+	
+    <template id="activities_layout" name="Activities Layout">
+        <t t-call="hr_apply.my_activities_frontend">
+            <div class="container mt16 o_portal">
+                <div class="oe_structure">
+                    <div t-if="not no_breadcrumbs" class="row">
+                        <div class="col-sm-12">
+                            <ol class="breadcrumb o_portal_submenu">
+                                <li><a href="/my/activities"><i class="fa fa-home"/></a></li>
+                                <li t-if="page_name == 'my_activities'">My Activities</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="wrap" class='o_portal_wrap'>
+                <div class="container mb64">
+                    <t t-if="page_name == 'my_activities'">
+                        <div class="row">
+                            <div id="o_my_sidebar" class="col-md-3 col-lg-offset-1 o_my_sidebar">
+                                <div class="o_portal_my_company">
+                                    <h3 class="page-header">Your Companies </h3>
+                                    <p t-foreach="company_ids" t-as="company" class="page-header">
+                                        <h4><a t-attf-href="/profile/#{company.id}"><div t-field="company.name"/></a></h4>
+                                        <div>
+                                            <t t-if="company.city_id"><span t-field="company.city_id"/>, </t>
+                                            <span t-field="company.country_id"/>
+                                            <t t-if="company.phone">, <span t-field="company.phone"/></t>
+                                        </div>
+                                        <div>
+                                            <a t-attf-href="/edit/company/#{company.id}"> <small><i class='fa fa-edit'></i> Edit</small></a>  
+                                            <a t-attf-href="/delete/company/#{company.id}"> <small><i class='fa fa-trash-o'></i> Delete</small></a>
+                                        </div>
+                                    </p>
+                                    <a t-attf-href="/new/company" class="btn btn-warning btn-sm">Add New Company</a>
+                                </div>
+                            </div>
+                            <div t-attf-class="col-md-9 col-lg-8">
+                                <t t-raw="0"/>
+                            </div>
+                        </div>
+                    </t>
+                    <t t-else="">
+                        <t t-raw="0"/>
+                    </t>
+                </div>
+            </div>
+        </t>
+    </template>
+    
+    <template id="my_activites" name="My Activities">
+        <t t-call="hr_apply.activities_layout">
+            <t t-set="my_activites" t-value="True"/>
+            <div class="o_portal_my_home">
+                <div class="oe_structure" id="oe_structure_portal_my_activities_1"/>
+                <h3 align="right">Your Activities</h3>
+                <div class="o_activities_docs list-group">
+                </div>
+                <p t-call="hr_apply.my_applications" />
+                <p t-call="hr_apply.a_pager" >
+                    <t t-set="classname">float-right</t>
+                </p>
+                <p t-call="hr_apply.my_vacancies" />
+                <p t-call="hr_apply.v_pager" >
+                    <t t-set="classname">float-right</t>
+                </p>
+            </div>
+            <div class="oe_structure" id="oe_structure_portal_my_activities_2"/>
+        </t>
+    </template>
+
+    <template id="v_pager" name="v_pager">
+        <ul t-if="v_pager['page_count'] > 1" t-attf-class="#{ classname or '' } pagination m-0 #{_classes}" t-att-style="style or None">
+            <li t-attf-class="page-item #{'disabled' if v_pager['page']['num'] == 1 else ''}">
+                <a t-att-href=" v_pager['page_previous']['url'] if v_pager['page']['num'] != 1 else None" class="page-link">Prev</a>
+            </li>
+            <t t-foreach="v_pager['pages']" t-as="page">
+                <li t-attf-class="page-item #{'active' if page['num'] == v_pager['page']['num'] else ''}"> 
+                    <a t-att-href="page['url']" class="page-link" t-raw="page['num']"></a></li>
+            </t>
+            <li t-attf-class="page-item #{'disabled' if v_pager['page']['num'] == v_pager['page_count'] else ''}">
+                <a t-att-href="v_pager['page_next']['url'] if v_pager['page']['num'] != v_pager['page_count'] else None" class="page-link">Next</a>
+            </li>
+        </ul>
+    </template>
+    <template id="a_pager" name="a_pager">
+        <ul t-if="a_pager['page_count'] > 1" t-attf-class="#{ classname or '' } pagination m-0 #{_classes}" t-att-style="style or None">
+            <li t-attf-class="page-item #{'disabled' if a_pager['page']['num'] == 1 else ''}">
+                <a t-att-href=" a_pager['page_previous']['url'] if a_pager['page']['num'] != 1 else None" class="page-link">Prev</a>
+            </li>
+            <t t-foreach="a_pager['pages']" t-as="page">
+                <li t-attf-class="page-item #{'active' if page['num'] == a_pager['page']['num'] else ''}"> <a t-att-href="page['url']" class="page-link" t-raw="page['num']"></a></li>
+            </t>
+            <li t-attf-class="page-item #{'disabled' if a_pager['page']['num'] == a_pager['page_count'] else ''}">
+                <a t-att-href="a_pager['page_next']['url'] if a_pager['page']['num'] != a_pager['page_count'] else None" class="page-link">Next</a>
+            </li>
+        </ul>
+    </template>
+
+    <template id="my_vacancies" name="My Vacancies">
+        <table id="vacancies" class="table table-striped">
+            <thead>
+                <tr>
+                    <td><h3>Your Vacancies </h3></td>
+                    <td align="right"><a t-attf-href="/new/vacancy"  class="btn btn-danger btn-sm">Add new Vacancy</a></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr t-if="vacancy_ids" t-foreach="vacancy_ids" t-as="vacancy">
+                    <td>
+                        <h5><a t-attf-href="/vacancy/#{ slug(vacancy) }"><b><span t-field="vacancy.name"/>, <span t-field="vacancy.employer_id"/></b></a></h5>
+                    </td>
+                    <td align="right">
+                        <h5><span t-field="vacancy.views" /> views</h5>
+                        <h5 t-if="len(vacancy.applicant_ids)"><a t-attf-href="/vacancy/#{ slug(vacancy) }/applicants"><span t-esc='len(vacancy.applicant_ids)'/> applicant(s)</a></h5>
+                    </td>
+                </tr>
+                <tr t-else="">
+                    <td><h5>You don't have any vacancy </h5></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </template>
+
+    <template id="my_applications" name="My Applications">
+        <table id="applications" class="table table-striped">
+            <thead>
+                <tr>
+                    <td><h3>Your Applications </h3></td>
+                    <td align="right"><a t-attf-href="/vacancies"  class="btn btn-danger btn-sm">Search new Jobs</a></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr t-if="application_ids" t-foreach="application_ids" t-as="applicant">
+                    <td>
+                        <h5><a t-attf-href="/application/#{ slug(applicant) }"><b><span t-field="applicant.job_id.name"/>, <span t-field="applicant.job_id.employer_id"/></b></a></h5>
+                    </td>
+                    <td align="right">
+                        <h5 t-field="applicant.status" />
+                    </td>
+                </tr>
+                <tr t-else="">
+                    <td><h5>You don't have any vacancy </h5></td>
+                </tr>
+                <tr t-if="partner.failed_application_ids" t-foreach="partner.failed_application_ids" t-as="f">
+                    <td>
+                        <h5><a t-attf-href="/vacancy/#{ slug(f.job_id) }"><b>
+                            <span t-field="f.job_id.name"/>, <span t-field="f.job_id.employer_id"/></b></a></h5>
+                    </td>
+                    <td align="right"><h5>Unfinished</h5></td>
+                </tr>
+            </tbody>
+        </table>
+    </template>
+
+    <template id="applicant_list">
+        <t t-call="hr_apply.activities_layout">
+            <t t-set="additional_title">Job Applicants</t>
+            <div id="wrap" class="container">
+                <h3 class="text-center text-muted page-header">
+                    <span t-field="vacancy.name"/>
+                </h3>
+                <table class="table table-striped table-condensed">
+                    <thead>
+                        <tr>
+                            <th class='td-name'>Applicant</th>
+<!--
+                            <th class='td-phone'>Phone</th>
+-->
+                            <th class='td-criteria'>Criteria Score</th>
+                            <th class='td-requirement'>Requirement Score</th>
+                            <th class='td-total'>Total Score</th>
+                            <th class='td-date'>Apply Date</th>
+                            <th class='td-status'>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                        <t t-foreach="applications" t-as="app">
+                            <tr>
+                                <td class='td-name'>
+                                    <a t-attf-href="/application/#{ slug(app) }"><span t-field="app.name"/></a>
+                                </td>
+<!--
+                                <td class='td-phone'>
+                                    <span t-field="app.partner_id.mobile"/>
+                                </td>
+-->
+                                <td class='td-criteria'>
+                                    <span t-field="app.criteria_score"/> %
+                                </td>
+                                <td class='td-requirement'>
+                                    <span t-field="app.qualification_score"/> %
+                                </td>
+                                <td class='td-requirement'>
+                                    <span t-field="app.total_score"/> %
+                                </td>
+                                <td class='td-date'>
+                                    <span t-field="app.create_date" t-options='{"widget": "date"}'/>
+                                </td>
+                                <td class='td-status'>
+                                    <span t-field="app.status"/>
+                                </td>
+                            </tr>
+                        </t>
+                </table>
+                <t t-call="website.pager" >
+                    <t t-set="classname">float-right</t>
+                </t>
+            </div>
+        </t>
+    </template>
+
+</odoo>

@@ -1,0 +1,2602 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* questionaire
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20181018\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-06 06:31+0000\n"
+"PO-Revision-Date: 2018-12-07 09:40+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: id\n"
+"X-Generator: Poedit 2.2\n"
+
+#. module: questionaire
+#: model:mail.template,body_html:questionaire.email_template_questionaire
+msgid ""
+"\n"
+"                \n"
+"<p>Hello,</p>\n"
+"<p>We are conducting a questionaire, and your response would be appreciated.</p>\n"
+"<p><a style=\"margin-left: 85px; padding:5px 10px; border-radius: 3px; background-color:#875A7B; text-align:center; text-decoration:none; color:#F7FBFD;\" href=\"__URL__\">Please, click here to start questionaire</a></p>\n"
+"<p>Thanks for your participation!</p>\n"
+"                \n"
+"            "
+msgstr ""
+"\n"
+"                \n"
+"<p>Hello,</p>\n"
+"<p>\n"
+"Kami sedang melakukan kuesioner, dan tanggapan Anda akan dihargai.</p>\n"
+"<p><a style=\"margin-left: 85px; padding:5px 10px; border-radius: 3px; background-color:#875A7B; text-align:center; text-decoration:none; color:#F7FBFD;\" href=\"__URL__\">Silakan, klik di sini untuk memulai kuesioner</a></p>\n"
+"<p>Terima kasih atas partisipasi Anda!</p>\n"
+"                "
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_page_tree
+msgid "#Questions"
+msgstr "#Pertanyaan"
+
+#. module: questionaire
+#: code:addons/questionaire/models/questionaire.py:106
+#, python-format
+msgid "%s (copy)"
+msgstr "%s (salin)"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.page
+msgid "&amp;times;"
+msgstr "&amp;waktu;"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.result
+msgid "<b>Question </b>"
+msgstr "<b>Pertanyaan </b>"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_question_form
+msgid "<i class=\"fa fa-2x\">123..</i>"
+msgstr "<i class=\"fa fa-2x\">123..</i>"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.result_matrix
+msgid ""
+"<i class=\"fa fa-bar-chart\"/>\n"
+"                    Graph"
+msgstr ""
+"<i class=\"fa fa-bar-chart\"/>\n"
+"                    Grafik"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.result_choice
+msgid "<i class=\"fa fa-bar-chart-o\"/> Graph"
+msgstr "<i class=\"fa fa-bar-chart-o\"/> Grafik"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.result_choice
+msgid "<i class=\"fa fa-bar-chart-o\"/> Pie Chart"
+msgstr "<i class=\"fa fa-bar-chart-o\"/> Diagram Lingkaran"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_question_form
+msgid "<i class=\"fa fa-check-square-o fa-lg\"/> answer"
+msgstr "<i class=\"fa fa-check-square-o fa-lg\"/> menjawab"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_question_form
+msgid "<i class=\"fa fa-circle-o  fa-lg\"/> answer"
+msgstr "<i class=\"fa fa-circle-o  fa-lg\"/> menjawab"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_question_form
+msgid "<i class=\"fa fa-dot-circle-o fa-lg\"/> answer"
+msgstr "<i class=\"fa fa-dot-circle-o fa-lg\"/> menjawab"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.result_number
+msgid ""
+"<i class=\"fa fa-list-alt\"/>\n"
+"                    All Data"
+msgstr ""
+"<i class=\"fa fa-list-alt\"/>\n"
+"                    Semua data"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.result_matrix
+msgid ""
+"<i class=\"fa fa-list-alt\"/>\n"
+"                    Data"
+msgstr ""
+"<i class=\"fa fa-list-alt\"/>\n"
+"                    Data"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.result_choice
+msgid "<i class=\"fa fa-list-alt\"/> Data"
+msgstr "<i class=\"fa fa-list-alt\"/> Data"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.result_number
+msgid ""
+"<i class=\"fa fa-list-ol\"/>\n"
+"                    Most Common"
+msgstr ""
+"<i class=\"fa fa-list-ol\"/>\n"
+"                    Paling umum"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_question_form
+msgid "<i class=\"fa fa-square-o fa-lg\"/> answer"
+msgstr "<i class=\"fa fa-square-o fa-lg\"/> menjawab"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.result
+msgid "<i class=\"fa fa-times\"/> Clear All Filters"
+msgstr "<i class=\"fa fa-times\"/> Bersihkan Semua Penyaring"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.result
+msgid "<span class=\"fa fa-filter\"/>  Filters"
+msgstr "<span class=\"fa fa-filter\"/>  Penyaring"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.result
+msgid "<span class=\"label label-default only_left_radius filter-all\">All questionaires</span><span class=\"label label-primary only_right_radius filter-finished\">Finished questionaires</span>"
+msgstr "<span class=\"label label-default only_left_radius filter-all\">Semua kuesioner</span><span class=\"label label-primary only_right_radius filter-finished\">Kuesioner selesai</span>"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.result_number
+msgid "<span class=\"label label-default only_left_radius\">Average </span>"
+msgstr "<span class=\"label label-default only_left_radius\">Rata-rata </span>"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.result_number
+msgid "<span class=\"label label-default only_left_radius\">Maximum </span>"
+msgstr "<span class=\"label label-default only_left_radius\">Maksimal </span>"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.result_number
+msgid "<span class=\"label label-default only_left_radius\">Minimum </span>"
+msgstr "<span class=\"label label-default only_left_radius\">Minimal</span>"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.result_number
+msgid "<span class=\"label label-default only_left_radius\">Sum </span>"
+msgstr "<span class=\"label label-default only_left_radius\">Jumlah </span>"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.result
+msgid "<span class=\"label label-primary only_left_radius filter-all\">All questionaires</span><span class=\"label label-default only_right_radius filter-finished\">Finished questionaires</span>"
+msgstr "<span class=\"label label-primary only_left_radius filter-all\">Semua Kuesioner</span><span class=\"label label-default only_right_radius filter-finished\">Kuesioner selesai</span>"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.no_result
+msgid ""
+"<span>\n"
+"                            <i style=\"font-size:1.8em\" class=\"fa fa-users pull-right\"/>\n"
+"                        </span>\n"
+"                        Sorry, No one answered this questionaire yet"
+msgstr ""
+"<span>\n"
+"                            <i style=\"font-size:1.8em\" class=\"fa fa-users pull-right\"/>\n"
+"                        </span>\n"
+"                        Maaf, belum ada yang menjawab pertanyaan ini"
+
+#. module: questionaire
+#: sql_constraint:questionaire.question:0
+msgid "A length must be positive!"
+msgstr ""
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_questionaire__description
+msgid "A long description of the purpose of the questionaire"
+msgstr "Deskripsi tentang tujuan kuesioner"
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_label__quizz_mark
+msgid "A positive score indicates a correct choice; a negative or null score indicates a wrong answer"
+msgstr "Hasil positif menunjukan pilihan yang benar; hasil negatif atau nol menunjukan jawaban salah"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.page
+msgid "A problem has occured"
+msgstr "Masalah terjadi"
+
+#. module: questionaire
+#: code:addons/questionaire/models/questionaireuserinputline.py:58
+#, python-format
+msgid "A question cannot be unanswered and skipped"
+msgstr "Sebuah pertanyaan tidak boleh tidak dijawab dan dilewatkan"
+
+#. module: questionaire
+#: sql_constraint:questionaire.user_input:0
+msgid "A token must be unique!"
+msgstr ""
+
+#. module: questionaire
+#: selection:questionaire.mail.compose.message,moderation_status:0
+msgid "Accepted"
+msgstr "Diterima"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification__message_needaction
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__message_needaction
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method_category__message_needaction
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__message_needaction
+msgid "Action Needed"
+msgstr "Diperlukan Tindakan"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification__active
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__active
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method_category__active
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__active
+msgid "Active"
+msgstr "Aktif"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__active_domain
+msgid "Active domain"
+msgstr "Aktif"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification__activity_ids
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__activity_ids
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method_category__activity_ids
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__activity_ids
+msgid "Activities"
+msgstr "Aktivitasnya"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification__activity_state
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__activity_state
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method_category__activity_state
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__activity_state
+msgid "Activity State"
+msgstr "Provinsi"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__add_sign
+msgid "Add Sign"
+msgstr "Tambah Tanda"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_email_compose_message
+msgid "Add a list of email of recipients (will not be converted into contacts). Separated by commas, semicolons or newline..."
+msgstr "Tambahkan daftar email penerima (tidak akan diubah menjadi kontak). Dipisahkan dengan koma, titik koma atau baris baru ..."
+
+#. module: questionaire
+#: model_terms:ir.actions.act_window,help:questionaire.action_questionaire_form
+msgid "Add a new questionaire"
+msgstr "Tambahkan kuesioner baru"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_email_compose_message
+msgid "Add existing contacts..."
+msgstr "Tambah kontak yang ada..."
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_question_form
+msgid "Allow Comments"
+msgstr "Izinkan Komentar"
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_page__description
+msgid "An introductory text to your page"
+msgstr "Tulisan pembukaan untuk halaman Anda"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_kanban
+msgid "Analyze Answers"
+msgstr "Analisa Jawaban"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.result_choice
+msgid "Answer Choices"
+msgstr "Pilihan Jawaban"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input__type
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input_line__answer_type
+msgid "Answer Type"
+msgstr "Tipe Jawaban"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.result
+msgid "Answered"
+msgstr "Terjawab"
+
+#. module: questionaire
+#: model:ir.actions.act_window,name:questionaire.action_questionaire_user_input
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question__user_input_line_ids
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input__user_input_line_ids
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_form
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_question_form
+msgid "Answers"
+msgstr "Jawaban"
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_mail_compose_message__no_auto_thread
+msgid "Answers do not go in the original document discussion thread. This has an impact on the generated message-id."
+msgstr "Jawaban tidak masuk dalam untaian diskusi dokumen asli. Ini berdampak pada id pesan yang dihasilkan."
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_questionaire_view_search
+msgid "Archived"
+msgstr "Diarsipkan"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification__message_attachment_count
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__message_attachment_count
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method_category__message_attachment_count
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__message_attachment_count
+msgid "Attachment Count"
+msgstr "Jumlah Lampiran"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__attachment_ids
+msgid "Attachments"
+msgstr "Lampiran"
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_mail_compose_message__attachment_ids
+msgid "Attachments are linked to a document through model / res_id and to the message through this field."
+msgstr "Lampiran terhubung ke dokumen melalui model / res_id dan pesan melalui bidang ini."
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__author_id
+msgid "Author"
+msgstr "Penulis"
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_mail_compose_message__author_id
+msgid "Author of the message. If not set, email_from may hold an email address that did not match any partner."
+msgstr "Penulis pesan. Jika tidak disetel, email_from dapat menahan alamat email yang tidak cocok dengan mitra mana pun."
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__author_avatar
+msgid "Author's avatar"
+msgstr "Baground Penulis"
+
+#. module: questionaire
+#: model:ir.model,name:questionaire.model_ir_autovacuum
+msgid "Automatic Vacuum"
+msgstr "Vacuum Otomatis"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.sfinished
+msgid "Back Home"
+msgstr "Kembali ke Kuesioner"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.back
+msgid "Back to Questionaire"
+msgstr "Kembali ke Kuesioner"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_email_compose_message
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_init
+msgid "Cancel"
+msgstr "Batal"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__classification_method_category_id
+msgid "Category of this classification method"
+msgstr "Kategori metode klasifikasi ini"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__channel_ids
+msgid "Channels"
+msgstr "Saluran"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__child_ids
+msgid "Child Messages"
+msgstr "Pesan yang belum dibaca"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_question_form
+msgid "Choices"
+msgstr "Pilihan"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.simple_choice
+msgid "Choose..."
+msgstr "Pilih..."
+
+#. module: questionaire
+#: model:ir.model,name:questionaire.model_questionaire_classification
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_score__classification_id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_classification__classification_id
+#: model:ir.ui.menu,name:questionaire.menu_classification_form
+msgid "Classification"
+msgstr "Klasifikasi"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.classification_score_form
+msgid "Classification Detail"
+msgstr "Detail Klasifikasi"
+
+#. module: questionaire
+#: model:ir.actions.act_window,name:questionaire.action_classification_form
+#: model_terms:ir.ui.view,arch_db:questionaire.classification_form
+#: model_terms:ir.ui.view,arch_db:questionaire.classification_tree
+msgid "Classification Form"
+msgstr "Formulir Klasifikasi"
+
+#. module: questionaire
+#: model:ir.actions.act_window,name:questionaire.action_classification_method_form
+#: model:ir.model,name:questionaire.model_questionaire_classification_method
+#: model:ir.model,name:questionaire.model_questionaire_classification_method_category
+#: model:ir.ui.menu,name:questionaire.menu_classification_method_form
+#: model_terms:ir.ui.view,arch_db:questionaire.classification_method_form
+#: model_terms:ir.ui.view,arch_db:questionaire.classification_method_tree
+msgid "Classification Method"
+msgstr "Metode Klasifikasi"
+
+#. module: questionaire
+#: model:ir.ui.menu,name:questionaire.menu_classification_method_category_form
+msgid "Classification Method Category"
+msgstr "Kategori Metode Klasifikasi"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.classification_method_form
+msgid "Classification Method Title"
+msgstr "Judul Metode Klasifikasi"
+
+#. module: questionaire
+#: model:ir.actions.act_window,name:questionaire.action_classification_score
+#: model:ir.model,name:questionaire.model_questionaire_classification_score
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__classification_score_ids
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_score__score
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__classification_score_ids
+#: model:ir.model.fields,field_description:questionaire.field_res_partner__classification_score_ids
+msgid "Classification Score"
+msgstr "Skor Klasifikasi"
+
+#. module: questionaire
+#: model:ir.ui.menu,name:questionaire.menu_user_classification
+msgid "Classification Scores"
+msgstr "Skor Klasifikasi"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_classification__user_input_line_ids
+msgid "Classification Source"
+msgstr "Sumber Klasifikasi"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.classification_form
+msgid "Classification Title"
+msgstr "Judul Klasifikasi"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_label__classification_id
+msgid "Classification id"
+msgstr "ID klasifikasi"
+
+#. module: questionaire
+#: model:ir.actions.act_window,name:questionaire.action_classification_method_category_form
+#: model_terms:ir.ui.view,arch_db:questionaire.classification_method_category_form
+#: model_terms:ir.ui.view,arch_db:questionaire.classification_method_category_tree
+msgid "Classification method category"
+msgstr "Kategori metode klasifikasi"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.classification_method_category_form
+msgid "Classification method category Title"
+msgstr "Klasifikasi kategori metode Judul"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input_line__classification_id
+msgid "Classification to get the score"
+msgstr "Klasifikasi untuk mendapatkan skor"
+
+#. module: questionaire
+#: model:ir.actions.act_window,name:questionaire.action_questionaire_classification_score
+#: model:ir.actions.act_window,name:questionaire.action_questionaire_user_classification
+#: model:ir.ui.menu,name:questionaire.menu_classification
+#: model_terms:ir.ui.view,arch_db:questionaire.classification_method_form
+msgid "Classifications"
+msgstr "Klasifikasi"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.classification_method_category_form
+msgid "Classifications Methods"
+msgstr "Metode Klasifikasi"
+
+#. module: questionaire
+#: model_terms:ir.actions.act_window,help:questionaire.action_classification_method_form
+msgid "Classify users based on classification method"
+msgstr "Klasifikasikan pengguna berdasarkan metode klasifikasi"
+
+#. module: questionaire
+#: model_terms:ir.actions.act_window,help:questionaire.action_classification_method_category_form
+msgid "Classify users based on classification method category"
+msgstr "Klasifikasikan pengguna berdasarkan kategori metode klasifikasi"
+
+#. module: questionaire
+#: code:addons/questionaire/models/questionaire.py:94
+#, python-format
+msgid "Click here to start questionaire"
+msgstr "Klik di sini untuk memulai kuesioner"
+
+#. module: questionaire
+#: model_terms:ir.actions.act_window,help:questionaire.action_classification_method_category_form
+msgid "Click to add a classification method category."
+msgstr "Klik untuk menambahkan kategori metode klasifikasi."
+
+#. module: questionaire
+#: model_terms:ir.actions.act_window,help:questionaire.action_classification_method_form
+msgid "Click to add a classification method."
+msgstr "Klik untuk menambahkan metode klasifikasi."
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.page
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_email_compose_message
+msgid "Close"
+msgstr "Tutup"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_stage__closed
+msgid "Closed"
+msgstr "Ditutup"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_kanban
+msgid "Color"
+msgstr "Warna"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__color
+msgid "Color Index"
+msgstr "Indeks Warna"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.result_comments
+#: selection:questionaire.mail.compose.message,message_type:0
+msgid "Comment"
+msgstr "Komentar"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question__comment_count_as_answer
+msgid "Comment Field is an Answer Choice"
+msgstr "Bidang Komentar adalah Pilihan Jawaban"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question__comments_message
+msgid "Comment Message"
+msgstr "Pesan Komentar"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_tree
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_user_input_search
+#: selection:questionaire.user_input,state:0
+msgid "Completed"
+msgstr "Selesai"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_email_compose_message
+msgid "Compose Email"
+msgstr "Buat Email"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__composition_mode
+msgid "Composition mode"
+msgstr "Mode Tampilan"
+
+#. module: questionaire
+#: model:ir.ui.menu,name:questionaire.menu_questionaires_configuration
+msgid "Configuration"
+msgstr "Konfigurasi"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_question_form
+msgid "Constraints"
+msgstr "Batasan"
+
+#. module: questionaire
+#: model:ir.model,name:questionaire.model_res_partner
+msgid "Contact"
+msgstr "Kontak"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__body
+msgid "Contents"
+msgstr "Isi"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_email_compose_message
+msgid "Copy and paste the HTML code below to add this web link to any webpage."
+msgstr "Salin dan tempel kode HTML dibawah untuk tambahkan link web ini ke halaman web manapun."
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_email_compose_message
+msgid "Copy, paste and share the web link below to your audience."
+msgstr "Salin, tempel dan bagikan link web dibawah ke pemirsa Anda."
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input_line__date_create
+msgid "Create Date"
+msgstr "Buat Tanggal"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification__create_uid
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__create_uid
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method_category__create_uid
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_score__create_uid
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_label__create_uid
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__create_uid
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_page__create_uid
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question__create_uid
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__create_uid
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_stage__create_uid
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_classification__create_uid
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input__create_uid
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input_line__create_uid
+msgid "Created by"
+msgstr "Dibuat oleh"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification__create_date
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__create_date
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method_category__create_date
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_score__create_date
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_label__create_date
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__create_date
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_page__create_date
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question__create_date
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__create_date
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_stage__create_date
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_classification__create_date
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input__create_date
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input_line__create_date
+msgid "Created on"
+msgstr "Dibuat pada"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input__date_create
+msgid "Creation Date"
+msgstr "Tanggal Pembuatan"
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_mail_compose_message__starred
+msgid "Current user has a starred notification linked to this message"
+msgstr "Pengguna saat ini memiliki pemberitahuan berbintang yang tertaut ke pesan ini"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__date
+#: selection:questionaire.question,type:0
+#: selection:questionaire.user_input_line,answer_type:0
+msgid "Date"
+msgstr "Tanggal"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input_line__value_date
+msgid "Date answer"
+msgstr "Jawaban tanggal"
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_user_input__deadline
+msgid "Date by which the person can open the questionaire and submit answers"
+msgstr "Tanggal dimana orang tersebut dapat membuka kuesioner dan mengirimkan jawaban"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input__deadline
+msgid "Deadline"
+msgstr "Batas waktu"
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_mail_compose_message__date_deadline
+msgid "Deadline to which the invitation to respond for this questionaire is valid. If the field is empty,        the invitation is still valid."
+msgstr "Batas waktu yang diminta undangan untuk menjawab pertanyaan ini valid. Jika bidang kosong, undangan masih berlaku."
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__date_deadline
+msgid "Deadline to which the invitation to respond is valid"
+msgstr "Batas waktu undangan untuk merespons valid"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_kanban
+msgid "Delete"
+msgstr "Hapus"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__auto_delete
+msgid "Delete Emails"
+msgstr "Hapus Email"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__auto_delete_message
+msgid "Delete Message Copy"
+msgstr "Hapus Salinan Pesan"
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_mail_compose_message__auto_delete
+msgid "Delete sent emails (mass mailing only)"
+msgstr "Hapus email terkirim (hanya milis massal)"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification__description
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__description
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method_category__description
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_page__description
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question__description
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__description
+msgid "Description"
+msgstr "Deskripsi"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_kanban
+msgid "Design"
+msgstr "Disain"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_form
+msgid "Design Questionaire"
+msgstr "Kuesioner Desain"
+
+#. module: questionaire
+#: model_terms:ir.actions.act_window,help:questionaire.action_questionaire_form
+msgid "Design easily your questionaire, send invitations to answer by email and analyse answers."
+msgstr "Rancang dengan mudah kuesioner Anda, kirim undangan untuk dijawab melalui email dan analisis jawaban."
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question__display_mode
+msgid "Display Mode"
+msgstr "Mode Tampilan"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification__display_name
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__display_name
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method_category__display_name
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_score__display_name
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_label__display_name
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__display_name
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_page__display_name
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question__display_name
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__display_name
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_stage__display_name
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_classification__display_name
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input__display_name
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input_line__display_name
+msgid "Display Name"
+msgstr "Nama tampilan"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_question_form
+msgid "Display mode"
+msgstr "Mode tampilan"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.my_method_categories
+msgid "Do The Test"
+msgstr "Lakukan Tes"
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_mail_compose_message__auto_delete_message
+msgid "Do not keep a copy of the email in the document communication history (mass mailing only)"
+msgstr "Jangan menyimpan salinan email dalam riwayat komunikasi dokumen (hanya milis massal)"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input__email
+msgid "E-mail"
+msgstr "E-mail"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_form
+msgid "Edit Pages and Questions"
+msgstr "Ubah Halaman dan Pertanyaan"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_kanban
+msgid "Edit Questionaire"
+msgstr "Ubah Questionaire"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_user_input_search
+#: selection:questionaire.mail.compose.message,message_type:0
+msgid "Email"
+msgstr "Email"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__email_template_id
+msgid "Email Template"
+msgstr "Template Email"
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_mail_compose_message__email_from
+msgid "Email address of the sender. This field is set when no matching partner is found and replaces the author_id field in the chatter."
+msgstr "Alamat email pengirim. Bidang ini diatur saat tidak ada mitra yang cocok ditemukan dan menggantikan bidang author_id di obrolan."
+
+#. module: questionaire
+#: model:ir.model,name:questionaire.model_questionaire_mail_compose_message
+msgid "Email composition wizard for Questionaire"
+msgstr "Wizard komposisi email untuk Kuesioner"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question__constr_error_msg
+msgid "Error message"
+msgstr "Pesan eror"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__partner_ids
+msgid "Existing contacts"
+msgstr "Kontak yang ada"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__starred_partner_ids
+msgid "Favorited By"
+msgstr "Difavoritkan oleh"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_stage__fold
+msgid "Folded in kanban view"
+msgstr "Dilipat dalam kartu"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification__message_follower_ids
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__message_follower_ids
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method_category__message_follower_ids
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__message_follower_ids
+msgid "Followers"
+msgstr "Pengikut"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification__message_channel_ids
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__message_channel_ids
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method_category__message_channel_ids
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Pengikut (Saluran)"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification__message_partner_ids
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__message_partner_ids
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method_category__message_partner_ids
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Pengikut (Mitra)"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_question_form
+msgid "Format"
+msgstr "Ukuran"
+
+#. module: questionaire
+#: selection:questionaire.user_input_line,answer_type:0
+msgid "Free Text"
+msgstr "Teks Gratis"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input_line__value_free_text
+msgid "Free Text answer"
+msgstr "Jawaban Tulisan Bebas"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__email_from
+msgid "From"
+msgstr "Dari"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_page_search
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_question_search
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_response_line_search
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_user_input_search
+msgid "Group By"
+msgstr "Dikelompokkan berdasarkan"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__has_error
+#: model:ir.model.fields,help:questionaire.field_questionaire_mail_compose_message__has_error
+msgid "Has error"
+msgstr "Ada kesalahan"
+
+#. module: questionaire
+#: model:ir.module.category,description:questionaire.module_category_questionaire
+msgid "Helps you manage your questionaire for review of different-different users."
+msgstr "Membantu Anda mengelola kuesioner Anda untuk meninjau pengguna yang berbeda-beda."
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification__id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method_category__id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_score__id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_label__id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_page__id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question__id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_stage__id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_classification__id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input__id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input_line__id
+msgid "ID"
+msgstr "ID"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input__token
+msgid "Identification token"
+msgstr "Token pengenal"
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_classification__message_unread
+#: model:ir.model.fields,help:questionaire.field_questionaire_classification_method__message_unread
+#: model:ir.model.fields,help:questionaire.field_questionaire_classification_method_category__message_unread
+#: model:ir.model.fields,help:questionaire.field_questionaire_questionaire__message_unread
+msgid "If checked new messages require your attention."
+msgstr "Jika dicentang, pesan baru membutuhkan perhatian Anda."
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_classification__message_needaction
+#: model:ir.model.fields,help:questionaire.field_questionaire_classification_method__message_needaction
+#: model:ir.model.fields,help:questionaire.field_questionaire_classification_method_category__message_needaction
+#: model:ir.model.fields,help:questionaire.field_questionaire_questionaire__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Jika dicentang, pesan baru membutuhkan perhatian Anda."
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_classification__message_has_error
+#: model:ir.model.fields,help:questionaire.field_questionaire_classification_method__message_has_error
+#: model:ir.model.fields,help:questionaire.field_questionaire_classification_method_category__message_has_error
+#: model:ir.model.fields,help:questionaire.field_questionaire_questionaire__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Jika dicentang, beberapa pesan mengalami kesalahan pengiriman."
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_questionaire__users_can_go_back
+msgid "If checked, users can go back to previous pages."
+msgstr "Jika dicentang, pengguna bisa balik ke halaman sebelumnya."
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_questionaire__is_closed
+#: model:ir.model.fields,help:questionaire.field_questionaire_stage__closed
+msgid "If closed, people won't be able to answer to questionaires in this column."
+msgstr "Jika tertutup, orang tidak akan dapat menjawab kuesioner di kolom ini."
+
+#. module: questionaire
+#: code:addons/questionaire/models/questionairequestion.py:92
+#, python-format
+msgid "If other, please specify:"
+msgstr "Jika lain, sebutkan:"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.sfinished
+msgid "If you wish, you can"
+msgstr "Jika Anda mau, Anda bisa"
+
+#. module: questionaire
+#: code:addons/questionaire/wizard/questionaire_email_compose_message.py:68
+#, python-format
+msgid "Incorrect Email Address: %s"
+msgstr "Alamat Email Tidak Benar:% s"
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_mail_compose_message__parent_id
+msgid "Initial thread message."
+msgstr "Pesan utas awal."
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question__validation_email
+msgid "Input must be an email"
+msgstr "Masukan harus berupa email"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_tree
+msgid "Invitations sent"
+msgstr "Undangan terkirim"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification__message_is_follower
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__message_is_follower
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method_category__message_is_follower
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__message_is_follower
+msgid "Is Follower"
+msgstr "Apakah Pengikut"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__is_closed
+msgid "Is closed"
+msgstr "Ditutup"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__designed
+msgid "Is designed?"
+msgstr "Didisain?"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_label__sequence
+msgid "Label Sequence order"
+msgstr "Label Urutan susunan"
+
+#. module: questionaire
+#: model:ir.actions.act_window,name:questionaire.action_questionaire_label_form
+#: model:ir.ui.menu,name:questionaire.menu_questionaire_label_form1
+msgid "Labels"
+msgstr "Label"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification____last_update
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method____last_update
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method_category____last_update
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_score____last_update
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_label____last_update
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message____last_update
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_page____last_update
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question____last_update
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire____last_update
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_stage____last_update
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_classification____last_update
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input____last_update
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input_line____last_update
+msgid "Last Modified on"
+msgstr "Terakhir diubah pada"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification__write_uid
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__write_uid
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method_category__write_uid
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_score__write_uid
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_label__write_uid
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__write_uid
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_page__write_uid
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question__write_uid
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__write_uid
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_stage__write_uid
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_classification__write_uid
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input__write_uid
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input_line__write_uid
+msgid "Last Updated by"
+msgstr "Terakhir diperbaharui oleh"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification__write_date
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__write_date
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method_category__write_date
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_score__write_date
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_label__write_date
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__write_date
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_page__write_date
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question__write_date
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__write_date
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_stage__write_date
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_classification__write_date
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input__write_date
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input_line__write_date
+msgid "Last Updated on"
+msgstr "Terakhir diperbaharui pada"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input__last_displayed_page_id
+msgid "Last displayed page"
+msgstr "Halaman dilihat terakhir"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_questionaire_view_search
+msgid "Late Activities"
+msgstr "Aktifitas terakhir"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__layout
+msgid "Layout"
+msgstr "Layout"
+
+#. module: questionaire
+#: selection:questionaire.user_input,type:0
+msgid "Link"
+msgstr "Link"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__multi_email
+msgid "List of emails"
+msgstr "Daftar email"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__is_log
+msgid "Log an Internal Note"
+msgstr "Buat Catatan Internal"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__auth_required
+#: model_terms:ir.ui.view,arch_db:questionaire.auth_required
+msgid "Login required"
+msgstr "Perlu login"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__mail_activity_type_id
+msgid "Mail Activity Type"
+msgstr "Jenis Aktivitas Email"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification__message_main_attachment_id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__message_main_attachment_id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method_category__message_main_attachment_id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Jumlah Lampiran"
+
+#. module: questionaire
+#: model:res.groups,name:questionaire.group_questionaire_manager
+msgid "Manager"
+msgstr "Manajer"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question__constr_mandatory
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_question_form
+msgid "Mandatory Answer"
+msgstr "Jawaban Wajib"
+
+#. module: questionaire
+#: selection:questionaire.user_input,type:0
+msgid "Manually"
+msgstr "Secara manual"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input__quizz_score
+msgid "Match answers"
+msgstr "Cocokkan jawaban"
+
+#. module: questionaire
+#: selection:questionaire.question,type:0
+msgid "Matrix"
+msgstr "Matriks"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question__matrix_subtype
+msgid "Matrix Type"
+msgstr "Tipe Matriks"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.result
+msgid "Matrix:"
+msgstr "Matriks:"
+
+#. module: questionaire
+#: sql_constraint:questionaire.question:0
+msgid "Max date cannot be smaller than min date!"
+msgstr "Tanggal maksimal tidak boleh lebih kecil dari tanggal minimal!"
+
+#. module: questionaire
+#: sql_constraint:questionaire.question:0
+msgid "Max length cannot be smaller than min length!"
+msgstr "Panjang maksimal tidak boleh lebih kecil dari panjang minimal!"
+
+#. module: questionaire
+#: sql_constraint:questionaire.question:0
+msgid "Max value cannot be smaller than min value!"
+msgstr "Nilai maksimal tidak boleh lebih kecil dari nilai minimal!"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question__validation_max_date
+msgid "Maximum Date"
+msgstr "Tanggal Maksimal"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question__validation_length_max
+msgid "Maximum Text Length"
+msgstr "Panjang Teks Maksimal"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__poor_score
+msgid "Maximum score considered as poor"
+msgstr "Skor maksimum dianggap rendah"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question__validation_max_float_value
+msgid "Maximum value"
+msgstr "Nilai maksimal"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification__message_has_error
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__message_has_error
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method_category__message_has_error
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__message_has_error
+msgid "Message Delivery error"
+msgstr "Kesalahan Pengiriman Pesan"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__record_name
+msgid "Message Record Name"
+msgstr "Nama Rekaman Pesan"
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_mail_compose_message__message_type
+msgid "Message type: email for email message, notification for system message, comment for other messages such as user replies"
+msgstr "Jenis pesan: email untuk pesan email, pemberitahuan untuk pesan sistem, komentar untuk pesan lain seperti balasan pengguna"
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_mail_compose_message__message_id
+msgid "Message unique identifier"
+msgstr "Nama Rekaman Pesan"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__message_id
+msgid "Message-Id"
+msgstr "Pesan-Id"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification__message_ids
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__message_ids
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method_category__message_ids
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__message_ids
+msgid "Messages"
+msgstr "Pesan"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_label__classification_method_id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_page__classification_method_id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question__classification_method_id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__classification_method_id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input__classification_method_id
+msgid "Method of classification"
+msgstr "Metode klasifikasi"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification__classification_method_id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_score__classification_method_id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_classification__classification_method_id
+msgid "Method of this classification"
+msgstr "Metode klasifikasi ini"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question__validation_min_date
+msgid "Minimum Date"
+msgstr "Tanggal Minimum"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question__validation_length_min
+msgid "Minimum Text Length"
+msgstr "Panjang Teks Minimum"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__excellent_score
+msgid "Minimum score considered as excellent"
+msgstr "Skor minimum dianggap sangat baik"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question__validation_min_float_value
+msgid "Minimum value"
+msgstr "Nilai Minimum"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__moderator_id
+msgid "Moderated By"
+msgstr "Dimoderasi oleh"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__moderation_status
+msgid "Moderation Status"
+msgstr "Status Moderasi"
+
+#. module: questionaire
+#: selection:questionaire.question,type:0
+msgid "Multiple Lines Text Box"
+msgstr "Kotak Teks Banyak Baris"
+
+#. module: questionaire
+#: selection:questionaire.question,type:0
+msgid "Multiple choice: multiple answers allowed"
+msgstr "Pilihan ganda: beberapa jawaban diperbolehkan"
+
+#. module: questionaire
+#: selection:questionaire.question,type:0
+msgid "Multiple choice: only one answer"
+msgstr "Pilihan ganda: hanya satu jawaban"
+
+#. module: questionaire
+#: selection:questionaire.question,matrix_subtype:0
+msgid "Multiple choices per row"
+msgstr "Banyak pilihan per baris"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_questionaire_view_search
+msgid "My Activities"
+msgstr "Aktifitas Ku"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_stage__name
+msgid "Name"
+msgstr "Nama"
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_mail_compose_message__record_name
+msgid "Name get of the related document."
+msgstr "Nama dapatkan dari dokumen terkait."
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__needaction
+#: model:ir.model.fields,help:questionaire.field_questionaire_mail_compose_message__needaction
+msgid "Need Action"
+msgstr "Diperlukan Tindakan"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__need_moderation
+msgid "Need moderation"
+msgstr "Status Moderasi"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_user_input_search
+msgid "New"
+msgstr "Baru"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification__activity_date_deadline
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__activity_date_deadline
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method_category__activity_date_deadline
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Batas Waktu Aktivitas Selanjutnya"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification__activity_summary
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__activity_summary
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method_category__activity_summary
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__activity_summary
+msgid "Next Activity Summary"
+msgstr "Ringkasan Aktivitas Berikutnya"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification__activity_type_id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__activity_type_id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method_category__activity_type_id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__activity_type_id
+msgid "Next Activity Type"
+msgstr "Tipe Aktivitas Berikutnya"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.page
+msgid "Next page"
+msgstr "Halaman berikutnya"
+
+#. module: questionaire
+#: model_terms:ir.actions.act_window,help:questionaire.action_questionaire_classification_score
+#: model_terms:ir.actions.act_window,help:questionaire.action_selected_questionaire_classification_score
+msgid "No Classification Score yet."
+msgstr "Belum ada Skor Klasifikasi."
+
+#. module: questionaire
+#: model_terms:ir.actions.act_window,help:questionaire.action_questionaire_page_form
+msgid "No pages found"
+msgstr "Tidak ada halaman ditemukan"
+
+#. module: questionaire
+#: model_terms:ir.actions.act_window,help:questionaire.action_questionaire_label_form
+msgid "No questionaire labels found"
+msgstr "Tidak ada label kuesioner yang ditemukan"
+
+#. module: questionaire
+#: model_terms:ir.actions.act_window,help:questionaire.action_questionaire_question_form
+msgid "No questions found"
+msgstr "Tidak ada pertanyaan yang ditemukan"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__no_auto_thread
+msgid "No threading for answers"
+msgstr "Tidak ada jawaban"
+
+#. module: questionaire
+#: model_terms:ir.actions.act_window,help:questionaire.action_questionaire_user_classification
+#: model_terms:ir.actions.act_window,help:questionaire.action_selected_questionaire_user_classification
+msgid "No user classification yet."
+msgstr "Belum ada pengguna klasifikasi."
+
+#. module: questionaire
+#: model_terms:ir.actions.act_window,help:questionaire.action_questionaire_user_input_line
+msgid "No user input lines found"
+msgstr "Tidak ada masukan pengguna yang ditemukan"
+
+#. module: questionaire
+#: model_terms:ir.actions.act_window,help:questionaire.action_selected_questionaire_user_input
+msgid "Nobody has replied to your questionaire yet."
+msgstr "Belum ada yang menjawab pertanyaan Anda."
+
+#. module: questionaire
+#: model_terms:ir.actions.act_window,help:questionaire.action_questionaire_user_input
+msgid "Nobody has replied to your questionaires yet."
+msgstr "Belum ada yang menjawab pertanyaan Anda."
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.notopen
+msgid "Not open"
+msgstr "Tidak terbuka"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.nopages
+msgid "Not ready"
+msgstr "Tidak siap"
+
+#. module: questionaire
+#: selection:questionaire.user_input,state:0
+msgid "Not started yet"
+msgstr "Belum dimulai"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__notification_ids
+msgid "Notifications"
+msgstr "Pemberitahuan"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__notify
+msgid "Notify followers"
+msgstr "Beri tahu pengikut"
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_mail_compose_message__notify
+msgid "Notify followers of the document (mass post only)"
+msgstr "Beri tahu pengikut dokumen (pos massal saja)"
+
+#. module: questionaire
+#: selection:questionaire.user_input_line,answer_type:0
+msgid "Number"
+msgstr "Nomor"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification__message_needaction_counter
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__message_needaction_counter
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method_category__message_needaction_counter
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Jumlah Tindakan"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question__column_nb
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_question_form
+msgid "Number of columns"
+msgstr "Jumlah kolom"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__tot_comp_questionaire
+msgid "Number of completed questionaires"
+msgstr "Jumlah kuesioner yang sudah diisi"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification__message_has_error_counter
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__message_has_error_counter
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method_category__message_has_error_counter
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__message_has_error_counter
+msgid "Number of error"
+msgstr "Jumlah kesalahan"
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_classification__message_needaction_counter
+#: model:ir.model.fields,help:questionaire.field_questionaire_classification_method__message_needaction_counter
+#: model:ir.model.fields,help:questionaire.field_questionaire_classification_method_category__message_needaction_counter
+#: model:ir.model.fields,help:questionaire.field_questionaire_questionaire__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Jumlah pesan yang membutuhkan tindakan"
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_classification__message_has_error_counter
+#: model:ir.model.fields,help:questionaire.field_questionaire_classification_method__message_has_error_counter
+#: model:ir.model.fields,help:questionaire.field_questionaire_classification_method_category__message_has_error_counter
+#: model:ir.model.fields,help:questionaire.field_questionaire_questionaire__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Jumlah Kesalahan Pengiriman Pesan"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__tot_sent_questionaire
+msgid "Number of sent questionaires"
+msgstr "Jumlah kuesioner yang dikirim"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__tot_start_questionaire
+msgid "Number of started questionaires"
+msgstr "Jumlah kuesioner yang dimulai"
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_classification__message_unread_counter
+#: model:ir.model.fields,help:questionaire.field_questionaire_classification_method__message_unread_counter
+#: model:ir.model.fields,help:questionaire.field_questionaire_classification_method_category__message_unread_counter
+#: model:ir.model.fields,help:questionaire.field_questionaire_questionaire__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Pesan yang belum dibaca"
+
+#. module: questionaire
+#: selection:questionaire.question,type:0
+msgid "Numerical Value"
+msgstr "Nilai numerik"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input_line__value_number
+msgid "Numerical answer"
+msgstr "Jawaban numerik"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.result_number
+msgid "Occurence"
+msgstr "Peristiwa"
+
+#. module: questionaire
+#: selection:questionaire.question,matrix_subtype:0
+msgid "One choice per row"
+msgstr "Satu pilihan per baris"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_form
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_question_form
+msgid "Options"
+msgstr "Opsi"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__mail_server_id
+msgid "Outgoing mail server"
+msgstr "Jenis Aktivitas Email"
+
+#. module: questionaire
+#: selection:questionaire.classification,activity_state:0
+#: selection:questionaire.classification_method,activity_state:0
+#: selection:questionaire.classification_method_category,activity_state:0
+#: selection:questionaire.questionaire,activity_state:0
+msgid "Overdue"
+msgstr "Showbiz"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_classification__page_id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input_line__page_id
+#: model_terms:ir.ui.view,arch_db:questionaire.page
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_page_search
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_question_search
+msgid "Page"
+msgstr "Laman"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_page__title
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_page_form
+msgid "Page Title"
+msgstr "Tampilkan Judul Halaman"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_page__sequence
+msgid "Page number"
+msgstr "Nomor halaman"
+
+#. module: questionaire
+#: model:ir.actions.act_window,name:questionaire.act_questionaire_pages
+#: model:ir.actions.act_window,name:questionaire.action_questionaire_page_form
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__page_ids
+#: model:ir.ui.menu,name:questionaire.menu_questionaire_page_form1
+msgid "Pages"
+msgstr "Halaman"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__parent_id
+msgid "Parent Message"
+msgstr "Pesan terima kasih"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_user_input_search
+msgid "Partially Completed"
+msgstr "Selesai sebagian"
+
+#. module: questionaire
+#: selection:questionaire.user_input,state:0
+msgid "Partially completed"
+msgstr "Selesai sebagian"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_score__partner_id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input__partner_id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input_line__partner_id
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_user_input_search
+msgid "Partner"
+msgstr "Rekanan"
+
+#. module: questionaire
+#: model:ir.actions.act_window,name:questionaire.action_partner_questionaire_mail
+msgid "Partner Questionaire Mailing"
+msgstr "Mailing Kuesioner Mitra"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__needaction_partner_ids
+msgid "Partners with Need Action"
+msgstr "Diperlukan Tindakan"
+
+#. module: questionaire
+#: selection:questionaire.mail.compose.message,moderation_status:0
+msgid "Pending Moderation"
+msgstr "Moderasi tertunda"
+
+#. module: questionaire
+#: selection:questionaire.classification,activity_state:0
+#: selection:questionaire.classification_method,activity_state:0
+#: selection:questionaire.classification_method_category,activity_state:0
+#: selection:questionaire.questionaire,activity_state:0
+msgid "Planned"
+msgstr "Berencana"
+
+#. module: questionaire
+#: code:addons/questionaire/wizard/questionaire_email_compose_message.py:164
+#, python-format
+msgid "Please enter at least one valid recipient."
+msgstr "Harap masukkan setidaknya satu penerima yang valid."
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.page
+msgid "Previous page"
+msgstr "Halaman sebelumnya"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_form
+msgid "Print Questionaire"
+msgstr "Cetak Kuesioner"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_user_input_form
+msgid "Print These Answers"
+msgstr "Cetak Jawaban Ini"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__print_url
+msgid "Print link"
+msgstr "Cetak link"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__public_url_html
+msgid "Public HTML web link"
+msgstr "Link web HTML Publik"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification__public_url
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__public_url
+msgid "Public link"
+msgstr "Link publik"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__public_url_html
+msgid "Public link (html version)"
+msgstr "Link publik (versi html)"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input__print_url
+msgid "Public link to the empty questionaire"
+msgstr "Tautan publik ke kuesioner kosong"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input__result_url
+msgid "Public link to the questionaire results"
+msgstr "Tautan publik ke hasil kuesioner"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__public_url
+msgid "Public url"
+msgstr "Url publik"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_label__question_id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input_line__question_id
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_label_search
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_question_search
+msgid "Question"
+msgstr "Pertanyaan"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_label__question_id_2
+msgid "Question 2"
+msgstr "Pertanyaan 2"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question__question
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_question_form
+msgid "Question Name"
+msgstr "Nama Pertanyaan"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_question_form
+msgid "Question name"
+msgstr "Nama pertanyaan"
+
+#. module: questionaire
+#: model:ir.model,name:questionaire.model_questionaire_questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__questionaire_ids
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method_category__classification_method_ids
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_score__questionaire_id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__questionaire_id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_page__questionaire_id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question__questionaire_id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_classification__questionaire_id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input__questionaire_id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input_line__questionaire_id
+#: model:ir.module.category,name:questionaire.module_category_questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_form
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_page_search
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_question_search
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_questionaire_view_search
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_response_line_search
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_tree
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_user_input_search
+msgid "Questionaire"
+msgstr "Kuesioner"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_response_line_tree
+msgid "Questionaire Answer Line"
+msgstr "Baris Jawaban Kuesioner"
+
+#. module: questionaire
+#: model:ir.ui.menu,name:questionaire.menu_questionaire_type_form1
+msgid "Questionaire Answers"
+msgstr "Jawaban Kuesioner"
+
+#. module: questionaire
+#: model:ir.actions.act_window,name:questionaire.action_selected_questionaire_classification_score
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_classification_score_form
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_classification_score_tree
+msgid "Questionaire Classification Score"
+msgstr "Skor Klasifikasi Kuesioner"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification__questionaire_input_lines
+msgid "Questionaire Input Lines"
+msgstr "Garis Masukan Kuesioner"
+
+#. module: questionaire
+#: model:ir.model,name:questionaire.model_questionaire_label
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_label_tree
+msgid "Questionaire Label"
+msgstr "Label Kuesioner"
+
+#. module: questionaire
+#: model:ir.model,name:questionaire.model_questionaire_page
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_page_form
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_page_tree
+msgid "Questionaire Page"
+msgstr "Halaman kuisioner"
+
+#. module: questionaire
+#: model:ir.model,name:questionaire.model_questionaire_question
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_question_form
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_question_tree
+msgid "Questionaire Question"
+msgstr "Pertanyaan Kuesioner"
+
+#. module: questionaire
+#: model:ir.model,name:questionaire.model_questionaire_stage
+msgid "Questionaire Stage"
+msgstr "Tahap Kuesioner"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_form
+msgid "Questionaire Title"
+msgstr "Judul Kuesioner"
+
+#. module: questionaire
+#: model:ir.model,name:questionaire.model_questionaire_user_input
+msgid "Questionaire User Input"
+msgstr "Masukan Pengguna Kuesioner"
+
+#. module: questionaire
+#: model:ir.model,name:questionaire.model_questionaire_user_input_line
+msgid "Questionaire User Input Line"
+msgstr "Jalur Input Pengguna Kuesioner"
+
+#. module: questionaire
+#: model:ir.actions.act_window,name:questionaire.action_questionaire_user_input_line
+msgid "Questionaire User Input lines"
+msgstr "Jalur Input Pengguna Kuesioner"
+
+#. module: questionaire
+#: model:ir.actions.act_window,name:questionaire.action_selected_questionaire_user_classification
+msgid "Questionaire User classification"
+msgstr "Klasifikasi pengguna"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_user_classification_form
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_user_classification_tree
+msgid "Questionaire User classifications"
+msgstr "Klasifikasi pengguna"
+
+#. module: questionaire
+#: model:ir.actions.act_window,name:questionaire.action_selected_questionaire_user_input
+msgid "Questionaire User input"
+msgstr "Kuesioner Masukan pengguna"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.classification_score_tree
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_user_input_form
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_user_input_tree
+msgid "Questionaire User inputs"
+msgstr "Kuesioner Masukan pengguna"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_label__questionaire_id
+msgid "Questionaire id"
+msgstr "ID kuesioner"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question__page_id
+msgid "Questionaire page"
+msgstr "Halaman kuisioner"
+
+#. module: questionaire
+#: model:ir.actions.server,name:questionaire.questionaire_action_server_clean_test_answers
+msgid "Questionaire: Clean test answers"
+msgstr "Kuesioner: Bersihkan jawaban uji coba"
+
+#. module: questionaire
+#: model:ir.ui.menu,name:questionaire.menu_questionaire_form
+#: model:ir.ui.menu,name:questionaire.menu_questionaire_form1
+#: model:ir.ui.menu,name:questionaire.menu_questionaires
+#: model_terms:ir.ui.view,arch_db:questionaire.classification_method_form
+msgid "Questionaires"
+msgstr "Kuisioner"
+
+#. module: questionaire
+#: model:ir.actions.act_window,name:questionaire.act_questionaire_page_question
+#: model:ir.actions.act_window,name:questionaire.act_questionaire_question
+#: model:ir.actions.act_window,name:questionaire.action_questionaire_question_form
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_page__question_ids
+#: model:ir.ui.menu,name:questionaire.menu_questionaire_question_form1
+msgid "Questions"
+msgstr "Pertanyaan"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__quizz_mode
+msgid "Quizz Mode"
+msgstr "Mode Kuis"
+
+#. module: questionaire
+#: selection:questionaire.question,display_mode:0
+msgid "Radio Buttons"
+msgstr "Tombol radio"
+
+#. module: questionaire
+#: selection:questionaire.mail.compose.message,moderation_status:0
+msgid "Rejected"
+msgstr "Ditolak"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__res_id
+msgid "Related Document ID"
+msgstr "ID Dokumen Terkait"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__model
+msgid "Related Document Model"
+msgstr "Model Dokumen Terkait"
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_mail_compose_message__reply_to
+msgid "Reply email address. Setting the reply_to bypasses the automatic thread creation."
+msgstr "Balas alamat email. Mengatur balasan_untuk melewati pembuatan utas otomatis."
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__reply_to
+msgid "Reply-To"
+msgstr "Membalas ke"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification__activity_user_id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__activity_user_id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method_category__activity_user_id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__activity_user_id
+msgid "Responsible User"
+msgstr "Pengguna yang Bertanggung Jawab"
+
+#. module: questionaire
+#: model:ir.ui.menu,name:questionaire.menu_questionaires_results
+msgid "Results"
+msgstr "Hasil"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__result_url
+msgid "Results link"
+msgstr "Link hasil"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input_line__value_suggested_row
+msgid "Row answer"
+msgstr "Jawaban baris"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_question_form
+msgid "Row1"
+msgstr "Baris1"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_question_form
+msgid "Row2"
+msgstr "Baris2"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_question_form
+msgid "Row3"
+msgstr "Baris3"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_question_form
+msgid "Rows"
+msgstr "Baris"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question__labels_ids_2
+msgid "Rows of the Matrix"
+msgstr "Baris Matrix"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_email_compose_message
+msgid "Save as a new template"
+msgstr "Proyek baru berdasarkan Template"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_email_compose_message
+msgid "Save as new template"
+msgstr "Simpan sebagai template baru"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_score__score_class
+msgid "Score Class"
+msgstr "Skor Klasifikasi"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_label__quizz_mark
+msgid "Score for this choice"
+msgstr "Hasil pilihan ini"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_classification__score
+msgid "Score for this classification"
+msgstr "Skor untuk klasifikasi ini"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input_line__quizz_mark
+msgid "Score given for this choice"
+msgstr "Hasil yang diberikan untuk pilihan ini"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input__quizz_score_percent
+msgid "Score in percent"
+msgstr "Skor dalam persen"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_classification_score_search
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_user_classification_search
+msgid "Search Classification"
+msgstr "Klasifikasi Pencarian"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_label_search
+msgid "Search Label"
+msgstr "Cari Label"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_page_search
+msgid "Search Page"
+msgstr "Cari Halaman"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_question_search
+msgid "Search Question"
+msgstr "Cari Pertanyaan"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_user_input_search
+msgid "Search Questionaire"
+msgstr "Kuesioner Pencarian"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_response_line_search
+msgid "Search User input lines"
+msgstr "Cari baris input Pengguna"
+
+#. module: questionaire
+#: selection:questionaire.question,display_mode:0
+msgid "Selection Box"
+msgstr "Kotak Seleksi"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_email_compose_message
+msgid "Send"
+msgstr "Kirim"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_user_input_form
+msgid "Send Invitation Again"
+msgstr "Kirim Undangan Lagi"
+
+#. module: questionaire
+#: selection:questionaire.mail.compose.message,public:0
+msgid "Send by email the public web link to your audience."
+msgstr "Kirim melalui email tautan web publik ke audiens Anda."
+
+#. module: questionaire
+#: selection:questionaire.mail.compose.message,public:0
+msgid "Send private invitation to your audience (only one response per recipient and per invitation)."
+msgstr "Kirim undangan pribadi ke audiens Anda (hanya satu tanggapan per penerima dan per undangan)."
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification__sequence
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__sequence
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method_category__sequence
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question__sequence
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_stage__sequence
+msgid "Sequence"
+msgstr "Penomoran"
+
+#. module: questionaire
+#: sql_constraint:questionaire.stage:0
+msgid "Sequence number MUST be a natural"
+msgstr "Nomor urut haruslah alami"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_kanban
+msgid "Share &amp;amp; Invite"
+msgstr "Bagikan &amp;amp; Undang"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_form
+msgid "Share and invite by email"
+msgstr "Bagikan dan undang melalui email"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__public
+msgid "Share options"
+msgstr "Pilihan bagikan"
+
+#. module: questionaire
+#: selection:questionaire.mail.compose.message,public:0
+msgid "Share the public web link to your audience."
+msgstr "Bagikan tautan web publik ke audiens Anda."
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question__comments_allowed
+msgid "Show Comments Field"
+msgstr "Tampilkan Bidang Komentar"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_questionaire_view_search
+msgid "Show all records which has next action date is before today"
+msgstr "Tampilkan semua dokumen dengan aksi berikut sebelum hari ini"
+
+#. module: questionaire
+#: selection:questionaire.question,type:0
+msgid "Single Line Text Box"
+msgstr "Kotak Teks Baris Tunggal"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input_line__skipped
+#: model_terms:ir.ui.view,arch_db:questionaire.result
+msgid "Skipped"
+msgstr "Dilewati"
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_mail_compose_message__author_avatar
+msgid "Small-sized image of this contact. It is automatically resized as a 64x64px image, with aspect ratio preserved. Use this field anywhere a small image is required."
+msgstr "Gambar berukuran kecil dari kontak ini. Secara otomatis diubah ukurannya sebagai gambar 64x64px, dengan aspek rasio diawetkan. Gunakan bidang ini di mana saja gambar kecil diperlukan."
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.page
+msgid "Something went wrong while contacting questionaire server. <strong class=\"text-danger\">Your answers have probably not been recorded.</strong> Try refreshing."
+msgstr "Terjadi kesalahan saat menghubungi server kuesioner. <strong class=\"text-danger\"> Jawaban Anda mungkin belum direkam. </strong> Coba segarkan."
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.result
+msgid "Sorry, No one answered this question."
+msgstr "Tidak ada yang jawab pertanyaan ini."
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__stage_id
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_stage_form
+msgid "Stage"
+msgstr "Tahap"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__starred
+msgid "Starred"
+msgstr "Dibintangi"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_init
+msgid "Start New"
+msgstr "Mulai Baru"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_init
+msgid "Start Questionaire"
+msgstr "Mulai Kuesioner"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_tree
+msgid "Started"
+msgstr "Dimulai"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input__state
+msgid "Status"
+msgstr "Status"
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_classification__activity_state
+#: model:ir.model.fields,help:questionaire.field_questionaire_classification_method__activity_state
+#: model:ir.model.fields,help:questionaire.field_questionaire_classification_method_category__activity_state
+#: model:ir.model.fields,help:questionaire.field_questionaire_questionaire__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Status berdasarkan aktivitas\n"
+"Terlambat: Batas waktu sudah berlalu\n"
+"Hari ini: Tanggal kegiatan adalah hari ini\n"
+"Direncanakan: Kegiatan di masa depan."
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__subject
+msgid "Subject"
+msgstr "Judul"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_email_compose_message
+msgid "Subject..."
+msgstr "Judul..."
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.page
+msgid "Submit questionaire"
+msgstr "Kirim kuesioner"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__subtype_id
+msgid "Subtype"
+msgstr "Subjenis"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input_line__value_suggested
+msgid "Suggested answer"
+msgstr "Saran jawaban"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_label__value
+msgid "Suggested value"
+msgstr "Nilai yang disarankan"
+
+#. module: questionaire
+#: selection:questionaire.user_input_line,answer_type:0
+msgid "Suggestion"
+msgstr "Saran"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification__employer_summary
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__employer_summary
+msgid "Summary for Employer"
+msgstr "Ringkasan untuk Pemberi Kerja"
+
+#. module: questionaire
+#: selection:questionaire.mail.compose.message,message_type:0
+msgid "System notification"
+msgstr "Notifikasi sistem"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_kanban
+msgid "Test"
+msgstr "Tes"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_user_input_search
+msgid "Test Entries"
+msgstr "Entri Tes"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input__test_entry
+msgid "Test Entry"
+msgstr "Catatan Tes"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_form
+msgid "Test Questionaire"
+msgstr "Kuesioner Tes"
+
+#. module: questionaire
+#: selection:questionaire.user_input_line,answer_type:0
+msgid "Text"
+msgstr "Teks"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input_line__value_text
+msgid "Text answer"
+msgstr "Jawaban tulisan"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.sfinished
+msgid "Thank you!"
+msgstr "Terima kasih!"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__thank_you_message
+msgid "Thanks Message"
+msgstr "Pesan terima kasih"
+
+#. module: questionaire
+#: code:addons/questionaire/models/questionaireuserinputline.py:71
+#, python-format
+msgid "The answer must be in the right type"
+msgstr "Jawabannya harus dalam tipe yang tepat"
+
+#. module: questionaire
+#: code:addons/questionaire/models/questionairequestion.py:106
+#, python-format
+msgid "The answer you entered has an invalid format."
+msgstr "Jawaban yang Anda masukkan memiliki format yang tidak valid."
+
+#. module: questionaire
+#: code:addons/questionaire/wizard/questionaire_email_compose_message.py:139
+#, python-format
+msgid "The content of the text don't contain '__URL__'.                     __URL__ is automaticaly converted into the special url of the questionaire."
+msgstr "Isi teks tidak mengandung '__FILE__'.                      __FILE__ secara otomatis diubah menjadi url khusus dari kuesioner."
+
+#. module: questionaire
+#: sql_constraint:questionaire.user_input:0
+msgid "The deadline cannot be in the past"
+msgstr "Tenggat waktu tidak bisa dilanjutkan"
+
+#. module: questionaire
+#: model_terms:ir.actions.act_window,help:questionaire.action_classification_score
+msgid "There are no classification scores yet."
+msgstr "Belum ada skor klasifikasi."
+
+#. module: questionaire
+#: code:addons/questionaire/models/questionairequestion.py:170
+#: code:addons/questionaire/tests/test_questionaire.py:86
+#, python-format
+msgid "This answer must be an email address"
+msgstr "Jawaban ini harus berupa alamat email"
+
+#. module: questionaire
+#: code:addons/questionaire/models/questionairequestion.py:214
+#: code:addons/questionaire/tests/test_questionaire.py:107
+#, python-format
+msgid "This is not a date"
+msgstr "Ini bukan tanggal"
+
+#. module: questionaire
+#: code:addons/questionaire/models/questionairequestion.py:191
+#: code:addons/questionaire/tests/test_questionaire.py:97
+#, python-format
+msgid "This is not a number"
+msgstr "Ini bukan angka"
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_mail_compose_message__multi_email
+msgid "This list of emails of recipients will not be converted in contacts.        Emails must be separated by commas, semicolons or newline."
+msgstr "Daftar email penerima ini tidak akan dikonversi dalam kontak. Email harus dipisahkan dengan koma, titik koma atau baris baru."
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_questionaire__thank_you_message
+msgid "This message will be displayed when questionaire is completed"
+msgstr "Pesan ini akan ditampilkan ketika kuesioner selesai"
+
+#. module: questionaire
+#: code:addons/questionaire/models/questionairequestion.py:110
+#, python-format
+msgid "This question requires an answer."
+msgstr "Pertanyaan ini membutuhkan jawaban."
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_form
+msgid "This questionaire coonected to :"
+msgstr "Kuisioner ini terhubung ke:"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.nopages
+msgid "This questionaire has no pages by now!"
+msgstr "Kuisioner ini tidak memiliki halaman sekarang!"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.notopen
+msgid "This questionaire is not open. Thank you for your interest!"
+msgstr "Kuisioner ini tidak terbuka. Terima kasih atas minat Anda!"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.auth_required
+msgid "This questionaire is open only to registered people. Please"
+msgstr "Kuesioner ini terbuka hanya untuk orang yang terdaftar. Silahkan"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification__title
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__title
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method_category__title
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__title
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_questionaire_view_search
+msgid "Title"
+msgstr "Judul"
+
+#. module: questionaire
+#: selection:questionaire.classification,activity_state:0
+#: selection:questionaire.classification_method,activity_state:0
+#: selection:questionaire.classification_method_category,activity_state:0
+#: selection:questionaire.questionaire,activity_state:0
+msgid "Today"
+msgstr "Hari Ini"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_questionaire_view_search
+msgid "Today Activities"
+msgstr "Aktivitas Hari ini"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_page__total_score
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question__total_score
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__total_score
+msgid "Total Score"
+msgstr "Total Score"
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_mail_compose_message__tracking_value_ids
+msgid "Tracked values are stored in a separate model. This field allow to reconstruct the tracking and to generate statistics on the model."
+msgstr "Nilai yang dilacak disimpan dalam model terpisah. Bidang ini memungkinkan untuk merekonstruksi pelacakan dan untuk menghasilkan statistik pada model."
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__tracking_value_ids
+msgid "Tracking values"
+msgstr "Melacak nilai"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__message_type
+msgid "Type"
+msgstr "Tipe"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question__type
+msgid "Type of Question"
+msgstr "Tipe Pertanyaan"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_question_form
+msgid "Type of answers"
+msgstr "Tipe Jawaban"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question__labels_ids
+msgid "Types of answers"
+msgstr "Tipe Jawaban"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification__message_unread
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__message_unread
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method_category__message_unread
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__message_unread
+msgid "Unread Messages"
+msgstr "Pesan yang belum dibaca"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification__message_unread_counter
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__message_unread_counter
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method_category__message_unread_counter
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Pesan yang belum dibaca"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_questionaire_view_search
+msgid "Upcoming Activities"
+msgstr "Kegiatan Selanjutnya"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__use_active_domain
+msgid "Use active domain"
+msgstr "Gunakan domain aktif"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_mail_compose_message__template_id
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_email_compose_message
+msgid "Use template"
+msgstr "Gunakan bawaan"
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_classification_method__description
+msgid "Use this field to add         additional explanations about this classification method"
+msgstr "Gunakan bidang ini untuk menambahkan penjelasan tambahan tentang metode klasifikasi ini"
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_classification_method_category__description
+msgid "Use this field to add         additional explanations about this classification method category"
+msgstr "Gunakan bidang ini untuk menambahkan penjelasan tambahan tentang kategori metode klasifikasi ini"
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_question__description
+msgid "Use this field to add         additional explanations about your question"
+msgstr "Gunakan bidang ini untuk menambahkan penjelasan tambahan tentang pertanyaan Anda"
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_classification__description
+msgid "Use this field to add         additional explanations about your questionaire result"
+msgstr "Gunakan bidang ini untuk menambahkan penjelasan tambahan tentang hasil kuesioner Anda"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_classification__partner_id
+#: model:res.groups,name:questionaire.group_questionaire_user
+msgid "User"
+msgstr "Pengguna"
+
+#. module: questionaire
+#: model:ir.model,name:questionaire.model_questionaire_user_classification
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_score__user_classification_ids
+msgid "User Classification"
+msgstr "Klasifikasi Pengguna"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input__user_classification_score_ids
+msgid "User Classification Score"
+msgstr "Skor Klasifikasi Pengguna"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input__user_classification_ids
+msgid "User Classifications"
+msgstr "Klasifikasi Pengguna"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_classification__user_input_id
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_user_input_line__user_input_id
+#: model:ir.model.fields,field_description:questionaire.field_res_partner__user_input_ids
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_response_line_search
+msgid "User Input"
+msgstr "Input Pengguna"
+
+#. module: questionaire
+#: model:ir.ui.menu,name:questionaire.menu_questionaire_response_line_form
+msgid "User Input Lines"
+msgstr "Baris Input Pengguna"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.result_choice
+#: model_terms:ir.ui.view,arch_db:questionaire.result_number
+#: model_terms:ir.ui.view,arch_db:questionaire.result_text
+msgid "User Responses"
+msgstr "Tanggapan Pengguna"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_form
+msgid "User can come back in the previous page"
+msgstr "Pengguna dapat kembali di halaman sebelumnya"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_user_input_line_form
+msgid "User input line details"
+msgstr "Detail baris masukan pengguna"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__user_input_ids
+msgid "User responses"
+msgstr "Tanggapan pengguna"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__users_can_go_back
+msgid "Users can go back"
+msgstr "Pengguna dapat kembali"
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_questionaire__auth_required
+msgid "Users with a public link will be requested to login before taking part to the questionaire"
+msgstr "Pengguna dengan tautan publik akan diminta untuk masuk sebelum mengambil bagian ke kuesioner"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question__validation_required
+msgid "Validate entry"
+msgstr "Validasi Catatan"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_question__validation_error_msg
+msgid "Validation Error message"
+msgstr "Pesan Kesalahan Validasi"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_user_input_form
+msgid "View Results"
+msgstr "Lihat Hasil"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_form
+msgid "View results"
+msgstr "Lihat Hasil"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.result_choice
+msgid "Vote"
+msgstr "Voting"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification__website_message_ids
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__website_message_ids
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method_category__website_message_ids
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_questionaire__website_message_ids
+msgid "Website Messages"
+msgstr "Pesan Situs Web"
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_classification__website_message_ids
+#: model:ir.model.fields,help:questionaire.field_questionaire_classification_method__website_message_ids
+#: model:ir.model.fields,help:questionaire.field_questionaire_classification_method_category__website_message_ids
+#: model:ir.model.fields,help:questionaire.field_questionaire_questionaire__website_message_ids
+msgid "Website communication history"
+msgstr "Riwayat komunikasi situs web"
+
+#. module: questionaire
+#: model:ir.model.fields,help:questionaire.field_questionaire_mail_compose_message__is_log
+msgid "Whether the message is an internal note (comment mode only)"
+msgstr "Apakah pesan tersebut merupakan catatan internal (hanya mode komentar)"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_question_form
+msgid ""
+"YYYY-MM-DD\n"
+"                                            <i class=\"fa fa-calendar fa-2x\"/>"
+msgstr ""
+"DD-MM-YYYY\n"
+"                                            <i class=\"fa fa-calendar fa-2x\"/>"
+
+#. module: questionaire
+#: model_terms:ir.actions.act_window,help:questionaire.action_questionaire_form
+msgid "You can create questionaires for different purposes: customer opinion, services feedback, recruitment interviews, employee's periodical evaluations, marketing campaigns, etc."
+msgstr "Anda dapat membuat kuesioner untuk tujuan yang berbeda: opini pelanggan, umpan balik layanan, wawancara rekrutmen, evaluasi berkala karyawan, kampanye pemasaran, dll."
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_email_compose_message
+msgid "You can share your questionaire web public link and/or send private invitations to your audience. People can answer once per invitation, and whenever they want with the public web link (in this case, the \"Login Required\" setting must be disabled)."
+msgstr "Anda dapat membagikan tautan umum web kuesioner dan / atau mengirim undangan pribadi kepada audiens Anda. Orang dapat menjawab satu kali per undangan, dan kapan pun mereka mau dengan tautan web publik (dalam hal ini, pengaturan \"Login Diperlukan\" harus dinonaktifkan)."
+
+#. module: questionaire
+#: code:addons/questionaire/models/questionaire.py:299
+#, python-format
+msgid "You cannot send an invitation for a questionaire that has no questions."
+msgstr "Anda tidak dapat mengirim undangan untuk kuesioner yang tidak memiliki pertanyaan."
+
+#. module: questionaire
+#: code:addons/questionaire/models/questionaire.py:302
+#, python-format
+msgid "You cannot send invitations for closed questionaires."
+msgstr "Anda tidak dapat mengirim undangan untuk kuesioner tertutup."
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.sfinished
+msgid "You scored"
+msgstr "Nilai Anda"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_init
+msgid "You've fill this questionaire before"
+msgstr "Anda sudah mengisi kuesioner ini sebelumnya"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.classification_info
+msgid "Your match with this classification :"
+msgstr "Kecocokan Anda dengan klasifikasi ini:"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.questionaire_question_form
+msgid "ans"
+msgstr "jawab"
+
+#. module: questionaire
+#: model:ir.model.fields,field_description:questionaire.field_questionaire_classification_method__classification_ids
+msgid "classifications in this method"
+msgstr "klasifikasi dalam metode ini"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.auth_required
+msgid "log in"
+msgstr "masuk"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.page
+msgid "of"
+msgstr "dari"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.sfinished
+msgid "points ("
+msgstr "poin ("
+
+#. module: questionaire
+#: model:ir.actions.act_window,name:questionaire.action_questionaire_form
+msgid "questionaires"
+msgstr "kuesioner"
+
+#. module: questionaire
+#: model_terms:ir.ui.view,arch_db:questionaire.sfinished
+msgid "review your answers"
+msgstr "periksa jawaban Anda"

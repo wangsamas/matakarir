@@ -1,0 +1,336 @@
+<odoo>
+    <data>
+        <template id="edit_my_informations" name="My Informations">
+            <t t-call="portal.portal_layout">
+                <form t-attf-action="/edit/informations" method="post" role="form" class="tag_text js_website_submit_form">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <p t-call="matakarir.my_info" />
+                    <div align="center">
+                        <a href="/my/home" class="btn btn-default">Cancel</a>
+                        <button type="submit" t-attf-class="btn btn-primary">Edit</button>
+                    </div>
+                </form>
+            </t>
+        </template>
+        
+        <template id="my_info">
+            <div class="o_area_selections">
+                <table class="table">
+                    <tr>
+                        <td>Your Name*</td>
+                        <td colspan="2"><input type="text" name="name" class="form-control" t-att-value="name or partner_id.alias_id.name" required="required" /></td>                            
+                    </tr>
+                    <tr>
+                        <td>Your Nickname*</td>
+                        <td colspan="2"><input type="text" name="nickname" class="form-control" t-att-value="nickname or partner_id.name" required="required" /></td>                            
+                    </tr>
+                    <tr>
+                        <td>Introduction*</td>
+                        <td colspan="2">
+                            <textarea class="form-control" name="description" required="required">
+                                <t t-esc="description or partner_id.description" />
+                            </textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Current Address*</td>
+                        <td colspan="2"><input type="text" name="street" class="form-control" t-att-value="street or partner_id.street"  required="required"/></td>                         
+                    </tr>
+                    <tr>
+                        <td />
+                        <td colspan="2"><input type="text" name="street2" class="form-control" t-att-value="street2 or partner_id.street2" /></td>                         
+                    </tr>
+                    <p t-call="matakarir.country_template" />
+                    <p t-call="matakarir.state_template" />
+                    <p t-call="matakarir.city_template" />
+                    <p t-call="matakarir.district_template" />
+                    <p t-call="matakarir.village_template" />
+                    <p t-call="matakarir.area_template" />
+                    <p t-call="matakarir.zipcode_template" />
+                    <tr>
+                        <td>Address Ownership</td>
+                        <td colspan="2">
+                            <div t-attf-class="form-group">
+                                <select class="form-control" name="address_status">
+                                    <option t-if="partner_id.address_status" t-att-value="partner_id.address_status">
+                                        <t t-esc="{'rent': 'Rent', 
+                                                  'own': 'Own', 
+                                                  'family': 'Family Own'}[partner_id.address_status]" />
+                                    </option>
+                                    <option t-else="" value=""></option>
+                                    <option value="rent">Rent</option>
+                                    <option value="own">Self Owned</option>
+                                    <option value="family">Family Owned</option>
+                                </select>
+                            </div>
+                        </td>                         
+                    </tr>
+                    <tr>
+                        <td>Phone Number</td>
+                        <td colspan="2"><input type="text" name="phone" class="form-control" t-att-value="phone or partner_id.phone" /></td>                         
+                    </tr>
+                    <tr>
+                        <td>Mobile Number</td>
+                        <td colspan="2"><input type="text" name="mobile" class="form-control" t-att-value="mobile or partner_id.mobile" /></td>                         
+                    </tr>
+                    <tr>
+                        <td>Email*</td>
+                        <td colspan="2"><input type="text" name="email" class="form-control" t-att-value="email or partner_id.email"  required="required"/></td>                         
+                    </tr>
+                </table>
+            </div>
+        </template>
+
+        <template id="edit_other_informations" name="Other Informations">
+            <t t-call="portal.portal_layout">
+                <form t-attf-action="/edit/otherinformations" method="post" role="form" class="tag_text js_website_submit_form">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <p t-call="matakarir.other_info" />
+                    <div align="center">
+                        <a href="/my/home" class="btn btn-default">Cancel</a>
+                        <button type="submit" t-attf-class="btn btn-primary">Edit</button>
+                    </div>
+                </form>
+            </t>
+        </template>
+
+        <template id="other_info">
+            <div class="o_area_selections">
+                <table class="table">
+                    <tr>
+                        <td><strong>Birth Country</strong></td>
+                        <td id="input_country" style="display:none;"><input type="text" class="form-control" name="country_name" placeholder="Birth Country..."/></td>
+                        <td>
+                            <select name="country" class="form-control">
+                                <option value="">Birth Country...</option>
+                                <t t-foreach="countries or []" t-as="l">
+                                    <option t-att-value="l.id" t-att-selected="l.id == partner_id.birth_country_id.id if partner_id.birth_country_id.id else l.code == 'ID'">
+                                        <t t-esc="l.name" />
+                                    </option>
+                                </t>
+                            </select>
+                        </td>
+                        <td><a href="#new_country" id="new_country"><i class="fa fa-plus-square"/>Add new</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Birth Province</strong></td>
+                        <td id="input_state" style="display:none;"><input type="text" class="form-control" name="state_name" placeholder="Birth Province..."/></td>
+                        <td>
+                            <select name="state" class="form-control">
+                                <option value="">Birth Province...</option>
+                                <t t-foreach="states or []" t-as="l">
+                                    <option t-att-value="l.id" style="display:none;" t-att-selected="l.id == partner_id.birth_state_id.id" t-att-data-country="l.country_id.id">
+                                        <t t-esc="l.name" />
+                                    </option>
+                                </t>
+                            </select>
+                        </td>
+                        <td><a href="#new_state" id="new_state"><i class="fa fa-plus-square"/>Add new</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Birth City</strong></td>
+                        <td id="input_city" style="display:none;"><input type="text" class="form-control" name="city_name" placeholder="Birth City..."/></td>
+                        <td>
+                            <select name="city" class="form-control">
+                                <option value="">Birth City...</option>
+                                <t t-foreach="cities or []" t-as="l">
+                                    <option t-att-value="l.id" style="display:none;" t-att-selected="l.id == partner_id.birth_city_id.id" t-att-data-country="l.country_id.id" t-att-data-state="l.state_id.id">
+                                        <t t-esc="l.name" />
+                                    </option>
+                                </t>
+                            </select>
+                        </td>
+                        <td><a href="#new_city" id="new_city"><i class="fa fa-plus-square"/>Add new</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Birthday</strong></td>
+                        <td colspan="2"><input type="date" name="birthday" t-att-value="partner_id.birthday" id="birthday" class="form-control" required="required" /></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Gender</strong></td>
+                        <td colspan="2">
+                            <select class="form-control" name="gender" required="required">
+                                <option t-if="partner_id.gender" t-att-value="partner_id.gender">
+                                    <t t-esc="{'male': 'Male', 'female': 'Female'}[partner_id.gender]" />
+                                </option>
+                                <option t-else="" value=""></option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Marital</strong></td>
+                        <td colspan="2">
+                            <select class="form-control" name="marital" required="required">
+                                <option t-if="partner_id.marital" t-att-value="partner_id.marital">
+                                    <t t-esc="{'single': 'Single', 'married': 'Married', 'widower': 'Widower', 'divorced': 'Divorced'}[partner_id.marital]" />
+                                </option>
+                                <option t-else="" value=""></option>
+                                <option value="single">Single</option>
+                                <option value="married">Married</option>
+                                <option value="widower">Widower</option>
+                                <option value="divorced">Divorced</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Dependents</strong></td>
+                        <td colspan="2"><input type="tel" name="dependents" class="form-control" t-att-value="dependents or partner_id.dependents" /></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Height</strong></td>
+                        <td colspan="2"><input type="tel" name="height" class="form-control" t-att-value="height or partner_id.height" /></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Weight</strong></td>
+                        <td colspan="2"><input type="tel" name="weight" class="form-control" t-att-value="weight or partner_id.weight" /></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Blood Type</strong></td>
+                        <td colspan="2">
+                            <select class="form-control" name="blood">
+                                <option t-if="partner_id.blood" t-att-value="partner_id.blood">
+                                    <t t-esc="{'a': 'A', 'b': 'B', 'ab': 'AB', 'o': 'O'}[partner_id.blood]" />
+                                </option>
+                                <option t-else="" value=""></option>
+                                <option value="a">A</option>
+                                <option value="b">B</option>
+                                <option value="ab">AB</option>
+                                <option value="o">O</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr class="o_edit_citizen">
+                        <td><strong>Citizenship</strong></td>
+                        <td id="input_citizen" style="display:none;"><input type="text" class="form-control" name="citizen_name" placeholder="Citizen Country..."/></td>
+                        <td>
+                            <select name="citizenship" class="form-control">
+                                <option value="">Citizenship...</option>
+                                <t t-foreach="countries or []" t-as="country">
+                                    <option t-att-value="country.id" t-att-selected="country.id == partner_id.citizenship_id.id if partner_id.citizenship_id.id else country.code == 'ID'">
+                                        <t t-esc="country.name" />
+                                    </option>
+                                </t>
+                            </select>
+                        </td>
+                        <td><a href="#new_citizen" id="new_citizen"><i class="fa fa-plus-square"/>Add new</a></td>
+                    </tr>
+                    <tr class="o_edit_religion">
+                        <td><strong>Religion</strong></td>
+                        <td id="input_religion" style="display:none;"><input type="text" class="form-control" name="religion_name" placeholder="Religion..."/></td>
+                        <td>
+                            <select name="religion" class="form-control">
+                                <option value="">Religion...</option>
+                                <t t-foreach="religions or []" t-as="r">
+                                    <option t-att-value="r.id" t-att-selected="r.id == int(religion_id) if religion_id else r.id == partner_id.religion_id.id">
+                                        <t t-esc="r.name" />
+                                    </option>
+                                </t>
+                            </select>
+                        </td>
+                        <td><a href="#new_religion" id="new_religion"><i class="fa fa-plus-square"/>Add new</a></td>
+                    </tr>
+                    <tr class="o_edit_ethnic">
+                        <td><strong>Ethnic</strong></td>
+                        <td id="input_ethnic" style="display:none;"><input type="text" class="form-control" name="ethnic_name" placeholder="Ethnic..."/></td>
+                        <td>
+                            <select name="ethnic" class="form-control">
+                                <option value="">Ethnic...</option>
+                                <t t-foreach="ethnics or []" t-as="r">
+                                    <option t-att-value="r.id" t-att-selected="r.id == int(ethnic_id) if ethnic_id else r.id == partner_id.ethnic_id.id">
+                                        <t t-esc="r.name" />
+                                    </option>
+                                </t>
+                            </select>
+                        </td>
+                        <td><a href="#new_ethnic" id="new_ethnic"><i class="fa fa-plus-square"/>Add new</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Smoker</strong></td>
+                        <td colspan="2"><input type="checkbox" name="smoker" t-att-checked="'checked' if partner_id.smoker else None" /></td>
+                    </tr>
+                </table>
+            </div>
+        </template>
+
+        <template id="edit_identity" name="My Identity">
+            <t t-call="portal.portal_layout">
+                <form t-attf-action="/edit/identity" method="post" role="form" class="tag_text js_website_submit_form">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <p t-call="matakarir.my_identity" />
+                    <div align="center">
+                        <a href="/my/home" class="btn btn-default">Cancel</a>
+                        <button type="submit" t-attf-class="btn btn-primary">Edit</button>
+                    </div>
+                </form>
+            </t>
+        </template>
+
+        <template id="my_identity">
+            <div class="o_area_selections">
+                <table class="table">
+                    <tr>
+                        <td>Identity Address*</td>
+                        <td colspan="2"><input type="text" name="street" class="form-control" placeholder="Address..." t-att-value="street or object.street" required="required"/></td>                         
+                    </tr>
+                    <tr>
+                        <td />
+                        <td colspan="2"><input type="text" name="street2" class="form-control" placeholder="Additional Address..." t-att-value="street2 or object.street2" /></td>                         
+                    </tr>
+                    <p t-call="matakarir.country_template" />
+                    <p t-call="matakarir.state_template" />
+                    <p t-call="matakarir.city_template" />
+                    <p t-call="matakarir.district_template" />
+                    <p t-call="matakarir.village_template" />
+                    <p t-call="matakarir.area_template" />
+                    <p t-call="matakarir.zipcode_template" />
+                    <tr>
+                        <td>Address Ownership</td>
+                        <td colspan="2">
+                            <select class="form-control" name="address_status">
+                                <option t-if="object.address_status" t-att-value="object.address_status">
+                                    <t t-esc="{'rent': 'Rent', 
+                                              'own': 'Own', 
+                                              'family': 'Family Own'}[object.address_status]" />
+                                </option>
+                                <option t-else="" value=""></option>
+                                <option value="rent">Rent</option>
+                                <option value="own">Self Owned</option>
+                                <option value="family">Family Owned</option>
+                            </select>
+                        </td>                         
+                    </tr>
+                    <tr>
+                        <td>Phone Number</td>
+                        <td colspan="2"><input type="text" name="phone" class="form-control" t-att-value="phone or object.phone" /></td>                         
+                    </tr>
+                    <tr>
+                        <td>Identification Number*</td>
+                        <td colspan="2"><input type="text" name="identification_no" class="form-control" t-att-value="identification_no or partner_id.identification_no" required="required" /></td>                         
+                    </tr>
+                    <tr>
+                        <td>Social Insurance Number</td>
+                        <td colspan="2"><input type="text" name="sinid" class="form-control" t-att-value="sinid or partner_id.sinid" /></td>                         
+                    </tr>
+                    <tr>
+                        <td>Social Security Number</td>
+                        <td colspan="2"><input type="text" name="ssnid" class="form-control" t-att-value="ssnid or partner_id.ssnid" /></td>                         
+                    </tr>
+                    <tr>
+                        <td>Passport</td>
+                        <td colspan="2"><input type="text" name="passport_no" class="form-control" t-att-value="passport_no or partner_id.passport_no" /></td>                         
+                    </tr>
+                    <tr>
+                        <td>Visa</td>
+                        <td colspan="2"><input type="text" name="visa_no" class="form-control" t-att-value="visa_no or partner_id.visa_no" /></td>                         
+                    </tr>
+                    <tr>
+                        <td>KITAS / P</td>
+                        <td colspan="2"><input type="text" name="permit_no" class="form-control" t-att-value="permit_no or partner_id.permit_no" /></td>                         
+                    </tr>
+                </table>
+            </div>
+        </template>
+    </data>
+</odoo>

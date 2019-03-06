@@ -1,0 +1,351 @@
+<odoo>
+  <data>
+    
+    <record id="car" model="matakarir.tooltype">
+        <field name="name">Car</field>
+    </record>
+    <record id="motorcycle" model="matakarir.tooltype">
+        <field name="name">Motorcycle</field>
+    </record>
+    <record id="laptop" model="matakarir.tooltype">
+        <field name="name">Laptop</field>
+    </record>
+    <record id="smartphone" model="matakarir.tooltype">
+        <field name="name">Smartphone</field>
+    </record>
+    
+    <record model="ir.ui.view" id="matakarir_ethnic_tree">
+        <field name="name">res_ethnic.tree</field>
+        <field name="model">res.ethnic</field>
+        <field name="arch" type="xml">
+            <tree string="Ethnic" editable="bottom">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_matakarir_ethnic">
+        <field name="name">Ethnic</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.ethnic</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="matakarir_religion_tree">
+        <field name="name">res_religion.tree</field>
+        <field name="model">res.religion</field>
+        <field name="arch" type="xml">
+            <tree string="Religion" editable="bottom">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_matakarir_religion">
+        <field name="name">Religion</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.religion</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="matakarir_certificatepublisher_tree">
+        <field name="name">matakarir_certificatepublisher.tree</field>
+        <field name="model">matakarir.certificatepublisher</field>
+        <field name="arch" type="xml">
+            <tree string="Certificate Publisher" editable="bottom">
+                <field name="name"/>
+                <field name="publisher_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_matakarir_certificatepublisher">
+        <field name="name">Certificate Publisher</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">matakarir.certificatepublisher</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="matakarir_drivinglisencetype_tree">
+        <field name="name">matakarir_drivinglisencetype.tree</field>
+        <field name="model">matakarir.drivinglisencetype</field>
+        <field name="arch" type="xml">
+            <tree string="Driving Lisence Type" editable="bottom">
+                <field name="name"/>
+                <field name="country_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_matakarir_drivinglisencetype">
+        <field name="name">Driving Lisence Type</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">matakarir.drivinglisencetype</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="matakarir_joblevel_tree">
+        <field name="name">matakarir_joblevel.tree</field>
+        <field name="model">matakarir.joblevel</field>
+        <field name="arch" type="xml">
+            <tree string="Job Level" editable="bottom">
+                <field name="sequence"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_matakarir_joblevel">
+        <field name="name">Job Level</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">matakarir.joblevel</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="matakarir_employmentstatus_tree">
+        <field name="name">matakarir_employmentstatus.tree</field>
+        <field name="model">matakarir.employmentstatus</field>
+        <field name="arch" type="xml">
+            <tree string="Employment Status" editable="bottom">
+                <field name="sequence"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_matakarir_employmentstatus">
+        <field name="name">Employment Status</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">matakarir.employmentstatus</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="matakarir_lisencepublisher_tree">
+        <field name="name">matakarir_lisencepublisher.tree</field>
+        <field name="model">matakarir.lisencepublisher</field>
+        <field name="arch" type="xml">
+            <tree string="Lisence Publisher" editable="bottom">
+                <field name="publisher_id"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_matakarir_lisencepublisher">
+        <field name="name">Lisence Publisher</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">matakarir.lisencepublisher</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="matakarir_referencetype_tree">
+        <field name="name">matakarir_referencetype.tree</field>
+        <field name="model">matakarir.referencetype</field>
+        <field name="arch" type="xml">
+            <tree string="Reference Type" editable="bottom">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_matakarir_referencetype">
+        <field name="name">Reference Type</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">matakarir.referencetype</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="matakarir_companytype_tree">
+        <field name="name">res_companytype.tree</field>
+        <field name="model">res.companytype</field>
+        <field name="arch" type="xml">
+            <tree string="Company Type" editable="bottom">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_matakarir_companytype">
+        <field name="name">Company Type</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.companytype</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="matakarir_schoolstage_tree">
+        <field name="name">matakarir_schoolstage.tree</field>
+        <field name="model">matakarir.schoolstage</field>
+        <field name="arch" type="xml">
+            <tree string="School Stage" editable="bottom">
+                <field name="sequence"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_matakarir_schoolstage">
+        <field name="name">School Stage</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">matakarir.schoolstage</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="matakarir_language_tree">
+        <field name="name">res_language.tree</field>
+        <field name="model">res.language</field>
+        <field name="arch" type="xml">
+            <tree string="Language" editable="bottom">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_matakarir_language">
+        <field name="name">Language</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.language</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="matakarir_computer_tree">
+        <field name="name">res_computer.tree</field>
+        <field name="model">res.computer</field>
+        <field name="arch" type="xml">
+            <tree string="Computer" editable="bottom">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_matakarir_computer">
+        <field name="name">Computer</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.computer</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="matakarir_skill_tree">
+        <field name="name">res_skill.tree</field>
+        <field name="model">res.skill</field>
+        <field name="arch" type="xml">
+            <tree string="Skill" editable="bottom">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_matakarir_skill">
+        <field name="name">Skill</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.skill</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="matakarir_tooltype_tree">
+        <field name="name">matakarir_tooltype.tree</field>
+        <field name="model">matakarir.tooltype</field>
+        <field name="arch" type="xml">
+            <tree string="Tool Type" editable="bottom">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_matakarir_tooltype">
+        <field name="name">Tool Type</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">matakarir.tooltype</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="matakarir_universitydegree_tree">
+        <field name="name">matakarir_universitydegree.tree</field>
+        <field name="model">matakarir.universitydegree</field>
+        <field name="arch" type="xml">
+            <tree string="University Degree" editable="bottom">
+                <field name="sequence"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_matakarir_universitydegree">
+        <field name="name">University Degree</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">matakarir.universitydegree</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="matakarir_faculty_tree">
+        <field name="name">matakarir_faculty.tree</field>
+        <field name="model">matakarir.faculty</field>
+        <field name="arch" type="xml">
+            <tree string="Faculty" editable="bottom">
+                <field name="name"/>
+                <field name="major_ids"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_matakarir_faculty">
+        <field name="name">Faculty</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">matakarir.faculty</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="matakarir_facultymajor_tree">
+        <field name="name">matakarir_facultymajor.tree</field>
+        <field name="model">matakarir.facultymajor</field>
+        <field name="arch" type="xml">
+            <tree string="Major" editable="bottom">
+                <field name="name"/>
+                <field name="faculty_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_matakarir_facultymajor">
+        <field name="name">Major</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">matakarir.facultymajor</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem parent="hr_recruitment.menu_hr_recruitment_configuration" id="menu_matakarir_ethnic" action="action_matakarir_ethnic" sequence="60"/>
+    <menuitem parent="hr_recruitment.menu_hr_recruitment_configuration" id="menu_matakarir_religion" action="action_matakarir_religion" sequence="60"/>
+    <menuitem parent="hr_recruitment.menu_hr_recruitment_configuration" id="menu_matakarir_certificatepublisher" action="action_matakarir_certificatepublisher" sequence="60"/>
+    <menuitem parent="hr_recruitment.menu_hr_recruitment_configuration" id="menu_matakarir_drivinglisencetype" action="action_matakarir_drivinglisencetype" sequence="60"/>
+    <menuitem parent="hr_recruitment.menu_hr_recruitment_configuration" id="menu_matakarir_joblevel" action="action_matakarir_joblevel" sequence="60"/>
+    <menuitem parent="hr_recruitment.menu_hr_recruitment_configuration" id="menu_matakarir_employmentstatus" action="action_matakarir_employmentstatus" sequence="60"/>
+    <menuitem parent="hr_recruitment.menu_hr_recruitment_configuration" id="menu_matakarir_lisencepublisher" action="action_matakarir_lisencepublisher" sequence="60"/>
+    <menuitem parent="hr_recruitment.menu_hr_recruitment_configuration" id="menu_matakarir_referencetype" action="action_matakarir_referencetype" sequence="60"/>
+    <menuitem parent="hr_recruitment.menu_hr_recruitment_configuration" id="menu_matakarir_companytype" action="action_matakarir_companytype" sequence="60"/>
+    <menuitem parent="hr_recruitment.menu_hr_recruitment_configuration" id="menu_matakarir_schoolstage" action="action_matakarir_schoolstage" sequence="60"/>
+    <menuitem parent="hr_recruitment.menu_hr_recruitment_configuration" id="menu_matakarir_language" action="action_matakarir_language" sequence="60"/>
+    <menuitem parent="hr_recruitment.menu_hr_recruitment_configuration" id="menu_matakarir_computer" action="action_matakarir_computer" sequence="60"/>
+    <menuitem parent="hr_recruitment.menu_hr_recruitment_configuration" id="menu_matakarir_skill" action="action_matakarir_skill" sequence="60"/>
+    <menuitem parent="hr_recruitment.menu_hr_recruitment_configuration" id="menu_matakarir_tooltype" action="action_matakarir_tooltype" sequence="60"/>
+    <menuitem parent="hr_recruitment.menu_hr_recruitment_configuration" id="menu_matakarir_universitydegree" action="action_matakarir_universitydegree" sequence="60"/>
+    <menuitem parent="hr_recruitment.menu_hr_recruitment_configuration" id="menu_matakarir_faculty" action="action_matakarir_faculty" sequence="60"/>
+    <menuitem parent="hr_recruitment.menu_hr_recruitment_configuration" id="menu_matakarir_facultymajor" action="action_matakarir_facultymajor" sequence="60"/>
+
+  </data>
+</odoo>

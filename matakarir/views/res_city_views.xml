@@ -1,0 +1,121 @@
+<odoo>
+  <data>
+        <record id="view_city_tree" model="ir.ui.view">
+            <field name="model">res.city</field>
+            <field name="arch" type="xml">
+                <tree string="City" editable="bottom">
+                    <field name="name"/>
+                    <field name="state_id"/>
+                    <field name="country_id"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_district_tree" model="ir.ui.view">
+            <field name="model">res.district</field>
+            <field name="arch" type="xml">
+                <tree string="District" editable="bottom">
+                    <field name="name"/>
+                    <field name="city_id"/>
+                    <field name="state_id"/>
+                    <field name="country_id"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_village_tree" model="ir.ui.view">
+            <field name="model">res.village</field>
+            <field name="arch" type="xml">
+                <tree string="Village" editable="bottom">
+                    <field name="name"/>
+                    <field name="district_id"/>
+                    <field name="city_id"/>
+                    <field name="state_id"/>
+                    <field name="country_id"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_area_tree" model="ir.ui.view">
+            <field name="model">res.area</field>
+            <field name="arch" type="xml">
+                <tree string="Area" editable="bottom">
+                    <field name="name"/>
+                    <field name="village_id"/>
+                    <field name="district_id"/>
+                    <field name="city_id"/>
+                    <field name="state_id"/>
+                    <field name="country_id"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_zip_tree" model="ir.ui.view">
+            <field name="model">res.zipcode</field>
+            <field name="arch" type="xml">
+                <tree string="Zip Code" editable="bottom">
+                    <field name="name"/>
+                    <field name="area_id"/>
+                    <field name="village_id"/>
+                    <field name="district_id"/>
+                    <field name="city_id"/>
+                    <field name="state_id"/>
+                    <field name="country_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_res_city_tree" model="ir.actions.act_window">
+            <field name="name">Cities</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.city</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+        </record>
+        <record id="action_res_district_tree" model="ir.actions.act_window">
+            <field name="name">Districts</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.district</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+        </record>
+        <record id="action_res_village_tree" model="ir.actions.act_window">
+            <field name="name">Villages</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.village</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+        </record>
+        <record id="action_res_area_tree" model="ir.actions.act_window">
+            <field name="name">Areas</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.area</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+        </record>
+        <record id="action_res_zip_tree" model="ir.actions.act_window">
+            <field name="name">Zip Codes</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.zipcode</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+    <menuitem id="menu_city_partner"
+        action="action_res_city_tree" parent="contacts.menu_localisation"
+        sequence="4"/>
+    
+    <menuitem id="menu_district_partner"
+        action="action_res_district_tree" parent="contacts.menu_localisation"
+        sequence="5"/>
+    
+    <menuitem id="menu_village_partner"
+        action="action_res_village_tree" parent="contacts.menu_localisation"
+        sequence="6"/>
+    
+    <menuitem id="menu_area_partner"
+        action="action_res_area_tree" parent="contacts.menu_localisation"
+        sequence="7"/>
+    
+    <menuitem id="menu_zip_partner"
+        action="action_res_zip_tree" parent="contacts.menu_localisation"
+        sequence="8"/>
+    
+  </data>
+</odoo>

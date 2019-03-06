@@ -1,0 +1,11 @@
+id,sequence,name
+e_status_1,10,Self Employed
+e_status_2,20,Fix Employee
+e_status_3,30,Employee
+e_status_4,40,Contract
+e_status_5,50,Worker
+e_status_6,60,Part Timer
+e_status_7,70,Probation
+e_status_8,80,Agent
+e_status_9,90,Intern
+e_status_10,100,Volunteer

@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+    <!-- "Thank you" message when the questionaire is completed -->
+    <template id="sfinished" name="Questionaire Finished">
+        <t t-call="website.layout">
+            <div class="wrap">
+                <div class="container">
+                    <t t-call="questionaire.back" />
+                    <div class="jumbotron mt32">
+                        <h1>Thank you!</h1>
+                        <div t-field="questionaire.thank_you_message" class="oe_no_empty" />
+                        <div t-if='questionaire.quizz_mode'>You scored <t t-esc="user_input.quizz_score" /> points (<span t-esc="user_input.quizz_score_percent" /> %).</div>
+                        <div t-if='user_input.classification_method_id'>
+                            <h1 t-field="quest.title"/>
+                            <t t-call="questionaire.score_table"/></div>
+                        <div>If you wish, you can <a t-att-href="'/questionaire/print/%s/%s' % (slug(questionaire), token)">review your answers</a>.</div>
+                        <div align="center"><a href="/my/home" class="btn btn-primary btn-lg">Back Home</a></div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <!-- Message when the questionaire is not open  -->
+    <template id="notopen" name="Questionaire not open">
+        <t t-call="website.layout">
+            <div class="wrap">
+                <div class="container">
+                    <div class="jumbotron mt32">
+                        <h1>Not open</h1>
+                        <p>This questionaire is not open. Thank you for your interest!</p>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <!-- Message when a login is required  -->
+    <template id="auth_required" name="Login required for this questionaire">
+        <t t-call="website.layout">
+            <div class="wrap">
+                <div class="container">
+                    <div class="jumbotron mt32">
+                        <h1>Login required</h1>
+                        <p>This questionaire is open only to registered people. Please <a t-attf-href="/web/login?redirect=%2Fquestionaire%2Fstart%2F#{ slug(questionaire) }%2F#{token}">log in</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <!-- Message when the questionaire has no pages  -->
+    <template id="nopages" name="Questionaire has no pages">
+        <t t-call="website.layout">
+            <div class="wrap">
+                <div class="container">
+                    <t t-call="questionaire.back" />
+                    <div class="jumbotron mt32">
+                        <h1>Not ready</h1>
+                        <p>This questionaire has no pages by now!</p>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <!-- Back Button to redirect in form view of questionaire -->
+    <template id="back" name="Back">
+        <div groups="website.group_website_publisher" t-ignore="true" class="pull-right">
+            <a t-attf-href="/web#view_type=form&amp;model=questionaire.questionaire&amp;id=#{questionaire.id}&amp;action=questionaire.action_questionaire_form" class="btn btn-default">Back to Questionaire</a>
+        </div>
+    </template>
+
+    <!-- First page of a questionaire -->
+    <template id="questionaire_init" name="Questionaire">
+        <t t-call="website.layout">
+            <div class="wrap">
+                <div class="oe_structure" />
+                <div class="container">
+                    <t t-call="questionaire.back" />
+                    <div class='jumbotron mt32' t-if='old_user_input_id'>
+                        <h1>You've fill this questionaire before</h1>
+                        <h2 t-field='questionaire.title' />
+                        <div t-field='questionaire.description' class="oe_no_empty"/>
+                        <a class="btn btn-primary btn-lg" t-att-href="'/'">
+                            Cancel
+                        </a>
+                        <a class="btn btn-primary btn-lg" t-att-href="'/questionaire/fill/%s/%s' % (slug(questionaire), token)">
+                            Start New
+                        </a>
+                    </div>
+                    <div class='jumbotron mt32' t-else="">
+                        <h1 t-field='questionaire.title' />
+                        <div t-field='questionaire.description' class="oe_no_empty"/>
+                        <a class="btn btn-primary btn-lg" t-att-href="'/questionaire/fill/%s/%s' % (slug(questionaire), token)">
+                            Start Questionaire
+                        </a>
+                    </div>
+                </div>
+                <div class="oe_structure" />
+            </div>
+        </t>
+    </template>
+
+    <!-- A questionaire -->
+    <template id="assets_frontend" inherit_id="website.assets_frontend" name="Questionaire assets">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/questionaire/static/src/js/questionaire.js" />
+            <script type="text/javascript" src="/questionaire/static/src/js/tour_test_questionaire.js"></script>
+            <script type="text/javascript" src="/web/static/src/js/fields/field_utils.js"></script>
+        </xpath>
+    </template>
+    <template id="questionaire" name="Questionaire">
+        <t t-call="website.layout">
+            <div class="wrap">
+                <div class="oe_structure"/>
+                <div class="container">
+                    <t t-call="questionaire.back" />
+                    <t t-call="questionaire.page" />
+                </div>
+                <div class="oe_structure"/>
+            </div>
+        </t>
+    </template>
+
+    <!-- A page -->
+    <template id="page" name="Page">
+        <div class="page-header">
+            <p class="pull-right">Page <span t-raw='page_nr + 1'/> of <span t-raw="len(questionaire.page_ids)"/></p>
+            <h1 t-field='page.title' />
+            <div t-field='page.description' class="oe_no_empty"/>
+        </div>
+
+        <form role="form" method="post" class="js_questionaireform" t-att-name="'%s_%s' % (questionaire.id, page.id)" t-att-action="'/questionaire/fill/%s/%s' % (slug(questionaire), token)" t-att-data-prefill="'/questionaire/prefill/%s/%s/%s' % (slug(questionaire), token, slug(page))" t-att-data-validate="'/questionaire/validate/%s' % (slug(questionaire))" t-att-data-submit="'/questionaire/submit/%s' % (slug(questionaire))">
+            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+            <input type="hidden" name="page_id" t-att-value="page.id" />
+            <input type="hidden" name="classification_method_id" t-att-value="page.classification_method_id.id" />
+            <input type="hidden" name="token" t-att-value="token" />
+            <t t-foreach='page.question_ids' t-as='question'>
+                <t t-set="prefix" t-value="'%s_%s_%s' % (questionaire.id, page.id, question.id)" />
+                <div class="js_question-wrapper" t-att-id="prefix">
+                    <h3>
+                        <span t-field='question.question' />
+                        <span t-if="question.constr_mandatory" class="text-danger">*</span>
+                    </h3>
+                    <div t-if='question.description' t-field='question.description' class="text-muted oe_no_empty"/>
+                    <t t-if="question.type == 'free_text'"><t t-call="questionaire.free_text"/></t>
+                    <t t-if="question.type == 'textbox'"><t t-call="questionaire.textbox"/></t>
+                    <t t-if="question.type == 'numerical_box'"><t t-call="questionaire.numerical_box"/></t>
+                    <t t-if="question.type == 'date'"><t t-call="questionaire.date"/></t>
+                    <t t-if="question.type == 'simple_choice'"><t t-call="questionaire.simple_choice"/></t>
+                    <t t-if="question.type == 'multiple_choice'"><t t-call="questionaire.multiple_choice"/></t>
+                    <t t-if="question.type == 'matrix'"><t t-call="questionaire.matrix"/></t>
+                    <div class="js_errzone alert alert-danger" style="display:none;"></div>
+                </div>
+            </t>
+            <div class="text-center mt16 mb16">
+                <button t-if="questionaire.users_can_go_back and page_nr > 0" type="submit" class="btn btn-default" name="button_submit" value="previous">Previous page</button>
+                <button t-if="not last" type="submit" class="btn btn-primary" name="button_submit" value="next">Next page</button>
+                <button t-if="last" type="submit" class="btn btn-primary" name="button_submit" value="finish">Submit questionaire</button>
+            </div>
+        </form>
+
+        <!-- Modal used to display error message, i.c.o. ajax error -->
+        <div class="modal fade" id="AJAXErrorModal" role="dialog" aria-labelledby="AJAXErrorModal" aria-hidden="true" >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&amp;times;</button>
+                        <h4 class="modal-title">A problem has occured</h4>
+                    </div>
+                    <div class="modal-body"><p>Something went wrong while contacting questionaire server. <strong class="text-danger">Your answers have probably not been recorded.</strong> Try refreshing.</p></div>
+                    <div class="modal-footer"><button type="button" class="btn btn-primary" data-dismiss="modal">Close</button></div>
+                </div>
+            </div>
+        </div>
+
+    </template>
+
+    <!-- Question widgets -->
+    <template id="free_text" name="Free text box">
+        <textarea class="form-control" rows="3" t-att-name="prefix"></textarea>
+    </template>
+
+    <template id="textbox" name="Text box">
+        <input type="text" class="form-control" t-att-name="prefix"/>
+    </template>
+
+    <template id="numerical_box" name="Numerical box">
+        <input type="number" step="any" class="form-control" t-att-name="prefix"/>
+    </template>
+
+    <template id="date" name="Date box">
+        <div class='input-group date'>
+            <input type="text" date="true" class="form-control date" t-att-name="prefix"/>
+        </div>
+    </template>
+
+    <template id="simple_choice" name="Simple choice">
+        <p>
+        <div t-if="question.display_mode == 'dropdown' and token" class="js_drop row">
+            <div class="col-lg-12">
+                <select class="form-control" t-att-name="prefix">
+                    <option disabled="1" selected="1" value="">Choose...</option>
+                    <t t-foreach='question.labels_ids' t-as='label'>
+                        <h4><option t-att-value='label.id'><span t-field='label.value'/></option></h4>
+                    </t>
+                    <t t-if='question.comments_allowed and question.comment_count_as_answer'>
+                        <option class="js_other_option" value="-1"><span t-esc="question.comments_message" /></option>
+                    </t>
+                </select>
+            </div>
+            <div t-if='question.comments_allowed and question.comment_count_as_answer' class="col-lg-6">
+                <input type="text" class="form-control" t-att-name="'%s_%s' % (prefix, 'comment')" data-oe-questionaire-othert="1"/>
+            </div>
+            <div t-if='question.comments_allowed and not question.comment_count_as_answer' class="col-lg-12 mt16">
+                <span t-field="question.comments_message"/>
+                <input type="text" class="form-control" t-att-name="'%s_%s' % (prefix, 'comment')"/>
+            </div>
+        </div>
+        <div t-if="question.display_mode == 'columns' or not token" class="row js_radio">
+            <div t-foreach='question.labels_ids' t-as='label' t-attf-class="col-lg-#{question.column_nb}">
+                <label t-att-class="' bg-success ' if quizz_correction and label.quizz_mark > 0.0 else None">
+                    <h4><input type="radio" t-att-name="prefix" t-att-value='label.id' />
+                        <span t-field='label.value'/></h4>
+                </label>
+            </div>
+            <div t-if='question.comments_allowed and question.comment_count_as_answer' class="js_comments col-lg-12" >
+                <label>
+                    <input type="radio" t-att-name="prefix" value="-1"/>
+                    <span t-field="question.comments_message" />
+                </label>
+                <input type="text" class="form-control" t-att-name="'%s_%s' % (prefix, 'comment')"/>
+            </div>
+            <div t-if='question.comments_allowed and not question.comment_count_as_answer' class="col-lg-12">
+                <span t-field="question.comments_message"/>
+                <input type="text" class="form-control" t-att-name="'%s_%s' % (prefix, 'comment')" data-oe-questionaire-othert="1"/>
+            </div>
+        </div>
+        </p>
+    </template>
+
+    <template id="multiple_choice" name="Multiple choice">
+        <div class="row">
+            <div t-foreach='question.labels_ids' t-as='label' t-attf-class="col-lg-#{question.column_nb}">
+                <label t-att-class="' bg-success ' if quizz_correction and label.quizz_mark > 0.0 else None">
+                    <h4><input type="checkbox" t-att-name="'%s_%s' % (prefix, label.id)" t-att-value='label.id' />
+                        <span t-field='label.value'/></h4>
+                </label>
+            </div>
+            <div t-if='question.comments_allowed and question.comment_count_as_answer' class="js_ck_comments col-lg-12" >
+                <label>
+                    <input type="checkbox" t-att-name="'%s_%s' % (prefix, -1)" value="-1" />
+                    <span t-field="question.comments_message" />
+                </label>
+                <input type="text" class="form-control" t-att-name="'%s_%s' % (prefix, 'comment')"/>
+            </div>
+            <div t-if='question.comments_allowed and not question.comment_count_as_answer' class="col-lg-12">
+                <span t-field="question.comments_message"/>
+                <input type="text" class="form-control" t-att-name="'%s_%s' % (prefix, 'comment')" data-oe-questionaire-othert="1"/>
+            </div>
+        </div>
+    </template>
+
+    <template id="matrix" name="Matrix">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th> </th>
+                    <th t-foreach="question.labels_ids" t-as="col_label"><span t-field="col_label.value" /></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr t-foreach="question.labels_ids_2" t-as="row_label">
+                    <th><span t-field="row_label.value" /></th>
+                    <td t-foreach="question.labels_ids" t-as="col_label">
+                        <input t-if="question.matrix_subtype == 'simple'" type="radio" t-att-name="'%s_%s' % (prefix, row_label.id)" t-att-value='col_label.id' />
+                        <input t-if="question.matrix_subtype == 'multiple'" type="checkbox" t-att-name="'%s_%s_%s' % (prefix, row_label.id, col_label.id)" t-att-value='col_label.id' />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div t-if='question.comments_allowed'>
+            <span t-field="question.comments_message"/>
+            <input type="text" class="form-control" t-att-name="'%s_%s' % (prefix, 'comment')" />
+        </div>
+    </template>
+
+    <template id="assets_frontend_questionaire" inherit_id="website.assets_frontend" name="Printing Questionaire assets">
+        <xpath expr="." position="inside">
+            <link href="/questionaire/static/src/css/questionaire_print.css" rel="stylesheet" type="text/css"/>
+        </xpath>
+    </template>
+
+    <!-- Printable view of a questionaire (all pages) -->
+    <template id="questionaire_print" name="Questionaire">
+        <t t-call="website.layout">
+            <div class="wrap">
+                <div class="container">
+                    <t t-call="questionaire.back" />
+                    <div class="row">
+                        <div class='jumbotron mt32'>
+                            <h1><span t-field='questionaire.title'/></h1>
+                            <t t-if="questionaire.description"><div t-field='questionaire.description' class="oe_no_empty"/></t>
+                        </div>
+                        <div role="form" class="js_questionaireform" t-att-name="'%s' % (questionaire.id)" t-att-data-prefill="'/questionaire/prefill/%s/%s' % (slug(questionaire), token)">
+                            <t t-foreach="questionaire.page_ids" t-as="page">
+                                <div class="page-header">
+                                    <h1 t-field='page.title' />
+                                    <t t-if="page.description"><div t-field='page.description' class="oe_no_empty"/></t>
+                                </div>
+                                <t t-foreach='page.question_ids' t-as='question'>
+                                    <t t-set="prefix" t-value="'%s_%s_%s' % (questionaire.id, page.id, question.id)" />
+                                    <div class="js_question-wrapper" t-att-id="prefix">
+                                        <h2>
+                                            <span t-field='question.question' />
+                                            <span t-if="question.constr_mandatory" class="text-danger">*</span>
+                                            <span t-if="quizz_correction" class="badge" t-att-data-score-question="question.id"></span>
+                                        </h2>
+                                        <t t-if="question.description"><div class="text-muted oe_no_empty" t-field='question.description'/></t>
+                                        <t t-if="question.type == 'free_text'"><t t-call="questionaire.free_text"/></t>
+                                        <t t-if="question.type == 'textbox'"><t t-call="questionaire.textbox"/></t>
+                                        <t t-if="question.type == 'numerical_box'"><t t-call="questionaire.numerical_box"/></t>
+                                        <t t-if="question.type == 'date'"><t t-call="questionaire.date"/></t>
+                                        <t t-if="question.type == 'simple_choice'"><t t-call="questionaire.simple_choice"/></t>
+                                        <t t-if="question.type == 'multiple_choice'"><t t-call="questionaire.multiple_choice"/></t>
+                                        <t t-if="question.type == 'matrix'"><t t-call="questionaire.matrix"/></t>
+                                        <div class="js_errzone alert alert-danger" style="display:none;"></div>
+                                    </div>
+                                </t>
+                                <hr/>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+</data>
+</odoo>

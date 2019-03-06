@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    
+    <template id="vacancies" name="Vacancies">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="oe_structure bg-beta">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 pt16 pb16" style="text-align: center;">
+                                <h4><font style="font-size: 62px;">Vacancy List</font></h4>
+                                <span>
+                                    Sort by: 
+                                    <a t-att-href="url_for('') + '?' + keep_query( 'search', sorting='max_salary desc')" class="btn btn-default">Higest Salary</a> 
+                                    <a t-att-href="url_for('') + '?' + keep_query( 'search', sorting='min_salary asc')" class="btn btn-default">Lowest Salary</a> 
+                                    <a t-att-href="url_for('') + '?' + keep_query( 'search', sorting='max_age desc')" class="btn btn-default">Oldest Qualified</a> 
+                                    <a t-att-href="url_for('') + '?' + keep_query( 'search', sorting='min_age asc')" class="btn btn-default">Youngest Qualified</a> 
+                                    <a t-att-href="url_for('') + '?' + keep_query( 'search', sorting='write_date desc')" class="btn btn-default">Newest Vacancy</a> 
+                                    <a t-att-href="url_for('') + '?' + keep_query( 'search', sorting='write_date asc')" class="btn btn-default">Oldest Vacancy</a> 
+                                    <a t-att-href="url_for('') + '?' + keep_query( 'search', sorting='close_date asc')" class="btn btn-default">Closing Date</a> 
+                                    <a t-att-href="url_for('') + '?' + keep_query( 'search', sorting='views desc')" class="btn btn-default">Most Views</a> 
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="oe_structure">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 pt16 pb16">
+                                <t t-call="hr_apply.vacancy_list" />
+                                <t t-call="website.pager" >
+                                    <t t-set="classname">float-right</t>
+                                </t>
+                            </div>
+                            <div id="o_my_sidebar" class="col-md-3 col-lg-offset-1 pt16 pb16">
+                                <t t-call="hr_apply.vacancy_search" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+    
+    <template id="vacancy_search">
+        <form t-attf-action="/vacancies/" method="post" role="form" class="tag_text js_website_submit_form">
+            <section id="area" class="o_search_area">
+                <p><select name="country" class="form-control">
+                    <option value="">Country...</option>
+                    <t t-foreach="countries or []" t-as="l">
+                        <option t-att-value="l.id" t-att-selected="l.id == country_id if country_id else l.code == 'ID'">
+                            <span t-field="l.name" />
+                        </option>
+                    </t>
+                </select></p>
+                <p><select name="state" class="form-control">
+                    <option value="">Province...</option>
+                    <t t-foreach="states or []" t-as="l">
+                        <option t-att-value="l.id" style="display:none;" t-att-selected="l.id == state_id if state_id else None" t-att-data-country="l.country_id.id">
+                            <span t-field="l.name" />
+                        </option>
+                    </t>
+                </select></p>
+                <p><select name="city" class="form-control">
+                    <option value="">City...</option>
+                    <t t-foreach="cities or []" t-as="l">
+                        <option t-att-value="l.id" style="display:none;" t-att-selected="l.id == city_id if city_id else None" t-att-data-country="l.country_id.id" t-att-data-state="l.state_id.id">
+                            <span t-field="l.name" />
+                        </option>
+                    </t>
+                </select></p>
+                <p><select name="district" class="form-control">
+                    <option value="">District...</option>
+                    <t t-foreach="districts or []" t-as="l">
+                        <option t-att-value="l.id" style="display:none;" t-att-selected="l.id == district_id if district_id else None" t-att-data-country="l.country_id.id" t-att-data-state="l.state_id.id" t-att-data-city="l.city_id.id">
+                            <span t-field="l.name" />
+                        </option>
+                    </t>
+                </select></p>
+                <p><select name="village" class="form-control">
+                    <option value="">Village...</option>
+                    <t t-foreach="villages or []" t-as="l">
+                        <option t-att-value="l.id" style="display:none;" t-att-selected="l.id == village_id if village_id else None" t-att-data-country="l.country_id.id" t-att-data-state="l.state_id.id" t-att-data-city="l.city_id.id" t-att-data-district="l.district_id.id">
+                            <span t-field="l.name" />
+                        </option>
+                    </t>
+                </select></p>
+                <p><select name="area" class="form-control">
+                    <option value="">Area...</option>
+                    <t t-foreach="areas or []" t-as="l">
+                        <option t-att-value="l.id" style="display:none;" t-att-selected="l.id == area_id if area_id else None" t-att-data-country="l.country_id.id" t-att-data-state="l.state_id.id" t-att-data-city="l.city_id.id" t-att-data-district="l.district_id.id" t-att-data-village="l.village_id.id">
+                            <span t-field="l.name" />
+                        </option>
+                    </t>
+                </select></p>
+                <p><select name="company" class="form-control">
+                    <option value="">Company...</option>
+                    <t t-foreach="companies or []" t-as="l">
+                        <option t-att-value="l.id" t-att-selected="l.id == company_id if company_id else None" t-att-data-country="l.country_id.id" t-att-data-state="l.state_id.id" t-att-data-city="l.city_id.id" t-att-data-district="l.district_id.id" t-att-data-village="l.village_id.id" t-att-data-area="l.area_id.id">
+                            <span t-field="l.name" />
+                        </option>
+                    </t>
+                </select></p>
+            </section>
+            <section id="qualification">
+                <p><select name="level" class="form-control">
+                    <option value="">Level...</option>
+                    <t t-foreach="levels or []" t-as="l">
+                        <option t-att-value="l.id" t-att-selected="l.id == level_id if level_id else None">
+                            <span t-field="l.name" />
+                        </option>
+                    </t>
+                </select></p>
+                <p><select name="department" class="form-control">
+                    <option value="">Department...</option>
+                    <t t-foreach="departments or []" t-as="l">
+                        <option t-att-value="l.id" t-att-selected="l.id == department_id if department_id else None">
+                            <span t-field="l.name" />
+                        </option>
+                    </t>
+                </select></p>
+                <p><select name="industry" class="form-control">
+                    <option value="">Industry...</option>
+                    <t t-foreach="industries or []" t-as="l">
+                        <option t-att-value="l.id" t-att-selected="l.id == industry_id if industry_id else None">
+                            <span t-field="l.name" />
+                        </option>
+                    </t>
+                </select></p>
+                <p><select name="e_status" class="form-control">
+                    <option value="">Employment Status...</option>
+                    <t t-foreach="e_statuses or []" t-as="l">
+                        <option t-att-value="l.id" t-att-selected="l.id == e_status_id if e_status_id else None">
+                            <span t-field="l.name" />
+                        </option>
+                    </t>
+                </select></p>
+                <p><select name="salary_currency" class="form-control">
+                    <option value="">Salary Currency...</option>
+                    <t t-foreach="currencies or []" t-as="l">
+                        <option t-att-value="l.id" t-att-selected="l.id == salary_currency_id if salary_currency_id else None">
+                            <span t-field="l.name" />
+                        </option>
+                    </t>
+                </select></p>
+                <p><select name="salary" class="form-control">
+                    <option value="">Salary...</option>
+                    <t t-foreach="salaries or []" t-as="l">
+                        <option t-att-value="l.id" t-att-selected="l.id == salary_id if salary_id else None">
+                            <span t-field="l.name" />
+                        </option>
+                    </t>
+                </select></p>
+                <p><select name="salary_duration" class="form-control">
+                    <option value="">Salary Duration...</option>
+                    <t t-foreach="durations or []" t-as="l">
+                        <option t-att-value="l.id" t-att-selected="l.id == salary_duration_id if salary_duration_id else None">
+                            <span t-field="l.name" />
+                        </option>
+                    </t>
+                </select></p>
+                <p><select name="age" class="form-control">
+                    <option value="">Age...</option>
+                    <t t-foreach="ages or []" t-as="l">
+                        <option t-att-value="l.id" t-att-selected="l.id == age_id if age_id else None">
+                            <span t-field="l.name" />
+                        </option>
+                    </t>
+                </select></p>
+                <p class="input-group">
+                    <input type="text" name="search" class="search-query form-control oe_search_box" placeholder="Search..." t-att-value="search"/>
+                </p>
+            </section>
+            <div align="center">
+                <button type="submit" t-attf-class="btn btn-primary">Search</button>
+            </div>
+        </form>
+    </template>
+    
+    <template id="vacancy_list">
+        <table class="table table-striped">
+            <tr t-if="len(vacancies) > 0" t-foreach="vacancies" t-as="v">
+                <td>
+                    <a t-attf-href="/vacancy/#{slug(v)}/"><h4 t-field="v.name" /></a>
+                    <a t-attf-href="/profile/#{slug(v.employer_id)}">
+                        <h5><span t-field="v.level_id" /> <span t-field="v.department_id" /> <span t-field="v.employer_id" /></h5>
+                    </a>
+                    <span t-if="v.area_id"><span t-field="v.area_id" />, </span>
+                    <span t-if="v.village_id"><span t-field="v.village_id" />, </span>
+                    <span t-if="v.district_id"><span t-field="v.district_id" />, </span>
+                    <span t-if="v.city_id"><span t-field="v.city_id" />, </span>
+                    <span t-if="v.state_id"><span t-field="v.state_id" />, </span>
+                    <span t-if="v.country_id"><span t-field="v.country_id" />.<br /></span>
+                    <span t-if="v.min_salary or v.max_salary">
+                        Income Range: <span t-if="v.currency_id" ><span t-field="v.currency_id" /> </span>
+                        <span t-if="v.min_salary" ><span t-field="v.min_salary" /> - </span>
+                        <span t-else="" >Up to </span>
+                        <span t-if="v.max_salary" ><span t-field="v.max_salary" /></span>
+                        <span t-else="" >Up</span>
+                        <span t-if="v.duration_id" ><span t-field="v.duration_id" /> </span><br/>
+                    </span>
+                    <span t-if="v.min_age or v.max_age">
+                        Qualified Age Range: 
+                        <span t-if="v.min_age" ><span t-field="v.min_age" /> - </span>
+                        <span t-else="" >Up to </span>
+                        <span t-if="v.max_age" ><span t-field="v.max_age" /></span>
+                        <span t-else="" >Up</span><br/>
+                    </span>
+                    <span>Vacancy for <span t-field="v.no_of_recruitment" /> person(s) </span>
+                    , <span t-field="v.views" /> views<br/>
+<!--
+                    , there are <span t-field="v.applicants" /> applicants, <span t-field="v.views" /> views<br/>
+-->
+                    <span t-if="v.close_date">, closing date: <span t-field="v.close_date" /></span>
+                </td>
+            </tr>
+            <tr t-else=""><td align="center">
+                <h4>Sorry, we can't find vacancies you are looking for.<br/>
+                Please search again.</h4></td></tr>
+        </table>
+    </template>
+    
+</odoo>

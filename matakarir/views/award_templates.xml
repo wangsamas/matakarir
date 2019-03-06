@@ -1,0 +1,418 @@
+<odoo>
+    <data>
+        <template id="driving_lisence" name="Driving Lisences">
+            <t t-call="portal.portal_layout">
+                <t t-if="partner_id.driving_lisence_ids" t-call="matakarir.driving_lisence_table"/>
+                <h1 t-if="driving_lisence_id" class="mt0">Edit Driving Lisence</h1>
+                <h1 t-else="" class="mt0">New Driving Lisence</h1>
+                <form t-attf-action="/save/driving_lisence" method="post" role="form" class="tag_text js_website_submit_form">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <input t-if="driving_lisence_id" type="hidden" name="driving_lisence_id" t-att-value="driving_lisence_id.id"/>
+                    <p t-call="matakarir.driving_lisence_form"/>
+                    <div align="center">
+                        <a href="/my/home" class="btn btn-default">Cancel</a>
+                        <button type="submit" t-attf-class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </t>
+        </template>
+        
+        <template id="driving_lisence_form">
+            <table class="table o_country_object">
+                <t t-if="driving_lisence_id">
+                    <tr>
+                        <td><strong>Driving Lisence</strong></td>
+                        <td colspan="2"><span t-field="object.name"/></td>
+                    </tr>
+                </t>
+                <t t-else="">
+                    <tr>
+                        <td><strong>Driving Lisence Country</strong></td>
+                        <td colspan="2">
+                            <select name="country_id" class="form-control">
+                                <option value="">Country...</option>
+                                <t t-foreach="countries or []" t-as="country">
+                                    <option t-att-value="country.id" t-att-selected="country.code == 'ID'">
+                                        <t t-esc="country.name" />
+                                    </option>
+                                </t>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Driving Lisence</strong></td>
+                        <td id="input_object" style="display:none;"><input type="text" class="form-control" name="object_name" placeholder="Driving Lisence Name..."/></td>
+                        <td>
+                            <select name="object_id" class="form-control">
+                                <option value="">Driving Lisence...</option>
+                                <t t-foreach="objects or []" t-as="l">
+                                    <option t-att-value="l.id" style="display:none;" t-att-data-country_id="l.country_id.id">
+                                        <t t-esc="l.name" />
+                                    </option>
+                                </t>
+                            </select>
+                        </td>
+                        <td><a href="#new_object" id="new_object"><i class="fa fa-plus-square"/>Add new</a></td>
+                    </tr>
+                </t>
+                <tr>
+                    <td><strong>Number</strong></td>
+                    <td t-if="driving_lisence_id" colspan="2"><input type="text" name="number" class="form-control" t-att-value="driving_lisence_id.number or number" required="required" /></td>
+                    <td t-else="" colspan="2"><input type="text" name="number" class="form-control" t-att-value="number" required="required" /></td>
+                </tr>
+                <tr>
+                    <td><strong>Since</strong></td>
+                    <td t-if="driving_lisence_id" colspan="2"><input type="date" name="since" class="form-control fa fa-calendar" t-att-value="driving_lisence_id.since or since" required="required" /></td>
+                    <td t-else='' colspan="2"><input type="date" name="since" class="form-control fa fa-calendar" t-att-value="since" required="required" /></td>
+                </tr>
+                <tr>
+                    <td><strong>Until</strong></td>
+                    <td t-if="driving_lisence_id" colspan="2"><input type="date" name="until" class="form-control fa fa-calendar" t-att-value="driving_lisence_id.until or until" /></td>
+                    <td t-else='' colspan="2"><input type="date" name="until" class="form-control fa fa-calendar" t-att-value="until" /></td>
+                </tr>
+            </table>
+        </template>
+        
+        <template id="delete_driving_lisence" name="Delete Driving Lisence">
+            <t t-call="portal.portal_layout">
+                <h1 class="mt0">Delete Driving Lisence</h1>
+                <form t-attf-action="/delete/driving_lisence" method="post" role="form" class="tag_text js_website_submit_form">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <input type="hidden" name="driving_lisence_id" t-att-value="driving_lisence_id.id"/>
+                    <table class="table table-striped table-condensed well well-lg">
+                        <tr>
+                            <td><strong>Driving Lisence</strong></td>
+                            <td><span t-field="driving_lisence_id.lisence_type_id.name"/></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Number</strong></td>
+                            <td><span t-field="driving_lisence_id.number"/></td>
+                        </tr>
+                    </table>
+                    <h1 class="mt0">Are You sure?</h1>
+                    <a href="/my/home" class="btn btn-default">Cancel</a>
+                    <button type="submit" t-attf-class="btn btn-primary">Delete</button>
+                </form>
+            </t>
+        </template>
+        
+        <template id="lisence" name="Lisences">
+            <t t-call="portal.portal_layout">
+                <t t-if="partner_id.lisence_ids" t-call="matakarir.lisence_table"/>
+                <h1 t-if="lisence_id" class="mt0">Edit Lisence</h1>
+                <h1 t-else="" class="mt0">New Lisence</h1>
+                <form t-attf-action="/save/lisence" method="post" role="form" class="tag_text js_website_submit_form">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <input t-if="lisence_id" type="hidden" name="lisence_id" t-att-value="lisence_id.id"/>
+                    <p t-call="matakarir.lisence_form"/>
+                    <div align="center">
+                        <a href="/my/home" class="btn btn-default">Cancel</a>
+                        <button type="submit" t-attf-class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </t>
+        </template>
+        
+        <template id="lisence_form">
+            <table class="table o_three_levels">
+                <t t-if="lisence_id">
+                    <tr>
+                        <td><strong>Lisence</strong></td>
+                        <td colspan="2"><span t-field="lisence_id.name"/></td>
+                    </tr>
+                </t>
+                <t t-else="">
+                    <tr>
+                        <td><strong>Publisher Country</strong></td>
+                        <td id="input_level1" style="display:none;"><input type="text" class="form-control" name="level1_name" placeholder="Publisher Country..."/></td>
+                        <td>
+                            <select name="level1" class="form-control">
+                                <option value="">Country...</option>
+                                <t t-foreach="level1s or []" t-as="l">
+                                    <option t-att-value="l.id" t-att-selected="l.code == 'ID'">
+                                        <t t-esc="l.name" />
+                                    </option>
+                                </t>
+                            </select>
+                        </td>
+                        <td><a href="#new_level1" id="new_level1"><i class="fa fa-plus-square"/>Add new</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Publisher Name</strong></td>
+                        <td id="input_level2" style="display:none;"><input type="text" class="form-control" name="level2_name" placeholder="Publisher Name..."/></td>
+                        <td>
+                            <select name="level2" class="form-control">
+                                <option value="">Publisher...</option>
+                                <t t-foreach="level2s or []" t-as="l">
+                                    <option t-att-value="l.id" t-att-data-level1="l.country_id.id">
+                                        <t t-esc="l.name" />
+                                    </option>
+                                </t>
+                            </select>
+                        </td>
+                        <td><a href="#new_level2" id="new_level2"><i class="fa fa-plus-square"/>Add new</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lisence Name</strong></td>
+                        <td id="input_level3" style="display:none;"><input type="text" class="form-control" name="level3_name" placeholder="Lisence Name..."/></td>
+                        <td>
+                            <select name="level3" class="form-control">
+                                <option value="">Lisence...</option>
+                                <t t-foreach="level3s or []" t-as="l">
+                                    <option t-att-value="l.id" t-att-data-level2="l.publisher_id.id" t-att-data-level1="l.country_id.id">
+                                        <t t-esc="l.name" />
+                                    </option>
+                                </t>
+                            </select>
+                        </td>
+                        <td><a href="#new_level3" id="new_level3"><i class="fa fa-plus-square"/>Add new</a></td>
+                    </tr>
+                </t>
+                <tr>
+                    <td><strong>Number</strong></td>
+                    <td t-if="lisence_id" colspan="2"><input type="text" name="number" class="form-control" t-att-value="lisence_id.number or number" /></td>
+                    <td t-else="" colspan="2"><input type="text" name="number" class="form-control" t-att-value="number" /></td>
+                </tr>
+                <tr>
+                    <td><strong>Status</strong></td>
+                    <td colspan="2">
+                        <select class="form-control" name="status" required="required">
+                            <option t-if="lisence_id" t-att-value="lisence_id.status">
+                                <t t-esc="{'expired': 'Expired', 
+                                          'valid': 'Valid', 
+                                          'progress': 'Progress'}[lisence_id.status]" />
+                            </option>
+                            <option t-else="" value=""></option>
+                            <option value="expired">Expired</option>
+                            <option value="valid">Valid</option>
+                            <option value="progress">Progress</option>
+                        </select>
+                    </td>                         
+                </tr>
+                <tr>
+                    <td><strong>Since</strong></td>
+                    <td t-if="lisence_id" colspan="2"><input type="date" name="since" class="form-control fa fa-calendar" t-att-value="lisence_id.since or since" required="required" /></td>
+                    <td t-else='' colspan="2"><input type="date" name="since" class="form-control fa fa-calendar" t-att-value="since" required="required" /></td>
+                </tr>
+                <tr>
+                    <td><strong>Until</strong></td>
+                    <td t-if="lisence_id" colspan="2"><input type="date" name="until" class="form-control fa fa-calendar" t-att-value="lisence_id.until or until" /></td>
+                    <td t-else='' colspan="2"><input type="date" name="until" class="form-control fa fa-calendar" t-att-value="until" /></td>
+                </tr>
+            </table>
+        </template>
+        
+        <template id="delete_lisence" name="Delete Lisence">
+            <t t-call="portal.portal_layout">
+                <h1 class="mt0">Delete Lisence</h1>
+                <form t-attf-action="/delete/lisence" method="post" role="form" class="tag_text js_website_submit_form">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <input type="hidden" name="lisence_id" t-att-value="lisence_id.id"/>
+                    <table class="table table-striped table-condensed well well-lg">
+                        <tr>
+                            <td><strong>Lisence</strong></td>
+                            <td><span t-field="lisence_id.lisence_id.name"/></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Number</strong></td>
+                            <td><span t-field="lisence_id.number"/></td>
+                        </tr>
+                    </table>
+                    <h1 class="mt0">Are You sure?</h1>
+                    <a href="/my/home" class="btn btn-default">Cancel</a>
+                    <button type="submit" t-attf-class="btn btn-primary">Delete</button>
+                </form>
+            </t>
+        </template>        
+
+        <template id="award" name="Awards">
+            <t t-call="portal.portal_layout">
+                <t t-if="partner_id.award_ids" t-call="matakarir.award_table"/>
+                <h1 t-if="award_id" class="mt0">Edit Award</h1>
+                <h1 t-else="" class="mt0">New Award</h1>
+                <form t-attf-action="/save/award" method="post" role="form" class="tag_text js_website_submit_form">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <input t-if="award_id" type="hidden" name="award_id" t-att-value="award_id.id"/>
+                    <p t-call="matakarir.award_form"/>
+                    <div align="center">
+                        <a href="/my/home" class="btn btn-default">Cancel</a>
+                        <button type="submit" t-attf-class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </t>
+        </template>
+        
+        <template id="award_form">
+            <table class="table o_area_selections">
+                <t t-if="award_id">
+                    <tr>
+                        <td><strong>Awarder Institution</strong></td>
+                        <td colspan="2"><span t-field="object.name"/></td>
+                    </tr>
+                </t>
+                <t t-else="">
+                    <p t-call="matakarir.country_template" />
+                    <p t-call="matakarir.state_template" />
+                    <p t-call="matakarir.city_template" />
+                    <tr>
+                        <td><strong>Awarder Institution</strong></td>
+                        <td id="input_company" style="display:none;"><input type="text" class="form-control" name="company_name" placeholder="Awarder Institution..."/></td>
+                        <td>
+                            <select name="company" class="form-control">
+                                <option value="">Awarder...</option>
+                                <t t-foreach="companies or []" t-as="l">
+                                    <option t-att-value="l.id" t-att-selected="l.id == object.id if object else l.id == ''" t-att-data-country="l.country_id.id" t-att-data-state="l.state_id.id" t-att-data-city="l.city_id.id">
+                                        <t t-esc="l.name" />
+                                    </option>
+                                </t>
+                            </select>
+                        </td>
+                        <td><a href="#new_company" id="new_company"><i class="fa fa-plus-square"/>Add new</a></td>
+                    </tr>
+                </t>
+                <tr>
+                    <td><strong>Title</strong></td>
+                    <td t-if="award_id" colspan="2"><input type="text" name="title" class="form-control" t-att-value="award_id.title or title" /></td>
+                    <td t-else="" colspan="2"><input type="text" name="title" class="form-control" t-att-value="title" /></td>
+                </tr>
+                <tr>
+                    <td><strong>Since</strong></td>
+                    <td t-if="award_id" colspan="2"><input type="date" name="since" class="form-control fa fa-calendar" t-att-value="award_id.since or since" required="required" /></td>
+                    <td t-else='' colspan="2"><input type="date" name="since" class="form-control fa fa-calendar" t-att-value="since" required="required" /></td>
+                </tr>
+            </table>
+        </template>
+        
+        <template id="delete_award" name="Delete award">
+            <t t-call="portal.portal_layout">
+                <h1 class="mt0">Delete Award</h1>
+                <form t-attf-action="/delete/award" method="post" role="form" class="tag_text js_website_submit_form">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <input type="hidden" name="award_id" t-att-value="award_id.id"/>
+                    <table class="table table-striped table-condensed well well-lg">
+                        <tr>
+                            <td><strong>Award Title</strong></td>
+                            <td><span t-field="award_id.title"/></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Awarder</strong></td>
+                            <td><span t-field="award_id.awarder_id.name"/></td>
+                        </tr>
+                    </table>
+                    <h1 class="mt0">Are You sure?</h1>
+                    <a href="/my/home" class="btn btn-default">Cancel</a>
+                    <button type="submit" t-attf-class="btn btn-primary">Delete</button>
+                </form>
+            </t>
+        </template>
+        
+        <template id="certificate" name="Certificates">
+            <t t-call="portal.portal_layout">
+                <t t-if="partner_id.certificate_ids" t-call="matakarir.certificate_table"/>
+                <h1 t-if="certificate_id" class="mt0">Edit Certificate</h1>
+                <h1 t-else="" class="mt0">New Certificate</h1>
+                <form t-attf-action="/save/certificate" method="post" role="form" class="tag_text js_website_submit_form">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <input t-if="certificate_id" type="hidden" name="certificate_id" t-att-value="certificate_id.id"/>
+                    <p t-call="matakarir.certificate_form"/>
+                    <div align="center">
+                        <a href="/my/home" class="btn btn-default">Cancel</a>
+                        <button type="submit" t-attf-class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </t>
+        </template>
+        
+        <template id="certificate_form">
+            <table class="table o_three_levels">
+                <t t-if="certificate_id">
+                    <tr>
+                        <td><strong>Certificate</strong></td>
+                        <td colspan="2"><span t-field="certificate_id.name"/></td>
+                    </tr>
+                </t>
+                <t t-else="">
+                    <tr>
+                        <td><strong>Publisher Country</strong></td>
+                        <td id="input_level1" style="display:none;"><input type="text" class="form-control" name="level1_name" placeholder="Publisher Country..."/></td>
+                        <td>
+                            <select name="level1" class="form-control">
+                                <option value="">Country...</option>
+                                <t t-foreach="level1s or []" t-as="l">
+                                    <option t-att-value="l.id" t-att-selected="l.code == 'ID'">
+                                        <t t-esc="l.name" />
+                                    </option>
+                                </t>
+                            </select>
+                        </td>
+                        <td><a href="#new_level1" id="new_level1"><i class="fa fa-plus-square"/>Add new</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Publisher Name</strong></td>
+                        <td id="input_level2" style="display:none;"><input type="text" class="form-control" name="level2_name" placeholder="Publisher Name..."/></td>
+                        <td>
+                            <select name="level2" class="form-control">
+                                <option value="">Publisher...</option>
+                                <t t-foreach="level2s or []" t-as="l">
+                                    <option t-att-value="l.id" t-att-data-level1="l.country_id.id">
+                                        <t t-esc="l.name" />
+                                    </option>
+                                </t>
+                            </select>
+                        </td>
+                        <td><a href="#new_level2" id="new_level2"><i class="fa fa-plus-square"/>Add new</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Certifticate Name</strong></td>
+                        <td id="input_level3" style="display:none;"><input type="text" class="form-control" name="level3_name" placeholder="Certifticate Name..."/></td>
+                        <td>
+                            <select name="level3" class="form-control">
+                                <option value="">Certifticate...</option>
+                                <t t-foreach="level3s or []" t-as="l">
+                                    <option t-att-value="l.id" t-att-data-level2="l.publisher_id.id" t-att-data-level1="l.country_id.id">
+                                        <t t-esc="l.name" />
+                                    </option>
+                                </t>
+                            </select>
+                        </td>
+                        <td><a href="#new_level3" id="new_level3"><i class="fa fa-plus-square"/>Add new</a></td>
+                    </tr>
+                </t>
+                <tr>
+                    <td><strong>Number</strong></td>
+                    <td t-if="certificate_id" colspan="2"><input type="text" name="number" class="form-control" t-att-value="certificate_id.number or number" /></td>
+                    <td t-else="" colspan="2"><input type="text" name="number" class="form-control" t-att-value="number" /></td>
+                </tr>
+                <tr>
+                    <td><strong>Since</strong></td>
+                    <td t-if="certificate_id" colspan="2"><input type="date" name="since" class="form-control fa fa-calendar" t-att-value="certificate_id.since or since" required="required" /></td>
+                    <td t-else='' colspan="2"><input type="date" name="since" class="form-control fa fa-calendar" t-att-value="since" required="required" /></td>
+                </tr>
+            </table>
+        </template>
+        
+        <template id="delete_certificate" name="Delete Certificate">
+            <t t-call="portal.portal_layout">
+                <h1 class="mt0">Delete Certificate</h1>
+                <form t-attf-action="/delete/certificate" method="post" role="form" class="tag_text js_website_submit_form">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <input type="hidden" name="certificate_id" t-att-value="certificate_id.id"/>
+                    <table class="table table-striped table-condensed well well-lg">
+                        <tr>
+                            <td><strong>Certificate</strong></td>
+                            <td><span t-field="certificate_id.certificate_id.name"/></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Number</strong></td>
+                            <td><span t-field="certificate_id.number"/></td>
+                        </tr>
+                    </table>
+                    <h1 class="mt0">Are You sure?</h1>
+                    <a href="/my/home" class="btn btn-default">Cancel</a>
+                    <button type="submit" t-attf-class="btn btn-primary">Delete</button>
+                </form>
+            </t>
+        </template>        
+
+    </data>
+</odoo>

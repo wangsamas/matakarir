@@ -1,0 +1,3059 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_apply
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20181118\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-16 12:38+0000\n"
+"PO-Revision-Date: 2018-12-16 20:09+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: id\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: hr_apply
+#: model:mail.template,body_html:hr_apply.email_applied
+msgid ""
+"\n"
+"<div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"    <p>Dear ${object.job_owner_id.name},</p>\n"
+"    <p>You have a new application for ${object.job_id.name}.</p>\n"
+"    <div style=\"text-align: center; margin-top: 16px;\">\n"
+"        <a href=\"https://matakarir.com/application/${object.id}\" style=\"padding: 5px 10px; font-size: 12px; line-height: 18px; color: #FFFFFF; border-color:#875A7B; text-decoration: none; display: inline-block; margin-bottom: 0px; font-weight: 400; text-align: center; vertical-align: middle; cursor: pointer; white-space: nowrap; background-image: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius:3px\">View application</a>\n"
+"    </div>\n"
+"    <p>If you do not expect this, you can safely ignore this email.</p>\n"
+"    <p>Best regards,</p>\n"
+"</div>\n"
+"<div style=\"padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777\">\n"
+"    <p style=\"font-size: 11px; margin-top: 10px;\">\n"
+"        <a href=\"www.matakarir.com\"><img src=\"/logo.png\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.job_id.company_id.name}\"></a>\n"
+"    </p>\n"
+"</div>\n"
+"        "
+msgstr ""
+"\n"
+"<div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"    <p>Yang Terhormat ${object.job_owner_id.name},</p>\n"
+"    <p>Anda memiliki lamaran baru untuk ${object.job_id.name}.</p>\n"
+"    <div style=\"text-align: center; margin-top: 16px;\">\n"
+"        <a href=\"https://matakarir.com/application/${object.id}\" style=\"padding: 5px 10px; font-size: 12px; line-height: 18px; color: #FFFFFF; border-color:#875A7B; text-decoration: none; display: inline-block; margin-bottom: 0px; font-weight: 400; text-align: center; vertical-align: middle; cursor: pointer; white-space: nowrap; background-image: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius:3px\">Lihat Lamaran</a>\n"
+"    </div>\n"
+"    <p>Jika Anda tidak mengharapkan ini, Anda dapat dengan aman mengabaikan email ini.</p>\n"
+"    <p>Dengan hormat,</p>\n"
+"</div>\n"
+"<div style=\"padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777\">\n"
+"    <p style=\"font-size: 11px; margin-top: 10px;\">\n"
+"        <a href=\"www.matakarir.com\"><img src=\"/logo.png\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.job_id.company_id.name}\"></a>\n"
+"    </p>\n"
+"</div>\n"
+"        "
+
+#. module: hr_apply
+#: model:mail.template,body_html:hr_apply.email_applicant_response
+msgid ""
+"\n"
+"<div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"    <p>Dear ${object.job_owner_id.name},</p>\n"
+"    <p>You have new response for: ${object.job_id.name}.</p>\n"
+"    <div style=\"text-align: center; margin-top: 16px;\">\n"
+"        <a href=\"https://matakarir.com/application/${object.id}\" style=\"padding: 5px 10px; font-size: 12px; line-height: 18px; color: #FFFFFF; border-color:#875A7B; text-decoration: none; display: inline-block; margin-bottom: 0px; font-weight: 400; text-align: center; vertical-align: middle; cursor: pointer; white-space: nowrap; background-image: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius:3px\">View application</a>\n"
+"    </div>\n"
+"    <p>Please click the link above to view.</p>\n"
+"    <p>Best regards,</p>\n"
+"</div>\n"
+"<div style=\"padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777\">\n"
+"    <p style=\"font-size: 11px; margin-top: 10px;\">\n"
+"        <a href=\"www.matakarir.com\"><img src=\"/logo.png\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.job_id.company_id.name}\"></a>\n"
+"    </p>\n"
+"</div>\n"
+"        "
+msgstr ""
+"\n"
+"<div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"    <p>Yang terhormat ${object.job_owner_id.name},</p>\n"
+"    <p>Anda mendapatkan tanggapan baru untuk: ${object.job_id.name}.</p>\n"
+"    <div style=\"text-align: center; margin-top: 16px;\">\n"
+"        <a href=\"https://matakarir.com/application/${object.id}\" style=\"padding: 5px 10px; font-size: 12px; line-height: 18px; color: #FFFFFF; border-color:#875A7B; text-decoration: none; display: inline-block; margin-bottom: 0px; font-weight: 400; text-align: center; vertical-align: middle; cursor: pointer; white-space: nowrap; background-image: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius:3px\">Lihat Lamaran</a>\n"
+"    </div>\n"
+"    <p>Silakan klik tautan di atas untuk melihat.</p>\n"
+"    <p>Dengan hormat,</p>\n"
+"</div>\n"
+"<div style=\"padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777\">\n"
+"    <p style=\"font-size: 11px; margin-top: 10px;\">\n"
+"        <a href=\"www.matakarir.com\"><img src=\"/logo.png\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.job_id.company_id.name}\"></a>\n"
+"    </p>\n"
+"</div>\n"
+"        "
+
+#. module: hr_apply
+#: model:mail.template,body_html:hr_apply.email_rejected
+msgid ""
+"\n"
+"<div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"    <p>Dear ${object.partner_id.name},</p>\n"
+"    <p>We appreciate that you are interested to apply ${object.job_id.name}.</p>\n"
+"    <p>After reviewing your submitted application, the job owner have decided that your qualifications is not suit for the job and we have to decline your application.</p>\n"
+"\n"
+"    <p>We encourage you to search and apply for other jobs in our list, and use our tools to help you find jobs that suit your qualifications.</p>\n"
+"    <p>Best regards,</p>\n"
+"</div>\n"
+"<div style=\"padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777\">\n"
+"    <p style=\"font-size: 11px; margin-top: 10px;\">\n"
+"        <a href=\"www.matakarir.com\"><img src=\"/logo.png\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.job_id.company_id.name}\"></a>\n"
+"    </p>\n"
+"</div>\n"
+"        "
+msgstr ""
+"\n"
+"<div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"    <p>Yang Terhormat ${object.partner_id.name},</p>\n"
+"    <p>Kami menghargai bahwa Anda tertarik untuk melamar pekerjaan ${object.job_id.name}.</p>\n"
+"    <p>Setelah mengulas lamaran yang Anda kirim, pemilik pekerjaan telah memutuskan bahwa kualifikasi Anda tidak cocok dengan pekerjaan yang diberikan dan lamaran Anda tidak disetujui.</p>\n"
+"\n"
+"    <p>Kami menyarankan Anda untuk mencari dan melamar lowongan lain yang ada di daftar kami, dan gunakan peralatan kami untuk membantu Anda mencari pekerjaan yang cocok dengan kualifikasi Anda.</p>\n"
+"    <p>Dengan hormat,</p>\n"
+"</div>\n"
+"<div style=\"padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777\">\n"
+"    <p style=\"font-size: 11px; margin-top: 10px;\">\n"
+"        <a href=\"www.matakarir.com\"><img src=\"/logo.png\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.job_id.company_id.name}\"></a>\n"
+"    </p>\n"
+"</div>\n"
+"        "
+
+#. module: hr_apply
+#: model:mail.template,body_html:hr_apply.email_hired
+msgid ""
+"\n"
+"<div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"    <p>Dear ${object.partner_id.name},</p>\n"
+"    <p>We are happy to inform you that your application: ${object.job_id.name} is succeed.</p>\n"
+"    <p>You are hired !</p>\n"
+"    <p>Please contact the employer for further instruction<p>\n"
+"    <div style=\"text-align: center; margin-top: 16px;\">\n"
+"        <a href=\"https://matakarir.com/application/${object.id}\" style=\"padding: 5px 10px; font-size: 12px; line-height: 18px; color: #FFFFFF; border-color:#875A7B; text-decoration: none; display: inline-block; margin-bottom: 0px; font-weight: 400; text-align: center; vertical-align: middle; cursor: pointer; white-space: nowrap; background-image: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius:3px\">View application</a>\n"
+"    </div>\n"
+"    <p>Best regards,</p>\n"
+"</div>\n"
+"<div style=\"padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777\">\n"
+"    <p style=\"font-size: 11px; margin-top: 10px;\">\n"
+"        <a href=\"www.matakarir.com\"><img src=\"/logo.png\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.job_id.company_id.name}\"></a>\n"
+"    </p>\n"
+"</div>\n"
+"        "
+msgstr ""
+"\n"
+"<div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"    <p>Yang Terhormat ${object.partner_id.name},</p>\n"
+"    <p>Dengan senang kami informasikan bahwa lamaran Anda: ${object.job_id.name} berhasil.</p>\n"
+"    <p>Anda diterima !</p>\n"
+"    <p>Silakan hubungi pemberi kerja untuk instruksi berikutnya.<p>\n"
+"    <div style=\"text-align: center; margin-top: 16px;\">\n"
+"        <a href=\"https://matakarir.com/application/${object.id}\" style=\"padding: 5px 10px; font-size: 12px; line-height: 18px; color: #FFFFFF; border-color:#875A7B; text-decoration: none; display: inline-block; margin-bottom: 0px; font-weight: 400; text-align: center; vertical-align: middle; cursor: pointer; white-space: nowrap; background-image: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius:3px\">Lihat Lamaran</a>\n"
+"    </div>\n"
+"    <p>Dengan Hormat,</p>\n"
+"</div>\n"
+"<div style=\"padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777\">\n"
+"    <p style=\"font-size: 11px; margin-top: 10px;\">\n"
+"        <a href=\"www.matakarir.com\"><img src=\"/logo.png\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.job_id.company_id.name}\"></a>\n"
+"    </p>\n"
+"</div>\n"
+"        "
+
+#. module: hr_apply
+#: model:mail.template,body_html:hr_apply.email_employer_response
+msgid ""
+"\n"
+"<div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"    <p>Dear ${object.partner_id.name},</p>\n"
+"    <p>You have new response for your application: ${object.job_id.name}.</p>\n"
+"    <div style=\"text-align: center; margin-top: 16px;\">\n"
+"        <a href=\"https://matakarir.com/application/${object.id}\" style=\"padding: 5px 10px; font-size: 12px; line-height: 18px; color: #FFFFFF; border-color:#875A7B; text-decoration: none; display: inline-block; margin-bottom: 0px; font-weight: 400; text-align: center; vertical-align: middle; cursor: pointer; white-space: nowrap; background-image: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius:3px\">View application</a>\n"
+"    </div>\n"
+"    <p>Please click the link above to give your response.</p>\n"
+"    <p>Best regards,</p>\n"
+"</div>\n"
+"<div style=\"padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777\">\n"
+"    <p style=\"font-size: 11px; margin-top: 10px;\">\n"
+"        <a href=\"www.matakarir.com\"><img src=\"/logo.png\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.job_id.company_id.name}\"></a>\n"
+"    </p>\n"
+"</div>\n"
+"        "
+msgstr ""
+"\n"
+"<div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"    <p>Yang Terhormat ${object.partner_id.name},</p>\n"
+"    <p>Anda mendapatkan tanggapan baru untuk lamaran Anda: ${object.job_id.name}.</p>\n"
+"    <div style=\"text-align: center; margin-top: 16px;\">\n"
+"        <a href=\"https://matakarir.com/application/${object.id}\" style=\"padding: 5px 10px; font-size: 12px; line-height: 18px; color: #FFFFFF; border-color:#875A7B; text-decoration: none; display: inline-block; margin-bottom: 0px; font-weight: 400; text-align: center; vertical-align: middle; cursor: pointer; white-space: nowrap; background-image: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius:3px\">Lihat Lamaran</a>\n"
+"    </div>\n"
+"    <p>Silakan klik tautan di atas untuk berikan tanggapan Anda.</p>\n"
+"    <p>Dengan hormat,</p>\n"
+"</div>\n"
+"<div style=\"padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777\">\n"
+"    <p style=\"font-size: 11px; margin-top: 10px;\">\n"
+"        <a href=\"www.matakarir.com\"><img src=\"/logo.png\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.job_id.company_id.name}\"></a>\n"
+"    </p>\n"
+"</div>\n"
+"        "
+
+#. module: hr_apply
+#: model:mail.template,body_html:hr_apply.testingmail
+msgid ""
+"\n"
+"<div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"    <p>Dear ${object.user_id.name},${ctx['hr_user'].name}</p>\n"
+"    <p>There is a new unpublished vacancy: ${object.name}.</p>\n"
+"    <div style=\"text-align: center; margin-top: 16px;\">\n"
+"        <a href=\"https://matakarir.com/jobs/detail/${object.id}\" style=\"padding: 5px 10px; font-size: 12px; line-height: 18px; color: #FFFFFF; border-color:#875A7B; text-decoration: none; display: inline-block; margin-bottom: 0px; font-weight: 400; text-align: center; vertical-align: middle; cursor: pointer; white-space: nowrap; background-image: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius:3px\">View application</a>\n"
+"    </div>\n"
+"    <p>If you do not expect this, you can safely ignore this email.</p>\n"
+"    <p>Best regards,</p>\n"
+"</div>\n"
+"<div style=\"padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777\">\n"
+"    <p style=\"font-size: 11px; margin-top: 10px;\">\n"
+"        <a href=\"www.matakarir.com\"><img src=\"/logo.png\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.company_id.name}\"></a>\n"
+"    </p>\n"
+"</div>\n"
+"        "
+msgstr ""
+"\n"
+"<div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"    <p>Yang Terhormat ${object.user_id.name},${ctx['hr_user'].name}</p>\n"
+"    <p>Ada lowongan baru yang tidak terpublikasi: ${object.name}.</p>\n"
+"    <div style=\"text-align: center; margin-top: 16px;\">\n"
+"        <a href=\"https://matakarir.com/jobs/detail/${object.id}\" style=\"padding: 5px 10px; font-size: 12px; line-height: 18px; color: #FFFFFF; border-color:#875A7B; text-decoration: none; display: inline-block; margin-bottom: 0px; font-weight: 400; text-align: center; vertical-align: middle; cursor: pointer; white-space: nowrap; background-image: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius:3px\">Lihat Lamaran</a>\n"
+"    </div>\n"
+"    <p>Jika Anda tidak mengharapkan ini, Anda dapat dengan aman mengabaikan email ini.</p>\n"
+"    <p>Salam Hormat,</p>\n"
+"</div>\n"
+"<div style=\"padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777\">\n"
+"    <p style=\"font-size: 11px; margin-top: 10px;\">\n"
+"        <a href=\"www.matakarir.com\"><img src=\"/logo.png\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.company_id.name}\"></a>\n"
+"    </p>\n"
+"</div>\n"
+"        "
+
+#. module: hr_apply
+#: model:mail.template,body_html:hr_apply.new_vacancy
+msgid ""
+"\n"
+"<div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"    <p>Dear ${object.user_id.name},</p>\n"
+"    <p>Your new vacancy: ${object.name}, can be viewed by this link</p>\n"
+"    <div style=\"text-align: center; margin-top: 16px;\">\n"
+"        <a href=\"https://matakarir.com/jobs/detail/${object.id}\" style=\"padding: 5px 10px; font-size: 12px; line-height: 18px; color: #FFFFFF; border-color:#875A7B; text-decoration: none; display: inline-block; margin-bottom: 0px; font-weight: 400; text-align: center; vertical-align: middle; cursor: pointer; white-space: nowrap; background-image: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius:3px\">View vacancy</a>\n"
+"    </div>\n"
+"    <p>If you do not expect this, you can safely ignore this email.</p>\n"
+"    <p>Best regards,</p>\n"
+"</div>\n"
+"<div style=\"padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777\">\n"
+"    <p style=\"font-size: 11px; margin-top: 10px;\">\n"
+"        <a href=\"www.matakarir.com\"><img src=\"/logo.png\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.company_id.name}\"></a>\n"
+"    </p>\n"
+"</div>\n"
+"        "
+msgstr ""
+"\n"
+"<div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"    <p>Yang Terhormat ${object.user_id.name},</p>\n"
+"    <p>Lowongan baru Anda: ${object.name}, bisa dilihat di tautan berikut ini</p>\n"
+"    <div style=\"text-align: center; margin-top: 16px;\">\n"
+"        <a href=\"https://matakarir.com/jobs/detail/${object.id}\" style=\"padding: 5px 10px; font-size: 12px; line-height: 18px; color: #FFFFFF; border-color:#875A7B; text-decoration: none; display: inline-block; margin-bottom: 0px; font-weight: 400; text-align: center; vertical-align: middle; cursor: pointer; white-space: nowrap; background-image: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius:3px\">Lihat Lowongan</a>\n"
+"    </div>\n"
+"    <p>Jika Anda tidak mengharapkan hal ini, silakan abaikan email ini.</p>\n"
+"    <p>Dengan Hormat,</p>\n"
+"</div>\n"
+"<div style=\"padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777\">\n"
+"    <p style=\"font-size: 11px; margin-top: 10px;\">\n"
+"        <a href=\"www.matakarir.com\"><img src=\"/logo.png\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.company_id.name}\"></a>\n"
+"    </p>\n"
+"</div>\n"
+"        "
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.page
+msgid "&amp;times;"
+msgstr "&amp;waktu;"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_form_view
+msgid "(Schollarship)"
+msgstr "(Beasiswa)"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_form_view
+msgid "(Volunteer)"
+msgstr "(Sukarelawan)"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_form_view
+msgid "(listening)<br/>"
+msgstr "(mendengar)<br/>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_form_view
+msgid "(reading)<br/>"
+msgstr "(membaca)<br/>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_form_view
+msgid "(speaking)<br/>"
+msgstr "(berbicara)<br/>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_form_view
+msgid "(writing)"
+msgstr "(menulis)"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_form_view
+msgid ""
+")<br/>\n"
+"                       Certificate number:"
+msgstr ""
+")<br/>\n"
+"                       Nomor Sertifikat:"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_form_view
+msgid ""
+")<br/>\n"
+"                    Score:"
+msgstr ""
+")<br/>\n"
+"                        Nilai:"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_list
+msgid ", closing date:"
+msgstr ", tanggal penutupan:"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid ", smoker"
+msgstr ", Perokok"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_form_view
+msgid "<b>Allowance: </b>"
+msgstr "<b>Tunjangan: </b>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "<b>Average</b>"
+msgstr "<b>Rata-rata </b>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_form_view
+msgid "<b>Bonus: </b>"
+msgstr ""
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "<b>Match</b>"
+msgstr "<b>Cocok</b>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "<b>Not Match</b>"
+msgstr "<b>Tidak Cocok</b>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "<b>Not Qualified</b>"
+msgstr "<b>Tidak Lolos</b>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "<b>Qualified</b>"
+msgstr "<b>Lolos</b>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "<b>Strong</b>"
+msgstr "<b>Kuat</b>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "<b>Weak</b>"
+msgstr "<b>Rendah</b>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_form_view
+msgid ""
+"<br/>\n"
+"                          <span><b>Salary: </b></span>"
+msgstr ""
+"<br/>\n"
+"                          <span><b>Gaji: </b></span>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid ""
+"<br/>\n"
+"                        Height :"
+msgstr ""
+"<br/>\n"
+"                        Tinggi:"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid ""
+"<br/>\n"
+"                        Weight :"
+msgstr ""
+"<br/>\n"
+"                        Berat :"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.snippet_vacancy
+msgid "<font style=\"font-size: 62px;\">Search Vacancies</font>"
+msgstr "<font style=\"font-size: 62px;\">Cari Lowongan</font>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancies
+msgid "<font style=\"font-size: 62px;\">Vacancy List</font>"
+msgstr "<font style=\"font-size: 62px;\">Daftar Lowongan</font>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.certificate_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.comskill_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.driving_lisence_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.experience_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.langskill_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.lisence_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.school_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.skill_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.tools_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.university_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.working_company_form
+msgid "<i class=\"fa fa-plus-square\"/>Add new"
+msgstr "<i class=\"fa fa-plus-square\"/>Tambah baru"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.snippet_vacancy_bar
+msgid ""
+"<i class=\"fa fa-th\"/>\n"
+"\t\t\t\t\tVacancy Search"
+msgstr ""
+"<i class=\"fa fa-th\"/>\n"
+"\t\t\t\t\tCari Lowongan"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.activities_layout
+msgid "<small><i class=\"fa fa-edit\"/> Edit</small>"
+msgstr "<small><i class=\"fa fa-edit\"/> Ubah</small>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.activities_layout
+msgid "<small><i class=\"fa fa-trash-o\"/> Delete</small>"
+msgstr "<small><i class=\"fa fa-trash-o\"/> Hapus</small>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.certificate_table
+#: model_terms:ir.ui.view,arch_db:hr_apply.comskill_table
+#: model_terms:ir.ui.view,arch_db:hr_apply.driving_lisence_table
+#: model_terms:ir.ui.view,arch_db:hr_apply.experience_table
+#: model_terms:ir.ui.view,arch_db:hr_apply.langskill_table
+#: model_terms:ir.ui.view,arch_db:hr_apply.lisence_table
+#: model_terms:ir.ui.view,arch_db:hr_apply.school_table
+#: model_terms:ir.ui.view,arch_db:hr_apply.skill_table
+#: model_terms:ir.ui.view,arch_db:hr_apply.tools_table
+#: model_terms:ir.ui.view,arch_db:hr_apply.university_table
+msgid "<small><i class=\"fa fa-trash-o\"/> Remove</small>"
+msgstr "<small><i class=\"fa fa-trash-o\"/> Hapus</small>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "<strong>Applicant Age</strong><br/>"
+msgstr "<strong>Usia Pelamar</strong><br/>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "<strong>Applicant Area</strong> <br/>"
+msgstr "<strong>Daerah Pelamar</strong> <br/>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "<strong>Applicant City</strong> <br/>"
+msgstr "<strong>Kota Pelamar</strong> <br/>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "<strong>Applicant Country</strong> <br/>"
+msgstr "<strong>Negara Pelamar</strong> <br/>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "<strong>Applicant District</strong> <br/>"
+msgstr "<strong>Kecamatan Pelamar</strong> <br/>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "<strong>Applicant Ethnic</strong> <br/>"
+msgstr "<strong>Suku Pelamar</strong> <br/>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "<strong>Applicant Province</strong> <br/>"
+msgstr "<strong>Provinsi Pelamar</strong> <br/>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "<strong>Applicant Religion</strong> <br/>"
+msgstr "<strong>Agama Pelamar</strong> <br/>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "<strong>Applicant Village</strong> <br/>"
+msgstr "<strong>Kelurahan Pelamar</strong> <br/>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+msgid "<strong>Bottom Salary Range</strong>"
+msgstr "<strong>Rentang Gaji Terendah</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.certificate_form
+msgid "<strong>Certificate Name</strong>"
+msgstr "<strong>Nama Sertifikat</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+msgid "<strong>Closing Date</strong>"
+msgstr "<strong>Tanggal Penutupan</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.working_company_form
+msgid "<strong>Company Address</strong>"
+msgstr "<strong>Alamat Perusahaan</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.working_company_form
+msgid "<strong>Company Email</strong>"
+msgstr "<strong>Email Perusahaan</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.working_company_form
+msgid "<strong>Company Industry</strong>"
+msgstr "<strong>Industri Perusahaan</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.delete_working_company
+#: model_terms:ir.ui.view,arch_db:hr_apply.working_company_form
+msgid "<strong>Company Name</strong>"
+msgstr "<strong>Nama Perusahaan</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.working_company_form
+msgid "<strong>Company Phone</strong>"
+msgstr "<strong>Telepon Perusahaan</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.working_company_form
+msgid "<strong>Company Type</strong>"
+msgstr "<strong>Jenis perusahaan</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.working_company_form
+msgid "<strong>Company Website</strong>"
+msgstr "<strong>Situs Web Perusahaan</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+msgid "<strong>Company</strong>"
+msgstr "<strong>Perusahaan</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.comskill_form
+msgid "<strong>Computer Skill</strong>"
+msgstr "<strong>Keterampilan Komputer</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.university_form
+msgid "<strong>Degree</strong>"
+msgstr "<strong>Gelar</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.experience_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+msgid "<strong>Department</strong>"
+msgstr "<strong>Departemen</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.working_company_form
+msgid "<strong>Describe Your Position</strong>"
+msgstr "<strong>Jelaskan Posisi Anda</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.driving_lisence_form
+msgid "<strong>Driving Lisence</strong>"
+msgstr "<strong>Surat ijin Mengemudi</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+msgid "<strong>Employment Status</strong>"
+msgstr "<strong>Status Kepegawaian</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.university_form
+msgid "<strong>Faculty</strong>"
+msgstr "<strong>Fakultas</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.experience_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+msgid "<strong>Industry</strong>"
+msgstr "<strong>Industri</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "<strong>Job Area</strong> <br/>"
+msgstr "<strong>Area Pekerjaan</strong> <br/>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "<strong>Job City</strong> <br/>"
+msgstr "<strong>Kota Pekerjaan</strong> <br/>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "<strong>Job Country</strong> <br/>"
+msgstr "<strong>Negara Pekerjaan</strong> <br/>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+msgid "<strong>Job Description</strong>"
+msgstr "<strong>Penjelasan Pekerjaan</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "<strong>Job District</strong> <br/>"
+msgstr "<strong>Kecamatan Pekerjaan</strong> <br/>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "<strong>Job Ethnic</strong> <br/>"
+msgstr "<strong>Suku Pekerjaan</strong> <br/>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "<strong>Job Province</strong> <br/>"
+msgstr "<strong>Provinsi Pekerjaan</strong> <br/>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "<strong>Job Religion</strong> <br/>"
+msgstr "<strong>Agama Pekerjaan</strong> <br/>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+msgid "<strong>Job Task</strong>"
+msgstr "<strong>Tugas pekerjaan</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "<strong>Job Village</strong> <br/>"
+msgstr "<strong>Kelurahan Pekerjaan</strong> <br/>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.langskill_form
+msgid "<strong>Language Skill</strong>"
+msgstr "<strong>Keterampilan Bahasa</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.experience_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+msgid "<strong>Level</strong>"
+msgstr "<strong>Tingkat</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.lisence_form
+msgid "<strong>Lisence Name</strong>"
+msgstr "<strong>Nama Surat ijin</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+msgid "<strong>Location</strong>"
+msgstr "<strong>Lokasi</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.university_form
+msgid "<strong>Major</strong>"
+msgstr "<strong>Jurusan</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+msgid "<strong>Maximum Age</strong>"
+msgstr "<strong>Usia Maksimum</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+msgid "<strong>Minimum Age</strong>"
+msgstr "<strong>Usia Minimum</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.experience_form
+msgid "<strong>Minimum Experience Year</strong>"
+msgstr "<strong>Tahun Pengalaman Minimum</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+msgid "<strong>Number of People Needed</strong>"
+msgstr "<strong>Jumlah Orang yang Dibutuhkan</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+msgid "<strong>Preferred Candidate Ethnic</strong>"
+msgstr "<strong>Suku Kandidat yang Diharapkan</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+msgid "<strong>Preferred Candidate Religion</strong>"
+msgstr "<strong>Agama Kandidat yang Diharapkan</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.certificate_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.lisence_form
+msgid "<strong>Publisher Country</strong>"
+msgstr "<strong>Negara Penerbit</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.certificate_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.lisence_form
+msgid "<strong>Publisher Name</strong>"
+msgstr "<strong>Nama Penerbit</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "<strong>Qualified Age</strong><br/>"
+msgstr "<strong>Batas Usia</strong><br/>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+msgid "<strong>Salary Calculation Base</strong>"
+msgstr "<strong>Dasar Perhitungan Gaji</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+msgid "<strong>Salary Currency</strong>"
+msgstr "<strong>Mata Uang Gaji</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.school_form
+msgid "<strong>School</strong>"
+msgstr "<strong>Sekolah</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.working_company_form
+msgid "<strong>Since</strong>"
+msgstr "<strong>Sejak</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.skill_form
+msgid "<strong>Skill</strong>"
+msgstr "<strong>Keterampilan</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.tools_form
+msgid "<strong>Tool</strong>"
+msgstr "<strong>Peralatan</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+msgid "<strong>Top Salary Range</strong>"
+msgstr "<strong>Rentang Gaji Tertinggi</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+msgid "<strong>Vacancy Title</strong>"
+msgstr "<strong>Judul Lowongan</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.working_company_form
+msgid "<strong>Your Department</strong>"
+msgstr "<strong>Departemen Anda</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.working_company_form
+msgid "<strong>Your Level</strong>"
+msgstr "<strong>Jabatan Anda</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.working_company_form
+msgid "<strong>Your Position in the Company</strong>"
+msgstr "<strong>Posisi anda di Perusahaan </strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.delete_working_company
+msgid "<strong>Your Position</strong>"
+msgstr "<strong>Posisi Anda</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.working_company_form
+msgid "<strong>Your Status</strong>"
+msgstr "<strong>Status Anda</strong>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.page
+msgid "A problem has occured"
+msgstr "Terjadi masalah"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__abuse_report_ids
+msgid "Abuse Report Ids"
+msgstr "Laporan Penyalahgunaan"
+
+#. module: hr_apply
+#: model:ir.actions.act_window,name:hr_apply.action_hr_apply_abuse_report
+#: model:ir.model,name:hr_apply.model_hr_apply_abuse_report
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__abuse_reports
+#: model:ir.ui.menu,name:hr_apply.menu_hr_apply_abuse_report
+#: model_terms:ir.ui.view,arch_db:hr_apply.hr_apply_abuse_report_tree
+msgid "Abuse Reports"
+msgstr "Laporan Penyalahgunaan"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_form_view
+msgid "Achievements"
+msgstr "Prestasi"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__message_needaction
+msgid "Action Needed"
+msgstr "Diperlukan Tindakan"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_res_partner__vacancies
+msgid "Active Vacancies"
+msgstr "Lowongan Aktif"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_certificate
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_comskill
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_driving_lisence
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_experience
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_langskill
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_lisence
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_school
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_skill
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_tools
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_university
+msgid "Add"
+msgstr "Tambahkan"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.activities_layout
+msgid "Add New Company"
+msgstr "Tambahkan Perusahaan Baru"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancies
+msgid "Add new Vacancy"
+msgstr "Tambahkan Lowongan baru"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.working_company_form
+msgid "Additional Address"
+msgstr "Alamat Tambahan"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.working_company_form
+msgid "Address"
+msgstr "Alamat"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_experience__age
+#: model_terms:ir.ui.view,arch_db:hr_apply.show_vacancy
+msgid "Age"
+msgstr "Usia"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_search
+msgid "Age..."
+msgstr "Usia..."
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_res_partner__allow_vacancy_post
+msgid "Allow to post vacancy"
+msgstr "Izinkan kirim lowongan kerja"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__qualified_age
+msgid "Aplicant age compare to requirement age"
+msgstr "Usia Aplicant dibandingkan dengan usia persyaratan"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__partner_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_criteriascore__applicant_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_interview__applicant_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_certificate__applicant_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_comskill__applicant_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_driving_lisence__applicant_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_experience__applicant_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_langskill__applicant_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_lisence__applicant_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_school__applicant_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_skill__applicant_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_tools__applicant_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_university__applicant_id
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_list
+msgid "Applicant"
+msgstr "Pelamar"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__applicant_age
+msgid "Applicant Age"
+msgstr "Usia Pelamar"
+
+#. module: hr_apply
+#: model:mail.template,subject:hr_apply.email_applicant_response
+msgid "Applicant Response: ${object.name}"
+msgstr "Tanggapan Pelamar: ${object.name}"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__applicant_ids
+#: model_terms:ir.ui.view,arch_db:hr_apply.view_hr_applicant_tree
+msgid "Applicants"
+msgstr "Pelamar"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_interview__application_id
+msgid "Application"
+msgstr "Lamaran"
+
+#. module: hr_apply
+#: model:ir.model,name:hr_apply.model_hr_apply_interview
+msgid "Application Interview Questions"
+msgstr "Pertanyaan Wawancara Lamaran"
+
+#. module: hr_apply
+#: model:mail.template,subject:hr_apply.email_employer_response
+msgid "Application Response: ${object.name}"
+msgstr "Tanggapan Lamaran: ${object.name}"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_profile
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form
+msgid "Application for"
+msgstr "Lamaran Untuk"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__job_id
+msgid "Applied Job"
+msgstr "Pekerjaan yang dilamar"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__create_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_interview__write_date
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_list
+msgid "Apply Date"
+msgstr "Tanggal Melamar"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.show_vacancy
+msgid "Apply Now!"
+msgstr "Lamar Sekarang!"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.delete_working_company
+msgid "Are You sure?"
+msgstr "Anda yakin?"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__area_id
+msgid "Area"
+msgstr "Daerah"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_search
+msgid "Area..."
+msgstr "Daerah..."
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__message_attachment_count
+msgid "Attachment Count"
+msgstr "Jumlah Lampiran"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_form_view
+msgid "Awards"
+msgstr "Penghargaan"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.sfinished
+msgid "Back Home"
+msgstr "Kembali ke Beranda"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.back
+msgid "Back to Questionaire"
+msgstr "Kembali ke Kuesioner"
+
+#. module: hr_apply
+#: selection:hr_apply.applicant,status:0
+msgid "Called"
+msgstr "Dipanggil"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.delete_working_company
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy
+#: model_terms:ir.ui.view,arch_db:hr_apply.questionaire_init
+#: model_terms:ir.ui.view,arch_db:hr_apply.working_company
+msgid "Cancel"
+msgstr "Batal"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "Cancel Application"
+msgstr "Batal Melamar"
+
+#. module: hr_apply
+#: selection:hr_apply.applicant,status:0
+msgid "Canceled"
+msgstr "Dibatalkan"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_certificate__name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_certificate__name
+msgid "Certificate Name"
+msgstr "Nama Sertifikat"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.certificate_form
+msgid "Certificate Name..."
+msgstr "Nama Sertifikat..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.certificate_form
+msgid "Certificate..."
+msgstr "Sertifikat..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_form_view
+#: model_terms:ir.ui.view,arch_db:hr_apply.show_vacancy
+msgid "Certificates"
+msgstr "Sertifikat"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__city_id
+msgid "City Regency"
+msgstr "Kabupaten Kota"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_search
+msgid "City..."
+msgstr "Kota..."
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_criteria__classification_id
+msgid "Classification"
+msgstr "Klasifikasi"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__criteria_ids
+msgid "Classification Criteria"
+msgstr "Kriteria Klasifikasi"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_criteria__classification_method_id
+msgid "Classification Method"
+msgstr "Metode Klasifikasi"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.page
+msgid "Close"
+msgstr "Tutup"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancies
+msgid "Closing Date"
+msgstr "Tanggal Penutupan"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.working_company_form
+msgid "Company Name..."
+msgstr "Nama Perusahaan..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.show_company
+msgid "Company Profile"
+msgstr "Profil Perusahaan"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.working_company_form
+msgid "Company Type..."
+msgstr "Jenis Perusahaan..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_search
+#: model_terms:ir.ui.view,arch_db:hr_apply.working_company_form
+msgid "Company..."
+msgstr "Perusahaan..."
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_comskill__name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_comskill__name
+msgid "Computer Skill Name"
+msgstr "Nama Keahlian Komputer"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.comskill_form
+msgid "Computer Skill Name..."
+msgstr "Nama Keahlian Komputer..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.comskill_form
+msgid "Computer Skill..."
+msgstr "Keahlian Komputer..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_form_view
+#: model_terms:ir.ui.view,arch_db:hr_apply.show_vacancy
+msgid "Computer Skills"
+msgstr "Keahlian komputer"
+
+#. module: hr_apply
+#: model:mail.template,subject:hr_apply.email_hired
+msgid "Congratulation: ${object.name}"
+msgstr "Selamat: ${object.name}"
+
+#. module: hr_apply
+#: model:ir.model,name:hr_apply.model_res_partner
+msgid "Contact"
+msgstr "Kontak"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__country_id
+msgid "Country"
+msgstr "Negara"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.certificate_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.lisence_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_search
+msgid "Country..."
+msgstr "Negara..."
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_abuse_report__create_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__create_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_criteria__create_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_criteriascore__create_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_duration__create_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_interview__create_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_million__create_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_number__create_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_certificate__create_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_comskill__create_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_driving_lisence__create_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_experience__create_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_langskill__create_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_lisence__create_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_school__create_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_skill__create_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_tools__create_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_university__create_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_certificate__create_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_comskill__create_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_driving_lisence__create_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_experience__create_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_langskill__create_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_lisence__create_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_school__create_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_skill__create_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_tools__create_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_university__create_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_tryapply__create_uid
+msgid "Created by"
+msgstr "Dibuat oleh"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_abuse_report__create_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_criteria__create_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_criteriascore__create_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_duration__create_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_interview__create_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_million__create_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_number__create_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_certificate__create_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_comskill__create_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_driving_lisence__create_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_experience__create_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_langskill__create_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_lisence__create_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_school__create_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_skill__create_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_tools__create_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_university__create_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_certificate__create_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_comskill__create_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_driving_lisence__create_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_experience__create_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_langskill__create_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_lisence__create_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_school__create_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_skill__create_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_tools__create_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_university__create_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_tryapply__create_date
+msgid "Created on"
+msgstr "Dibuat pada"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_form_view
+msgid "Criminal Records"
+msgstr "Catatan Kejahatan"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_criteriascore__criteria_id
+msgid "Criteria"
+msgstr "Kriteria"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "Criteria Match"
+msgstr "Pencocokan Kriteria"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_criteriascore__score
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_list
+msgid "Criteria Score"
+msgstr "Skor Kriteria"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__criteria_scores_ids
+msgid "Criteria Scores"
+msgstr "Skor Kriteria"
+
+#. module: hr_apply
+#: model:ir.model,name:hr_apply.model_hr_apply_criteria
+msgid "Criteria for the job"
+msgstr "Kriteria untuk pekerjaan itu"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__criteria_score
+msgid "Criteria match in percent"
+msgstr "Kecocokan Kriteria dalam persen"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_profile
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form
+msgid "Criteria score :"
+msgstr "Skor Kriteria :"
+
+#. module: hr_apply
+#: model:ir.model,name:hr_apply.model_hr_apply_criteriascore
+msgid "Criteria score of applicant"
+msgstr "Skor Kriteria Pelamar"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_university__degree_id
+msgid "Degree"
+msgstr "Gelar"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.university_form
+msgid "Degree Name..."
+msgstr "Nama gelar..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.university_form
+msgid "Degree..."
+msgstr "Gelar..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.delete_working_company
+msgid "Delete"
+msgstr "Hapus"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.delete_working_company
+msgid "Delete Company"
+msgstr "Hapus Perusahaan"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_experience__department_id
+msgid "Department"
+msgstr "Departemen"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.experience_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.working_company_form
+msgid "Department Name..."
+msgstr "Nama departemen..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_search
+#: model_terms:ir.ui.view,arch_db:hr_apply.working_company_form
+msgid "Department..."
+msgstr "Departemen..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.experience_form
+msgid "Departments..."
+msgstr "Departemen..."
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_abuse_report__display_name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__display_name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_criteria__display_name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_criteriascore__display_name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_duration__display_name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_interview__display_name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_million__display_name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_number__display_name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_certificate__display_name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_comskill__display_name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_driving_lisence__display_name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_experience__display_name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_langskill__display_name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_lisence__display_name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_school__display_name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_skill__display_name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_tools__display_name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_university__display_name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_certificate__display_name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_comskill__display_name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_driving_lisence__display_name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_experience__display_name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_langskill__display_name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_lisence__display_name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_school__display_name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_skill__display_name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_tools__display_name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_university__display_name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_tryapply__display_name
+msgid "Display Name"
+msgstr "Nama tampilan"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__district_id
+msgid "District"
+msgstr "Kecamatan"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_search
+msgid "District..."
+msgstr "Kecamatan..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_certificate
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_comskill
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_driving_lisence
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_experience
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_langskill
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_lisence
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_school
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_skill
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_tools
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_university
+msgid "Done"
+msgstr "Selesai"
+
+#. module: hr_apply
+#: selection:hr_apply.applicant,status:0
+msgid "Draft"
+msgstr "Konsep"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_driving_lisence__name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_driving_lisence__name
+msgid "Driving Lisence"
+msgstr "Surat Izin Mengemudi"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.driving_lisence_form
+msgid "Driving Lisence Name..."
+msgstr "Nama Surat Izin Mengemudi..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.driving_lisence_form
+msgid "Driving Lisence..."
+msgstr "Surat Izin Mengemudi..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.show_vacancy
+msgid "Driving Lisences"
+msgstr "Surat Izin Mengemudi"
+
+#. module: hr_apply
+#: model:ir.model,name:hr_apply.model_hr_apply_duration
+msgid "Duration"
+msgstr "Durasi"
+
+#. module: hr_apply
+#: model:ir.actions.act_window,name:hr_apply.action_hr_apply_duration
+#: model:ir.ui.menu,name:hr_apply.menu_hr_apply_duration
+#: model_terms:ir.ui.view,arch_db:hr_apply.hr_apply_duration_tree
+msgid "Durations"
+msgstr "Durasi"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.working_company
+msgid "Edit Company"
+msgstr "Ubah Perusahaan"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "Edit My Profile"
+msgstr "Ubah Profil Saya"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy
+msgid "Edit Vacancy"
+msgstr "Ubah Lowongan"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__employer_id
+msgid "Employer"
+msgstr "Pemberi Kerja"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__industry_id
+msgid "Employer Industry"
+msgstr "Industri Pemberi Kerja"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__e_status_id
+msgid "Employment Status"
+msgstr "Status karyawan"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+msgid "Employment Status Name..."
+msgstr "Nama Status Pekerjaan..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_search
+#: model_terms:ir.ui.view,arch_db:hr_apply.working_company_form
+msgid "Employment Status..."
+msgstr "Status Pekerjaan..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view2
+msgid "Enter your message here..."
+msgstr "Masukan pesan Anda di sini..."
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__ethnic_id
+msgid "Ethnic"
+msgstr "Suku"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+msgid "Ethnic Name..."
+msgstr "Nama Suku..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.show_vacancy
+msgid "Experiences"
+msgstr "Pengalaman"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.university_form
+msgid "Faculties..."
+msgstr "Fakultas..."
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_university__faculty_id
+msgid "Faculty"
+msgstr "Fakultas"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.university_form
+msgid "Faculty Name..."
+msgstr "Nama Fakultas..."
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__message_follower_ids
+msgid "Followers"
+msgstr "Pengikut"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Pengikut (Saluran)"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Pengikut (Mitra)"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_form_view
+msgid "Go To Interview"
+msgstr "Ke Wawancara"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancies
+msgid "Higest Salary"
+msgstr "Gaji Tertinggi"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_profile
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form
+msgid "Hire"
+msgstr "Pekerjakan"
+
+#. module: hr_apply
+#: selection:hr_apply.applicant,status:0
+msgid "Hired"
+msgstr "Dipekerjakan"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_abuse_report__id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_criteria__id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_criteriascore__id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_duration__id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_interview__id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_million__id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_number__id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_certificate__id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_comskill__id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_driving_lisence__id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_experience__id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_langskill__id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_lisence__id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_school__id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_skill__id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_tools__id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_university__id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_certificate__id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_comskill__id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_driving_lisence__id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_experience__id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_langskill__id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_lisence__id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_school__id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_skill__id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_tools__id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_university__id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_tryapply__id
+msgid "ID"
+msgstr "KTP"
+
+#. module: hr_apply
+#: model:ir.model.fields,help:hr_apply.field_hr_apply_applicant__message_unread
+msgid "If checked new messages require your attention."
+msgstr "Jika dicentang, pesan baru membutuhkan perhatian Anda."
+
+#. module: hr_apply
+#: model:ir.model.fields,help:hr_apply.field_hr_apply_applicant__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Jika dicentang, pesan baru membutuhkan perhatian Anda."
+
+#. module: hr_apply
+#: model:ir.model.fields,help:hr_apply.field_hr_apply_applicant__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Jika dicentang, beberapa pesan mengalami kesalahan pengiriman."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.sfinished
+msgid "If you wish, you can"
+msgstr "Jika Anda mau, Anda bisa"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.show_vacancy
+msgid "Income Range"
+msgstr "Rentang Penghasilan"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_list
+msgid "Income Range:"
+msgstr "Rentang Penghasilan:"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_experience__industry_id
+msgid "Industry"
+msgstr "Industri"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.experience_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+msgid "Industry Name..."
+msgstr "Nama Industri..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.experience_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_search
+#: model_terms:ir.ui.view,arch_db:hr_apply.working_company_form
+msgid "Industry..."
+msgstr "Industri..."
+
+#. module: hr_apply
+#: model:mail.template,subject:hr_apply.email_rejected
+msgid "Information: ${object.name}"
+msgstr "Informasi: ${object.name}"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__interview_ids
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view2
+msgid "Interview"
+msgstr "Wawancara"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__message_is_follower
+msgid "Is Follower"
+msgstr "Apakah Pengikut"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_abuse_report__job_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_criteria__job_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_certificate__job_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_comskill__job_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_driving_lisence__job_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_experience__job_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_langskill__job_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_lisence__job_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_school__job_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_skill__job_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_tools__job_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_university__job_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_certificate__job_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_comskill__job_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_driving_lisence__job_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_experience__job_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_langskill__job_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_lisence__job_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_school__job_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_skill__job_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_tools__job_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_university__job_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_tryapply__job_id
+#: model_terms:ir.ui.view,arch_db:hr_apply.view_hr_job_tree
+msgid "Job"
+msgstr "Pekerjaan"
+
+#. module: hr_apply
+#: model:ir.model,name:hr_apply.model_hr_apply_applicant
+msgid "Job Applicant"
+msgstr "Pelamar kerja"
+
+#. module: hr_apply
+#: model:ir.actions.act_window,name:hr_apply.action_hr_applicant
+#: model:ir.ui.menu,name:hr_apply.menu_hr_applicant
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_list
+msgid "Job Applicants"
+msgstr "Pelamar kerja"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__department_id
+msgid "Job Department"
+msgstr "Departemen Pekerjaan"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__description
+#: model_terms:ir.ui.view,arch_db:hr_apply.show_vacancy
+msgid "Job Description"
+msgstr "Penjelasan Pekerjaan"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__level_id
+msgid "Job Level"
+msgstr "Tingkat Pekerjaan"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__job_owner_id
+msgid "Job Owner"
+msgstr "Pemilik Pekerjaan"
+
+#. module: hr_apply
+#: model:ir.model,name:hr_apply.model_hr_job
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__name
+msgid "Job Position"
+msgstr "Posisi"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_experience__joblevel_id
+msgid "Joblevel"
+msgstr "Tingkat Pekerjaan"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_langskill__name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_langskill__name
+msgid "Language Name"
+msgstr "Nama Bahasa"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.langskill_form
+msgid "Language Skill Name..."
+msgstr "Nama Keterampilan Bahasa..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.langskill_form
+msgid "Language Skill..."
+msgstr "Keterampilan Bahasa..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_form_view
+#: model_terms:ir.ui.view,arch_db:hr_apply.show_vacancy
+msgid "Language Skills"
+msgstr "Keterampilan Bahasa"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_abuse_report____last_update
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant____last_update
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_criteria____last_update
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_criteriascore____last_update
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_duration____last_update
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_interview____last_update
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_million____last_update
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_number____last_update
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_certificate____last_update
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_comskill____last_update
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_driving_lisence____last_update
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_experience____last_update
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_langskill____last_update
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_lisence____last_update
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_school____last_update
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_skill____last_update
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_tools____last_update
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_university____last_update
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_certificate____last_update
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_comskill____last_update
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_driving_lisence____last_update
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_experience____last_update
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_langskill____last_update
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_lisence____last_update
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_school____last_update
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_skill____last_update
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_tools____last_update
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_university____last_update
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_tryapply____last_update
+msgid "Last Modified on"
+msgstr "Terakhir Dimodifikasi pada"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_abuse_report__write_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__write_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_criteria__write_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_criteriascore__write_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_duration__write_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_interview__write_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_million__write_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_number__write_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_certificate__write_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_comskill__write_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_driving_lisence__write_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_experience__write_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_langskill__write_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_lisence__write_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_school__write_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_skill__write_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_tools__write_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_university__write_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_certificate__write_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_comskill__write_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_driving_lisence__write_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_experience__write_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_langskill__write_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_lisence__write_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_school__write_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_skill__write_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_tools__write_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_university__write_uid
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_tryapply__write_uid
+msgid "Last Updated by"
+msgstr "Terakhir diperbaharui oleh"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_abuse_report__write_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__write_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_criteria__write_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_criteriascore__write_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_duration__write_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_million__write_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_number__write_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_certificate__write_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_comskill__write_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_driving_lisence__write_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_experience__write_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_langskill__write_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_lisence__write_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_school__write_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_skill__write_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_tools__write_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_university__write_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_certificate__write_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_comskill__write_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_driving_lisence__write_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_experience__write_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_langskill__write_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_lisence__write_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_school__write_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_skill__write_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_tools__write_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_university__write_date
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_tryapply__write_date
+msgid "Last Updated on"
+msgstr "Terakhir diperbaharui pada"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.experience_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.working_company_form
+msgid "Level Name..."
+msgstr "Nama Tingkatan..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.experience_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_search
+#: model_terms:ir.ui.view,arch_db:hr_apply.working_company_form
+msgid "Level..."
+msgstr "Tingkatan..."
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_lisence__name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_lisence__name
+msgid "Lisence Name"
+msgstr "Nama Surat Izin"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.lisence_form
+msgid "Lisence Name..."
+msgstr "Nama Surat Izin..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.lisence_form
+msgid "Lisence..."
+msgstr "Surat Izin..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_form_view
+#: model_terms:ir.ui.view,arch_db:hr_apply.show_vacancy
+msgid "Lisences"
+msgstr "Surat izin"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.auth_required
+msgid "Login required"
+msgstr "Perlu login"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancies
+msgid "Lowest Salary"
+msgstr "Gaji Terendah"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Jumlah Lampiran"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_university__major_id
+msgid "Major"
+msgstr "Jurusan"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.university_form
+msgid "Major Name..."
+msgstr "Nama jurusan..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.university_form
+msgid "Major..."
+msgstr "Jurusan..."
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__max_age
+msgid "Maximum Age"
+msgstr "Usia Maksimum"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+msgid "Maximum Age..."
+msgstr "Usia Maksimum..."
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__max_salary
+msgid "Maximum Salary"
+msgstr "Gaji Maksimum"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+msgid "Maximum Salary..."
+msgstr "Gaji Maksimum..."
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_res_partner__max_vacancy
+msgid "Maximum Vacancy Allowed"
+msgstr "Diizinkan Lowongan Maksimum"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_form_view
+msgid "Medical Records"
+msgstr "Catatan Medis"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_interview__message
+msgid "Message"
+msgstr "Pesan"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__message_has_error
+msgid "Message Delivery error"
+msgstr "Kesalahan Pengiriman Pesan"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__message_ids
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view2
+msgid "Messages"
+msgstr "Pesan"
+
+#. module: hr_apply
+#: model:ir.model,name:hr_apply.model_hr_apply_million
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_million__name
+msgid "Million"
+msgstr "Juta"
+
+#. module: hr_apply
+#: model:ir.actions.act_window,name:hr_apply.action_hr_apply_million
+#: model:ir.ui.menu,name:hr_apply.menu_hr_apply_million
+#: model_terms:ir.ui.view,arch_db:hr_apply.hr_apply_million_tree
+msgid "Millions"
+msgstr "Juta"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__min_age
+msgid "Minimum Age"
+msgstr "Usia Minimum"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+msgid "Minimum Age..."
+msgstr "Usia Minimum..."
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_experience__min_exp
+msgid "Minimum Experience in Year"
+msgstr "Pengalaman Minimum dalam Setahun"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.experience_form
+msgid "Minimum Experience..."
+msgstr "Pengalaman Minimum..."
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__min_salary
+msgid "Minimum Salary"
+msgstr "Gaji Minimum"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+msgid "Minimum Salary..."
+msgstr "Gaji Minimum..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.show_vacancy
+msgid "Modify"
+msgstr "Ubah"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancies
+msgid "Most Views"
+msgstr "Paling Dilihat"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.activities_layout
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_activities_frontend
+msgid "My Activities"
+msgstr "Aktifitas Ku"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_res_partner__my_application_ids
+msgid "My Applications"
+msgstr "Lamaran Ku"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_res_partner__my_vacancy_ids
+msgid "My Vacancies"
+msgstr "Lowongan Ku"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.working_company
+msgid "New Company"
+msgstr "Perusahaan Baru"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.working_company_form
+msgid "New Company Type..."
+msgstr "Jenis Perusahaan Baru..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.working_company_form
+msgid "New Industry..."
+msgstr "Industri Baru..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy
+msgid "New Vacancy"
+msgstr "Lowongan Baru"
+
+#. module: hr_apply
+#: model:mail.template,subject:hr_apply.email_applied
+msgid "New applicant: ${object.name}"
+msgstr "Pelamar baru: ${object.name}"
+
+#. module: hr_apply
+#: model:mail.template,subject:hr_apply.new_vacancy
+#: model:mail.template,subject:hr_apply.testingmail
+msgid "New vacancy: ${object.name}"
+msgstr "Lowongan baru: ${object.name}"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancies
+msgid "Newest Vacancy"
+msgstr "Lowongan Terbaru"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.a_pager
+#: model_terms:ir.ui.view,arch_db:hr_apply.v_pager
+msgid "Next"
+msgstr "Berikutnya"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.page
+msgid "Next page"
+msgstr "Halaman berikutnya"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view2
+msgid "No Interview Message Yet"
+msgstr "Belum Ada Pesan Wawancara"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.show_vacancy
+msgid "None"
+msgstr "Tidak Ada"
+
+#. module: hr_apply
+#: model:ir.model,name:hr_apply.model_hr_apply_number
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_number__name
+msgid "Number"
+msgstr "Nomor"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Jumlah Tindakan"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__applicants
+msgid "Number of Applicants"
+msgstr "Jumlah Pelamar"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__views
+msgid "Number of Views"
+msgstr "Jumlah Tampilan"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__message_has_error_counter
+msgid "Number of error"
+msgstr "Jumlah kesalahan"
+
+#. module: hr_apply
+#: model:ir.model.fields,help:hr_apply.field_hr_apply_applicant__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Jumlah pesan yang membutuhkan tindakan"
+
+#. module: hr_apply
+#: model:ir.model.fields,help:hr_apply.field_hr_apply_applicant__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Jumlah Kesalahan Pengiriman Pesan"
+
+#. module: hr_apply
+#: model:ir.model.fields,help:hr_apply.field_hr_apply_applicant__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Pesan yang belum dibaca"
+
+#. module: hr_apply
+#: model:ir.actions.act_window,name:hr_apply.action_hr_apply_number
+#: model:ir.ui.menu,name:hr_apply.menu_hr_apply_number
+#: model_terms:ir.ui.view,arch_db:hr_apply.hr_apply_number_tree
+msgid "Numbers"
+msgstr "Nomor"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_certificate__object_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_comskill__object_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_driving_lisence__object_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_experience__object_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_langskill__object_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_lisence__object_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_school__object_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_skill__object_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_tools__object_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_university__object_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_certificate__object_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_comskill__object_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_driving_lisence__object_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_langskill__object_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_lisence__object_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_school__object_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_skill__object_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_tools__object_id
+msgid "Object"
+msgstr "Obyek"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancies
+msgid "Oldest Qualified"
+msgstr "Kualifikasi Tertua"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancies
+msgid "Oldest Vacancy"
+msgstr "Lowongan Tertua"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__description
+msgid "Opening Letter"
+msgstr "Surat Pembukaan"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_form_view
+msgid "Organization Experience"
+msgstr "Pengalaman Organisasi"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_form_view
+msgid "Other Skills"
+msgstr "Keterampilan lainnya"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.page
+msgid "Page"
+msgstr "Halaman"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_criteriascore__partner_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_tryapply__partner_id
+msgid "Partner"
+msgstr "Rekanan"
+
+#. module: hr_apply
+#: model:ir.model.fields,help:hr_apply.field_hr_apply_applicant__job_partner_id
+#: model:ir.model.fields,help:hr_apply.field_hr_apply_interview__interviewer_id
+#: model:ir.model.fields,help:hr_apply.field_hr_job__poster_id
+msgid "Partner-related data of the user"
+msgstr "Data yang terkait dengan mitra pengguna"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+msgid "People Needed..."
+msgstr "Jumlah Orang yang dibutuhkan..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.show_vacancy
+msgid "Personality Criteria"
+msgstr "Kriteria Kepribadian"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+msgid "Preferred Ethnic..."
+msgstr "Suku yang Diharapkan..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+msgid "Preferred Religion..."
+msgstr "Agama yang Diharapkan..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.a_pager
+#: model_terms:ir.ui.view,arch_db:hr_apply.v_pager
+msgid "Prev"
+msgstr "Sebelumnya"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.page
+msgid "Previous page"
+msgstr "Halaman sebelumnya"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__probability
+msgid "Probability"
+msgstr "Kemungkinan"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_search
+msgid "Province..."
+msgstr "Provinsi..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.certificate_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.lisence_form
+msgid "Publisher Country..."
+msgstr "Negara Penerbit..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.certificate_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.lisence_form
+msgid "Publisher Name..."
+msgstr "Nama Penerbit..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.certificate_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.lisence_form
+msgid "Publisher..."
+msgstr "Penerbit ..."
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__qualification_score
+msgid "Qualification match in percent"
+msgstr "Kecocokan Kriteria dalam persen"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_profile
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form
+msgid "Qualification score :"
+msgstr "Skor Klasifikasi :"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.show_vacancy
+msgid "Qualifications"
+msgstr "Kualifikasi"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_certificate__qualified
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_comskill__qualified
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_driving_lisence__qualified
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_experience__qualified
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_langskill__qualified
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_lisence__qualified
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_school__qualified
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_skill__qualified
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_tools__qualified
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_university__qualified
+msgid "Qualified"
+msgstr "Memenuhi Syarat"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_list
+msgid "Qualified Age Range:"
+msgstr "Memenuhi Syarat Usia:"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__qualified_area
+msgid "Qualified Area"
+msgstr "Memenuhi syarat Daerah"
+
+#. module: hr_apply
+#: model:ir.model,name:hr_apply.model_hr_apply_qualified_certificate
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__qualified_certificate_ids
+msgid "Qualified Certificates"
+msgstr "Memenuhi syarat sertifikat"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__qualified_city
+msgid "Qualified City"
+msgstr "Memenuhi syarat Kota"
+
+#. module: hr_apply
+#: model:ir.model,name:hr_apply.model_hr_apply_qualified_comskill
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__qualified_comskill_ids
+msgid "Qualified Computer Skills"
+msgstr "Memenuhi syarat keterampilan komputer"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__qualified_country
+msgid "Qualified Country"
+msgstr "Memenuhi syarat Negara"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__qualified_district
+msgid "Qualified District"
+msgstr "Memenuhi syarat Kecamatan"
+
+#. module: hr_apply
+#: model:ir.model,name:hr_apply.model_hr_apply_qualified_driving_lisence
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__qualified_driving_lisence_ids
+msgid "Qualified Driving Lisences"
+msgstr "Memenuhi syarat Surat ijin Mengemudi"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__qualified_ethnic
+msgid "Qualified Ethnic"
+msgstr "Memenuhi syarat Suku"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__qualified_experience
+msgid "Qualified Experience"
+msgstr "Memenuhi syarat pengalaman"
+
+#. module: hr_apply
+#: model:ir.model,name:hr_apply.model_hr_apply_qualified_experience
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__qualified_experience_ids
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "Qualified Experiences"
+msgstr "Memenuhi syarat pengalaman"
+
+#. module: hr_apply
+#: model:ir.model,name:hr_apply.model_hr_apply_qualified_langskill
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__qualified_langskill_ids
+msgid "Qualified Language Skills"
+msgstr "Memenuhi syarat keterampilan bahasa"
+
+#. module: hr_apply
+#: model:ir.model,name:hr_apply.model_hr_apply_qualified_lisence
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__qualified_lisence_ids
+msgid "Qualified Lisences"
+msgstr "Memenuhi syarat surat ijin"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__qualified_religion
+msgid "Qualified Religion"
+msgstr "Memenuhi syarat Agama"
+
+#. module: hr_apply
+#: model:ir.model,name:hr_apply.model_hr_apply_qualified_school
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__qualified_school_ids
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "Qualified Schools"
+msgstr "Memenuhi syarat Sekolah"
+
+#. module: hr_apply
+#: model:ir.model,name:hr_apply.model_hr_apply_qualified_skill
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__qualified_skill_ids
+msgid "Qualified Skills"
+msgstr "Memenuhi syarat Ketampilan"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__qualified_state
+msgid "Qualified State"
+msgstr "Memenuhi syarat Provinsi"
+
+#. module: hr_apply
+#: model:ir.model,name:hr_apply.model_hr_apply_qualified_tools
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__qualified_tool_ids
+msgid "Qualified Tools"
+msgstr "Memenuhi syarat Peralatan"
+
+#. module: hr_apply
+#: model:ir.model,name:hr_apply.model_hr_apply_qualified_university
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__qualified_university_ids
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "Qualified Universities"
+msgstr "Memenuhi syarat Universitas"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__qualified_village
+msgid "Qualified Village"
+msgstr "Memenuhi syarat Kelurahan"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "Refresh Application"
+msgstr "Perbarui Lamaran"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_profile
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form
+msgid "Reject"
+msgstr "Tolak"
+
+#. module: hr_apply
+#: selection:hr_apply.applicant,status:0
+msgid "Rejected"
+msgstr "Ditolak"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__job_partner_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_interview__interviewer_id
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__poster_id
+msgid "Related Partner"
+msgstr "Mitra Terkait"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__religion_id
+msgid "Religion"
+msgstr "Agama"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+msgid "Religion Name..."
+msgstr "Nama Agama..."
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_abuse_report__reason
+msgid "Report Reason"
+msgstr "Alasan Laporan"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_abuse_report__reporter_id
+msgid "Reporter"
+msgstr "Pelapor"
+
+#. module: hr_apply
+#: model:ir.model,name:hr_apply.model_hr_apply_required_certificate
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__required_certificate_ids
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_certificate
+msgid "Required Certificates"
+msgstr "Sertifikat yang diperlukan"
+
+#. module: hr_apply
+#: model:ir.model,name:hr_apply.model_hr_apply_required_comskill
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__required_comskill_ids
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_comskill
+msgid "Required Computer Skills"
+msgstr "Keterampilan Komputer yang diperlukan"
+
+#. module: hr_apply
+#: model:ir.model,name:hr_apply.model_hr_apply_required_driving_lisence
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__required_driving_lisence_ids
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_driving_lisence
+msgid "Required Driving Lisences"
+msgstr "Surat izin mengemudi yang diperlukan"
+
+#. module: hr_apply
+#: model:ir.model,name:hr_apply.model_hr_apply_required_experience
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__required_experience_ids
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_experience
+msgid "Required Experiences"
+msgstr "Pengalaman yang diperlukan"
+
+#. module: hr_apply
+#: model:ir.model,name:hr_apply.model_hr_apply_required_langskill
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__required_langskill_ids
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_langskill
+msgid "Required Language Skills"
+msgstr "Keterampilan Bahasa yang diperlukan"
+
+#. module: hr_apply
+#: model:ir.model,name:hr_apply.model_hr_apply_required_lisence
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__required_lisence_ids
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_lisence
+msgid "Required Lisences"
+msgstr "Surat ijin yang diperlukan"
+
+#. module: hr_apply
+#: model:ir.model,name:hr_apply.model_hr_apply_required_school
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__required_school_ids
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_school
+msgid "Required Schools"
+msgstr "Sekolah yang diperlukan"
+
+#. module: hr_apply
+#: model:ir.model,name:hr_apply.model_hr_apply_required_skill
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__required_skill_ids
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_skill
+msgid "Required Skills"
+msgstr "Keterampilan yang diperlukan"
+
+#. module: hr_apply
+#: model:ir.model,name:hr_apply.model_hr_apply_required_tools
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__required_tools_ids
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_tools
+msgid "Required Tools"
+msgstr "Peralatan yang diperlukan"
+
+#. module: hr_apply
+#: model:ir.model,name:hr_apply.model_hr_apply_required_university
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__required_university_ids
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_university
+msgid "Required Universities"
+msgstr "Universitas yang diperlukan"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.view_hr_job_form
+msgid "Requirement"
+msgstr "Syarat"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_list
+msgid "Requirement Score"
+msgstr "Jumlah syarat"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.show_vacancy
+msgid "Requirements"
+msgstr "Persyaratan"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__currency_id
+msgid "Salary Currency"
+msgstr "Mata Uang Gaji"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_search
+msgid "Salary Currency..."
+msgstr "Mata Uang Gaji..."
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__duration_id
+msgid "Salary Duration"
+msgstr "Durasi Gaji"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy_form
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_search
+msgid "Salary Duration..."
+msgstr "Durasi Gaji..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_search
+msgid "Salary..."
+msgstr "Gaji..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancy
+#: model_terms:ir.ui.view,arch_db:hr_apply.working_company
+msgid "Save"
+msgstr "Simpan"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_form_view
+msgid "School"
+msgstr "Sekolah"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.school_form
+msgid "School Name..."
+msgstr "Nama Sekolah..."
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_school__name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_school__name
+msgid "School Stage"
+msgstr "Provinsi Sekolah"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.school_form
+msgid "School..."
+msgstr "Sekolah..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.show_vacancy
+msgid "Schools"
+msgstr "Sekolah"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.snippet_vacancy
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_search
+msgid "Search"
+msgstr "Cari"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_applications
+msgid "Search new Jobs"
+msgstr "Mencari pekerjaan Baru"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.snippet_vacancy
+msgid "Search vacancy..."
+msgstr "Cari Lowongan..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_search
+msgid "Search..."
+msgstr "Cari ..."
+
+#. module: hr_apply
+#: selection:hr_apply.applicant,status:0
+msgid "Sent"
+msgstr "Terkirim"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_duration__sequence
+msgid "Sequence"
+msgstr "Penomoran"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_skill__name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_skill__name
+msgid "Skill Name"
+msgstr "Nama keterampilan"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.skill_form
+msgid "Skill Name..."
+msgstr "Nama keterampilan..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.skill_form
+msgid "Skill..."
+msgstr "Keterampilan..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.show_vacancy
+msgid "Skills"
+msgstr "Keterampilan"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.page
+msgid "Something went wrong while contacting questionaire server. <strong class=\"text-danger\">Your answers have probably not been recorded.</strong> Try refreshing."
+msgstr "Terjadi kesalahan saat menghubungi server kuesioner. <strong class=\"text-danger\"> Jawaban Anda mungkin belum direkam. </strong> Coba segarkan."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_list
+msgid ""
+"Sorry, we can't find vacancies you are looking for.<br/>\n"
+"                Please search again."
+msgstr ""
+"Maaf, kami tidak menemukan lowongan yang Anda cari.<br/>\n"
+"                Silakan cari lagi."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancies
+msgid "Sort by:"
+msgstr "Susun berdasarkan:"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.questionaire_init
+msgid "Start New"
+msgstr "Mulai Baru"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.questionaire_init
+msgid "Start Questionaire"
+msgstr "Mulai Kuesioner"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__state_id
+msgid "State"
+msgstr "Provinsi"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__status
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_list
+msgid "Status"
+msgstr "Status"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view2
+#: model_terms:ir.ui.view,arch_db:hr_apply.edit_my_identity
+#: model_terms:ir.ui.view,arch_db:hr_apply.edit_my_info
+#: model_terms:ir.ui.view,arch_db:hr_apply.edit_other_info
+msgid "Submit"
+msgstr "Kirim"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "Submit Application"
+msgstr "Kirim Lamaran"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.page
+msgid "Submit questionaire"
+msgstr "Kirim kuesioner"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.show_vacancy
+msgid "Tasks"
+msgstr "Tugas"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__tasks
+msgid "Tasks of this job"
+msgstr "Tugas pekerjaan ini"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.sfinished
+msgid "Thank you!"
+msgstr "Terima kasih!"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.auth_required
+msgid "This questionaire is open only to registered people. Please"
+msgstr "Kuesioner ini terbuka hanya untuk orang yang terdaftar. Silahkan"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_qualified_tools__name
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_required_tools__name
+msgid "Tool Name"
+msgstr "Nama Alat"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.tools_form
+msgid "Tool Name..."
+msgstr "Nama Alat..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.tools_form
+msgid "Tool..."
+msgstr "Alat..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.show_vacancy
+msgid "Tools"
+msgstr "Peralatan"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_list
+msgid "Total Score"
+msgstr "Skor Total"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__total_score
+msgid "Total match in percent"
+msgstr "Kecocokan Kriteria dalam persen"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_profile
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form
+msgid "Total score :"
+msgstr "Skor Total :"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_form_view
+msgid "Trainings"
+msgstr "Pelatihan"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_applications
+msgid "Unfinished"
+msgstr "Belum selesai"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_res_partner__failed_application_ids
+msgid "Unfinished Applications"
+msgstr "Lamaran Belum Selesai"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.show_vacancy
+msgid "Universities"
+msgstr "Universitas"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_form_view
+msgid "University"
+msgstr "Universitas"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__message_unread
+msgid "Unread Messages"
+msgstr "Pesan yang belum dibaca"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Jumlah pesan yang belum dibaca"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_list
+msgid "Up"
+msgstr "Naik"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_list
+msgid "Up to"
+msgstr "Hingga"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.show_company
+#: model:website.menu,name:hr_apply.menu_vacancies
+msgid "Vacancies"
+msgstr "Lowongan"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.show_vacancy
+msgid "Vacancy"
+msgstr "Lowongan"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__close_date
+msgid "Vacancy closing date"
+msgstr "Tanggal Penutupan Lowongan"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_list
+msgid "Vacancy for"
+msgstr "Lowongan untuk"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "View Applicant Profile"
+msgstr "Lihat Profil Pelamar"
+
+#. module: hr_apply
+#: selection:hr_apply.applicant,status:0
+msgid "Viewed"
+msgstr "Dilihat"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__village_id
+msgid "Village"
+msgstr "Kelurahan"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_search
+msgid "Village..."
+msgstr "Kelurahan..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.show_company
+#: model_terms:ir.ui.view,arch_db:hr_apply.show_vacancy
+msgid "Visualize on Google Maps"
+msgstr "Lihat pada Google Maps"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_duration__name
+msgid "Wage Duration"
+msgstr "Durasi Upah"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.show_vacancy
+msgid "We are searching for"
+msgstr "Kami sedang mencari untuk"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_applicant__website_message_ids
+msgid "Website Messages"
+msgstr "Pesan Situs Web"
+
+#. module: hr_apply
+#: model:ir.model.fields,help:hr_apply.field_hr_apply_applicant__website_message_ids
+msgid "Website communication history"
+msgstr "Riwayat komunikasi situs web"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_form_view
+msgid "Work Experience"
+msgstr "Pengalaman kerja"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_res_partner__working_company_ids
+msgid "Working Company"
+msgstr "Perusahaan Sedang Bekerja"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_apply_interview__writer_id
+msgid "Writer"
+msgstr "Penulis"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_applications
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancies
+msgid "You don't have any vacancy"
+msgstr "Anda tidak memiliki lowongan apa pun"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.sfinished
+msgid "You scored"
+msgstr "Nilai Anda"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.questionaire_init
+msgid "You've fill this questionaire before"
+msgstr "Anda sudah mengisi kuesioner ini sebelumnya"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancies
+msgid "Youngest Qualified"
+msgstr "Kualifikasi Termuda"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_activites
+msgid "Your Activities"
+msgstr "Aktivitas Anda"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_applications
+msgid "Your Applications"
+msgstr "Lamaran Anda"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.activities_layout
+msgid "Your Companies"
+msgstr "Perusahaan Anda"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.working_company_form
+msgid "Your Status..."
+msgstr "Status Anda..."
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancies
+msgid "Your Vacancies"
+msgstr "Lowongan Anda"
+
+#. module: hr_apply
+#: model:ir.model.fields,field_description:hr_apply.field_hr_job__zipcode_id
+msgid "Zip Code"
+msgstr "Kode POS"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancies
+msgid "applicant(s)"
+msgstr "pelamar(s)"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+#: model_terms:ir.ui.view,arch_db:hr_apply.experience_table
+#: model_terms:ir.ui.view,arch_db:hr_apply.show_vacancy
+msgid "as"
+msgstr "sebagai"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_form_view
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_profile
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form
+msgid "by"
+msgstr "oleh"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+msgid "dependents"
+msgstr "tanggungan"
+
+#. module: hr_apply
+#: model:ir.model,name:hr_apply.model_hr_apply_tryapply
+msgid "failed apply"
+msgstr "gagal melamar"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_list
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view2
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_activites
+#: model_terms:ir.ui.view,arch_db:hr_apply.show_company
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancies
+msgid "float-right"
+msgstr ""
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.certificate_table
+#: model_terms:ir.ui.view,arch_db:hr_apply.lisence_table
+msgid "from"
+msgstr "dari"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_form_view
+#: model_terms:ir.ui.view,arch_db:hr_apply.show_vacancy
+msgid "in"
+msgstr "di dalam"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+#: model_terms:ir.ui.view,arch_db:hr_apply.experience_table
+#: model_terms:ir.ui.view,arch_db:hr_apply.show_vacancy
+msgid "in department of"
+msgstr "di departemen"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+#: model_terms:ir.ui.view,arch_db:hr_apply.experience_table
+#: model_terms:ir.ui.view,arch_db:hr_apply.show_vacancy
+msgid "in industry of"
+msgstr "di industri"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.auth_required
+msgid "log in"
+msgstr "masuk"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.page
+msgid "of"
+msgstr "dari"
+
+#. module: hr_apply
+#: model:hr_apply.duration,name:hr_apply.Duration_4
+msgid "per 12 hours"
+msgstr "per 12 jam"
+
+#. module: hr_apply
+#: model:hr_apply.duration,name:hr_apply.Duration_3
+msgid "per 8 hours"
+msgstr "per 8 jam"
+
+#. module: hr_apply
+#: model:hr_apply.duration,name:hr_apply.Duration_6
+msgid "per day"
+msgstr "perhari"
+
+#. module: hr_apply
+#: model:hr_apply.duration,name:hr_apply.Duration_2
+msgid "per hour"
+msgstr "perjam"
+
+#. module: hr_apply
+#: model:hr_apply.duration,name:hr_apply.Duration_1
+msgid "per minute"
+msgstr "permenit"
+
+#. module: hr_apply
+#: model:hr_apply.duration,name:hr_apply.Duration_8
+msgid "per month"
+msgstr "perbulan"
+
+#. module: hr_apply
+#: model:hr_apply.duration,name:hr_apply.Duration_7
+msgid "per week"
+msgstr "perminggu"
+
+#. module: hr_apply
+#: model:hr_apply.duration,name:hr_apply.Duration_5
+msgid "per work day"
+msgstr "perhari kerja"
+
+#. module: hr_apply
+#: model:hr_apply.duration,name:hr_apply.Duration_9
+msgid "per year"
+msgstr "pertahun"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.show_company
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_list
+msgid "person(s)"
+msgstr "orang(s)"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.show_vacancy
+msgid "person(s) to fill the position of"
+msgstr "orang (s) untuk mengisi posisi"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.sfinished
+msgid "points ("
+msgstr "poin ("
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.sfinished
+msgid "review your answers"
+msgstr "periksa jawaban Anda"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.applicant_form_view
+msgid "since"
+msgstr "sejak"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.my_vacancies
+msgid "views"
+msgstr "dilihat"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.vacancy_list
+msgid "views<br/>"
+msgstr "dilihat<br/>"
+
+#. module: hr_apply
+#: model_terms:ir.ui.view,arch_db:hr_apply.application_form_view
+#: model_terms:ir.ui.view,arch_db:hr_apply.experience_table
+#: model_terms:ir.ui.view,arch_db:hr_apply.show_vacancy
+msgid "year(s) of work"
+msgstr "tahun(s)kerja"

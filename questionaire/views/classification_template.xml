@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+<!--
+    <template id="portal_my_home" inherit_id="portal.portal_my_home">
+        <xpath expr="//div[hasclass('o_portal_my_home')]/div[hasclass('oe_structure')]" position="after">
+            <t t-call="questionaire.my_method_categories" />
+        </xpath>
+    </template>
+-->
+    <template id="portal_layout" inherit_id="portal.portal_layout">
+        <xpath expr="//div[@id='o_my_sidebar']" position="inside">
+            <t t-call="questionaire.my_method_categories" />
+        </xpath>
+    </template>
+    
+    <template id="my_method_categories" name="My method categories">
+            <t t-if="method_categories" t-foreach="method_categories" t-as="category">
+                <h3 align="right" class="page-header"><span t-field="category.title"/></h3>
+                <t t-if="category.classification_method_ids" t-foreach="category.classification_method_ids" t-as="method">
+                    <t t-if="method.questionaire_ids" t-foreach="method.questionaire_ids" t-as="quest">
+                        <table class="table">
+                            <tr>
+                                <td align="left"><h4><span t-field="quest.title"/></h4></td>
+                                <td align="right"><a t-attf-href="#{quest.public_url}" class="btn btn-danger btn-sm">Do The Test</a></td>
+                            </tr>
+                        </table>
+                        <t t-call="questionaire.score_table"/>
+                        <div t-field="method.description"/>
+                    </t>
+                </t>
+            </t>
+    </template>
+
+    <template id="score_table">
+        <table class="table">
+            <t t-foreach="partner.classification_score_ids" t-as="scores">
+                <tr t-if="scores.questionaire_id == quest">
+                    <t t-set="classification_score" t-value="scores.classification_id"/>
+                    <td><a t-attf-href="#{classification_score.public_url}"><strong><span t-field="scores.classification_id"/></strong></a></td>
+                    <td t-if="scores.score_class == 'a'" style="color: white; background-color:green"><t t-call="questionaire.table_stars"/></td>
+                    <td t-elif="scores.score_class == 'b'" style="background-color:yellow"><t t-call="questionaire.table_stars"/></td>
+                    <td t-else="" style="color: white; background-color:red"><t t-call="questionaire.table_stars"/></td>
+                </tr>
+            </t>
+        </table>
+    </template>
+
+    <template id="table_stars">
+        <t t-set="val_integer" t-value="int(scores.score)"/>
+        <t t-set="val_decimal" t-value="scores.score - val_integer"/>
+        <t t-foreach="val_integer" t-as="num">
+            <i class="fa fa-star"></i>
+        </t>
+        <t t-if="val_decimal">
+            <i class="fa fa-star-half-o"></i>
+        </t>
+    </template>
+
+    <template id="my_personality" name="Talenta Ku">
+        <t t-call="portal.portal_layout">
+            <t t-call="questionaire.my_method_categories" />
+            <div class="col-md-12 oe_structure"/>
+        </t>
+    </template>
+
+</odoo>

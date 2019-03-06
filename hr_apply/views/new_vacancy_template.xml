@@ -1,0 +1,911 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_frontend" inherit_id="web.assets_frontend" name="Portal Assets">
+        <xpath expr="//script[last()]" position="after">
+            <script type="text/javascript" src="/hr_apply/static/hr_apply.js"/>
+        </xpath>
+    </template>
+    
+    <template id="my_vacancy" name="My Vacancy">
+        <t t-call="hr_apply.activities_layout">
+            <h1 t-if="vacancy_id" class="mt0">Edit Vacancy</h1>
+            <h1 t-else="" class="mt0">New Vacancy</h1>
+            <form t-attf-action="/save/vacancy/" method="post" role="form" class="tag_text js_website_submit_form">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                <input t-if="vacancy_id" type="hidden" name="vacancy_id" t-att-value="vacancy_id.id"/>
+                <p t-call="hr_apply.my_vacancy_form"/>
+                <div align="center">
+                    <a t-if="vacancy_id" t-attf-href="/vacancy/#{slug(vacancy_id)}/" class="btn btn-default">Cancel</a>
+                    <a t-else="" t-attf-href="/my/activities/" class="btn btn-default">Cancel</a>
+                    <button type="submit" t-attf-class="btn btn-primary">Save</button>
+                </div>
+            </form>
+        </t>
+    </template>
+
+    <template id="my_vacancy_form">
+        <table class="table o_area_selections">
+            <tr id="name">
+                <td><strong>Vacancy Title</strong></td>
+                <td t-if="vacancy_id" colspan="2"><input type="text" name="name" class="form-control" t-att-value="vacancy_id.name or name" /></td>
+                <td t-else="" colspan="2"><input type="text" name="name" class="form-control" t-att-value="name" /></td>
+            </tr>
+            <tr id="description">
+                <td><strong>Job Description</strong></td>
+                <td t-if="vacancy_id" colspan="2">
+                    <textarea class="form-control" name="description"><t t-esc="vacancy_id.description or description" /></textarea>
+                </td>
+                <td t-else="" colspan="2">
+                    <textarea class="form-control" name="description"><t t-esc="description" /></textarea>
+                </td>
+            </tr>
+            <tr id="tasks">
+                <td><strong>Job Task</strong></td>
+                <td t-if="vacancy_id" colspan="2">
+                    <textarea class="form-control" name="tasks"><t t-esc="vacancy_id.tasks or tasks" /></textarea>
+                </td>
+                <td t-else="" colspan="2">
+                    <textarea class="form-control" name="tasks"><t t-esc="tasks" /></textarea>
+                </td>
+            </tr>
+            <tr id="employer_company">
+                <td><strong>Company</strong></td>
+                <td>
+                    <select name="employer_company" class="form-control">
+                        <option value="">Company...</option>
+                        <t t-foreach="companies or []" t-as="l">
+                            <option t-att-value="l.id" t-att-selected="l.id == vacancy_id.employer_id.id if vacancy_id else l.id == ''" >
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="/new/company" id="new_vacancy"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+            <tr><td><strong>Location</strong></td></tr>
+            <p t-call="matakarir.country_template" />
+            <p t-call="matakarir.state_template" />
+            <p t-call="matakarir.city_template" />
+            <p t-call="matakarir.district_template" />
+            <p t-call="matakarir.village_template" />
+            <p t-call="matakarir.area_template" />
+            <tr id="industry" class ="o_edit_industry" >
+                <td><strong>Industry</strong></td>
+                <td id="input_industry" style="display:none;"><input type="text" class="form-control" name="industry_name" placeholder="Industry Name..."/></td>
+                <td>
+                    <select name="industry" class="form-control">
+                        <option value="">Industry...</option>
+                        <t t-foreach="industries or []" t-as="l">
+                            <option t-att-value="l.id" t-att-selected="l.id == vacancy_id.industry_id.id if vacancy_id else l.id == ''" >
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="#new_industry" id="new_industry"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+            <tr id="department" class ="o_edit_department" >
+                <td><strong>Department</strong></td>
+                <td id="input_department" style="display:none;"><input type="text" class="form-control" name="department_name" placeholder="Department Name..."/></td>
+                <td>
+                    <select name="department" class="form-control">
+                        <option value="">Department...</option>
+                        <t t-foreach="departments or []" t-as="l">
+                            <option t-att-value="l.id" t-att-selected="l.id == vacancy_id.department_id.id if vacancy_id else l.id == ''" >
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="#new_department" id="new_department"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+            <tr id="level" class ="o_edit_job_level" >
+                <td><strong>Level</strong></td>
+                <td id="input_level" style="display:none;"><input type="text" class="form-control" name="level_name" placeholder="Level Name..."/></td>
+                <td>
+                    <select name="level" class="form-control">
+                        <option value="">Level...</option>
+                        <t t-foreach="levels or []" t-as="l">
+                            <option t-att-value="l.id" t-att-selected="l.id == vacancy_id.level_id.id if vacancy_id else l.id == ''" >
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="#new_level" id="new_level"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+            <tr id="e_status" class ="o_edit_e_status" >
+                <td><strong>Employment Status</strong></td>
+                <td id="input_e_status" style="display:none;"><input type="text" class="form-control" name="e_status_name" placeholder="Employment Status Name..."/></td>
+                <td>
+                    <select name="e_status" class="form-control">
+                        <option value="">Employment Status...</option>
+                        <t t-foreach="e_statuses or []" t-as="l">
+                            <option t-att-value="l.id" t-att-selected="l.id == vacancy_id.e_status_id.id if vacancy_id else l.id == ''" >
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="#new_e_status" id="new_e_status"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+            <tr id="min_age">
+                <td><strong>Minimum Age</strong></td>
+                <td colspan="2">
+                    <select name="min_age" class="form-control">
+                        <option value="">Minimum Age...</option>
+                        <t t-foreach="numbers or []" t-as="l">
+                            <option t-att-value="l.id" t-att-selected="l.name == vacancy_id.min_age if vacancy_id else l.id == ''" >
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+            </tr>
+            <tr id="max_age">
+                <td><strong>Maximum Age</strong></td>
+                <td colspan="2">
+                    <select name="max_age" class="form-control">
+                        <option value="">Maximum Age...</option>
+                        <t t-foreach="numbers or []" t-as="l">
+                            <option t-att-value="l.id" t-att-selected="l.name == vacancy_id.max_age if vacancy_id else l.id == ''" >
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+            </tr>
+            <tr id="min_salary">
+                <td><strong>Bottom Salary Range</strong></td>
+                <td colspan="2">
+                    <select name="min_salary" class="form-control">
+                        <option value="">Minimum Salary...</option>
+                        <t t-foreach="millions or []" t-as="l">
+                            <option t-att-value="l.id" t-att-selected="l.name == vacancy_id.min_salary if vacancy_id else l.id == ''" >
+                                <span t-field="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+            </tr>
+            <tr id="max_salary">
+                <td><strong>Top Salary Range</strong></td>
+                <td colspan="2">
+                    <select name="max_salary" class="form-control">
+                        <option value="">Maximum Salary...</option>
+                        <t t-foreach="millions or []" t-as="l">
+                            <option t-att-value="l.id" t-att-selected="l.name == vacancy_id.max_salary if vacancy_id else l.id == ''" >
+                                <span t-field="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+            </tr>
+            <tr id="duration">
+                <td><strong>Salary Calculation Base</strong></td>
+                <td colspan="2">
+                    <select name="duration" class="form-control">
+                        <option value="">Salary Duration...</option>
+                        <t t-foreach="durations or []" t-as="l">
+                            <option t-att-value="l.id" t-att-selected="l.id == vacancy_id.duration_id.id if vacancy_id else l.id == ''" >
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+            </tr>
+            <tr id="currency">
+                <td><strong>Salary Currency</strong></td>
+                <td colspan="2">
+                    <select name="currency" class="form-control">
+                        <option value="">Salary Currency...</option>
+                        <t t-foreach="currencies or []" t-as="l">
+                            <option t-att-value="l.id" t-att-selected="l.id == vacancy_id.currency_id.id if vacancy_id else l.id == ''" >
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+            </tr>
+            <tr id="ethnic" class ="o_edit_ethnic" >
+                <td><strong>Preferred Candidate Ethnic</strong></td>
+                <td id="input_ethnic" style="display:none;"><input type="text" class="form-control" name="ethnic_name" placeholder="Ethnic Name..."/></td>
+                <td>
+                    <select name="ethnic" class="form-control">
+                        <option value="">Preferred Ethnic...</option>
+                        <t t-foreach="ethnics or []" t-as="l">
+                            <option t-att-value="l.id" t-att-selected="l.id == vacancy_id.ethnic_id.id if vacancy_id else l.id == ''" >
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="#new_ethnic" id="new_ethnic"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+            <tr id="religion" class ="o_edit_religion" >
+                <td><strong>Preferred Candidate Religion</strong></td>
+                <td id="input_religion" style="display:none;"><input type="text" class="form-control" name="religion_name" placeholder="Religion Name..."/></td>
+                <td>
+                    <select name="religion" class="form-control">
+                        <option value="">Preferred Religion...</option>
+                        <t t-foreach="religions or []" t-as="l">
+                            <option t-att-value="l.id" t-att-selected="l.id == vacancy_id.religion_id.id if vacancy_id else l.id == ''" >
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="#new_religion" id="new_religion"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+            <tr id="close_date">
+                <td><strong>Closing Date</strong></td>
+                <td t-if="vacancy_id" colspan="2"><input type="date" name="close_date" class="form-control" t-att-value="vacancy_id.close_date or close_date" /></td>
+                <td t-else='' colspan="2"><input type="date" name="close_date" class="form-control" t-att-value="close_date" /></td>
+            </tr>
+            <tr id="no_of_recruitment">
+                <td><strong>Number of People Needed</strong></td>
+                <td colspan="2">
+                    <select name="no_of_recruitment" class="form-control">
+                        <option value="">People Needed...</option>
+                        <t t-foreach="numbers or []" t-as="l">
+                            <option t-att-value="l.id" t-att-selected="l.name == vacancy_id.no_of_recruitment if vacancy_id else l.id == ''" >
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+            </tr>
+            <tr t-foreach="method_ids" t-as="method">
+                <td>
+                    <span t-field="method.employer_summary"/>
+                    <input type="hidden" name="method_id" t-att-value="method.id" />
+                    <t t-set="prefix" t-value="'%s' % (method.id)" />
+                </td>
+                <td t-if="vacancy_id.classification_ids" colspan="2">
+                    <p t-foreach='method.classification_ids' t-as='classification' t-att-id="prefix">
+                        <t t-if="classification in vacancy_id.classification_ids" t-set="c_id" t-value="classification.id"/>
+                        <label>
+                            <input type="radio" t-att-name="prefix" t-att-value='classification.id' required="required" t-att-checked="'checked' if classification.id == c_id else None"/>
+                            <span t-field='classification.employer_summary'/>
+                        </label>
+                    </p>
+                </td>
+                <td t-else="" colspan="2">
+                    <p t-foreach='method.classification_ids' t-as='classification' t-att-id="prefix">
+                        <label>
+                            <input type="radio" t-att-name="prefix" t-att-value='classification.id' required="required" />
+                            <span t-field='classification.employer_summary'/>
+                        </label>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </template>
+
+    <template id="vacancy_driving_lisence" name="Required Driving Lisences">
+        <t t-call="hr_apply.activities_layout">
+            <h1 class="mt0">Required Driving Lisences</h1>
+            <t t-call="hr_apply.driving_lisence_table" />
+            <form t-attf-action="/save/vacancy/driving_lisence" method="post" role="form" class="tag_text js_website_submit_form">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                <input t-if="vacancy" type="hidden" name="vacancy" t-att-value="vacancy.id"/>
+                <t t-call="hr_apply.driving_lisence_form" />
+                <div align="center">
+                    <button type="submit" t-attf-class="btn btn-primary">Add</button>
+                    <a t-attf-href="/vacancy/#{slug(vacancy)}" class="btn btn-default">Done</a>
+                </div>
+            </form>
+        </t>
+    </template>
+    
+    <template id="driving_lisence_table">
+        <table class="table">
+            <tr t-foreach="vacancy.required_driving_lisence_ids" t-as="line">
+                <td>
+                    <span t-field="line.name" />
+                </td>
+                <td align="right">
+                    <a t-attf-href="/remove/#{slug(vacancy)}/driving_lisence/#{line.id}/"> <small><i class='fa fa-trash-o'></i> Remove</small></a>
+                </td>
+            </tr>
+        </table>
+    </template>
+    
+    <template id="driving_lisence_form">
+        <table class="table">
+            <tr class="o_add_v_object">
+                <td><strong>Driving Lisence</strong></td>
+                <td id="input_v_object" style="display:none;"><input type="text" class="form-control" name="v_object_name" placeholder="Driving Lisence Name..."/></td>
+                <td>
+                    <select name="v_object_id" class="form-control">
+                        <option value="">Driving Lisence...</option>
+                        <t t-foreach="v_objects or []" t-as="l">
+                            <option t-att-value="l.id">
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="#new_v_object" id="new_v_object"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+        </table>
+    </template>
+        
+    <template id="vacancy_lisence" name="Required Lisences">
+        <t t-call="hr_apply.activities_layout">
+            <h1 class="mt0">Required Lisences</h1>
+            <t t-call="hr_apply.lisence_table" />
+            <form t-attf-action="/save/vacancy/lisence" method="post" role="form" class="tag_text js_website_submit_form">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                <input t-if="vacancy" type="hidden" name="vacancy" t-att-value="vacancy.id"/>
+                <t t-call="hr_apply.lisence_form" />
+                <div align="center">
+                    <button type="submit" t-attf-class="btn btn-primary">Add</button>
+                    <a t-attf-href="/vacancy/#{slug(vacancy)}" class="btn btn-default">Done</a>
+                </div>
+            </form>
+        </t>
+    </template>
+    
+    <template id="lisence_table">
+        <table class="table">
+            <tr t-foreach="vacancy.required_lisence_ids" t-as="line">
+                <td>
+                    <h5><span t-field="line.name" /> from <span t-field="line.object_id.publisher_id.name" /></h5>
+                </td>
+                <td align="right">
+                    <a t-attf-href="/remove/#{slug(vacancy)}/lisence/#{line.id}/"> <small><i class='fa fa-trash-o'></i> Remove</small></a>
+                </td>
+            </tr>
+        </table>
+    </template>
+    
+    <template id="lisence_form">
+        <table class="table o_three_levels">
+            <tr>
+                <td><strong>Publisher Country</strong></td>
+                <td id="input_level1" style="display:none;"><input type="text" class="form-control" name="level1_name" placeholder="Publisher Country..."/></td>
+                <td>
+                    <select name="level1" class="form-control">
+                        <option value="">Country...</option>
+                        <t t-foreach="level1s or []" t-as="l">
+                            <option t-att-value="l.id" t-att-selected="l.code == 'ID'">
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="#new_level1" id="new_level1"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+            <tr>
+                <td><strong>Publisher Name</strong></td>
+                <td id="input_level2" style="display:none;"><input type="text" class="form-control" name="level2_name" placeholder="Publisher Name..."/></td>
+                <td>
+                    <select name="level2" class="form-control">
+                        <option value="">Publisher...</option>
+                        <t t-foreach="level2s or []" t-as="l">
+                            <option t-att-value="l.id" t-att-data-level1="l.country_id.id">
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="#new_level2" id="new_level2"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+            <tr>
+                <td><strong>Lisence Name</strong></td>
+                <td id="input_level3" style="display:none;"><input type="text" class="form-control" name="level3_name" placeholder="Lisence Name..."/></td>
+                <td>
+                    <select name="level3" class="form-control">
+                        <option value="">Lisence...</option>
+                        <t t-foreach="level3s or []" t-as="l">
+                            <option t-att-value="l.id" t-att-data-level2="l.publisher_id.id" t-att-data-level1="l.country_id.id">
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="#new_level3" id="new_level3"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+        </table>
+    </template>
+        
+    <template id="vacancy_certificate" name="Required Certificates">
+        <t t-call="hr_apply.activities_layout">
+            <h1 class="mt0">Required Certificates</h1>
+            <t t-call="hr_apply.certificate_table" />
+            <form t-attf-action="/save/vacancy/certificate" method="post" role="form" class="tag_text js_website_submit_form">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                <input t-if="vacancy" type="hidden" name="vacancy" t-att-value="vacancy.id"/>
+                <t t-call="hr_apply.certificate_form" />
+                <div align="center">
+                    <button type="submit" t-attf-class="btn btn-primary">Add</button>
+                    <a t-attf-href="/vacancy/#{slug(vacancy)}" class="btn btn-default">Done</a>
+                </div>
+            </form>
+        </t>
+    </template>
+    
+    <template id="certificate_table">
+        <table class="table">
+            <tr t-foreach="vacancy.required_certificate_ids" t-as="line">
+                <td>
+                    <h5><span t-field="line.name" /> from <span t-field="line.object_id.publisher_id.name" /></h5>
+                </td>
+                <td align="right">
+                    <a t-attf-href="/remove/#{slug(vacancy)}/certificate/#{line.id}/"> <small><i class='fa fa-trash-o'></i> Remove</small></a>
+                </td>
+            </tr>
+        </table>
+    </template>
+    
+    <template id="certificate_form">
+        <table class="table o_three_levels">
+            <tr>
+                <td><strong>Publisher Country</strong></td>
+                <td id="input_level1" style="display:none;"><input type="text" class="form-control" name="level1_name" placeholder="Publisher Country..."/></td>
+                <td>
+                    <select name="level1" class="form-control">
+                        <option value="">Country...</option>
+                        <t t-foreach="level1s or []" t-as="l">
+                            <option t-att-value="l.id" t-att-selected="l.code == 'ID'">
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="#new_level1" id="new_level1"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+            <tr>
+                <td><strong>Publisher Name</strong></td>
+                <td id="input_level2" style="display:none;"><input type="text" class="form-control" name="level2_name" placeholder="Publisher Name..."/></td>
+                <td>
+                    <select name="level2" class="form-control">
+                        <option value="">Publisher...</option>
+                        <t t-foreach="level2s or []" t-as="l">
+                            <option t-att-value="l.id" t-att-data-level1="l.country_id.id">
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="#new_level2" id="new_level2"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+            <tr>
+                <td><strong>Certificate Name</strong></td>
+                <td id="input_level3" style="display:none;"><input type="text" class="form-control" name="level3_name" placeholder="Certificate Name..."/></td>
+                <td>
+                    <select name="level3" class="form-control">
+                        <option value="">Certificate...</option>
+                        <t t-foreach="level3s or []" t-as="l">
+                            <option t-att-value="l.id" t-att-data-level2="l.publisher_id.id" t-att-data-level1="l.country_id.id">
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="#new_level3" id="new_level3"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+        </table>
+    </template>
+        
+    <template id="vacancy_skill" name="Required Skills">
+        <t t-call="hr_apply.activities_layout">
+            <h1 class="mt0">Required Skills</h1>
+            <t t-call="hr_apply.skill_table" />
+            <form t-attf-action="/save/vacancy/skill" method="post" role="form" class="tag_text js_website_submit_form">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                <input t-if="vacancy" type="hidden" name="vacancy" t-att-value="vacancy.id"/>
+                <t t-call="hr_apply.skill_form" />
+                <div align="center">
+                    <button type="submit" t-attf-class="btn btn-primary">Add</button>
+                    <a t-attf-href="/vacancy/#{slug(vacancy)}" class="btn btn-default">Done</a>
+                </div>
+            </form>
+        </t>
+    </template>
+    
+    <template id="skill_table">
+        <table class="table">
+            <tr t-foreach="vacancy.required_skill_ids" t-as="line">
+                <td>
+                    <span t-field="line.name" />
+                </td>
+                <td align="right">
+                    <a t-attf-href="/remove/#{slug(vacancy)}/skill/#{line.id}/"> <small><i class='fa fa-trash-o'></i> Remove</small></a>
+                </td>
+            </tr>
+        </table>
+    </template>
+    
+    <template id="skill_form">
+        <table class="table">
+            <tr class="o_add_v_object">
+                <td><strong>Skill</strong></td>
+                <td id="input_v_object" style="display:none;"><input type="text" class="form-control" name="v_object_name" placeholder="Skill Name..."/></td>
+                <td>
+                    <select name="v_object_id" class="form-control">
+                        <option value="">Skill...</option>
+                        <t t-foreach="v_objects or []" t-as="l">
+                            <option t-att-value="l.id">
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="#new_v_object" id="new_v_object"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+        </table>
+    </template>
+        
+    <template id="vacancy_langskill" name="Required Language Skills">
+        <t t-call="hr_apply.activities_layout">
+            <h1 class="mt0">Required Language Skills</h1>
+            <t t-call="hr_apply.langskill_table" />
+            <form t-attf-action="/save/vacancy/langskill" method="post" role="form" class="tag_text js_website_submit_form">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                <input t-if="vacancy" type="hidden" name="vacancy" t-att-value="vacancy.id"/>
+                <t t-call="hr_apply.langskill_form" />
+                <div align="center">
+                    <button type="submit" t-attf-class="btn btn-primary">Add</button>
+                    <a t-attf-href="/vacancy/#{slug(vacancy)}" class="btn btn-default">Done</a>
+                </div>
+            </form>
+        </t>
+    </template>
+    
+    <template id="langskill_table">
+        <table class="table">
+            <tr t-foreach="vacancy.required_langskill_ids" t-as="line">
+                <td>
+                    <span t-field="line.name" />
+                </td>
+                <td align="right">
+                    <a t-attf-href="/remove/#{slug(vacancy)}/langskill/#{line.id}/"> <small><i class='fa fa-trash-o'></i> Remove</small></a>
+                </td>
+            </tr>
+        </table>
+    </template>
+    
+    <template id="langskill_form">
+        <table class="table">
+            <tr class="o_add_v_object">
+                <td><strong>Language Skill</strong></td>
+                <td id="input_v_object" style="display:none;"><input type="text" class="form-control" name="v_object_name" placeholder="Language Skill Name..."/></td>
+                <td>
+                    <select name="v_object_id" class="form-control">
+                        <option value="">Language Skill...</option>
+                        <t t-foreach="v_objects or []" t-as="l">
+                            <option t-att-value="l.id">
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="#new_v_object" id="new_v_object"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+        </table>
+    </template>
+        
+    <template id="vacancy_comskill" name="Required Computer Skills">
+        <t t-call="hr_apply.activities_layout">
+            <h1 class="mt0">Required Computer Skills</h1>
+            <t t-call="hr_apply.comskill_table" />
+            <form t-attf-action="/save/vacancy/comskill" method="post" role="form" class="tag_text js_website_submit_form">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                <input t-if="vacancy" type="hidden" name="vacancy" t-att-value="vacancy.id"/>
+                <t t-call="hr_apply.comskill_form" />
+                <div align="center">
+                    <button type="submit" t-attf-class="btn btn-primary">Add</button>
+                    <a t-attf-href="/vacancy/#{slug(vacancy)}" class="btn btn-default">Done</a>
+                </div>
+            </form>
+        </t>
+    </template>
+    
+    <template id="comskill_table">
+        <table class="table">
+            <tr t-foreach="vacancy.required_comskill_ids" t-as="line">
+                <td>
+                    <span t-field="line.name" />
+                </td>
+                <td align="right">
+                    <a t-attf-href="/remove/#{slug(vacancy)}/comskill/#{line.id}/"> <small><i class='fa fa-trash-o'></i> Remove</small></a>
+                </td>
+            </tr>
+        </table>
+    </template>
+    
+    <template id="comskill_form">
+        <table class="table">
+            <tr class="o_add_v_object">
+                <td><strong>Computer Skill</strong></td>
+                <td id="input_v_object" style="display:none;"><input type="text" class="form-control" name="v_object_name" placeholder="Computer Skill Name..."/></td>
+                <td>
+                    <select name="v_object_id" class="form-control">
+                        <option value="">Computer Skill...</option>
+                        <t t-foreach="v_objects or []" t-as="l">
+                            <option t-att-value="l.id">
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="#new_v_object" id="new_v_object"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+        </table>
+    </template>
+        
+    <template id="vacancy_tools" name="Required Tools">
+        <t t-call="hr_apply.activities_layout">
+            <h1 class="mt0">Required Tools</h1>
+            <t t-call="hr_apply.tools_table" />
+            <form t-attf-action="/save/vacancy/tools" method="post" role="form" class="tag_text js_website_submit_form">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                <input t-if="vacancy" type="hidden" name="vacancy" t-att-value="vacancy.id"/>
+                <t t-call="hr_apply.tools_form" />
+                <div align="center">
+                    <button type="submit" t-attf-class="btn btn-primary">Add</button>
+                    <a t-attf-href="/vacancy/#{slug(vacancy)}" class="btn btn-default">Done</a>
+                </div>
+            </form>
+        </t>
+    </template>
+    
+    <template id="tools_table">
+        <table class="table">
+            <tr t-foreach="vacancy.required_tools_ids" t-as="line">
+                <td>
+                    <span t-field="line.name" />
+                </td>
+                <td align="right">
+                    <a t-attf-href="/remove/#{slug(vacancy)}/tools/#{line.id}/"> <small><i class='fa fa-trash-o'></i> Remove</small></a>
+                </td>
+            </tr>
+        </table>
+    </template>
+    
+    <template id="tools_form">
+        <table class="table o_add_object">
+            <tr>
+                <td><strong>Tool</strong></td>
+                <td id="input_object" style="display:none;"><input type="text" class="form-control" name="object_name" placeholder="Tool Name..."/></td>
+                <td>
+                    <select name="object_id" class="form-control">
+                        <option value="">Tool...</option>
+                        <t t-foreach="objects or []" t-as="l">
+                            <option t-att-value="l.id">
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="#new_object" id="new_object"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+        </table>
+    </template>
+
+    <template id="vacancy_school" name="Required Schools">
+        <t t-call="hr_apply.activities_layout">
+            <h1 class="mt0">Required Schools</h1>
+            <t t-call="hr_apply.school_table" />
+            <form t-attf-action="/save/vacancy/school" method="post" role="form" class="tag_text js_website_submit_form">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                <input t-if="vacancy" type="hidden" name="vacancy" t-att-value="vacancy.id"/>
+                <t t-call="hr_apply.school_form" />
+                <div align="center">
+                    <button type="submit" t-attf-class="btn btn-primary">Add</button>
+                    <a t-attf-href="/vacancy/#{slug(vacancy)}" class="btn btn-default">Done</a>
+                </div>
+            </form>
+        </t>
+    </template>
+    
+    <template id="school_table">
+        <table class="table">
+            <tr t-foreach="vacancy.required_school_ids" t-as="line">
+                <td>
+                    <span t-field="line.name" />
+                </td>
+                <td align="right">
+                    <a t-attf-href="/remove/#{slug(vacancy)}/school/#{line.id}/"> <small><i class='fa fa-trash-o'></i> Remove</small></a>
+                </td>
+            </tr>
+        </table>
+    </template>
+    
+    <template id="school_form">
+        <table class="table">
+            <tr class="o_add_v_object">
+                <td><strong>School</strong></td>
+                <td id="input_v_object" style="display:none;"><input type="text" class="form-control" name="v_object_name" placeholder="School Name..."/></td>
+                <td>
+                    <select name="v_object_id" class="form-control">
+                        <option value="">School...</option>
+                        <t t-foreach="v_objects or []" t-as="l">
+                            <option t-att-value="l.id">
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="#new_v_object" id="new_v_object"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+        </table>
+    </template>
+        
+    <template id="vacancy_university" name="Required Universities">
+        <t t-call="hr_apply.activities_layout">
+            <h1 class="mt0">Required Universities</h1>
+            <t t-call="hr_apply.university_table" />
+            <form t-attf-action="/save/vacancy/university" method="post" role="form" class="tag_text js_website_submit_form">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                <input t-if="vacancy" type="hidden" name="vacancy" t-att-value="vacancy.id"/>
+                <t t-call="hr_apply.university_form" />
+                <div align="center">
+                    <button type="submit" t-attf-class="btn btn-primary">Add</button>
+                    <a t-attf-href="/vacancy/#{slug(vacancy)}" class="btn btn-default">Done</a>
+                </div>
+            </form>
+        </t>
+    </template>
+    
+    <template id="university_table">
+        <table class="table">
+            <tr t-foreach="vacancy.required_university_ids" t-as="line">
+                <td>
+                    <span t-field="line.degree_id.name" /> <span t-field="line.faculty_id.name" /> <span t-field="line.major_id.name" />
+                </td>
+                <td align="right">
+                    <a t-attf-href="/remove/#{slug(vacancy)}/university/#{line.id}/"> <small><i class='fa fa-trash-o'></i> Remove</small></a>
+                </td>
+            </tr>
+        </table>
+    </template>
+    
+    <template id="university_form">
+        <table class="table o_required_univ">
+            <tr>
+                <td><strong>Degree</strong></td>
+                <td id="input_degree" style="display:none;"><input type="text" class="form-control" name="degree_name" placeholder="Degree Name..."/></td>
+                <td>
+                    <select name="degree_id" class="form-control">
+                        <option value="">Degree...</option>
+                        <t t-foreach="degrees or []" t-as="l">
+                            <option t-att-value="l.id">
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="#new_degree" id="new_degree"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+            <tr>
+                <td><strong>Faculty</strong></td>
+                <td id="input_faculty" style="display:none;"><input type="text" class="form-control" name="faculty_name" placeholder="Faculty Name..."/></td>
+                <td>
+                    <select name="faculty_id" class="form-control">
+                        <option value="">Faculties...</option>
+                        <t t-foreach="faculties or []" t-as="l">
+                            <option t-att-value="l.id">
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="#new_faculty" id="new_faculty"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+            <tr>
+                <td><strong>Major</strong></td>
+                <td id="input_major" style="display:none;"><input type="text" class="form-control" name="major_name" placeholder="Major Name..."/></td>
+                <td>
+                    <select name="major_id" class="form-control">
+                        <option value="">Major...</option>
+                        <t t-foreach="majors or []" t-as="l">
+                            <option t-att-value="l.id" t-att-data-faculty="l.faculty_id.id">
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="#new_major" id="new_major"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+        </table>
+    </template>
+        
+    <template id="vacancy_experience" name="Required Experiences">
+        <t t-call="hr_apply.activities_layout">
+            <h1 class="mt0">Required Experiences</h1>
+            <t t-call="hr_apply.experience_table" />
+            <form t-attf-action="/save/vacancy/experience" method="post" role="form" class="tag_text js_website_submit_form">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                <input t-if="vacancy" type="hidden" name="vacancy" t-att-value="vacancy.id"/>
+                <t t-call="hr_apply.experience_form" />
+                <div align="center">
+                    <button type="submit" t-attf-class="btn btn-primary">Add</button>
+                    <a t-attf-href="/vacancy/#{slug(vacancy)}" class="btn btn-default">Done</a>
+                </div>
+            </form>
+        </t>
+    </template>
+    
+    <template id="experience_table">
+        <table class="table">
+            <tr t-foreach="vacancy.required_experience_ids" t-as="line">
+                <td>
+                    <span t-field="line.min_exp" /> year(s) of work 
+                    <span t-if="line.joblevel_id">as <span t-field="line.joblevel_id.name" /> </span>
+                    <span t-if="line.department_id">in department of <span t-field="line.department_id.name" /> </span>
+                    <span t-if="line.industry_id">in industry of <span t-field="line.industry_id.name" /> </span>
+                </td>
+                <td align="right">
+                    <a t-attf-href="/remove/#{slug(vacancy)}/experience/#{line.id}/"> <small><i class='fa fa-trash-o'></i> Remove</small></a>
+                </td>
+            </tr>
+        </table>
+    </template>
+    
+    <template id="experience_form">
+        <table class="table o_required_exp">
+            <tr id="min_exp">
+                <td><strong>Minimum Experience Year</strong></td>
+                <td colspan="2">
+                    <select name="min_exp" class="form-control">
+                        <option value="">Minimum Experience...</option>
+                        <t t-foreach="numbers or []" t-as="l">
+                            <option t-att-value="l.id">
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Level</strong></td>
+                <td id="input_level" style="display:none;"><input type="text" class="form-control" name="level_name" placeholder="Level Name..."/></td>
+                <td>
+                    <select name="level_id" class="form-control">
+                        <option value="">Level...</option>
+                        <t t-foreach="levels or []" t-as="l">
+                            <option t-att-value="l.id">
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="#new_level" id="new_level"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+            <tr>
+                <td><strong>Department</strong></td>
+                <td id="input_department" style="display:none;"><input type="text" class="form-control" name="department_name" placeholder="Department Name..."/></td>
+                <td>
+                    <select name="department_id" class="form-control">
+                        <option value="">Departments...</option>
+                        <t t-foreach="departments or []" t-as="l">
+                            <option t-att-value="l.id">
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="#new_department" id="new_department"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+            <tr>
+                <td><strong>Industry</strong></td>
+                <td id="input_industry" style="display:none;"><input type="text" class="form-control" name="industry_name" placeholder="Industry Name..."/></td>
+                <td>
+                    <select name="industry_id" class="form-control">
+                        <option value="">Industry...</option>
+                        <t t-foreach="industries or []" t-as="l">
+                            <option t-att-value="l.id">
+                                <t t-esc="l.name" />
+                            </option>
+                        </t>
+                    </select>
+                </td>
+                <td><a href="#new_industry" id="new_industry"><i class="fa fa-plus-square"/>Add new</a></td>
+            </tr>
+        </table>
+    </template>
+        
+</odoo>

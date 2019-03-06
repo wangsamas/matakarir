@@ -1,0 +1,4667 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* matakarir
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20181118\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-16 13:30+0000\n"
+"PO-Revision-Date: 2018-12-16 20:45+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: id\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.school_table
+#: model_terms:ir.ui.view,arch_db:matakarir.training_table
+#: model_terms:ir.ui.view,arch_db:matakarir.university_table
+msgid "(Schollarship)"
+msgstr "(Beasiswa)"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.organization_table
+msgid "(Volunteer)"
+msgstr "(Sukarelawan)"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.view_partner_form
+msgid "(edit)"
+msgstr "(ubah)"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.language_skill_table
+msgid "(listening)<br/>"
+msgstr "(mendengar)<br/>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.language_skill_table
+msgid "(reading)<br/>"
+msgstr "(membaca)<br/>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.language_skill_table
+msgid "(speaking)<br/>"
+msgstr "(berbicara)<br/>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.language_skill_table
+msgid "(writing)"
+msgstr "(menulis)"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.school_table
+#: model_terms:ir.ui.view,arch_db:matakarir.training_table
+#: model_terms:ir.ui.view,arch_db:matakarir.university_table
+msgid ""
+")<br/>\n"
+"                        Score:"
+msgstr ""
+")<br/>\n"
+"                        Nilai:"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.certificate_table
+msgid ""
+")<br/>\n"
+"                       Certificate number:"
+msgstr ""
+")<br/>\n"
+"                       Nomor Sertifikat:"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_table
+msgid "<b>Allowance: </b>"
+msgstr "<b>Tunjangan: </b>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_table
+msgid "<b>Bonus: </b>"
+msgstr ""
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_table
+msgid ""
+"<br/>\n"
+"                          <span><b>Salary: </b></span>"
+msgstr ""
+"<br/>\n"
+"                          <span><b>Gaji: </b></span>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.area_template
+#: model_terms:ir.ui.view,arch_db:matakarir.award_form
+#: model_terms:ir.ui.view,arch_db:matakarir.certificate_form
+#: model_terms:ir.ui.view,arch_db:matakarir.city_template
+#: model_terms:ir.ui.view,arch_db:matakarir.comskill_form
+#: model_terms:ir.ui.view,arch_db:matakarir.country_template
+#: model_terms:ir.ui.view,arch_db:matakarir.district_template
+#: model_terms:ir.ui.view,arch_db:matakarir.driving_lisence_form
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+#: model_terms:ir.ui.view,arch_db:matakarir.langskill_form
+#: model_terms:ir.ui.view,arch_db:matakarir.lisence_form
+#: model_terms:ir.ui.view,arch_db:matakarir.organization_form
+#: model_terms:ir.ui.view,arch_db:matakarir.other_info
+#: model_terms:ir.ui.view,arch_db:matakarir.reference_form
+#: model_terms:ir.ui.view,arch_db:matakarir.school_form
+#: model_terms:ir.ui.view,arch_db:matakarir.skill_form
+#: model_terms:ir.ui.view,arch_db:matakarir.state_template
+#: model_terms:ir.ui.view,arch_db:matakarir.tool_form
+#: model_terms:ir.ui.view,arch_db:matakarir.training_form
+#: model_terms:ir.ui.view,arch_db:matakarir.university_form
+#: model_terms:ir.ui.view,arch_db:matakarir.village_template
+#: model_terms:ir.ui.view,arch_db:matakarir.zipcode_template
+msgid "<i class=\"fa fa-plus-square\"/>Add new"
+msgstr "<i class=\"fa fa-plus-square\"/>Tambah baru"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.achievement_table
+#: model_terms:ir.ui.view,arch_db:matakarir.award_table
+#: model_terms:ir.ui.view,arch_db:matakarir.certificate_table
+#: model_terms:ir.ui.view,arch_db:matakarir.computer_skill_table
+#: model_terms:ir.ui.view,arch_db:matakarir.driving_lisence_table
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_table
+#: model_terms:ir.ui.view,arch_db:matakarir.language_skill_table
+#: model_terms:ir.ui.view,arch_db:matakarir.lisence_table
+#: model_terms:ir.ui.view,arch_db:matakarir.medical_table
+#: model_terms:ir.ui.view,arch_db:matakarir.organization_table
+#: model_terms:ir.ui.view,arch_db:matakarir.reference_table
+#: model_terms:ir.ui.view,arch_db:matakarir.school_table
+#: model_terms:ir.ui.view,arch_db:matakarir.skill_table
+#: model_terms:ir.ui.view,arch_db:matakarir.training_table
+#: model_terms:ir.ui.view,arch_db:matakarir.university_table
+msgid "<small><i class=\"fa fa-edit\"/> Modify</small>"
+msgstr "<small><i class=\"fa fa-edit\"/> Ubah</small>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.achievement_table
+#: model_terms:ir.ui.view,arch_db:matakarir.allergy_table
+#: model_terms:ir.ui.view,arch_db:matakarir.award_table
+#: model_terms:ir.ui.view,arch_db:matakarir.certificate_table
+#: model_terms:ir.ui.view,arch_db:matakarir.computer_skill_table
+#: model_terms:ir.ui.view,arch_db:matakarir.crime_table
+#: model_terms:ir.ui.view,arch_db:matakarir.driving_lisence_table
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_table
+#: model_terms:ir.ui.view,arch_db:matakarir.hobby_table
+#: model_terms:ir.ui.view,arch_db:matakarir.language_skill_table
+#: model_terms:ir.ui.view,arch_db:matakarir.lisence_table
+#: model_terms:ir.ui.view,arch_db:matakarir.medical_table
+#: model_terms:ir.ui.view,arch_db:matakarir.organization_table
+#: model_terms:ir.ui.view,arch_db:matakarir.reference_table
+#: model_terms:ir.ui.view,arch_db:matakarir.school_table
+#: model_terms:ir.ui.view,arch_db:matakarir.skill_table
+#: model_terms:ir.ui.view,arch_db:matakarir.tool_table
+#: model_terms:ir.ui.view,arch_db:matakarir.training_table
+#: model_terms:ir.ui.view,arch_db:matakarir.university_table
+msgid "<small><i class=\"fa fa-trash-o\"/> Delete</small>"
+msgstr "<small><i class=\"fa fa-trash-o\"/> Hapus</small>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.achievement_form
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_achievement
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+msgid "<strong>Achievement</strong>"
+msgstr "<strong>Prestasi</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+msgid "<strong>Allowance</strong>"
+msgstr "<strong>Tunjangan</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_award
+msgid "<strong>Award Title</strong>"
+msgstr "<strong>Judul Penghargaan</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.award_form
+msgid "<strong>Awarder Institution</strong>"
+msgstr "<strong>Lembaga Pemberi Penghargaan</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_award
+msgid "<strong>Awarder</strong>"
+msgstr "<strong>Penerima penghargaan</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.other_info
+msgid "<strong>Birth City</strong>"
+msgstr "<strong>Kota Kelahiran</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.other_info
+msgid "<strong>Birth Country</strong>"
+msgstr "<strong>Negara Kelahiran</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.other_info
+msgid "<strong>Birth Province</strong>"
+msgstr "<strong>Provinsi Kelahiran</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.other_info
+msgid "<strong>Birthday</strong>"
+msgstr "<strong>Tanggal Lahir</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.other_info
+msgid "<strong>Blood Type</strong>"
+msgstr "<strong>Golongan darah</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.personal
+msgid "<strong>Blood type </strong>"
+msgstr "<strong>Golongan darah </strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+msgid "<strong>Bonus</strong>"
+msgstr ""
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.tool_form
+msgid "<strong>Brand</strong>"
+msgstr "<strong>Merek</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.medical_form
+msgid "<strong>Case</strong>"
+msgstr "<strong>Kasus</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.certificate_form
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_certificate
+msgid "<strong>Certificate</strong>"
+msgstr "<strong>Sertifikat</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.certificate_form
+msgid "<strong>Certifticate Name</strong>"
+msgstr "<strong>Nama Sertifikat</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.personal
+msgid "<strong>Citizenship </strong>"
+msgstr "<strong>Kewarganegaraan </strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.other_info
+msgid "<strong>Citizenship</strong>"
+msgstr "<strong>Kewarganegaraan</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+msgid "<strong>Company Address</strong>"
+msgstr "<strong>Alamat Perusahaan</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+msgid "<strong>Company Email</strong>"
+msgstr "<strong>Email Perusahaan</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+msgid "<strong>Company Industry</strong>"
+msgstr "<strong>Industri Perusahaan</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_experience
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+msgid "<strong>Company Name</strong>"
+msgstr "<strong>Nama Perusahaan</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+msgid "<strong>Company Phone</strong>"
+msgstr "<strong>Telepon Perusahaan</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+msgid "<strong>Company Type</strong>"
+msgstr "<strong>Jenis perusahaan</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+msgid "<strong>Company Website</strong>"
+msgstr "<strong>Situs Web Perusahaan</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.comskill_form
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_comskill
+msgid "<strong>Computer Skill</strong>"
+msgstr "<strong>Keterampilan Komputer</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.crime_form
+msgid "<strong>Crime Case</strong>"
+msgstr "<strong>Kasus Kejahatan</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_university
+#: model_terms:ir.ui.view,arch_db:matakarir.university_form
+msgid "<strong>Degree</strong>"
+msgstr "<strong>Gelar</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.personal
+msgid "<strong>Dependents </strong>"
+msgstr "<strong>Tanggungan </strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.other_info
+msgid "<strong>Dependents</strong>"
+msgstr "<strong>Tanggungan</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.achievement_form
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_achievement
+#: model_terms:ir.ui.view,arch_db:matakarir.medical_form
+msgid "<strong>Description</strong>"
+msgstr "<strong>Deskripsi:</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.driving_lisence_form
+msgid "<strong>Driving Lisence Country</strong>"
+msgstr "<strong>Negara Surat ijin Mengemudi</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_driving_lisence
+#: model_terms:ir.ui.view,arch_db:matakarir.driving_lisence_form
+msgid "<strong>Driving Lisence</strong>"
+msgstr "<strong>Surat ijin Mengemudi</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.reference_form
+msgid "<strong>Email</strong>"
+msgstr ""
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+msgid "<strong>Employment Status</strong>"
+msgstr "<strong>Status Kepegawaian</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.personal
+msgid "<strong>Ethnic </strong>"
+msgstr "<strong>Suku </strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.other_info
+msgid "<strong>Ethnic</strong>"
+msgstr "<strong>Suku</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_university
+#: model_terms:ir.ui.view,arch_db:matakarir.university_form
+msgid "<strong>Faculty</strong>"
+msgstr "<strong>Fakultas</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.personal
+msgid "<strong>Gender </strong>"
+msgstr "<strong>Jenis kelamin </strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.other_info
+msgid "<strong>Gender</strong>"
+msgstr "<strong>Jenis Kelamin</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.personal
+msgid "<strong>Height </strong>"
+msgstr "<strong>Tinggi </strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.other_info
+msgid "<strong>Height</strong>"
+msgstr "<strong>Tinggi</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.identity
+msgid "<strong>ID Address</strong>"
+msgstr "<strong>Alamat KTP</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.identity
+msgid "<strong>ID</strong>"
+msgstr "<strong>No KTP</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.identity
+msgid "<strong>Insurance Number</strong>"
+msgstr "<strong>No BPJS KS</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_experience
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+msgid "<strong>Job Department</strong>"
+msgstr "<strong>Departemen Pekerjaan</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+msgid "<strong>Job Description</strong>"
+msgstr "<strong>Penjelasan Pekerjaan</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_experience
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+msgid "<strong>Job Level</strong>"
+msgstr "<strong>Tingkat pekerjaan</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_experience
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+msgid "<strong>Job Name</strong>"
+msgstr "<strong>Nama Pekerjaan</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.identity
+msgid "<strong>KITAS / P</strong>"
+msgstr ""
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_langskill
+#: model_terms:ir.ui.view,arch_db:matakarir.langskill_form
+msgid "<strong>Language Skill</strong>"
+msgstr "<strong>Keterampilan Bahasa</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.comskill_form
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_comskill
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_skill
+#: model_terms:ir.ui.view,arch_db:matakarir.skill_form
+msgid "<strong>Level</strong>"
+msgstr "<strong>Tingkat</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.lisence_form
+msgid "<strong>Lisence Name</strong>"
+msgstr "<strong>Nama Surat ijin</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_lisence
+#: model_terms:ir.ui.view,arch_db:matakarir.lisence_form
+msgid "<strong>Lisence</strong>"
+msgstr "<strong>Surat ijin</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_langskill
+#: model_terms:ir.ui.view,arch_db:matakarir.langskill_form
+msgid "<strong>Listen</strong>"
+msgstr "<strong>Mendengarkan</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_university
+#: model_terms:ir.ui.view,arch_db:matakarir.university_form
+msgid "<strong>Major</strong>"
+msgstr "<strong>Jurusan</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.personal
+msgid "<strong>Marital </strong>"
+msgstr "<strong>Pernikahan</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.other_info
+msgid "<strong>Marital</strong>"
+msgstr "<strong>Pernikahan</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.reference_form
+msgid "<strong>Name</strong>"
+msgstr "<strong>Nama</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.certificate_form
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_certificate
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_driving_lisence
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_lisence
+#: model_terms:ir.ui.view,arch_db:matakarir.driving_lisence_form
+#: model_terms:ir.ui.view,arch_db:matakarir.lisence_form
+msgid "<strong>Number</strong>"
+msgstr ""
+"<strong>\n"
+"Jumlah</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_organization
+#: model_terms:ir.ui.view,arch_db:matakarir.organization_form
+msgid "<strong>Organization Name</strong>"
+msgstr "<strong>Nama Organisasi</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.identity
+msgid "<strong>Passport</strong>"
+msgstr "<strong>Paspor</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.reference_form
+msgid "<strong>Phone</strong>"
+msgstr "<strong>Telepon</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.personal
+msgid "<strong>Place, birthday </strong>"
+msgstr "<strong>Tempat, tanggal lahir </strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.certificate_form
+#: model_terms:ir.ui.view,arch_db:matakarir.lisence_form
+msgid "<strong>Publisher Country</strong>"
+msgstr "<strong>Negara Penerbit</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.certificate_form
+#: model_terms:ir.ui.view,arch_db:matakarir.lisence_form
+msgid "<strong>Publisher Name</strong>"
+msgstr "<strong>Nama Penerbit</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+msgid "<strong>Quit Reason</strong>"
+msgstr "<strong>Hentikan Alasan</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_langskill
+#: model_terms:ir.ui.view,arch_db:matakarir.langskill_form
+msgid "<strong>Read</strong>"
+msgstr "<strong>Baca</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.reference_form
+msgid "<strong>Relation</strong>"
+msgstr "<strong>Hubungan</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.personal
+msgid "<strong>Religion </strong>"
+msgstr "<strong>Agama</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.other_info
+msgid "<strong>Religion</strong>"
+msgstr "<strong>Agama</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.organization_form
+msgid "<strong>Role Description</strong>"
+msgstr "<strong>Deskripsi Tugas</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_organization
+#: model_terms:ir.ui.view,arch_db:matakarir.organization_form
+msgid "<strong>Role</strong>"
+msgstr "<strong>Tugas</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+msgid "<strong>Salary</strong>"
+msgstr "<strong>Gaji</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.school_form
+#: model_terms:ir.ui.view,arch_db:matakarir.training_form
+#: model_terms:ir.ui.view,arch_db:matakarir.university_form
+msgid "<strong>Schollarship</strong>"
+msgstr "<strong>Beasiswa</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.school_form
+msgid "<strong>School Name</strong>"
+msgstr ""
+"<strong>Nama sekolah\n"
+"</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_school
+msgid "<strong>School</strong>"
+msgstr "<strong>Sekolah</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.school_form
+#: model_terms:ir.ui.view,arch_db:matakarir.training_form
+#: model_terms:ir.ui.view,arch_db:matakarir.university_form
+msgid "<strong>Score</strong>"
+msgstr "<strong>Nilai</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.identity
+msgid "<strong>Security Number</strong>"
+msgstr "<strong>No BPJS TK</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.crime_form
+msgid "<strong>Since Test</strong>"
+msgstr "<strong>Sejak</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.achievement_form
+#: model_terms:ir.ui.view,arch_db:matakarir.award_form
+#: model_terms:ir.ui.view,arch_db:matakarir.certificate_form
+#: model_terms:ir.ui.view,arch_db:matakarir.driving_lisence_form
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+#: model_terms:ir.ui.view,arch_db:matakarir.lisence_form
+#: model_terms:ir.ui.view,arch_db:matakarir.medical_form
+#: model_terms:ir.ui.view,arch_db:matakarir.organization_form
+#: model_terms:ir.ui.view,arch_db:matakarir.school_form
+#: model_terms:ir.ui.view,arch_db:matakarir.training_form
+#: model_terms:ir.ui.view,arch_db:matakarir.university_form
+msgid "<strong>Since</strong>"
+msgstr "<strong>Sejak</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_skill
+#: model_terms:ir.ui.view,arch_db:matakarir.skill_form
+msgid "<strong>Skill</strong>"
+msgstr "<strong>Keterampilan</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.personal
+msgid "<strong>Smoker </strong>"
+msgstr "<strong>Perokok</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.other_info
+msgid "<strong>Smoker</strong>"
+msgstr "<strong>Perokok</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_langskill
+#: model_terms:ir.ui.view,arch_db:matakarir.langskill_form
+msgid "<strong>Speak</strong>"
+msgstr "<strong>Berbicara</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_school
+#: model_terms:ir.ui.view,arch_db:matakarir.school_form
+msgid "<strong>Stage</strong>"
+msgstr "<strong>Tahap</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.crime_form
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+#: model_terms:ir.ui.view,arch_db:matakarir.lisence_form
+#: model_terms:ir.ui.view,arch_db:matakarir.medical_form
+#: model_terms:ir.ui.view,arch_db:matakarir.organization_form
+#: model_terms:ir.ui.view,arch_db:matakarir.school_form
+#: model_terms:ir.ui.view,arch_db:matakarir.training_form
+#: model_terms:ir.ui.view,arch_db:matakarir.university_form
+msgid "<strong>Status</strong>"
+msgstr ""
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.award_form
+#: model_terms:ir.ui.view,arch_db:matakarir.training_form
+msgid "<strong>Title</strong>"
+msgstr "<strong>Judul</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.tool_form
+msgid "<strong>Tool</strong>"
+msgstr "<strong>Peralatan</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.training_form
+msgid "<strong>Training Institution</strong>"
+msgstr "<strong>Lembaga Pelatihan</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.university_form
+msgid "<strong>University Name</strong>"
+msgstr "<strong>Nama Universitas</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_university
+msgid "<strong>University</strong>"
+msgstr "<strong>Universitas</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.driving_lisence_form
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+#: model_terms:ir.ui.view,arch_db:matakarir.lisence_form
+#: model_terms:ir.ui.view,arch_db:matakarir.organization_form
+#: model_terms:ir.ui.view,arch_db:matakarir.school_form
+#: model_terms:ir.ui.view,arch_db:matakarir.training_form
+#: model_terms:ir.ui.view,arch_db:matakarir.university_form
+msgid "<strong>Until</strong>"
+msgstr "<strong>Sampai</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.identity
+msgid "<strong>Visa</strong>"
+msgstr ""
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.organization_form
+msgid "<strong>Volunteer</strong>"
+msgstr "<strong>Magang</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.personal
+msgid "<strong>Weight </strong>"
+msgstr "<strong>Berat</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.other_info
+msgid "<strong>Weight</strong>"
+msgstr "<strong>Berat</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_langskill
+#: model_terms:ir.ui.view,arch_db:matakarir.langskill_form
+msgid "<strong>Write</strong>"
+msgstr "<strong>Menulis</strong>"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.other_info
+#: selection:res.partner,blood:0
+msgid "AB"
+msgstr ""
+
+#. module: matakarir
+#: model:res.ethnic,name:matakarir.Ethnic_1
+msgid "Aceh"
+msgstr ""
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_achievement__name
+msgid "Achievement"
+msgstr "Prestasi"
+
+#. module: matakarir
+#: model:ir.model,name:matakarir.model_matakarir_achievement
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_experience__achievement
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__achievement_ids
+#: model_terms:ir.ui.view,arch_db:matakarir.lisences
+msgid "Achievements"
+msgstr "Prestasi"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.lisences
+msgid "Add New"
+msgstr "Tambah baru"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.experienceinfo
+#: model_terms:ir.ui.view,arch_db:matakarir.organizationinfo
+#: model_terms:ir.ui.view,arch_db:matakarir.schoolinfo
+#: model_terms:ir.ui.view,arch_db:matakarir.traininginfo
+#: model_terms:ir.ui.view,arch_db:matakarir.uniinfo
+msgid "Add new"
+msgstr "Tambah baru"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+msgid "Additional Address"
+msgstr "Alamat Tambahan"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.my_identity
+msgid "Additional Address..."
+msgstr "Alamat tambahan..."
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.auth_signup_fields_extend
+msgid "Additional Current Address"
+msgstr "Tambahan Alamat Saat Ini"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+msgid "Address"
+msgstr "Alamat"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__address_status
+#: model_terms:ir.ui.view,arch_db:matakarir.my_identity
+#: model_terms:ir.ui.view,arch_db:matakarir.my_info
+msgid "Address Ownership"
+msgstr "Kepemilikan Alamat"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.my_identity
+msgid "Address..."
+msgstr "Alamat..."
+
+#. module: matakarir
+#: model:matakarir.joblevel,name:matakarir.joblevel_5
+msgid "Advisor"
+msgstr "Penasihat"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__age
+msgid "Age"
+msgstr "Usia"
+
+#. module: matakarir
+#: model:matakarir.employmentstatus,name:matakarir.e_status_8
+msgid "Agent"
+msgstr "Agen"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__alias_id
+msgid "Alias"
+msgstr "Nama Lain"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.view_partner_form
+msgid "Alias..."
+msgstr "Nama Lain..."
+
+#. module: matakarir
+#: model:ir.model,name:matakarir.model_matakarir_allergy
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__allergy_ids
+#: model_terms:ir.ui.view,arch_db:matakarir.lisences
+msgid "Allergies"
+msgstr "Alergi"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_allergy__name
+msgid "Allergy"
+msgstr "Alergi"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_experience__allowance
+msgid "Allowance"
+msgstr "Tunjangan"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Ambon
+msgid "Ambon"
+msgstr ""
+
+#. module: matakarir
+#: code:addons/matakarir/controllers/signup.py:66
+#, python-format
+msgid "Another user is already registered using this email address."
+msgstr "Pengguna lain sudah terdaftar menggunakan alamat email ini."
+
+#. module: matakarir
+#: model:res.language,name:matakarir.Langskill_1
+msgid "Arabic"
+msgstr "Arab"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_achievement
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_award
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_certificate
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_comskill
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_driving_lisence
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_experience
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_langskill
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_lisence
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_organization
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_school
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_skill
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_university
+msgid "Are You sure?"
+msgstr "Anda yakin?"
+
+#. module: matakarir
+#: model:ir.model,name:matakarir.model_res_area
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__area_id
+#: model:ir.model.fields,field_description:matakarir.field_res_zipcode__area_id
+#: model_terms:ir.ui.view,arch_db:matakarir.area_template
+#: model_terms:ir.ui.view,arch_db:matakarir.view_area_tree
+#: model_terms:ir.ui.view,arch_db:matakarir.view_partner_form
+msgid "Area"
+msgstr "Daerah"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.area_template
+msgid "Area..."
+msgstr "Daerah..."
+
+#. module: matakarir
+#: model:ir.actions.act_window,name:matakarir.action_res_area_tree
+#: model:ir.model.fields,field_description:matakarir.field_res_village__area_ids
+#: model:ir.ui.menu,name:matakarir.menu_area_partner
+msgid "Areas"
+msgstr "Daerah"
+
+#. module: matakarir
+#: model:matakarir.faculty,name:matakarir.Faculty_1
+msgid "Art"
+msgstr "Seni"
+
+#. module: matakarir
+#: model:matakarir.universitydegree,name:matakarir.Degree_1
+msgid "Associate"
+msgstr "Diploma"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_award__title
+msgid "Award Title"
+msgstr "Judul Penghargaan"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_award__awarder_id
+msgid "Awarder"
+msgstr "Penerima penghargaan"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.award_form
+msgid "Awarder Institution..."
+msgstr "Lembaga Penerima Penghargaan..."
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_award__name
+msgid "Awarder Name"
+msgstr "Nama Penerima"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.award_form
+msgid "Awarder..."
+msgstr "Penerima penghargaan..."
+
+#. module: matakarir
+#: model:ir.model,name:matakarir.model_matakarir_award
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__award_ids
+#: model_terms:ir.ui.view,arch_db:matakarir.lisences
+msgid "Awards"
+msgstr "Penghargaan"
+
+#. module: matakarir
+#: model:matakarir.universitydegree,name:matakarir.Degree_2
+msgid "Bachelor"
+msgstr "Sarjana"
+
+#. module: matakarir
+#: model:res.language,name:matakarir.Langskill_2
+msgid "Bahasa Indonesia"
+msgstr ""
+
+#. module: matakarir
+#: model:res.ethnic,name:matakarir.Ethnic_2
+#: model:res.language,name:matakarir.Langskill_3
+msgid "Bali"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Balikpapan
+msgid "Balikpapan"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.BandaAceh
+msgid "Banda Aceh"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Bandung
+msgid "Bandung"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Bangil
+msgid "Bangil"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Bangkalan
+msgid "Bangkalan"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Banjar
+#: model:res.ethnic,name:matakarir.Ethnic_3
+msgid "Banjar"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.BanjarBaru
+msgid "Banjar Baru"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Banjarmasin
+msgid "Banjarmasin"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Banjarnegara
+msgid "Banjarnegara"
+msgstr ""
+
+#. module: matakarir
+#: model:res.ethnic,name:matakarir.Ethnic_4
+msgid "Banten"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Banyumas
+msgid "Banyumas"
+msgstr ""
+
+#. module: matakarir
+#: model:res.ethnic,name:matakarir.Ethnic_5
+#: model:res.language,name:matakarir.Langskill_4
+msgid "Batak"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Batam
+msgid "Batam"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Batu
+msgid "Batu"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.BauBau
+msgid "Bau Bau"
+msgstr ""
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.comskill_form
+#: model_terms:ir.ui.view,arch_db:matakarir.langskill_form
+#: model_terms:ir.ui.view,arch_db:matakarir.skill_form
+#: selection:matakarir.comskill,level:0
+#: selection:matakarir.langskill,listenskill:0
+#: selection:matakarir.langskill,readskill:0
+#: selection:matakarir.langskill,speakskill:0
+#: selection:matakarir.langskill,writeskill:0 selection:matakarir.skill,level:0
+msgid "Beginner"
+msgstr "Pemula"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Bekasi
+msgid "Bekasi"
+msgstr ""
+
+#. module: matakarir
+#: model:res.ethnic,name:matakarir.Ethnic_6
+msgid "Betawi"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Bima
+msgid "Bima"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Binjai
+msgid "Binjai"
+msgstr ""
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__birth_city_id
+msgid "Birth City"
+msgstr "Kota kelahiran"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.other_info
+msgid "Birth City..."
+msgstr "Kota kelahiran..."
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__birth_country_id
+msgid "Birth Country"
+msgstr "Negara Kelahiran"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.other_info
+msgid "Birth Country..."
+msgstr "Negara Kelahiran..."
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__birth_state_id
+msgid "Birth Province"
+msgstr "Provinsi Kelahiran"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.other_info
+msgid "Birth Province..."
+msgstr "Provinsi Kelahiran..."
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Bitung
+msgid "Bitung"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Blitar
+msgid "Blitar"
+msgstr ""
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__blood
+msgid "Blood Type"
+msgstr "Golongan darah"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Blora
+msgid "Blora"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Bogor
+msgid "Bogor"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Bojonegoro
+msgid "Bojonegoro"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Bondowoso
+msgid "Bondowoso"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Bontang
+msgid "Bontang"
+msgstr ""
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_experience__bonus
+msgid "Bonus"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Boyolali
+msgid "Boyolali"
+msgstr ""
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_tools__name
+msgid "Brand"
+msgstr "Merek"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Brebes
+msgid "Brebes"
+msgstr ""
+
+#. module: matakarir
+#: model:res.religion,name:matakarir.Religion_4
+msgid "Buddha"
+msgstr ""
+
+#. module: matakarir
+#: model:res.ethnic,name:matakarir.Ethnic_7
+msgid "Bugis"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.BukitTinggi
+msgid "Bukit Tinggi"
+msgstr ""
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.achievement
+#: model_terms:ir.ui.view,arch_db:matakarir.allergy
+#: model_terms:ir.ui.view,arch_db:matakarir.award
+#: model_terms:ir.ui.view,arch_db:matakarir.certificate
+#: model_terms:ir.ui.view,arch_db:matakarir.comskill
+#: model_terms:ir.ui.view,arch_db:matakarir.crime
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_achievement
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_award
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_certificate
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_comskill
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_driving_lisence
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_experience
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_langskill
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_lisence
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_organization
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_school
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_skill
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_university
+#: model_terms:ir.ui.view,arch_db:matakarir.driving_lisence
+#: model_terms:ir.ui.view,arch_db:matakarir.edit_identity
+#: model_terms:ir.ui.view,arch_db:matakarir.edit_my_informations
+#: model_terms:ir.ui.view,arch_db:matakarir.edit_other_informations
+#: model_terms:ir.ui.view,arch_db:matakarir.experience
+#: model_terms:ir.ui.view,arch_db:matakarir.hobby
+#: model_terms:ir.ui.view,arch_db:matakarir.langskill
+#: model_terms:ir.ui.view,arch_db:matakarir.lisence
+#: model_terms:ir.ui.view,arch_db:matakarir.medical
+#: model_terms:ir.ui.view,arch_db:matakarir.organization
+#: model_terms:ir.ui.view,arch_db:matakarir.reference
+#: model_terms:ir.ui.view,arch_db:matakarir.school
+#: model_terms:ir.ui.view,arch_db:matakarir.skill
+#: model_terms:ir.ui.view,arch_db:matakarir.tool
+#: model_terms:ir.ui.view,arch_db:matakarir.training
+#: model_terms:ir.ui.view,arch_db:matakarir.university
+msgid "Cancel"
+msgstr "Batal"
+
+#. module: matakarir
+#: model:matakarir.tooltype,name:matakarir.car
+msgid "Car"
+msgstr "Mobil"
+
+#. module: matakarir
+#: model:res.religion,name:matakarir.Religion_3
+msgid "Catholic"
+msgstr "Katolik"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_certificate__certificate_id
+msgid "Certificate"
+msgstr "Sertifikat"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_certificatepublisher__name
+msgid "Certificate Name"
+msgstr "Nama Sertifikat"
+
+#. module: matakarir
+#: model:ir.actions.act_window,name:matakarir.action_matakarir_certificatepublisher
+#: model:ir.model,name:matakarir.model_matakarir_certificatepublisher
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_certificate__name
+#: model:ir.ui.menu,name:matakarir.menu_matakarir_certificatepublisher
+#: model_terms:ir.ui.view,arch_db:matakarir.matakarir_certificatepublisher_tree
+msgid "Certificate Publisher"
+msgstr "Penerbit Sertifikat"
+
+#. module: matakarir
+#: model:ir.model,name:matakarir.model_matakarir_certificate
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__certificate_ids
+#: model_terms:ir.ui.view,arch_db:matakarir.lisences
+msgid "Certificates"
+msgstr "Sertifikat"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.certificate_form
+msgid "Certifticate Name..."
+msgstr "Nama Sertifikat..."
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.certificate_form
+msgid "Certifticate..."
+msgstr "Sertifikat..."
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.myimages
+msgid "Change Picture"
+msgstr "Ganti gambar"
+
+#. module: matakarir
+#: model:ir.model.fields,help:matakarir.field_res_country__enforce_cities
+#: model:ir.model.fields,help:matakarir.field_res_partner__country_enforce_cities
+msgid "Check this box to ensure every address created in that country has a 'City' chosen in the list of the country's cities."
+msgstr "Centang kotak ini untuk memastikan setiap alamat yang dibuat di negara tersebut memiliki 'Kota' yang dipilih dalam daftar kota di negara tersebut."
+
+#. module: matakarir
+#: model:matakarir.joblevel,name:matakarir.joblevel_4
+msgid "Chief"
+msgstr "Kepala"
+
+#. module: matakarir
+#: model:res.ethnic,name:matakarir.Ethnic_8
+#: model:res.language,name:matakarir.Langskill_5
+msgid "Chinese"
+msgstr "Cina"
+
+#. module: matakarir
+#: model:res.religion,name:matakarir.Religion_2
+msgid "Christian"
+msgstr "Kristen"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Ciamis
+msgid "Ciamis"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Cianjur
+msgid "Cianjur"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Cilacap
+msgid "Cilacap"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Cilegon
+msgid "Cilegon"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Cimahi
+msgid "Cimahi"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Cirebon
+#: model:res.ethnic,name:matakarir.Ethnic_9
+msgid "Cirebon"
+msgstr ""
+
+#. module: matakarir
+#: model:ir.actions.act_window,name:matakarir.action_res_city_tree
+#: model:ir.model.fields,field_description:matakarir.field_res_country_state__city_ids
+#: model:ir.ui.menu,name:matakarir.menu_city_partner
+msgid "Cities"
+msgstr "Kota"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__citizenship_id
+msgid "Citizen"
+msgstr "Warganegara"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.other_info
+msgid "Citizen Country..."
+msgstr "Warga Negara..."
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.other_info
+msgid "Citizenship..."
+msgstr "Kewarganegaraan..."
+
+#. module: matakarir
+#: code:addons/matakarir/models/res_partner.py:192
+#: model:ir.model,name:matakarir.model_res_city
+#: model:ir.model.fields,field_description:matakarir.field_res_area__city_id
+#: model:ir.model.fields,field_description:matakarir.field_res_district__city_id
+#: model:ir.model.fields,field_description:matakarir.field_res_village__city_id
+#: model:ir.model.fields,field_description:matakarir.field_res_zipcode__city_id
+#: model_terms:ir.ui.view,arch_db:matakarir.auth_signup_fields_extend
+#: model_terms:ir.ui.view,arch_db:matakarir.city_template
+#: model_terms:ir.ui.view,arch_db:matakarir.view_city_tree
+#: model_terms:ir.ui.view,arch_db:matakarir.view_partner_form
+#, python-format
+msgid "City"
+msgstr "Kota"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_city__phone_code
+msgid "City Calling Code"
+msgstr "Kode Pos"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__city_id
+msgid "City Regency"
+msgstr "Kabupaten Kota"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.auth_signup_fields_extend
+#: model_terms:ir.ui.view,arch_db:matakarir.city_template
+msgid "City..."
+msgstr "Kota..."
+
+#. module: matakarir
+#: model:matakarir.referencetype,name:matakarir.Relation_3
+msgid "Colleague"
+msgstr "Rekan"
+
+#. module: matakarir
+#: model:matakarir.faculty,name:matakarir.Faculty_2
+msgid "Commerce"
+msgstr "Perdagangan"
+
+#. module: matakarir
+#: model:matakarir.joblevel,name:matakarir.joblevel_2
+msgid "Commissioner"
+msgstr "Komisaris"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_experience__company_id
+msgid "Company"
+msgstr "Perusahaan"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_experience__name
+msgid "Company Name"
+msgstr "Nama Perusahaan"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+msgid "Company Name..."
+msgstr "Nama Perusahaan..."
+
+#. module: matakarir
+#: model:ir.actions.act_window,name:matakarir.action_matakarir_companytype
+#: model:ir.model,name:matakarir.model_res_companytype
+#: model:ir.model.fields,field_description:matakarir.field_res_companytype__name
+#: model:ir.ui.menu,name:matakarir.menu_matakarir_companytype
+#: model_terms:ir.ui.view,arch_db:matakarir.matakarir_companytype_tree
+msgid "Company Type"
+msgstr "Jenis perusahaan"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+msgid "Company Type..."
+msgstr "Jenis Perusahaan..."
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+msgid "Company..."
+msgstr "Perusahaan..."
+
+#. module: matakarir
+#: model:ir.actions.act_window,name:matakarir.action_matakarir_computer
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_comskill__computer_id
+#: model:ir.ui.menu,name:matakarir.menu_matakarir_computer
+#: model_terms:ir.ui.view,arch_db:matakarir.matakarir_computer_tree
+msgid "Computer"
+msgstr "Komputer"
+
+#. module: matakarir
+#: model:ir.model,name:matakarir.model_res_computer
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_comskill__name
+msgid "Computer Skill"
+msgstr "Keahlian Komputer"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_computer__name
+msgid "Computer Skill Name"
+msgstr "Nama Keahlian Komputer"
+
+#. module: matakarir
+#: model:ir.model,name:matakarir.model_matakarir_comskill
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__comskill_ids
+#: model_terms:ir.ui.view,arch_db:matakarir.lisences
+msgid "Computer Skills"
+msgstr "Keahlian komputer"
+
+#. module: matakarir
+#: model:ir.model,name:matakarir.model_res_partner
+msgid "Contact"
+msgstr "Kontak"
+
+#. module: matakarir
+#: model:matakarir.employmentstatus,name:matakarir.e_status_4
+msgid "Contract"
+msgstr "Kontrak"
+
+#. module: matakarir
+#: model:res.companytype,name:matakarir.Type_1
+msgid "Contractor"
+msgstr "Kontraktor"
+
+#. module: matakarir
+#: model:res.skill,name:matakarir.Skill_1
+msgid "Cooking"
+msgstr "Memasak"
+
+#. module: matakarir
+#: code:addons/matakarir/controllers/signup.py:70
+#, python-format
+msgid "Could not create a new account."
+msgstr "Tidak bisa membuat akun baru"
+
+#. module: matakarir
+#: model:ir.model,name:matakarir.model_res_country
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_certificatepublisher__country_id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_drivinglisencetype__country_id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_lisencepublisher__country_id
+#: model:ir.model.fields,field_description:matakarir.field_res_area__country_id
+#: model:ir.model.fields,field_description:matakarir.field_res_city__country_id
+#: model:ir.model.fields,field_description:matakarir.field_res_district__country_id
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__country_id
+#: model:ir.model.fields,field_description:matakarir.field_res_village__country_id
+#: model:ir.model.fields,field_description:matakarir.field_res_zipcode__country_id
+#: model_terms:ir.ui.view,arch_db:matakarir.auth_signup_fields_extend
+#: model_terms:ir.ui.view,arch_db:matakarir.country_template
+#: model_terms:ir.ui.view,arch_db:matakarir.view_partner_form
+msgid "Country"
+msgstr "Negara"
+
+#. module: matakarir
+#: model:ir.model,name:matakarir.model_res_country_state
+msgid "Country state"
+msgstr "Negara Bagian"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.certificate_form
+#: model_terms:ir.ui.view,arch_db:matakarir.country_template
+#: model_terms:ir.ui.view,arch_db:matakarir.driving_lisence_form
+#: model_terms:ir.ui.view,arch_db:matakarir.lisence_form
+msgid "Country..."
+msgstr "Negara"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_achievement__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_allergy__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_award__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_certificate__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_certificatepublisher__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_comskill__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_crime__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_drivinglisence__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_drivinglisencetype__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_employmentstatus__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_experience__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_faculty__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_facultymajor__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_hobby__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_joblevel__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_langskill__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_lisence__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_lisencepublisher__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_medical__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_organization__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_reference__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_referencetype__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_school__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_schoolstage__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_skill__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_tools__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_tooltype__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_training__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_university__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_universitydegree__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_res_area__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_res_city__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_res_companytype__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_res_computer__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_res_district__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_res_ethnic__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_res_language__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_res_religion__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_res_skill__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_res_village__create_uid
+#: model:ir.model.fields,field_description:matakarir.field_res_zipcode__create_uid
+msgid "Created by"
+msgstr "Dibuat oleh"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_achievement__create_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_allergy__create_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_award__create_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_certificate__create_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_certificatepublisher__create_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_comskill__create_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_crime__create_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_drivinglisence__create_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_drivinglisencetype__create_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_employmentstatus__create_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_experience__create_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_faculty__create_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_facultymajor__create_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_hobby__create_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_joblevel__create_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_langskill__create_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_lisence__create_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_lisencepublisher__create_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_medical__create_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_organization__create_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_reference__create_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_referencetype__create_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_school__create_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_schoolstage__create_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_skill__create_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_tools__create_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_tooltype__create_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_training__create_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_university__create_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_universitydegree__create_date
+#: model:ir.model.fields,field_description:matakarir.field_res_area__create_date
+#: model:ir.model.fields,field_description:matakarir.field_res_city__create_date
+#: model:ir.model.fields,field_description:matakarir.field_res_companytype__create_date
+#: model:ir.model.fields,field_description:matakarir.field_res_computer__create_date
+#: model:ir.model.fields,field_description:matakarir.field_res_district__create_date
+#: model:ir.model.fields,field_description:matakarir.field_res_ethnic__create_date
+#: model:ir.model.fields,field_description:matakarir.field_res_language__create_date
+#: model:ir.model.fields,field_description:matakarir.field_res_religion__create_date
+#: model:ir.model.fields,field_description:matakarir.field_res_skill__create_date
+#: model:ir.model.fields,field_description:matakarir.field_res_village__create_date
+#: model:ir.model.fields,field_description:matakarir.field_res_zipcode__create_date
+msgid "Created on"
+msgstr "Dibuat pada"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_crime__name
+msgid "Crime Record"
+msgstr "Catatan Kejahatan"
+
+#. module: matakarir
+#: model:ir.model,name:matakarir.model_matakarir_crime
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__crime_ids
+#: model_terms:ir.ui.view,arch_db:matakarir.lisences
+msgid "Crime Records"
+msgstr "Catatan Kejahatan"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.medical_form
+#: selection:matakarir.medical,status:0
+msgid "Curing"
+msgstr "Pengobatan"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.auth_signup_fields_extend
+msgid "Current Address"
+msgstr "Alamat saat ini"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.my_info
+msgid "Current Address*"
+msgstr "Alamat saat ini*"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__birthday
+msgid "Date of Birth"
+msgstr "Tanggal lahir"
+
+#. module: matakarir
+#: model:res.ethnic,name:matakarir.Ethnic_10
+msgid "Dayak"
+msgstr ""
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.university_form
+msgid "Degree Name..."
+msgstr "Nama gelar..."
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.university_form
+msgid "Degree..."
+msgstr "Gelar..."
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_achievement
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_award
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_certificate
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_comskill
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_driving_lisence
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_experience
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_langskill
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_lisence
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_organization
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_school
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_skill
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_university
+msgid "Delete"
+msgstr "Hapus"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_achievement
+msgid "Delete Achievement"
+msgstr "Hapus Pencapaian"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_award
+msgid "Delete Award"
+msgstr "Hapus Penghargaan"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_certificate
+msgid "Delete Certificate"
+msgstr "Hapus Sertifikat"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_comskill
+msgid "Delete Computer Skill"
+msgstr "Hapus Keterampilan Komputer"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_driving_lisence
+msgid "Delete Driving Lisence"
+msgstr "Hapus Surat Izin Mengemudi"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_experience
+msgid "Delete Experience"
+msgstr "Hapus Pengalaman"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_langskill
+msgid "Delete Language Skill"
+msgstr "Hapus Keterampilan Bahasa"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_lisence
+msgid "Delete Lisence"
+msgstr "Hapus Syrat Izin"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_organization
+msgid "Delete Organization"
+msgstr "Hapus Organisasi"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_school
+msgid "Delete School"
+msgstr "Hapus Sekolah"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_skill
+msgid "Delete Skill"
+msgstr "Hapus Keterampilan"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.delete_university
+msgid "Delete University"
+msgstr "Hapus Universitas"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Demak
+msgid "Demak"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Denpasar
+msgid "Denpasar"
+msgstr ""
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+msgid "Department Name..."
+msgstr "Nama departemen..."
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+msgid "Department..."
+msgstr "Departemen..."
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__dependents
+msgid "Dependents"
+msgstr "Tanggungan"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Depok
+msgid "Depok"
+msgstr ""
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_achievement__description
+msgid "Description"
+msgstr "Deskripsi"
+
+#. module: matakarir
+#: model:res.skill,name:matakarir.Skill_2
+msgid "Design"
+msgstr "Disain"
+
+#. module: matakarir
+#: model:res.companytype,name:matakarir.Type_2
+msgid "Developer"
+msgstr "Pengembang"
+
+#. module: matakarir
+#: model:matakarir.joblevel,name:matakarir.joblevel_3
+msgid "Director"
+msgstr "Direktur"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_achievement__display_name
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_allergy__display_name
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_award__display_name
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_certificate__display_name
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_certificatepublisher__display_name
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_comskill__display_name
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_crime__display_name
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_drivinglisence__display_name
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_drivinglisencetype__display_name
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_employmentstatus__display_name
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_experience__display_name
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_faculty__display_name
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_facultymajor__display_name
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_hobby__display_name
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_joblevel__display_name
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_langskill__display_name
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_lisence__display_name
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_lisencepublisher__display_name
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_medical__display_name
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_organization__display_name
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_reference__display_name
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_referencetype__display_name
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_school__display_name
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_schoolstage__display_name
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_skill__display_name
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_tools__display_name
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_tooltype__display_name
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_training__display_name
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_university__display_name
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_universitydegree__display_name
+#: model:ir.model.fields,field_description:matakarir.field_res_area__display_name
+#: model:ir.model.fields,field_description:matakarir.field_res_city__display_name
+#: model:ir.model.fields,field_description:matakarir.field_res_companytype__display_name
+#: model:ir.model.fields,field_description:matakarir.field_res_computer__display_name
+#: model:ir.model.fields,field_description:matakarir.field_res_district__display_name
+#: model:ir.model.fields,field_description:matakarir.field_res_ethnic__display_name
+#: model:ir.model.fields,field_description:matakarir.field_res_language__display_name
+#: model:ir.model.fields,field_description:matakarir.field_res_religion__display_name
+#: model:ir.model.fields,field_description:matakarir.field_res_skill__display_name
+#: model:ir.model.fields,field_description:matakarir.field_res_village__display_name
+#: model:ir.model.fields,field_description:matakarir.field_res_zipcode__display_name
+msgid "Display Name"
+msgstr "Nama tampilan"
+
+#. module: matakarir
+#: model:ir.model,name:matakarir.model_res_district
+#: model:ir.model.fields,field_description:matakarir.field_res_area__district_id
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__district_id
+#: model:ir.model.fields,field_description:matakarir.field_res_village__district_id
+#: model:ir.model.fields,field_description:matakarir.field_res_zipcode__district_id
+#: model_terms:ir.ui.view,arch_db:matakarir.district_template
+#: model_terms:ir.ui.view,arch_db:matakarir.view_district_tree
+#: model_terms:ir.ui.view,arch_db:matakarir.view_partner_form
+msgid "District"
+msgstr "Kecamatan"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.district_template
+msgid "District..."
+msgstr "Kecamatan..."
+
+#. module: matakarir
+#: model:ir.actions.act_window,name:matakarir.action_res_district_tree
+#: model:ir.model.fields,field_description:matakarir.field_res_city__district_ids
+#: model:ir.ui.menu,name:matakarir.menu_district_partner
+msgid "Districts"
+msgstr "Kecamatan"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.other_info
+#: selection:res.partner,marital:0
+msgid "Divorced"
+msgstr "Cerai Hidup"
+
+#. module: matakarir
+#: model:matakarir.universitydegree,name:matakarir.Degree_4
+msgid "Doctoral"
+msgstr "Doktoral"
+
+#. module: matakarir
+#: model:res.skill,name:matakarir.Skill_3
+msgid "Drawing"
+msgstr "Gambar"
+
+#. module: matakarir
+#: model:ir.model,name:matakarir.model_matakarir_drivinglisence
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_drivinglisence__name
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_drivinglisencetype__name
+msgid "Driving Lisence"
+msgstr "Surat Izin Mengemudi"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.driving_lisence_form
+msgid "Driving Lisence Name..."
+msgstr "Nama Surat Izin Mengemudi..."
+
+#. module: matakarir
+#: model:ir.actions.act_window,name:matakarir.action_matakarir_drivinglisencetype
+#: model:ir.model,name:matakarir.model_matakarir_drivinglisencetype
+#: model:ir.ui.menu,name:matakarir.menu_matakarir_drivinglisencetype
+#: model_terms:ir.ui.view,arch_db:matakarir.matakarir_drivinglisencetype_tree
+msgid "Driving Lisence Type"
+msgstr "Jenis Surat Izin Mengemudi"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.driving_lisence_form
+msgid "Driving Lisence..."
+msgstr "Surat Izin Mengemudi..."
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__driving_lisence_ids
+#: model_terms:ir.ui.view,arch_db:matakarir.lisences
+msgid "Driving Lisences"
+msgstr "Surat Izin Mengemudi"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.school_form
+#: model_terms:ir.ui.view,arch_db:matakarir.training_form
+#: model_terms:ir.ui.view,arch_db:matakarir.university_form
+#: selection:matakarir.school,status:0 selection:matakarir.training,status:0
+#: selection:matakarir.university,status:0
+msgid "Drop"
+msgstr "Keluar"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Dumai
+msgid "Dumai"
+msgstr ""
+
+#. module: matakarir
+#: model:res.language,name:matakarir.Langskill_6
+msgid "Dutch"
+msgstr "Belanda"
+
+#. module: matakarir
+#: model:matakarir.faculty,name:matakarir.Faculty_3
+msgid "Economic"
+msgstr "Ekonomi"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.edit_identity
+#: model_terms:ir.ui.view,arch_db:matakarir.edit_my_informations
+#: model_terms:ir.ui.view,arch_db:matakarir.edit_other_informations
+msgid "Edit"
+msgstr "Ubah"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.achievement
+msgid "Edit Achievement"
+msgstr "Ubah Prestasi"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.award
+msgid "Edit Award"
+msgstr "Ubah Penghargaan"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.certificate
+msgid "Edit Certificate"
+msgstr "Ubah Sertifikat"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.comskill
+msgid "Edit Computer Skill"
+msgstr "Ubah Keterampilan Komputer"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.driving_lisence
+msgid "Edit Driving Lisence"
+msgstr "Ubah Surat Izin Mengemudi"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.experience
+msgid "Edit Experience"
+msgstr "Ubah Pengalaman"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.langskill
+msgid "Edit Language Skill"
+msgstr "Ubah Keterampilan Bahasa"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.lisence
+msgid "Edit Lisence"
+msgstr "Ubah Surat Izin"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.organization
+msgid "Edit Organization"
+msgstr "Ubah Organisasi"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.reference
+msgid "Edit Reference"
+msgstr "Ubah Referensi"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.school
+msgid "Edit School"
+msgstr "Ubah Sekolah"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.skill
+msgid "Edit Skill"
+msgstr "Ubah Keterampilan"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.tool
+msgid "Edit Tool"
+msgstr "Ubah Alat"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.training
+msgid "Edit Training"
+msgstr "Ubah Pelatihan"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.university
+msgid "Edit University"
+msgstr "Ubah University"
+
+#. module: matakarir
+#: model:matakarir.faculty,name:matakarir.Faculty_4
+msgid "Education"
+msgstr "Pendidikan"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.portal_my_home
+msgid "Educations"
+msgstr "Pendidikan"
+
+#. module: matakarir
+#: model:matakarir.schoolstage,name:matakarir.Schoolstage_5
+msgid "Elementary"
+msgstr "Dasar"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_reference__email
+msgid "Email"
+msgstr ""
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.my_info
+msgid "Email*"
+msgstr ""
+
+#. module: matakarir
+#: model:matakarir.employmentstatus,name:matakarir.e_status_3
+msgid "Employee"
+msgstr "Karyawan"
+
+#. module: matakarir
+#: model:ir.actions.act_window,name:matakarir.action_matakarir_employmentstatus
+#: model:ir.model,name:matakarir.model_matakarir_employmentstatus
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_employmentstatus__name
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_experience__e_status_id
+#: model:ir.ui.menu,name:matakarir.menu_matakarir_employmentstatus
+#: model_terms:ir.ui.view,arch_db:matakarir.matakarir_employmentstatus_tree
+msgid "Employment Status"
+msgstr "Status Kepegawaian"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+msgid "Employment Status..."
+msgstr "Status Kepegawaian..."
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_country__enforce_cities
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__country_enforce_cities
+msgid "Enforce Cities"
+msgstr "Tugas Kota"
+
+#. module: matakarir
+#: model:matakarir.faculty,name:matakarir.Faculty_5
+msgid "Engineering"
+msgstr "Teknik"
+
+#. module: matakarir
+#: model:res.language,name:matakarir.Langskill_7
+msgid "English"
+msgstr "Inggris"
+
+#. module: matakarir
+#: model:ir.actions.act_window,name:matakarir.action_matakarir_ethnic
+#: model:ir.model,name:matakarir.model_res_ethnic
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__ethnic_id
+#: model:ir.ui.menu,name:matakarir.menu_matakarir_ethnic
+#: model_terms:ir.ui.view,arch_db:matakarir.matakarir_ethnic_tree
+msgid "Ethnic"
+msgstr "Suku"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_ethnic__name
+msgid "Ethnic Name"
+msgstr "Nama Suku"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.other_info
+msgid "Ethnic..."
+msgstr "Suku..."
+
+#. module: matakarir
+#: model:ir.model,name:matakarir.model_matakarir_experience
+#: model_terms:ir.ui.view,arch_db:matakarir.portal_my_home
+#: model_terms:ir.ui.view,arch_db:matakarir.view_partner_form
+msgid "Experiences"
+msgstr "Pengalaman"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.comskill_form
+#: model_terms:ir.ui.view,arch_db:matakarir.langskill_form
+#: model_terms:ir.ui.view,arch_db:matakarir.skill_form
+#: selection:matakarir.comskill,level:0
+#: selection:matakarir.langskill,listenskill:0
+#: selection:matakarir.langskill,readskill:0
+#: selection:matakarir.langskill,speakskill:0
+#: selection:matakarir.langskill,writeskill:0 selection:matakarir.skill,level:0
+msgid "Expert"
+msgstr "Ahli"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.lisence_form
+#: selection:matakarir.lisence,status:0
+msgid "Expired"
+msgstr "Kadaluarsa"
+
+#. module: matakarir
+#: model:res.companytype,name:matakarir.Type_3
+msgid "Exploration"
+msgstr "Eksplorasi"
+
+#. module: matakarir
+#: model:ir.actions.act_window,name:matakarir.action_matakarir_faculty
+#: model:ir.model,name:matakarir.model_matakarir_faculty
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_faculty__name
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_facultymajor__faculty_id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_university__faculty_id
+#: model:ir.ui.menu,name:matakarir.menu_matakarir_faculty
+#: model_terms:ir.ui.view,arch_db:matakarir.matakarir_faculty_tree
+msgid "Faculty"
+msgstr "Fakultas"
+
+#. module: matakarir
+#: model:ir.model,name:matakarir.model_matakarir_facultymajor
+msgid "Faculty Major"
+msgstr "Jurusan Fakultas"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.university_form
+msgid "Faculty Name..."
+msgstr "Nama Fakultas..."
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.university_form
+msgid "Faculty..."
+msgstr "Fakultas..."
+
+#. module: matakarir
+#: model:matakarir.referencetype,name:matakarir.Relation_1
+msgid "Family"
+msgstr "Keluarga"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.my_identity
+#: model_terms:ir.ui.view,arch_db:matakarir.my_info
+#: selection:res.partner,address_status:0
+msgid "Family Owned"
+msgstr "Milik Keluarga"
+
+#. module: matakarir
+#: model:res.companytype,name:matakarir.Type_4
+msgid "Farm"
+msgstr "Perkebunan"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.other_info
+#: selection:res.partner,gender:0
+msgid "Female"
+msgstr "Perempuan"
+
+#. module: matakarir
+#: model:res.skill,name:matakarir.Skill_4
+msgid "Fishing"
+msgstr "Perikanan"
+
+#. module: matakarir
+#: model:matakarir.employmentstatus,name:matakarir.e_status_2
+msgid "Fix Employee"
+msgstr "Karyawan Tetap"
+
+#. module: matakarir
+#: model:res.language,name:matakarir.Langskill_8
+msgid "French"
+msgstr "Perancis"
+
+#. module: matakarir
+#: model:matakarir.referencetype,name:matakarir.Relation_2
+msgid "Friend"
+msgstr "Teman"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Garut
+msgid "Garut"
+msgstr ""
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_university__degree_id
+msgid "Gelar"
+msgstr ""
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__gender
+msgid "Gender"
+msgstr "Jenis Kelamin"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Gorontalo
+msgid "Gorontalo"
+msgstr ""
+
+#. module: matakarir
+#: model:res.companytype,name:matakarir.Type_5
+msgid "Government"
+msgstr "Pemerintahan"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.school_form
+#: model_terms:ir.ui.view,arch_db:matakarir.training_form
+#: model_terms:ir.ui.view,arch_db:matakarir.university_form
+#: selection:matakarir.school,status:0 selection:matakarir.training,status:0
+#: selection:matakarir.university,status:0
+msgid "Graduate"
+msgstr "Lulus"
+
+#. module: matakarir
+#: model:res.language,name:matakarir.Langskill_9
+msgid "Greek"
+msgstr "Yunani"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Gresik
+msgid "Gresik"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Grobongan
+msgid "Grobongan"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Gunungsitoli
+msgid "Gunungsitoli"
+msgstr ""
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.medical_form
+#: selection:matakarir.medical,status:0
+msgid "Healed"
+msgstr "Menyembuhkan"
+
+#. module: matakarir
+#: model:res.language,name:matakarir.Langskill_10
+msgid "Hebrew"
+msgstr "Yahudi"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__height
+msgid "Height"
+msgstr "Tinggi"
+
+#. module: matakarir
+#: model:matakarir.schoolstage,name:matakarir.Schoolstage_1
+msgid "High School"
+msgstr "Sekolah Menengah"
+
+#. module: matakarir
+#: model:res.language,name:matakarir.Langskill_11
+msgid "Hindi"
+msgstr ""
+
+#. module: matakarir
+#: model:res.religion,name:matakarir.Religion_5
+msgid "Hindu"
+msgstr ""
+
+#. module: matakarir
+#: model:ir.model,name:matakarir.model_matakarir_hobby
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__hobby_ids
+#: model_terms:ir.ui.view,arch_db:matakarir.lisences
+msgid "Hobbies"
+msgstr "Kegemaran"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_hobby__name
+msgid "Hobby"
+msgstr "Kegemaran "
+
+#. module: matakarir
+#: model:res.language,name:matakarir.Langskill_12
+msgid "Hokkian"
+msgstr ""
+
+#. module: matakarir
+#: model:matakarir.faculty,name:matakarir.Faculty_6
+msgid "Humanities"
+msgstr "Sastra"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_achievement__id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_allergy__id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_award__id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_certificate__id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_certificatepublisher__id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_comskill__id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_crime__id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_drivinglisence__id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_drivinglisencetype__id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_employmentstatus__id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_experience__id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_faculty__id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_facultymajor__id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_hobby__id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_joblevel__id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_langskill__id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_lisence__id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_lisencepublisher__id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_medical__id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_organization__id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_reference__id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_referencetype__id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_school__id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_schoolstage__id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_skill__id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_tools__id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_tooltype__id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_training__id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_university__id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_universitydegree__id
+#: model:ir.model.fields,field_description:matakarir.field_res_area__id
+#: model:ir.model.fields,field_description:matakarir.field_res_city__id
+#: model:ir.model.fields,field_description:matakarir.field_res_companytype__id
+#: model:ir.model.fields,field_description:matakarir.field_res_computer__id
+#: model:ir.model.fields,field_description:matakarir.field_res_district__id
+#: model:ir.model.fields,field_description:matakarir.field_res_ethnic__id
+#: model:ir.model.fields,field_description:matakarir.field_res_language__id
+#: model:ir.model.fields,field_description:matakarir.field_res_religion__id
+#: model:ir.model.fields,field_description:matakarir.field_res_skill__id
+#: model:ir.model.fields,field_description:matakarir.field_res_village__id
+#: model:ir.model.fields,field_description:matakarir.field_res_zipcode__id
+msgid "ID"
+msgstr "KTP"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__identification_no
+msgid "Identification No"
+msgstr "No KTP"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.my_identity
+msgid "Identification Number*"
+msgstr "Nomor KTP*"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.my_identity
+msgid "Identity Address*"
+msgstr "Alamat KTP"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Indramayu
+msgid "Indramayu"
+msgstr ""
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_experience__industry_id
+msgid "Industry"
+msgstr "Industri"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+msgid "Industry..."
+msgstr "Industri..."
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.comskill_form
+#: model_terms:ir.ui.view,arch_db:matakarir.langskill_form
+#: model_terms:ir.ui.view,arch_db:matakarir.skill_form
+#: selection:matakarir.comskill,level:0
+#: selection:matakarir.langskill,listenskill:0
+#: selection:matakarir.langskill,readskill:0
+#: selection:matakarir.langskill,speakskill:0
+#: selection:matakarir.langskill,writeskill:0 selection:matakarir.skill,level:0
+msgid "Intermediate"
+msgstr "Menengah"
+
+#. module: matakarir
+#: model:matakarir.employmentstatus,name:matakarir.e_status_9
+msgid "Intern"
+msgstr ""
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__description
+#: model_terms:ir.ui.view,arch_db:matakarir.information
+msgid "Introduction"
+msgstr "Pengantar"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.my_info
+msgid "Introduction*"
+msgstr "Pengantar*"
+
+#. module: matakarir
+#: model:res.companytype,name:matakarir.Type_6
+msgid "Investment"
+msgstr "Investasi"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__is_school
+msgid "Is a School"
+msgstr "Adalah Sekolah"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__is_trainer
+msgid "Is a Trainer"
+msgstr "Adalah Pelatih"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__is_organization
+msgid "Is an Organization"
+msgstr "Adalah Organisasi"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__is_university
+msgid "Is an University"
+msgstr "Adalah Universitas"
+
+#. module: matakarir
+#: model:res.religion,name:matakarir.Religion_1
+msgid "Islam"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.JakartaBarat
+msgid "Jakarta Barat"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.JakartaPusat
+msgid "Jakarta Pusat"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.JakartaSelatan
+msgid "Jakarta Selatan"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.JakartaTimur
+msgid "Jakarta Timur"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.JakartaUtara
+msgid "Jakarta Utara"
+msgstr ""
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__sinid
+msgid "Jaminan Kesehatan"
+msgstr ""
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__ssnid
+msgid "Jaminan Sosial"
+msgstr ""
+
+#. module: matakarir
+#: model:res.language,name:matakarir.Langskill_13
+msgid "Japanese"
+msgstr "Jepang"
+
+#. module: matakarir
+#: model:res.ethnic,name:matakarir.Ethnic_11
+#: model:res.language,name:matakarir.Langskill_14
+msgid "Jawa"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Jayapura
+msgid "Jayapura"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Jember
+msgid "Jember"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Jepara
+msgid "Jepara"
+msgstr ""
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_experience__department_id
+msgid "Job Department"
+msgstr "Departemen Pekerjaan"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_experience__description
+msgid "Job Description"
+msgstr "Penjelasan Pekerjaan"
+
+#. module: matakarir
+#: model:ir.actions.act_window,name:matakarir.action_matakarir_joblevel
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_experience__level_id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_joblevel__name
+#: model:ir.ui.menu,name:matakarir.menu_matakarir_joblevel
+#: model_terms:ir.ui.view,arch_db:matakarir.matakarir_joblevel_tree
+msgid "Job Level"
+msgstr "Tingkat Pekerjaan"
+
+#. module: matakarir
+#: model:ir.model,name:matakarir.model_matakarir_joblevel
+msgid "Job Levels"
+msgstr "Tingkat Pekerjaan"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_experience__job_name
+msgid "Job Name"
+msgstr "Nama Pekerjaan"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Jombang
+msgid "Jombang"
+msgstr ""
+
+#. module: matakarir
+#: model:matakarir.schoolstage,name:matakarir.Schoolstage_3
+msgid "Junior High School"
+msgstr "Sekolah Menengah Pertama"
+
+#. module: matakarir
+#: model:matakarir.joblevel,name:matakarir.joblevel_8
+msgid "Junior Manager"
+msgstr "Manajer Junior"
+
+#. module: matakarir
+#: model:matakarir.joblevel,name:matakarir.joblevel_14
+msgid "Junior Staf"
+msgstr "Staf Junior"
+
+#. module: matakarir
+#: model:matakarir.joblevel,name:matakarir.joblevel_11
+msgid "Junior Supervisor"
+msgstr "Supervisor Junior"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.my_identity
+msgid "KITAS / P"
+msgstr ""
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__permit_no
+msgid "KITAS/P"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.KabupatenBekasi
+msgid "Kabupaten Bekasi"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Karanganyar
+msgid "Karanganyar"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Karawang
+msgid "Karawang"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Kebumen
+msgid "Kebumen"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Kediri
+msgid "Kediri"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Kendal
+msgid "Kendal"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Kendari
+msgid "Kendari"
+msgstr ""
+
+#. module: matakarir
+#: model:matakarir.schoolstage,name:matakarir.Schoolstage_6
+msgid "Kindergarten"
+msgstr "Taman kanak-kanak"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Klaten
+msgid "Klaten"
+msgstr ""
+
+#. module: matakarir
+#: model:res.language,name:matakarir.Langskill_15
+msgid "Korean"
+msgstr "Korea"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Kotamobagu
+msgid "Kotamobagu"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Kraksaan
+msgid "Kraksaan"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Kudus
+msgid "Kudus"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Kuningan
+msgid "Kuningan"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Kupang
+msgid "Kupang"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Lamongan
+msgid "Lamongan"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Langsa
+msgid "Langsa"
+msgstr ""
+
+#. module: matakarir
+#: model:ir.actions.act_window,name:matakarir.action_matakarir_language
+#: model:ir.model,name:matakarir.model_res_language
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_langskill__language_id
+#: model:ir.ui.menu,name:matakarir.menu_matakarir_language
+#: model_terms:ir.ui.view,arch_db:matakarir.matakarir_language_tree
+msgid "Language"
+msgstr "Bahasa"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_language__name
+msgid "Language Name"
+msgstr "Nama Bahasa"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.langskill_form
+msgid "Language Name..."
+msgstr "Nama Bahasa..."
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_langskill__name
+msgid "Language Skill"
+msgstr "Keterampilan Bahasa"
+
+#. module: matakarir
+#: model:ir.model,name:matakarir.model_matakarir_langskill
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__langskill_ids
+#: model_terms:ir.ui.view,arch_db:matakarir.lisences
+msgid "Language Skills"
+msgstr "Keterampilan Bahasa"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.langskill_form
+msgid "Language..."
+msgstr "Bahasa..."
+
+#. module: matakarir
+#: model:matakarir.tooltype,name:matakarir.laptop
+msgid "Laptop"
+msgstr ""
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_achievement____last_update
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_allergy____last_update
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_award____last_update
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_certificate____last_update
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_certificatepublisher____last_update
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_comskill____last_update
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_crime____last_update
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_drivinglisence____last_update
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_drivinglisencetype____last_update
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_employmentstatus____last_update
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_experience____last_update
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_faculty____last_update
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_facultymajor____last_update
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_hobby____last_update
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_joblevel____last_update
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_langskill____last_update
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_lisence____last_update
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_lisencepublisher____last_update
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_medical____last_update
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_organization____last_update
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_reference____last_update
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_referencetype____last_update
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_school____last_update
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_schoolstage____last_update
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_skill____last_update
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_tools____last_update
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_tooltype____last_update
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_training____last_update
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_university____last_update
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_universitydegree____last_update
+#: model:ir.model.fields,field_description:matakarir.field_res_area____last_update
+#: model:ir.model.fields,field_description:matakarir.field_res_city____last_update
+#: model:ir.model.fields,field_description:matakarir.field_res_companytype____last_update
+#: model:ir.model.fields,field_description:matakarir.field_res_computer____last_update
+#: model:ir.model.fields,field_description:matakarir.field_res_district____last_update
+#: model:ir.model.fields,field_description:matakarir.field_res_ethnic____last_update
+#: model:ir.model.fields,field_description:matakarir.field_res_language____last_update
+#: model:ir.model.fields,field_description:matakarir.field_res_religion____last_update
+#: model:ir.model.fields,field_description:matakarir.field_res_skill____last_update
+#: model:ir.model.fields,field_description:matakarir.field_res_village____last_update
+#: model:ir.model.fields,field_description:matakarir.field_res_zipcode____last_update
+msgid "Last Modified on"
+msgstr "Terakhir Dimodifikasi pada"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_achievement__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_allergy__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_award__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_certificate__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_certificatepublisher__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_comskill__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_crime__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_drivinglisence__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_drivinglisencetype__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_employmentstatus__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_experience__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_faculty__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_facultymajor__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_hobby__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_joblevel__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_langskill__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_lisence__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_lisencepublisher__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_medical__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_organization__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_reference__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_referencetype__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_school__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_schoolstage__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_skill__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_tools__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_tooltype__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_training__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_university__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_universitydegree__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_res_area__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_res_city__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_res_companytype__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_res_computer__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_res_district__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_res_ethnic__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_res_language__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_res_religion__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_res_skill__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_res_village__write_uid
+#: model:ir.model.fields,field_description:matakarir.field_res_zipcode__write_uid
+msgid "Last Updated by"
+msgstr "Terakhir diperbaharui oleh"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_achievement__write_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_allergy__write_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_award__write_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_certificate__write_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_certificatepublisher__write_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_comskill__write_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_crime__write_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_drivinglisence__write_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_drivinglisencetype__write_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_employmentstatus__write_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_experience__write_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_faculty__write_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_facultymajor__write_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_hobby__write_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_joblevel__write_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_langskill__write_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_lisence__write_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_lisencepublisher__write_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_medical__write_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_organization__write_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_reference__write_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_referencetype__write_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_school__write_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_schoolstage__write_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_skill__write_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_tools__write_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_tooltype__write_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_training__write_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_university__write_date
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_universitydegree__write_date
+#: model:ir.model.fields,field_description:matakarir.field_res_area__write_date
+#: model:ir.model.fields,field_description:matakarir.field_res_city__write_date
+#: model:ir.model.fields,field_description:matakarir.field_res_companytype__write_date
+#: model:ir.model.fields,field_description:matakarir.field_res_computer__write_date
+#: model:ir.model.fields,field_description:matakarir.field_res_district__write_date
+#: model:ir.model.fields,field_description:matakarir.field_res_ethnic__write_date
+#: model:ir.model.fields,field_description:matakarir.field_res_language__write_date
+#: model:ir.model.fields,field_description:matakarir.field_res_religion__write_date
+#: model:ir.model.fields,field_description:matakarir.field_res_skill__write_date
+#: model:ir.model.fields,field_description:matakarir.field_res_village__write_date
+#: model:ir.model.fields,field_description:matakarir.field_res_zipcode__write_date
+msgid "Last Updated on"
+msgstr "Terakhir diperbaharui pada"
+
+#. module: matakarir
+#: model:matakarir.faculty,name:matakarir.Faculty_8
+msgid "Law"
+msgstr "Hukum"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_comskill__level
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_skill__level
+msgid "Level"
+msgstr "Tingkat"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+msgid "Level Name..."
+msgstr "Nama Tingkat..."
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+msgid "Level..."
+msgstr "Tingkat..."
+
+#. module: matakarir
+#: model:ir.model,name:matakarir.model_matakarir_lisence
+msgid "Licences"
+msgstr "Surat Izin"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_lisence__lisence_id
+msgid "Lisence"
+msgstr "Surat Izin"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_lisencepublisher__name
+msgid "Lisence Name"
+msgstr "Nama Surat Izin"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.lisence_form
+msgid "Lisence Name..."
+msgstr "Nama Surat Izin..."
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_certificate__number
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_lisence__number
+msgid "Lisence Number"
+msgstr "Nomor Surat Izin"
+
+#. module: matakarir
+#: model:ir.actions.act_window,name:matakarir.action_matakarir_lisencepublisher
+#: model:ir.model,name:matakarir.model_matakarir_lisencepublisher
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_lisence__name
+#: model:ir.ui.menu,name:matakarir.menu_matakarir_lisencepublisher
+#: model_terms:ir.ui.view,arch_db:matakarir.matakarir_lisencepublisher_tree
+msgid "Lisence Publisher"
+msgstr "Penerbit surat izin"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_lisence__status
+msgid "Lisence Status"
+msgstr "Status Surat Izin"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_drivinglisence__lisence_type_id
+msgid "Lisence Type"
+msgstr "Jenis Surat Izin"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.lisence_form
+msgid "Lisence..."
+msgstr "Surat Izin..."
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__lisence_ids
+msgid "Lisences"
+msgstr "Surat izin"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_langskill__listenskill
+msgid "Listen"
+msgstr "Mendengarkan"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.myaccount
+msgid "Logout"
+msgstr "Keluar"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Lok
+msgid "Lok"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Lubuklinggau
+msgid "Lubuklinggau"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Lumajang
+msgid "Lumajang"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Madiun
+msgid "Madiun"
+msgstr ""
+
+#. module: matakarir
+#: model:res.ethnic,name:matakarir.Ethnic_12
+#: model:res.language,name:matakarir.Langskill_16
+msgid "Madura"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Magelang
+msgid "Magelang"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Magetan
+msgid "Magetan"
+msgstr ""
+
+#. module: matakarir
+#: model:res.skill,name:matakarir.Skill_5
+msgid "Magic Trick"
+msgstr "Trik sulap"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Majalengka
+msgid "Majalengka"
+msgstr ""
+
+#. module: matakarir
+#: model:ir.actions.act_window,name:matakarir.action_matakarir_facultymajor
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_faculty__major_ids
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_facultymajor__name
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_university__major_id
+#: model:ir.ui.menu,name:matakarir.menu_matakarir_facultymajor
+#: model_terms:ir.ui.view,arch_db:matakarir.matakarir_facultymajor_tree
+msgid "Major"
+msgstr "Jurusan"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.university_form
+msgid "Major Name..."
+msgstr "Nama jurusan..."
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.university_form
+msgid "Major..."
+msgstr "Jurusan..."
+
+#. module: matakarir
+#: model:res.ethnic,name:matakarir.Ethnic_13
+msgid "Makasar"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Makassar
+msgid "Makassar"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Malang
+msgid "Malang"
+msgstr ""
+
+#. module: matakarir
+#: model:res.language,name:matakarir.Langskill_17
+msgid "Malay"
+msgstr "Melayu"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.other_info
+#: selection:res.partner,gender:0
+msgid "Male"
+msgstr "Laki-laki"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Manado
+msgid "Manado"
+msgstr ""
+
+#. module: matakarir
+#: model:matakarir.joblevel,name:matakarir.joblevel_7
+msgid "Manager"
+msgstr "Manajer"
+
+#. module: matakarir
+#: model:res.companytype,name:matakarir.Type_7
+msgid "Manufacturing"
+msgstr "pabrik"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__marital
+msgid "Marital Status"
+msgstr "Status pernikahan"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.other_info
+#: selection:res.partner,marital:0
+msgid "Married"
+msgstr "Menikah"
+
+#. module: matakarir
+#: model:matakarir.universitydegree,name:matakarir.Degree_3
+msgid "Master"
+msgstr "Magister"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Mataram
+msgid "Mataram"
+msgstr ""
+
+#. module: matakarir
+#: model:matakarir.faculty,name:matakarir.Faculty_7
+msgid "Medical"
+msgstr "Medis"
+
+#. module: matakarir
+#: model:ir.model,name:matakarir.model_matakarir_medical
+msgid "Medical Record"
+msgstr "Catatan Medis"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_medical__name
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__medical_ids
+#: model_terms:ir.ui.view,arch_db:matakarir.lisences
+msgid "Medical Records"
+msgstr "Catatan Medis"
+
+#. module: matakarir
+#: model:res.ethnic,name:matakarir.Ethnic_14
+msgid "Melayu"
+msgstr ""
+
+#. module: matakarir
+#: model:res.skill,name:matakarir.Skill_6
+msgid "Metal Working"
+msgstr "Pekerjaan Logam"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Metro
+msgid "Metro"
+msgstr ""
+
+#. module: matakarir
+#: model:res.ethnic,name:matakarir.Ethnic_15
+msgid "Minahasa"
+msgstr ""
+
+#. module: matakarir
+#: model:res.ethnic,name:matakarir.Ethnic_16
+msgid "Minangkabau"
+msgstr ""
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.auth_signup_fields_extend
+msgid "Mobile"
+msgstr "Seluler"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.my_info
+msgid "Mobile Number"
+msgstr "Nomor Seluler"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.identity
+#: model_terms:ir.ui.view,arch_db:matakarir.information
+#: model_terms:ir.ui.view,arch_db:matakarir.personal
+msgid "Modify"
+msgstr "Ubah"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Mojokerto
+msgid "Mojokerto"
+msgstr ""
+
+#. module: matakarir
+#: model:matakarir.tooltype,name:matakarir.motorcycle
+msgid "Motorcycle"
+msgstr "Sepeda motor"
+
+#. module: matakarir
+#: model:res.companytype,name:matakarir.Type_8
+msgid "Multi Media"
+msgstr ""
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.myaccount
+msgid "My Info"
+msgstr "Info Ku"
+
+#. module: matakarir
+#: model:res.ethnic,name:matakarir.Ethnic_17
+msgid "NTB"
+msgstr ""
+
+#. module: matakarir
+#: model:res.ethnic,name:matakarir.Ethnic_18
+msgid "NTT"
+msgstr ""
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_university__name
+msgid "Nama Universitas"
+msgstr ""
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_area__name
+#: model:ir.model.fields,field_description:matakarir.field_res_city__name
+#: model:ir.model.fields,field_description:matakarir.field_res_district__name
+#: model:ir.model.fields,field_description:matakarir.field_res_village__name
+msgid "Name"
+msgstr "Nama"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.achievement
+msgid "New Achievement"
+msgstr "Prestasi Baru"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.allergy
+msgid "New Allergy"
+msgstr "Alergi Baru"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.award
+msgid "New Award"
+msgstr "Penghargaan Baru"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.certificate
+msgid "New Certificate"
+msgstr "Sertifikat Baru"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+msgid "New Company Type..."
+msgstr "Jenis Perusahaan Baru..."
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.comskill
+msgid "New Computer Skill"
+msgstr "Keterampilan Komputer Baru"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.crime
+msgid "New Crime Record"
+msgstr "Catatan Kejahatan Baru"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.driving_lisence
+msgid "New Driving Lisence"
+msgstr "SIM Baru"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.experience
+msgid "New Experience"
+msgstr "Pengalaman Baru"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.hobby
+msgid "New Hobby"
+msgstr "Kegemaran Baru"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+msgid "New Industry..."
+msgstr "Industri Baru..."
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.langskill
+msgid "New Language Skill"
+msgstr "Keterampilan Bahasa baru"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.lisence
+msgid "New Lisence"
+msgstr "Surat izin baru"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.medical
+msgid "New Medical Record"
+msgstr "Catatan medis baru"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.organization
+msgid "New Organization"
+msgstr "Organisasi baru"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.reference
+msgid "New Reference"
+msgstr "Referensi baru"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.school
+msgid "New School"
+msgstr "Sekolah baru"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.skill
+msgid "New Skill"
+msgstr "Keterampilan baru"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.tool
+msgid "New Tool"
+msgstr "Alat baru"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.training
+msgid "New Training"
+msgstr "Pelatihan Baru"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.university
+msgid "New University"
+msgstr "Universitas baru"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Nganjuk
+msgid "Nganjuk"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Ngawi
+msgid "Ngawi"
+msgstr ""
+
+#. module: matakarir
+#: model:res.companytype,name:matakarir.Type_9
+msgid "Non Profit Organization"
+msgstr "Organisasi non profit"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_drivinglisence__number
+msgid "Number"
+msgstr "Nomor"
+
+#. module: matakarir
+#: selection:matakarir.lisence,status:0
+msgid "On Progress"
+msgstr "Dalam pengembangan"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_organization__organization_id
+msgid "Organization"
+msgstr "Organisasi"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__organization_ids
+#: model_terms:ir.ui.view,arch_db:matakarir.organizationinfo
+msgid "Organization Experiences"
+msgstr "Pengalaman Organisasi"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_organization__name
+msgid "Organization Name"
+msgstr "Nama Organisasi"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.organization_form
+msgid "Organization Name..."
+msgstr "Nama Organisai..."
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.organization_form
+msgid "Organization..."
+msgstr "Organisasi..."
+
+#. module: matakarir
+#: model:ir.model,name:matakarir.model_matakarir_organization
+msgid "Organizations"
+msgstr "Organisasi"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.personal
+msgid "Other Informations"
+msgstr "Informasi Lainnya"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.lisences
+msgid "Other Lisences"
+msgstr "Lisensi Lainnya"
+
+#. module: matakarir
+#: selection:res.partner,address_status:0
+msgid "Owned"
+msgstr "Milik"
+
+#. module: matakarir
+#: model:matakarir.joblevel,name:matakarir.joblevel_1
+msgid "Owner"
+msgstr "Pemilik"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Pacitan
+msgid "Pacitan"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Padang
+msgid "Padang"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Padangpanjang
+msgid "Padangpanjang"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Padangsidempuan
+msgid "Padangsidempuan"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.PagarAlam
+msgid "Pagar Alam"
+msgstr ""
+
+#. module: matakarir
+#: model:res.skill,name:matakarir.Skill_7
+msgid "Painting"
+msgstr "Lukisan"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Palangkaraya
+msgid "Palangkaraya"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Palembang
+msgid "Palembang"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Palopo
+msgid "Palopo"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Palu
+msgid "Palu"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Pamatangsiantar
+msgid "Pamatangsiantar"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Pangandaran
+msgid "Pangandaran"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.PangkalPinang
+msgid "Pangkal Pinang"
+msgstr ""
+
+#. module: matakarir
+#: model:res.ethnic,name:matakarir.Ethnic_19
+msgid "Papua"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.ParePare
+msgid "Pare Pare"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Pariaman
+msgid "Pariaman"
+msgstr ""
+
+#. module: matakarir
+#: model:matakarir.employmentstatus,name:matakarir.e_status_6
+msgid "Part Timer"
+msgstr "Paruh Waktu"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_achievement__partner_id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_allergy__partner_id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_award__partner_id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_certificate__partner_id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_comskill__partner_id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_crime__partner_id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_drivinglisence__partner_id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_experience__partner_id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_hobby__partner_id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_langskill__partner_id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_lisence__partner_id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_medical__partner_id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_organization__partner_id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_reference__partner_id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_school__partner_id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_skill__partner_id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_tools__partner_id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_training__partner_id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_university__partner_id
+#: model:matakarir.referencetype,name:matakarir.Relation_4
+msgid "Partner"
+msgstr "Rekanan"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_area__partner_ids
+#: model:ir.model.fields,field_description:matakarir.field_res_city__partner_ids
+#: model:ir.model.fields,field_description:matakarir.field_res_country__partner_ids
+#: model:ir.model.fields,field_description:matakarir.field_res_country_state__partner_ids
+#: model:ir.model.fields,field_description:matakarir.field_res_district__partner_ids
+#: model:ir.model.fields,field_description:matakarir.field_res_village__partner_ids
+#: model:ir.model.fields,field_description:matakarir.field_res_zipcode__partner_ids
+msgid "Partners"
+msgstr "Rekanan"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__passport_no
+#: model_terms:ir.ui.view,arch_db:matakarir.my_identity
+msgid "Passport"
+msgstr "Paspor"
+
+#. module: matakarir
+#: code:addons/matakarir/controllers/signup.py:24
+#, python-format
+msgid "Passwords do not match; please retype them."
+msgstr "Sandi tidak cocok; silakan ketik ulang."
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Pasuruan
+msgid "Pasuruan"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Pati
+msgid "Pati"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Payakumbuh
+msgid "Payakumbuh"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Pekalongan
+msgid "Pekalongan"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Pekanbaru
+msgid "Pekanbaru"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Pemalang
+msgid "Pemalang"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Pemekasan
+msgid "Pemekasan"
+msgstr ""
+
+#. module: matakarir
+#: model:matakarir.schoolstage,name:matakarir.Schoolstage_4
+msgid "Pesantren"
+msgstr ""
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.auth_signup_fields_extend
+msgid "Phone"
+msgstr "Telepon"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_reference__phone
+#: model_terms:ir.ui.view,arch_db:matakarir.my_identity
+#: model_terms:ir.ui.view,arch_db:matakarir.my_info
+msgid "Phone Number"
+msgstr "Nomor Telepon"
+
+#. module: matakarir
+#: model:matakarir.faculty,name:matakarir.Faculty_9
+msgid "Politic"
+msgstr "Politik"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Ponorogo
+msgid "Ponorogo"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Pontianak
+msgid "Pontianak"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Prabumulih
+msgid "Prabumulih"
+msgstr ""
+
+#. module: matakarir
+#: model:matakarir.employmentstatus,name:matakarir.e_status_7
+msgid "Probation"
+msgstr "Masa percobaan"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Probolinggo
+msgid "Probolinggo"
+msgstr ""
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.lisence_form
+#: model_terms:ir.ui.view,arch_db:matakarir.school_form
+#: model_terms:ir.ui.view,arch_db:matakarir.training_form
+#: model_terms:ir.ui.view,arch_db:matakarir.university_form
+#: selection:matakarir.school,status:0 selection:matakarir.university,status:0
+msgid "Progress"
+msgstr "Proses"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.auth_signup_fields_extend
+#: model_terms:ir.ui.view,arch_db:matakarir.state_template
+msgid "Province"
+msgstr "Provinsi"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.auth_signup_fields_extend
+#: model_terms:ir.ui.view,arch_db:matakarir.state_template
+msgid "Province..."
+msgstr "Provinsi..."
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_certificatepublisher__publisher_id
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_lisencepublisher__publisher_id
+msgid "Publisher"
+msgstr "Penerbit"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.certificate_form
+#: model_terms:ir.ui.view,arch_db:matakarir.lisence_form
+msgid "Publisher Country..."
+msgstr "Negara Penerbit..."
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.certificate_form
+#: model_terms:ir.ui.view,arch_db:matakarir.lisence_form
+msgid "Publisher Name..."
+msgstr "Nama Penerbit..."
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.certificate_form
+#: model_terms:ir.ui.view,arch_db:matakarir.lisence_form
+msgid "Publisher..."
+msgstr "Penerbit ..."
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Purbalingga
+msgid "Purbalingga"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Purwakarta
+msgid "Purwakarta"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Purworejo
+msgid "Purworejo"
+msgstr ""
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.portal_my_home
+msgid "Qualifications"
+msgstr "Kualifikasi"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+#: model_terms:ir.ui.view,arch_db:matakarir.organization_form
+#: selection:matakarir.experience,status:0
+#: selection:matakarir.organization,status:0
+msgid "Quit"
+msgstr "Keluar"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_experience__quit_reason
+msgid "Quit Reasons"
+msgstr "Alasan Berhenti"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__rt
+#: model_terms:ir.ui.view,arch_db:matakarir.view_partner_form
+msgid "RT"
+msgstr ""
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__rw
+#: model_terms:ir.ui.view,arch_db:matakarir.view_partner_form
+msgid "RW"
+msgstr ""
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_langskill__readskill
+msgid "Read"
+msgstr "Baca"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_medical__description
+msgid "Record Description"
+msgstr "Deskripsi Rekaman"
+
+#. module: matakarir
+#: model:ir.model,name:matakarir.model_matakarir_reference
+msgid "Reference"
+msgstr "Referensi"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_reference__name
+msgid "Reference Name"
+msgstr "Nama Referensi"
+
+#. module: matakarir
+#: model:ir.actions.act_window,name:matakarir.action_matakarir_referencetype
+#: model:ir.model,name:matakarir.model_matakarir_referencetype
+#: model:ir.ui.menu,name:matakarir.menu_matakarir_referencetype
+#: model_terms:ir.ui.view,arch_db:matakarir.matakarir_referencetype_tree
+msgid "Reference Type"
+msgstr "Jenis Referensi"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__reference_ids
+#: model_terms:ir.ui.view,arch_db:matakarir.lisences
+msgid "References"
+msgstr "Referensi"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_reference__relation_id
+msgid "Relation"
+msgstr "Hubungan"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_referencetype__name
+msgid "Relation Name"
+msgstr "Nama Hubungan"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.reference_form
+msgid "Relation Name..."
+msgstr "Nama Hubungan..."
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.reference_form
+msgid "Relation..."
+msgstr "Hubungan..."
+
+#. module: matakarir
+#: model:ir.actions.act_window,name:matakarir.action_matakarir_religion
+#: model:ir.model,name:matakarir.model_res_religion
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__religion_id
+#: model:ir.ui.menu,name:matakarir.menu_matakarir_religion
+#: model_terms:ir.ui.view,arch_db:matakarir.matakarir_religion_tree
+msgid "Religion"
+msgstr "Agama"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_religion__name
+msgid "Religion Name"
+msgstr "Nama Agama"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.other_info
+msgid "Religion..."
+msgstr "Agama..."
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Rembang
+msgid "Rembang"
+msgstr ""
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.my_identity
+#: model_terms:ir.ui.view,arch_db:matakarir.my_info
+#: selection:res.partner,address_status:0
+msgid "Rent"
+msgstr "Sewa"
+
+#. module: matakarir
+#: model:res.companytype,name:matakarir.Type_10
+msgid "Research"
+msgstr "Penelitian"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.login
+msgid "Reset Password"
+msgstr "Reset Kata Sandi"
+
+#. module: matakarir
+#: model:res.companytype,name:matakarir.Type_11
+msgid "Retail"
+msgstr "Eceran"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_organization__role
+msgid "Role"
+msgstr "Tugas"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_organization__role_description
+msgid "Role Description"
+msgstr "Deskripsi tugas"
+
+#. module: matakarir
+#: model:matakarir.drivinglisencetype,name:matakarir.sim1
+msgid "SIM A"
+msgstr ""
+
+#. module: matakarir
+#: model:matakarir.drivinglisencetype,name:matakarir.sim2
+msgid "SIM B1"
+msgstr ""
+
+#. module: matakarir
+#: model:matakarir.drivinglisencetype,name:matakarir.sim3
+msgid "SIM B2"
+msgstr ""
+
+#. module: matakarir
+#: model:matakarir.drivinglisencetype,name:matakarir.sim4
+msgid "SIM C"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Sabang
+msgid "Sabang"
+msgstr ""
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_experience__salary
+msgid "Salary"
+msgstr "Gaji"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Salatiga
+msgid "Salatiga"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Samarinda
+msgid "Samarinda"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Sampang
+msgid "Sampang"
+msgstr ""
+
+#. module: matakarir
+#: model:res.ethnic,name:matakarir.Ethnic_20
+msgid "Sasak"
+msgstr ""
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.achievement
+#: model_terms:ir.ui.view,arch_db:matakarir.allergy
+#: model_terms:ir.ui.view,arch_db:matakarir.award
+#: model_terms:ir.ui.view,arch_db:matakarir.certificate
+#: model_terms:ir.ui.view,arch_db:matakarir.comskill
+#: model_terms:ir.ui.view,arch_db:matakarir.crime
+#: model_terms:ir.ui.view,arch_db:matakarir.driving_lisence
+#: model_terms:ir.ui.view,arch_db:matakarir.experience
+#: model_terms:ir.ui.view,arch_db:matakarir.hobby
+#: model_terms:ir.ui.view,arch_db:matakarir.langskill
+#: model_terms:ir.ui.view,arch_db:matakarir.lisence
+#: model_terms:ir.ui.view,arch_db:matakarir.medical
+#: model_terms:ir.ui.view,arch_db:matakarir.myimages
+#: model_terms:ir.ui.view,arch_db:matakarir.organization
+#: model_terms:ir.ui.view,arch_db:matakarir.reference
+#: model_terms:ir.ui.view,arch_db:matakarir.school
+#: model_terms:ir.ui.view,arch_db:matakarir.skill
+#: model_terms:ir.ui.view,arch_db:matakarir.tool
+#: model_terms:ir.ui.view,arch_db:matakarir.training
+#: model_terms:ir.ui.view,arch_db:matakarir.university
+msgid "Save"
+msgstr "Simpan"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Sawahlunto
+msgid "Sawahlunto"
+msgstr ""
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_school__schollarship
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_training__schollarship
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_university__schollarship
+msgid "Schollarship"
+msgstr "Beasiswa"
+
+#. module: matakarir
+#: model:ir.model,name:matakarir.model_matakarir_school
+msgid "School"
+msgstr "Sekolah "
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_school__name
+msgid "School Name"
+msgstr "Nama Sekolah"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.school_form
+msgid "School Name..."
+msgstr "Nama Sekolah..."
+
+#. module: matakarir
+#: model:ir.actions.act_window,name:matakarir.action_matakarir_schoolstage
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_schoolstage__name
+#: model:ir.ui.menu,name:matakarir.menu_matakarir_schoolstage
+#: model_terms:ir.ui.view,arch_db:matakarir.matakarir_schoolstage_tree
+msgid "School Stage"
+msgstr "Provinsi Sekolah"
+
+#. module: matakarir
+#: model:ir.model,name:matakarir.model_matakarir_schoolstage
+msgid "School Stages"
+msgstr "Provinsi Sekolah"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.school_form
+msgid "School..."
+msgstr "Sekolah..."
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__school_ids
+#: model_terms:ir.ui.view,arch_db:matakarir.schoolinfo
+msgid "Schools"
+msgstr "Sekolah"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_school__score
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_training__score
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_university__score
+msgid "Score"
+msgstr "Nilai"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.auth_signup_fields_extend
+msgid "Select"
+msgstr "Pilih"
+
+#. module: matakarir
+#: model:matakarir.employmentstatus,name:matakarir.e_status_1
+msgid "Self Employed"
+msgstr "Wiraswasta"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.my_identity
+#: model_terms:ir.ui.view,arch_db:matakarir.my_info
+msgid "Self Owned"
+msgstr "Milik Sendiri"
+
+#. module: matakarir
+#: model:res.skill,name:matakarir.Skill_8
+msgid "Selling"
+msgstr "Penjualan"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Semarang
+msgid "Semarang"
+msgstr ""
+
+#. module: matakarir
+#: model:matakarir.joblevel,name:matakarir.joblevel_6
+msgid "Senior Manager"
+msgstr "Manajer senior"
+
+#. module: matakarir
+#: model:matakarir.joblevel,name:matakarir.joblevel_12
+msgid "Senior Staf"
+msgstr "Staf Senior"
+
+#. module: matakarir
+#: model:matakarir.joblevel,name:matakarir.joblevel_9
+msgid "Senior Supervisor"
+msgstr ""
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_employmentstatus__sequence
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_joblevel__sequence
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_schoolstage__sequence
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_universitydegree__sequence
+msgid "Sequence"
+msgstr "Urutan"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Serang
+msgid "Serang"
+msgstr ""
+
+#. module: matakarir
+#: model:res.companytype,name:matakarir.Type_12
+msgid "Service"
+msgstr "Pelayanan"
+
+#. module: matakarir
+#: model:res.skill,name:matakarir.Skill_9
+msgid "Sewing"
+msgstr "Jahit"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Sibolga
+msgid "Sibolga"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Sidoarjo
+msgid "Sidoarjo"
+msgstr ""
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.login
+msgid "Sign up free account"
+msgstr "Daftar akun gratis"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_achievement__since
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_award__since
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_certificate__since
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_crime__since
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_drivinglisence__since
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_experience__since
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_lisence__since
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_medical__since
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_organization__since
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_school__since
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_training__since
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_university__since
+msgid "Since"
+msgstr "Sejak"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Singkawang
+msgid "Singkawang"
+msgstr ""
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.other_info
+#: selection:res.partner,marital:0
+msgid "Single"
+msgstr "Belum Menikah"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Situbundo
+msgid "Situbundo"
+msgstr ""
+
+#. module: matakarir
+#: model:ir.actions.act_window,name:matakarir.action_matakarir_skill
+#: model:ir.model,name:matakarir.model_res_skill
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_skill__skill_id
+#: model:ir.ui.menu,name:matakarir.menu_matakarir_skill
+#: model_terms:ir.ui.view,arch_db:matakarir.matakarir_skill_tree
+msgid "Skill"
+msgstr "Keterampilan"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_skill__name
+#: model:ir.model.fields,field_description:matakarir.field_res_skill__name
+msgid "Skill Name"
+msgstr "Nama keterampilan"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.comskill_form
+#: model_terms:ir.ui.view,arch_db:matakarir.skill_form
+msgid "Skill Name..."
+msgstr "Nama keterampilan..."
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.comskill_form
+#: model_terms:ir.ui.view,arch_db:matakarir.skill_form
+msgid "Skill..."
+msgstr "Keterampilan..."
+
+#. module: matakarir
+#: model:ir.model,name:matakarir.model_matakarir_skill
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__skill_ids
+#: model_terms:ir.ui.view,arch_db:matakarir.lisences
+msgid "Skills"
+msgstr "Keterampilan"
+
+#. module: matakarir
+#: model:matakarir.tooltype,name:matakarir.smartphone
+msgid "Smartphone"
+msgstr ""
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__smoker
+msgid "Smoker"
+msgstr "Perokok"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.my_identity
+msgid "Social Insurance Number"
+msgstr "BPJS KS"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.my_identity
+msgid "Social Security Number"
+msgstr "BPJS TK"
+
+#. module: matakarir
+#: model:res.skill,name:matakarir.Skill_10
+msgid "Soldering"
+msgstr "Penyolderan"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Solo
+msgid "Solo"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Solok
+msgid "Solok"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Sorong
+msgid "Sorong"
+msgstr ""
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_langskill__speakskill
+msgid "Speak"
+msgstr "Berbicara"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Sragen
+msgid "Sragen"
+msgstr ""
+
+#. module: matakarir
+#: model:matakarir.joblevel,name:matakarir.joblevel_13
+msgid "Staf"
+msgstr ""
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.school_form
+msgid "Stage Name..."
+msgstr "Nama Provinsi..."
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.school_form
+msgid "Stage..."
+msgstr "Provinsi..."
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_area__state_id
+#: model:ir.model.fields,field_description:matakarir.field_res_city__state_id
+#: model:ir.model.fields,field_description:matakarir.field_res_district__state_id
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__state_id
+#: model:ir.model.fields,field_description:matakarir.field_res_village__state_id
+#: model:ir.model.fields,field_description:matakarir.field_res_zipcode__state_id
+#: model_terms:ir.ui.view,arch_db:matakarir.view_partner_form
+msgid "State"
+msgstr "Provinsi"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_crime__status
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_experience__status
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_medical__status
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_organization__status
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_school__status
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_training__status
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_university__status
+msgid "Status"
+msgstr ""
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.view_partner_form
+msgid "Street 2..."
+msgstr "Tambahan nama jalan..."
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.view_partner_form
+msgid "Street..."
+msgstr "Nama jalan..."
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Subang
+msgid "Subang"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Subulussalam
+msgid "Subulussalam"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Sukabumi
+msgid "Sukabumi"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Sukoharjo
+msgid "Sukoharjo"
+msgstr ""
+
+#. module: matakarir
+#: model:res.ethnic,name:matakarir.Ethnic_21
+msgid "Sulawesi"
+msgstr ""
+
+#. module: matakarir
+#: model:res.ethnic,name:matakarir.Ethnic_22
+msgid "Sumatra"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Sumenep
+msgid "Sumenep"
+msgstr ""
+
+#. module: matakarir
+#: model:res.ethnic,name:matakarir.Ethnic_23
+#: model:res.language,name:matakarir.Langskill_18
+msgid "Sunda"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.SungaiPenuh
+msgid "Sungai Penuh"
+msgstr ""
+
+#. module: matakarir
+#: model:matakarir.joblevel,name:matakarir.joblevel_10
+msgid "Supervisor"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Surabaya
+msgid "Surabaya"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Surakarta
+msgid "Surakarta"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Tanggerang
+msgid "Tangerang"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.TanjungSelor
+msgid "Tanjung Selor"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Tanjungbalai
+msgid "Tanjungbalai"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Tarakan
+msgid "Tarakan"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Tasikmalaya
+msgid "Tasikmalaya"
+msgstr ""
+
+#. module: matakarir
+#: model:res.skill,name:matakarir.Skill_11
+msgid "Teaching"
+msgstr "Mengajar"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.TebingTinggi
+msgid "Tebing Tinggi"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Tegal
+msgid "Tegal"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Temanggung
+msgid "Temanggung"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Ternate
+msgid "Ternate"
+msgstr ""
+
+#. module: matakarir
+#: code:addons/matakarir/controllers/signup.py:22
+#, python-format
+msgid "The form was not properly filled in."
+msgstr "Formulir tidak diisi dengan benar."
+
+#. module: matakarir
+#: sql_constraint:matakarir.drivinglisencetype:0
+msgid "The name of the Driving Lisence Type must be unique by country !"
+msgstr "Nama Jenis Surat Izin Mengemudi harus unik berdasarkan Negara !"
+
+#. module: matakarir
+#: sql_constraint:res.village:0
+msgid "The name of the Village must be unique by district !"
+msgstr "Nama Kelurahan harus unik berdasarkan Kecamatan !"
+
+#. module: matakarir
+#: sql_constraint:res.area:0
+msgid "The name of the area must be unique by Village !"
+msgstr "Nama daerah harus unik berdasarkan Kelurahan !"
+
+#. module: matakarir
+#: sql_constraint:res.city:0
+msgid "The name of the city must be unique by state !"
+msgstr "Nama kota harus  unik berdasarkan Negara !"
+
+#. module: matakarir
+#: sql_constraint:res.district:0
+msgid "The name of the district must be unique by city !"
+msgstr "Nama kecamatan harus  unik berdasarkan kota !"
+
+#. module: matakarir
+#: sql_constraint:matakarir.facultymajor:0
+msgid "The name of the major must be unique by faculty !"
+msgstr "Nama jurusan harus  unik berdasarkan fakultas !"
+
+#. module: matakarir
+#: sql_constraint:res.zipcode:0
+msgid "The name of the zipcode must be unique by area !"
+msgstr "Nama kode pos harus  unik berdasarkan daerah !"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Tidore
+msgid "Tidore"
+msgstr ""
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_school__stage_id
+msgid "Tingkat Sekolah"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Tomohon
+msgid "Tomohon"
+msgstr ""
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_tooltype__name
+msgid "Tool Name"
+msgstr "Nama Alat"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.tool_form
+msgid "Tool Name..."
+msgstr "Nama Alat..."
+
+#. module: matakarir
+#: model:ir.actions.act_window,name:matakarir.action_matakarir_tooltype
+#: model:ir.ui.menu,name:matakarir.menu_matakarir_tooltype
+#: model_terms:ir.ui.view,arch_db:matakarir.matakarir_tooltype_tree
+msgid "Tool Type"
+msgstr "Jenis Alat"
+
+#. module: matakarir
+#: model:ir.model,name:matakarir.model_matakarir_tooltype
+msgid "Tool Types"
+msgstr "Jenis Alat"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.tool_form
+msgid "Tool..."
+msgstr "Alat..."
+
+#. module: matakarir
+#: model:ir.model,name:matakarir.model_matakarir_tools
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__tools_ids
+#: model_terms:ir.ui.view,arch_db:matakarir.lisences
+msgid "Tools"
+msgstr "Alat"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_tools__tooltype_id
+msgid "Tooltype"
+msgstr "Jenis Alat"
+
+#. module: matakarir
+#: model:res.companytype,name:matakarir.Type_13
+msgid "Trading"
+msgstr "Perdagangan"
+
+#. module: matakarir
+#: model:matakarir.joblevel,name:matakarir.joblevel_15
+msgid "Trainee"
+msgstr "Peserta Pelatihan"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_training__trainer_id
+msgid "Trainer"
+msgstr "Pelatih"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_training__name
+msgid "Trainer Institution"
+msgstr "Lembaga Pelatih"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.training_form
+msgid "Trainer..."
+msgstr "Pelatih..."
+
+#. module: matakarir
+#: model:ir.model,name:matakarir.model_matakarir_training
+msgid "Training"
+msgstr "Pelatihan"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__training_ids
+msgid "Training Courses"
+msgstr "Kursus Pelatihan"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.training_form
+msgid "Training Institution..."
+msgstr "Lembaga Pelatihan..."
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_training__title
+msgid "Training Name"
+msgstr "Nama Pelatihan"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.traininginfo
+msgid "Trainings"
+msgstr "Pelatihan"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Trenggalek
+msgid "Trenggalek"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Tual
+msgid "Tual"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Tuban
+msgid "Tuban"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Tulungagung
+msgid "Tulungagung"
+msgstr ""
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__companytype_id
+msgid "Type of Company"
+msgstr "Jenis Perusahaan"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.medical_form
+#: selection:matakarir.medical,status:0
+msgid "Uncurable"
+msgstr "Tidak Bisa Sembuh"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__university_ids
+#: model_terms:ir.ui.view,arch_db:matakarir.uniinfo
+msgid "Universities"
+msgstr "Universitas"
+
+#. module: matakarir
+#: model:ir.model,name:matakarir.model_matakarir_university
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_university__university_id
+msgid "University"
+msgstr "Universitas"
+
+#. module: matakarir
+#: model:ir.actions.act_window,name:matakarir.action_matakarir_universitydegree
+#: model:ir.model,name:matakarir.model_matakarir_universitydegree
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_universitydegree__name
+#: model:ir.ui.menu,name:matakarir.menu_matakarir_universitydegree
+#: model_terms:ir.ui.view,arch_db:matakarir.matakarir_universitydegree_tree
+msgid "University Degree"
+msgstr "Gelar Universitas"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.university_form
+msgid "University Name..."
+msgstr "Nama Universitas..."
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.university_form
+msgid "University..."
+msgstr "Universitas..."
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_drivinglisence__until
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_experience__until
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_lisence__until
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_organization__until
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_school__until
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_training__until
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_university__until
+msgid "Until"
+msgstr "Sampai"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.lisence_form
+#: selection:matakarir.lisence,status:0
+msgid "Valid"
+msgstr "Berlaku"
+
+#. module: matakarir
+#: model:ir.model,name:matakarir.model_res_village
+#: model:ir.model.fields,field_description:matakarir.field_res_area__village_id
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__village_id
+#: model:ir.model.fields,field_description:matakarir.field_res_zipcode__village_id
+#: model_terms:ir.ui.view,arch_db:matakarir.view_partner_form
+#: model_terms:ir.ui.view,arch_db:matakarir.view_village_tree
+#: model_terms:ir.ui.view,arch_db:matakarir.village_template
+msgid "Village"
+msgstr "Kelurahan"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.village_template
+msgid "Village..."
+msgstr "Kelurahan..."
+
+#. module: matakarir
+#: model:ir.actions.act_window,name:matakarir.action_res_village_tree
+#: model:ir.model.fields,field_description:matakarir.field_res_district__village_ids
+#: model:ir.ui.menu,name:matakarir.menu_village_partner
+msgid "Villages"
+msgstr "Kelurahan"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__visa_no
+#: model_terms:ir.ui.view,arch_db:matakarir.my_identity
+msgid "Visa"
+msgstr ""
+
+#. module: matakarir
+#: model:matakarir.schoolstage,name:matakarir.Schoolstage_2
+msgid "Vocational High School"
+msgstr "Sekolah Menengah Kejuruan"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_organization__volunteer
+#: model:matakarir.employmentstatus,name:matakarir.e_status_10
+msgid "Volunteer"
+msgstr "Sukarelawan"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Watampone
+msgid "Watampone"
+msgstr ""
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__weight
+msgid "Weight"
+msgstr "Berat"
+
+#. module: matakarir
+#: model:res.companytype,name:matakarir.Type_14
+msgid "Wholesale"
+msgstr "Grosir"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.other_info
+#: selection:res.partner,marital:0
+msgid "Widower"
+msgstr "Cerai Mati"
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Wonogiri
+msgid "Wonogiri"
+msgstr ""
+
+#. module: matakarir
+#: model:res.city,name:matakarir.Wonosobo
+msgid "Wonosobo"
+msgstr ""
+
+#. module: matakarir
+#: model:res.skill,name:matakarir.Skill_12
+msgid "Wood Working"
+msgstr "Pekerjaan Logam"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.experience_form
+#: model_terms:ir.ui.view,arch_db:matakarir.organization_form
+#: selection:matakarir.experience,status:0
+#: selection:matakarir.organization,status:0
+msgid "Work"
+msgstr "Kerja"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__experience_ids
+#: model_terms:ir.ui.view,arch_db:matakarir.experienceinfo
+msgid "Work Experiences"
+msgstr "Pengalaman kerja"
+
+#. module: matakarir
+#: model:matakarir.employmentstatus,name:matakarir.e_status_5
+msgid "Worker"
+msgstr "Pekerja"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_langskill__writeskill
+msgid "Write"
+msgstr "Menulis"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.lisences
+msgid "You don't have any Award"
+msgstr "Anda tidak memiliki Penghargaan apa pun"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.lisences
+msgid "You don't have any Certificate"
+msgstr "Anda tidak memiliki Certifikat apa pun"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.lisences
+msgid "You don't have any achievement"
+msgstr "Anda tidak memiliki pencapaian apa pun"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.lisences
+msgid "You don't have any allergy"
+msgstr "Anda tidak memiliki alergi apa pun"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.lisences
+msgid "You don't have any computer skill"
+msgstr "Anda tidak memiliki keterampilan computer apa pun"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.lisences
+msgid "You don't have any crime record"
+msgstr "Anda tidak memiliki catatan kejahatan"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.lisences
+msgid "You don't have any driving lisence"
+msgstr "Anda tidak memiliki surat izin mengemudi"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.lisences
+msgid "You don't have any hobby"
+msgstr "Anda tidak memiliki kegemaran"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.lisences
+msgid "You don't have any language skill"
+msgstr "Anda tidak memiliki keterampilan bahasa"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.lisences
+msgid "You don't have any medical record"
+msgstr "Anda tidak memiliki catatan medis"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.lisences
+msgid "You don't have any other lisence"
+msgstr "Anda tidak memiliki surat izin lainnya"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.lisences
+msgid "You don't have any reference"
+msgstr "Anda tidak memiliki referensi apa pun"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.lisences
+msgid "You don't have any skill"
+msgstr "Anda tidak memiliki keterampilan apa pun"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.lisences
+msgid "You don't have any tool"
+msgstr "Anda tidak memiliki alat apa pun"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.organizationinfo
+msgid "You dont have any organization experience"
+msgstr "Anda tidak memiliki pengalaman organisasi apa pun"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.schoolinfo
+msgid "You dont have any school data"
+msgstr "Anda tidak memiliki sekolah apa pun"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.traininginfo
+msgid "You dont have any training data"
+msgstr "Anda tidak memiliki pelatihan apa pun"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.uniinfo
+msgid "You dont have any university data"
+msgstr "Anda tidak memiliki universitas apa pun"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.experienceinfo
+msgid "You dont have any work experience"
+msgstr "Anda tidak memiliki pengalaman kerja apa pun"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.identity
+msgid "Your Identity"
+msgstr "Identitas Anda"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.information
+msgid "Your Informations"
+msgstr "Informasi Anda"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.my_info
+msgid "Your Name*"
+msgstr "Nama Anda*"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.my_info
+msgid "Your Nickname*"
+msgstr "Nama panggilan Anda*"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.view_partner_form
+msgid "ZIP"
+msgstr "Kode Pos"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.view_partner_form
+msgid "ZIP Code"
+msgstr "Kode POS..."
+
+#. module: matakarir
+#: model:ir.model,name:matakarir.model_res_zipcode
+#: model:ir.model.fields,field_description:matakarir.field_res_partner__zipcode_id
+#: model:ir.model.fields,field_description:matakarir.field_res_zipcode__name
+#: model_terms:ir.ui.view,arch_db:matakarir.view_zip_tree
+#: model_terms:ir.ui.view,arch_db:matakarir.zipcode_template
+msgid "Zip Code"
+msgstr "Kode POS"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.zipcode_template
+msgid "Zip Code..."
+msgstr "Kode POS..."
+
+#. module: matakarir
+#: model:ir.actions.act_window,name:matakarir.action_res_zip_tree
+#: model:ir.model.fields,field_description:matakarir.field_res_area__zipcode_ids
+#: model:ir.ui.menu,name:matakarir.menu_zip_partner
+msgid "Zip Codes"
+msgstr "Kode POS"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.award_table
+#: model_terms:ir.ui.view,arch_db:matakarir.certificate_table
+#: model_terms:ir.ui.view,arch_db:matakarir.lisence_table
+#: model_terms:ir.ui.view,arch_db:matakarir.training_table
+msgid "by"
+msgstr "oleh"
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.crime_table
+msgid "in"
+msgstr "di dalam"
+
+#. module: matakarir
+#: selection:matakarir.training,status:0
+msgid "progress"
+msgstr "Proses"
+
+#. module: matakarir
+#: model:ir.model.fields,field_description:matakarir.field_matakarir_school__school_id
+msgid "school"
+msgstr "Sekolah "
+
+#. module: matakarir
+#: model_terms:ir.ui.view,arch_db:matakarir.medical_table
+msgid "since"
+msgstr "sejak"

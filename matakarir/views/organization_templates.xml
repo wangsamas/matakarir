@@ -1,0 +1,121 @@
+<odoo>
+    <data>
+        <template id="organization" name="Organization">
+            <t t-call="portal.portal_layout">
+                <t t-if="partner_id.organization_ids" t-call="matakarir.organization_table"/>
+                <h1 t-if="org_id" class="mt0">Edit Organization</h1>
+                <h1 t-else="" class="mt0">New Organization</h1>
+                <form t-attf-action="/save/organization" method="post" role="form" class="tag_text js_website_submit_form">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <input t-if="org_id" type="hidden" name="org_id" t-att-value="org_id.id"/>
+                    <p t-call="matakarir.organization_form"/>
+                    <div align="center">
+                        <a href="/my/home" class="btn btn-default">Cancel</a>
+                        <button type="submit" t-attf-class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </t>
+        </template>
+        
+        <template id="organization_form">
+            <table class="table o_area_selections">
+                <t t-if="org_id">
+                    <tr>
+                        <td><strong>Organization Name</strong></td>
+                        <td colspan="2"><span t-field="object.name"/></td>
+                    </tr>
+                </t>
+                <t t-else="">
+                    <p t-call="matakarir.country_template" />
+                    <p t-call="matakarir.state_template" />
+                    <p t-call="matakarir.city_template" />
+                    <p t-call="matakarir.district_template" />
+                    <p t-call="matakarir.village_template" />
+                    <p t-call="matakarir.area_template" />
+                    <tr>
+                        <td><strong>Organization Name</strong></td>
+                        <td id="input_company" style="display:none;"><input type="text" class="form-control" name="company_name" placeholder="Organization Name..."/></td>
+                        <td>
+                            <select name="company" class="form-control">
+                                <option value="">Organization...</option>
+                                <t t-foreach="companies or []" t-as="l">
+                                    <option t-att-value="l.id" t-att-selected="l.id == object.id if object else l.id == ''" t-att-data-country="l.country_id.id" t-att-data-state="l.state_id.id" t-att-data-city="l.city_id.id" t-att-data-district="l.district_id.id" t-att-data-village="l.village_id.id" t-att-data-area="l.area_id.id">
+                                        <t t-esc="l.name" />
+                                    </option>
+                                </t>
+                            </select>
+                        </td>
+                        <td><a href="#new_company" id="new_company"><i class="fa fa-plus-square"/>Add new</a></td>
+                    </tr>
+                </t>
+                <tr>
+                    <td><strong>Role</strong></td>
+                    <td t-if="org_id" colspan="2"><input type="text" name="role" class="form-control" t-att-value="org_id.role or role" /></td>
+                    <td t-else="" colspan="2"><input type="text" name="role" class="form-control" t-att-value="role" /></td>
+                </tr>
+                <tr>
+                    <td><strong>Role Description</strong></td>
+                    <td t-if="org_id" colspan="2">
+                        <textarea class="form-control" name="role_description"><t t-esc="org_id.role_description or role_description" /></textarea>
+                    </td>
+                    <td t-else="" colspan="2">
+                        <textarea class="form-control" name="role_description"><t t-esc="role_description" /></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Status</strong></td>
+                    <td colspan="2">
+                        <select class="form-control" name="status" required="required">
+                            <option t-if="org_id" t-att-value="org_id.status">
+                                <t t-esc="{'quit': 'Quit', 
+                                          'work': 'Work'}[org_id.status]" />
+                            </option>
+                            <option t-else="" value=""></option>
+                            <option value="quit">Quit</option>
+                            <option value="work">Work</option>
+                        </select>
+                    </td>                         
+                </tr>
+                <tr>
+                    <td><strong>Since</strong></td>
+                    <td t-if="org_id" colspan="2"><input type="date" name="since" class="form-control fa fa-calendar" t-att-value="org_id.since or since" required="required" /></td>
+                    <td t-else='' colspan="2"><input type="date" name="since" class="form-control fa fa-calendar" t-att-value="since" required="required" /></td>
+                </tr>
+                <tr>
+                    <td><strong>Until</strong></td>
+                    <td t-if="org_id" colspan="2"><input type="date" name="until" class="form-control fa fa-calendar" t-att-value="org_id.until or until" /></td>
+                    <td t-else='' colspan="2"><input type="date" name="until" class="form-control fa fa-calendar" t-att-value="until" /></td>
+                </tr>
+                <tr>
+                    <td><strong>Volunteer</strong></td>
+                    <td t-if="org_id" colspan="2"><input type="checkbox" name="volunteer" t-att-checked="'checked' if org_id.volunteer else None" /></td>
+                    <td t-else='' colspan="2"><input type="checkbox" name="volunteer" t-att-value="volunteer" /></td>
+                </tr>
+            </table>
+        </template>
+        
+        <template id="delete_organization" name="Delete organization">
+            <t t-call="portal.portal_layout">
+                <h1 class="mt0">Delete Organization</h1>
+                <form t-attf-action="/delete/organization" method="post" role="form" class="tag_text js_website_submit_form">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <input type="hidden" name="org_id" t-att-value="org_id.id"/>
+                    <table class="table table-striped table-condensed well well-lg">
+                        <tr>
+                            <td><strong>Organization Name</strong></td>
+                            <td><span t-field="org_id.organization_id.name"/></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Role</strong></td>
+                            <td><span t-field="org_id.role"/></td>
+                        </tr>
+                    </table>
+                    <h1 class="mt0">Are You sure?</h1>
+                    <a href="/my/home" class="btn btn-default">Cancel</a>
+                    <button type="submit" t-attf-class="btn btn-primary">Delete</button>
+                </form>
+            </t>
+        </template>
+        
+    </data>
+</odoo>

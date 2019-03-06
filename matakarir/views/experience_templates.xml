@@ -1,0 +1,246 @@
+<odoo>
+    <data>
+        <template id="experience" name="Experience">
+            <t t-call="portal.portal_layout">
+                <t t-if="partner_id.experience_ids" t-call="matakarir.experience_table"/>
+                <h1 t-if="experience_id" class="mt0">Edit Experience</h1>
+                <h1 t-else="" class="mt0">New Experience</h1>
+                <form t-attf-action="/save/experience" method="post" role="form" class="tag_text js_website_submit_form">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <input t-if="experience_id" type="hidden" name="experience_id" t-att-value="experience_id.id"/>
+                    <p t-call="matakarir.experience_form"/>
+                    <div align="center">
+                        <a href="/my/home" class="btn btn-default">Cancel</a>
+                        <button type="submit" t-attf-class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </t>
+        </template>
+        
+        <template id="experience_form">
+            <table class="table o_area_selections">
+                <t t-if="experience_id">
+                    <tr>
+                        <td><strong>Company Name</strong></td>
+                        <td colspan="2"><span t-field="object.name"/></td>
+                    </tr>
+                </t>
+                <t t-else="">
+                    <p t-call="matakarir.country_template" />
+                    <p t-call="matakarir.state_template" />
+                    <p t-call="matakarir.city_template" />
+                    <p t-call="matakarir.district_template" />
+                    <p t-call="matakarir.village_template" />
+                    <p t-call="matakarir.area_template" />
+                    <tr>
+                        <td><strong>Company Name</strong></td>
+                        <td id="input_company" style="display:none;"><input type="text" class="form-control" name="company_name" placeholder="Company Name..."/></td>
+                        <td>
+                            <select name="company" class="form-control">
+                                <option value="">Company...</option>
+                                <t t-foreach="companies or []" t-as="l">
+                                    <option t-att-value="l.id" t-att-selected="l.id == object.id if object else l.id == ''" t-att-data-country="l.country_id.id" t-att-data-state="l.state_id.id" t-att-data-city="l.city_id.id" t-att-data-district="l.district_id.id" t-att-data-village="l.village_id.id" t-att-data-area="l.area_id.id">
+                                        <t t-esc="l.name" />
+                                    </option>
+                                </t>
+                            </select>
+                        </td>
+                        <td><a href="#new_company" id="new_company"><i class="fa fa-plus-square"/>Add new</a></td>
+                    </tr>
+                </t>
+                <t t-if="not experience_id">
+                    <tr style="display:none;" class="company_info">
+                        <td><strong>Company Address</strong></td>
+                        <td colspan="2"><input type="text" name="street" placeholder="Address" class="form-control" /></td>
+                    </tr>
+                    <tr style="display:none;" class="company_info">
+                        <td />
+                        <td colspan="2"><input type="text" name="street2" placeholder="Additional Address" class="form-control" /></td>
+                    </tr>
+                    <tr style="display:none;" class="company_info">
+                        <td><strong>Company Website</strong></td>
+                        <td colspan="2"><input type="text" name="website" class="form-control" /></td>
+                    </tr>
+                    <tr style="display:none;" class="company_info">
+                        <td><strong>Company Email</strong></td>
+                        <td colspan="2"><input type="text" name="email" class="form-control" /></td>
+                    </tr>
+                    <tr style="display:none;" class="company_info">
+                        <td><strong>Company Phone</strong></td>
+                        <td colspan="2"><input type="tel" name="phone" class="form-control" /></td>
+                    </tr>
+                    <tr style="display:none;" class="company_info o_edit_industry">
+                        <td><strong>Company Industry</strong></td>
+                        <td id="input_industry" style="display:none;"><input type="text" class="form-control" name="industry_name" placeholder="New Industry..."/></td>
+                        <td>
+                            <select name="industry" class="form-control">
+                                <option value="">Industry...</option>
+                                <t t-foreach="industries or []" t-as="l">
+                                    <option t-att-value="l.id" t-att-selected="l.id == object.industry_id.id if object else l.id == ''">
+                                        <t t-esc="l.name" />
+                                    </option>
+                                </t>
+                            </select>
+                        </td>
+                        <td><a href="#new_industry" id="new_industry"><i class="fa fa-plus-square"/>Add new</a></td>
+                    </tr>
+                    <tr style="display:none;" class="company_info o_edit_companytype">
+                        <td><strong>Company Type</strong></td>
+                        <td id="input_companytype" style="display:none;"><input type="text" class="form-control" name="companytype_name" placeholder="New Company Type..."/></td>
+                        <td>
+                            <select name="companytype" class="form-control">
+                                <option value="">Company Type...</option>
+                                <t t-foreach="companytypes or []" t-as="l">
+                                    <option t-att-value="l.id" t-att-selected="l.id == object.companytype_id.id if object else l.id == ''">
+                                        <t t-esc="l.name" />
+                                    </option>
+                                </t>
+                            </select>
+                        </td>
+                        <td><a href="#new_companytype" id="new_companytype"><i class="fa fa-plus-square"/>Add new</a></td>
+                    </tr>
+                </t>
+                <tr>
+                    <td><strong>Job Name</strong></td>
+                    <td t-if="experience_id" colspan="2"><input type="text" name="job_name" class="form-control" t-att-value="experience_id.job_name or job_name" /></td>
+                    <td t-else="" colspan="2"><input type="text" name="job_name" class="form-control" t-att-value="job_name" /></td>
+                </tr>
+                <tr>
+                    <td><strong>Job Description</strong></td>
+                    <td t-if="experience_id" colspan="2">
+                        <textarea class="form-control" name="description"><t t-esc="experience_id.description or description" /></textarea>
+                    </td>
+                    <td t-else="" colspan="2">
+                        <textarea class="form-control" name="description"><t t-esc="description" /></textarea>
+                    </td>
+                </tr>
+                <tr class="o_edit_job_level">
+                    <td><strong>Job Level</strong></td>
+                    <td id="input_level" style="display:none;"><input type="text" class="form-control" name="level_name" placeholder="Level Name..."/></td>
+                    <td>
+                        <select name="level" class="form-control">
+                            <option value="">Level...</option>
+                            <t t-foreach="levels or []" t-as="l">
+                                <option t-att-value="l.id" t-att-selected="l.id == experience_id.level_id.id if experience_id else l.id == ''">
+                                    <t t-esc="l.name" />
+                                </option>
+                            </t>
+                        </select>
+                    </td>
+                    <td><a href="#new_level" id="new_level"><i class="fa fa-plus-square"/>Add new</a></td>
+                </tr>
+                <tr class="o_edit_department">
+                    <td><strong>Job Department</strong></td>
+                    <td id="input_department" style="display:none;"><input type="text" class="form-control" name="department_name" placeholder="Department Name..."/></td>
+                    <td>
+                        <select name="department" class="form-control">
+                            <option value="">Department...</option>
+                            <t t-foreach="departments or []" t-as="l">
+                                <option t-att-value="l.id" t-att-selected="l.id == experience_id.department_id.id if experience_id else l.id == ''">
+                                    <t t-esc="l.name" />
+                                </option>
+                            </t>
+                        </select>
+                    </td>
+                    <td><a href="#new_department" id="new_department"><i class="fa fa-plus-square"/>Add new</a></td>
+                </tr>
+                <tr class="o_edit_e_status">
+                    <td><strong>Employment Status</strong></td>
+                    <td id="input_e_status" style="display:none;"><input type="text" class="form-control" name="e_status_name" placeholder="Employment Status..."/></td>
+                    <td>
+                        <select name="e_status" class="form-control">
+                            <option value="">Employment Status...</option>
+                            <t t-foreach="e_statuses or []" t-as="l">
+                                <option t-att-value="l.id" t-att-selected="l.id == experience_id.e_status_id.id if experience_id else l.id == ''">
+                                    <t t-esc="l.name" />
+                                </option>
+                            </t>
+                        </select>
+                    </td>
+                    <td><a href="#new_e_status" id="new_e_status"><i class="fa fa-plus-square"/>Add new</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Status</strong></td>
+                    <td colspan="2">
+                        <select class="form-control" name="status" required="required">
+                            <option t-if="experience_id" t-att-value="experience_id.status">
+                                <t t-esc="{'quit': 'Quit', 
+                                          'work': 'Work'}[experience_id.status]" />
+                            </option>
+                            <option t-else="" value=""></option>
+                            <option value="quit">Quit</option>
+                            <option value="work">Work</option>
+                        </select>
+                    </td>                         
+                </tr>
+                <tr>
+                    <td><strong>Since</strong></td>
+                    <td t-if="experience_id" colspan="2"><input type="date" name="since" class="form-control fa fa-calendar" t-att-value="experience_id.since or since" required="required" /></td>
+                    <td t-else="" colspan="2"><input type="date" name="since" class="form-control fa fa-calendar" t-att-value="since" required="required" /></td>
+                </tr>
+                <tr>
+                    <td><strong>Until</strong></td>
+                    <td t-if="experience_id" colspan="2"><input type="date" name="until" class="form-control fa fa-calendar" t-att-value="experience_id.until or until" /></td>
+                    <td t-else="" colspan="2"><input type="date" name="until" class="form-control fa fa-calendar" t-att-value="until" /></td>
+                </tr>
+                <tr>
+                    <td><strong>Salary</strong></td>
+                    <td t-if="experience_id" colspan="2"><input type="tel" name="salary" class="form-control" t-att-value="experience_id.salary or salary" /></td>
+                    <td t-else="" colspan="2"><input type="tel" name="salary" class="form-control" t-att-value="salary" /></td>
+                </tr>
+                <tr>
+                    <td><strong>Allowance</strong></td>
+                    <td t-if="experience_id" colspan="2"><input type="tel" name="allowance" class="form-control" t-att-value="experience_id.allowance or allowance" /></td>
+                    <td t-else="" colspan="2"><input type="tel" name="allowance" class="form-control" t-att-value="allowance" /></td>
+                </tr>
+                <tr>
+                    <td><strong>Bonus</strong></td>
+                    <td t-if="experience_id" colspan="2"><input type="tel" name="bonus" class="form-control" t-att-value="experience_id.bonus or bonus" /></td>
+                    <td t-else="" colspan="2"><input type="tel" name="bonus" class="form-control" t-att-value="bonus" /></td>
+                </tr>
+                <tr>
+                    <td><strong>Quit Reason</strong></td>
+                    <td t-if="experience_id" colspan="2"><input type="text" name="quit_reason" class="form-control" t-att-value="experience_id.quit_reason or quit_reason" /></td>
+                    <td t-else="" colspan="2"><input type="text" name="quit_reason" class="form-control" t-att-value="quit_reason" /></td>
+                </tr>
+                <tr>
+                    <td><strong>Achievement</strong></td>
+                    <td t-if="experience_id" colspan="2"><input type="text" name="achievement" class="form-control" t-att-value="experience_id.achievement or achievement" /></td>
+                    <td t-else="" colspan="2"><input type="text" name="achievement" class="form-control" t-att-value="achievement" /></td>
+                </tr>
+            </table>
+        </template>
+        
+        <template id="delete_experience" name="Delete Experience">
+            <t t-call="portal.portal_layout">
+                <h1 class="mt0">Delete Experience</h1>
+                <form t-attf-action="/delete/experience" method="post" role="form" class="tag_text js_website_submit_form">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <input type="hidden" name="experience_id" t-att-value="experience_id.id"/>
+                    <table class="table table-striped table-condensed well well-lg">
+                        <tr>
+                            <td><strong>Company Name</strong></td>
+                            <td><span t-field="experience_id.company_id.name"/></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Job Name</strong></td>
+                            <td><span t-field="experience_id.job_name"/></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Job Level</strong></td>
+                            <td><span t-field="experience_id.level_id.name"/></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Job Department</strong></td>
+                            <td><span t-field="experience_id.department_id.name"/></td>
+                        </tr>
+                    </table>
+                    <h1 class="mt0">Are You sure?</h1>
+                    <a href="/my/home" class="btn btn-default">Cancel</a>
+                    <button type="submit" t-attf-class="btn btn-primary">Delete</button>
+                </form>
+            </t>
+        </template>
+        
+    </data>
+</odoo>

@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="applicant_profile" name="Application">
+        <t t-call="hr_apply.activities_layout">
+            <div class="container mt16 o_portal">
+                <div class="oe_structure">
+                    <div align="center" class="container col-md-12 mb16">
+                        <h3 class="page-header">Application for <span t-field="vacancy.name" /> by <span t-field="partner.name" /></h3>
+                        <h5>Criteria score : <span t-field="application.criteria_score" /> % </h5>
+                        <h5>Qualification score : <span t-field="application.qualification_score" /> % </h5>
+                        <h3>Total score : <span t-field="application.total_score" /> % </h3>
+                    </div>
+                </div>
+            </div>
+            <div id="wrap" class='o_portal_wrap'>
+                <div class="container mb64">
+                    <div class="row">
+                        <div id="o_my_sidebar" class="col-md-4 col-lg-offset-1 o_my_sidebar">
+                            <t t-call="hr_apply.application_form_view" />
+                        </div>
+                        <div t-attf-class="col-md-9 col-lg-8">
+                            <t t-call="questionaire.my_method_categories" />
+                            <t t-call="hr_apply.applicant_form_view" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div align="center" id="application_buttons" class="oe_structure">
+                <div class="container col-md-12 mb16" t-if="partner_id == application.job_partner_id and application.status not in ['draft', 'canceled', 'rejected']">
+                    <a t-attf-href="/hire/application/#{slug(application)}" class="btn btn-primary btn-lg">Hire</a>
+                    <a t-attf-href="/reject/application/#{slug(application)}" class="btn btn-danger btn-lg">Reject</a>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="application_form" name="Application">
+        <t t-call="hr_apply.activities_layout">
+            <div class="container mt16 o_portal">
+                <div class="oe_structure">
+                    <div align="center" class="container col-md-12 mb16">
+                        <h3 class="page-header">Application for <span t-field="vacancy.name" /> by <span t-field="partner.name" /></h3>
+                        <h5>Criteria score : <span t-field="application.criteria_score" /> % </h5>
+                        <h5>Qualification score : <span t-field="application.qualification_score" /> % </h5>
+                        <h3>Total score : <span t-field="application.total_score" /> % </h3>
+                    </div>
+                </div>
+            </div>
+            <div id="wrap" class='o_portal_wrap'>
+                <div class="container mb64">
+                    <div class="row">
+                        <div id="o_my_sidebar" class="col-md-4 col-lg-offset-1 o_my_sidebar">
+                            <t t-call="hr_apply.application_form_view" />
+                        </div>
+                        <div t-attf-class="col-md-9 col-lg-8">
+                            <t t-call="hr_apply.application_form_view2" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div align="center" id="application_buttons" class="oe_structure">
+                <div class="container col-md-12 mb16" t-if="partner_id == application.job_partner_id and application.status not in ['draft', 'canceled', 'rejected']">
+                    <a t-attf-href="/hire/application/#{slug(application)}" class="btn btn-primary btn-lg">Hire</a>
+                    <a t-attf-href="/reject/application/#{slug(application)}" class="btn btn-danger btn-lg">Reject</a>
+                </div>
+            </div>
+        </t>
+    </template>
+            
+    <template id="applicant_form_view">
+        <div class="oe_structure">
+            <table t-if="partner.experience_ids" class="table table-striped container">
+                <tr align="right"><th><h3>Work Experience</h3></th></tr>
+                <tr t-foreach="partner.experience_ids" t-as="line">
+                      <td class='td-name'>
+                          <b><span t-field="line.job_name"/></b><br/>
+                          <t t-if="line.level_id"><span t-field="line.level_id"> </span></t>
+                          <t t-if="line.department_id"><span t-field="line.department_id"/></t>
+                          <t t-if="line.e_status_id"> (<span t-field="line.e_status_id"/>)<br/></t>
+                          <span t-if="line.description" t-field="line.description"/><br/>
+                          <b><span t-field="line.name"/> </b>
+                          <span t-if="line.company_id.city_id" t-field="line.company_id.city_id">, </span>
+                          <span t-field="line.company_id.country_id"/> <span t-field="line.company_id.phone"/><br/>
+                          <span t-field="line.since"/> - <span t-field="line.until"/>
+                          <t t-if="line.status"> (<span t-field="line.status"/>)</t><br/>
+                          <span><b>Salary: </b></span>
+                          <span t-field="line.salary"/><br/>
+                          <span t-if="line.allowance"><b>Allowance: </b></span>
+                          <span t-if="line.allowance" t-field="line.allowance"/><br/>
+                          <span t-if="line.bonus"><b>Bonus: </b></span>
+                          <span t-if="line.bonus" t-field="line.bonus"/>
+                      </td>
+                </tr>
+            </table>
+            <table t-if="partner.organization_ids" class="table table-striped container">
+                <tr align="right"><th><h3>Organization Experience</h3></th></tr>
+                <tr t-foreach="partner.organization_ids" t-as="line">
+                    <td class='td-stage'>
+                        <b><span t-field="line.role"/> <span t-field="line.name"/> </b><t t-if="line.organization_id.city_id"><span t-field="line.organization_id.city_id" /> </t> 
+                        <span t-field="line.organization_id.country_id"/> <br/>
+                        <t t-if="line.status"><span t-field="line.role_description"/> <br/></t>
+                        <t t-if="line.organization_id.description"><span t-field="line.organization_id.description" /><br/></t>
+                        <span t-field="line.since"/> - <span t-field="line.until"/>
+                        <t t-if="line.status"> (<span t-field="line.status"/>)</t>
+                        <span t-if="line.volunteer"> (Volunteer) </span>
+                    </td>
+                </tr>
+            </table>
+            <table t-if="partner.organization_ids" class="table table-striped container">
+                <tr align="right"><th><h3>Organization Experience</h3></th></tr>
+                <tr t-foreach="partner.organization_ids" t-as="line">
+                </tr>
+            </table>
+            <table t-if="partner.university_ids" class="table table-striped container">
+                <tr align="right"><th><h3>University</h3></th></tr>
+                <tr t-foreach="partner.university_ids" t-as="line">
+                  <td class='td-degree'>
+                    <span t-field="line.degree_id"/> <span t-field="line.faculty_id"/> <span t-field="line.major_id"/><br/>
+                    <span t-field="line.name"/> <span t-if="line.university_id.city_id" t-field="line.university_id.city_id">, </span>
+                    <span t-field="line.university_id.country_id"/><br/>
+                    <span t-field="line.since"/> - <span t-field="line.until"/> (<span t-field="line.status"/>)<br/>
+                    Score: <span t-field="line.score"/> <span t-if="line.schollarship">(Schollarship)</span>
+                  </td>
+                </tr>
+            </table>
+            <table t-if="partner.school_ids" class="table table-striped container">
+                <tr align="right"><th><h3>School</h3></th></tr>
+                <tr t-foreach="partner.school_ids" t-as="line">
+                  <td class='td-stage'>
+                    <span t-field="line.name"/> (<span t-field="line.stage_id"/> )<br/>
+                    <span t-if="line.school_id.city_id" t-field="line.school_id.city_id">, </span>
+                    <span t-field="line.school_id.country_id"/><br/>
+                    <span t-field="line.since"/> - <span t-field="line.until"/> (<span t-field="line.status"/>)<br/>
+                    Score: <span t-field="line.score"/> <span t-if="line.schollarship">(Schollarship)</span>
+                  </td>
+                </tr>
+            </table>
+            <table t-if="partner.training_ids" class="table table-striped container">
+                <tr align="right"><th><h3>Trainings</h3></th></tr>
+                <tr t-foreach="partner.training_ids" t-as="line">
+                  <td class='td-training'>
+                    <span t-field="line.title"/> by <span t-field="line.trainer_id.name"/> <span t-if="line.trainer_id.city_id" t-field="line.trainer_id.city_id">, </span>
+                    <span t-field="line.trainer_id.country_id"/><br/>
+                    <span t-field="line.since"/> - <span t-field="line.until"/> (<span t-field="line.status"/>)<br/>
+                    Score: <span t-field="line.score"/> <span t-if="line.schollarship">(Schollarship)</span>  
+                  </td>
+                </tr>
+            </table>
+            <table t-if="partner.achievement_ids" class="table table-striped container">
+                <tr align="right"><th><h3>Achievements</h3></th></tr>
+                <tr t-foreach="partner.achievement_ids" t-as="line">
+                    <td class='td-name'>
+                        <span t-field="line.name"/> (<span t-field="line.since"/>)<br/>
+						<span t-field="line.description"/>
+                    </td>
+                </tr>
+            </table>
+            <table t-if="partner.award_ids" class="table table-striped container">
+                <tr align="right"><th><h3>Awards</h3></th></tr>
+                <tr t-foreach="partner.award_ids" t-as="line">
+                    <td class='td-award'>
+                        <span t-field="line.title"/> by <span t-field="line.awarder_id.name"/>,
+                        <span t-if="line.awarder_id.city_id" t-field="line.awarder_id.city_id">, </span>
+                        <span t-field="line.awarder_id.country_id"/> (<span t-field="line.since"/>)
+                    </td>
+                </tr>
+            </table>
+            <table t-if="partner.certificate_ids" class="table table-striped container">
+                <tr align="right"><th><h3>Certificates</h3></th></tr>
+                <tr t-foreach="partner.certificate_ids" t-as="line">
+                    <td class='td-title'>
+                      <span t-field="line.name"/> by <span t-field="line.certificate_id.publisher_id.name"/>, <span t-field="line.certificate_id.country_id"/> (<span t-field="line.since"/>)<br/>
+                       Certificate number: <span t-field="line.number"/> 
+                    </td>
+                </tr>
+            </table>
+            <table t-if="partner.lisence_ids" class="table table-striped container">
+                <tr align="right"><th><h3>Lisences</h3></th></tr>
+                <tr t-foreach="partner.lisence_ids" t-as="line">
+                    <td class='td-name'>
+                        <span t-field="line.name"/> <t t-if="line.number">: <span t-field="line.number"/></t>  by <span t-field="line.lisence_id.publisher_id"/>, <span t-field="line.lisence_id.country_id"/><br/>
+                        <span t-field="line.since"/> - <span t-field="line.until"/> (<span t-field="line.status"/>)
+                    </td>
+                </tr>
+            </table>
+            <table t-if="partner.langskill_ids" class="table table-striped container">
+                <tr align="right"><th colspan="2"><h3>Language Skills</h3></th></tr>
+                <tr t-foreach="partner.langskill_ids" t-as="line">
+                    <td class='td-name'>
+                      <span t-field="line.name"/> (listening)<br/>
+                      <span t-field="line.name"/> (speaking)<br/>
+                      <span t-field="line.name"/> (reading)<br/>
+                      <span t-field="line.name"/> (writing)
+                    </td>
+                    <td class='td-listenskill'>
+                      <span t-field="line.listenskill"/><br/> 
+                      <span t-field="line.speakskill"/><br/>
+                      <span t-field="line.readskill"/><br/>
+                      <span t-field="line.writeskill"/>
+                    </td>
+                </tr>
+            </table>
+            <table t-if="partner.comskill_ids" class="table table-striped container">
+                <tr align="right"><th colspan="2"><h3>Computer Skills</h3></th></tr>
+                <tr t-foreach="partner.comskill_ids" t-as="line">
+                    <td class='td-name'>
+                      <span t-field="line.name"/>
+                    </td>
+                    <td class='td-level'>
+                      <span t-field="line.level"/> 
+                    </td>
+                </tr>
+            </table>
+            <table t-if="partner.skill_ids" class="table table-striped container">
+                <tr align="right"><th colspan="2"><h3>Other Skills</h3></th></tr>
+                <tr t-foreach="partner.skill_ids" t-as="line">
+                    <td class='td-name'>
+                      <span t-field="line.name"/>
+                    </td>
+                    <td class='td-level'>
+                      <span t-field="line.level"/> 
+                    </td>
+                </tr>
+            </table>
+            <table t-if="partner.medical_ids" class="table table-striped container">
+                <tr align="right"><th><h3>Medical Records</h3></th></tr>
+                <tr t-foreach="partner.medical_ids" t-as="line">
+                    <td class='td-name'>
+                        <span t-field="line.name"/> since <span t-field="line.since"/><br/>
+                        <span t-field="line.description"/> (<span t-field="line.status"/>)
+                    </td>
+                </tr>
+            </table>
+            <table t-if="partner.crime_ids" class="table table-striped container">
+                <tr align="right"><th><h3>Criminal Records</h3></th></tr>
+                <tr t-foreach="partner.crime_ids" t-as="line">
+                    <td class='td-name'>
+                        <span t-field="line.name"/> in <span t-field="line.since"/> (<span t-field="line.status"/>)
+                    </td>
+                </tr>
+            </table>
+            <table class="table">
+                <tr><td align="center"><a t-attf-href="/application/#{slug(application)}" class="btn btn-primary btn-lg">Go To Interview</a></td></tr>
+            </table>
+        </div>
+    </template>
+    
+    <template id="application_form_view">
+            <div class="oe_structure">
+                <table class="table container">
+                    <tr><td colspan="3" align="center"><img class="img img-responsive" t-attf-src="/my/avatar/#{partner.id}"/></td></tr>
+                    <tr align="center"><td colspan="3"><h3  t-if="partner.alias_id" t-field="partner.alias_id.name" />
+                        <h3 t-field="partner.name" /></td></tr>
+                    <tr><td colspan="3"><span t-field="partner.gender" />, <span t-field="partner.marital" />
+                        , <span t-field="partner.dependents" /> dependents<span t-if="partner.smoker" >, smoker</span><br/>
+                        Height : <span t-field="partner.height" /><br/>
+                        Weight : <span t-field="partner.weight" />
+                        </td></tr>
+                    <tr t-if="partner.description"><td colspan="3"><h4 t-field="partner.description" /></td></tr>
+                    <tr><td colspan="3" align="center"><a t-attf-href="/applicant/#{slug(application)}" class="btn btn-primary">View Applicant Profile</a></td></tr>
+                    <tr t-if="vacancy.min_age or vacancy.max_age">
+                        <td><strong>Qualified Age</strong><br/>
+                            <span t-field="vacancy.min_age" /> - <span t-field="vacancy.max_age" /></td>
+                        <td><strong>Applicant Age</strong><br/>
+                            <span t-field="application.applicant_age" /></td>
+                        <td t-if="application.qualified_age == True" style="color:white; background-color:green" align="center"><b>Qualified</b></td>
+                        <td t-else="application.qualified_age == False" style="color:white; background-color:red" align="center"><b>Not Qualified</b></td>
+                    </tr>
+                    <tr t-if="vacancy.country_id">
+                        <td><strong>Job Country</strong> <br/>
+                            <span t-field="vacancy.country_id" /></td>
+                        <td><strong>Applicant Country</strong> <br/>
+                            <span t-field="partner.country_id" /></td>
+                        <td t-if="application.qualified_country == True" style="color:white; background-color:green" align="center"><b>Match</b></td>
+                        <td t-else="application.qualified_country == False" style="color:white; background-color:red" align="center"><b>Not Match</b></td>
+                    </tr>
+                    <tr t-if="vacancy.state_id and application.qualified_country == True">
+                        <td><strong>Job Province</strong> <br/>
+                            <span t-field="vacancy.state_id" /></td>
+                        <td><strong>Applicant Province</strong> <br/>
+                            <span t-field="partner.state_id" /></td>
+                        <td t-if="application.qualified_state == True" style="color:white; background-color:green" align="center"><b>Match</b></td>
+                        <td t-else="application.qualified_state == False" style="color:white; background-color:red" align="center"><b>Not Match</b></td>
+                    </tr>
+                    <tr t-if="vacancy.city_id and application.qualified_state == True">
+                        <td><strong>Job City</strong> <br/>
+                            <span t-field="vacancy.city_id" /></td>
+                        <td><strong>Applicant City</strong> <br/>
+                            <span t-field="partner.city_id" /></td>
+                        <td t-if="application.qualified_city == True" style="color:white; background-color:green" align="center"><b>Match</b></td>
+                        <td t-else="application.qualified_city == False" style="color:white; background-color:red" align="center"><b>Not Match</b></td>
+                    </tr>
+                    <tr t-if="vacancy.district_id and application.qualified_city == True">
+                        <td><strong>Job District</strong> <br/>
+                            <span t-field="vacancy.district_id" /></td>
+                        <td><strong>Applicant District</strong> <br/>
+                            <span t-field="partner.district_id" /></td>
+                        <td t-if="application.qualified_district == True" style="color:white; background-color:green" align="center"><b>Match</b></td>
+                        <td t-else="application.qualified_district == False" style="color:white; background-color:red" align="center"><b>Not Match</b></td>
+                    </tr>
+                    <tr t-if="vacancy.village_id and application.qualified_district == True">
+                        <td><strong>Job Village</strong> <br/>
+                            <span t-field="vacancy.village_id" /></td>
+                        <td><strong>Applicant Village</strong> <br/>
+                            <span t-field="partner.village_id" /></td>
+                        <td t-if="application.qualified_village == True" style="color:white; background-color:green" align="center"><b>Match</b></td>
+                        <td t-else="application.qualified_village == False" style="color:white; background-color:red" align="center"><b>Not Match</b></td>
+                    </tr>
+                    <tr t-if="vacancy.area_id and application.qualified_village == True">
+                        <td><strong>Job Area</strong> <br/>
+                            <span t-field="vacancy.area_id" /></td>
+                        <td><strong>Applicant Area</strong> <br/>
+                            <span t-field="partner.area_id" /></td>
+                        <td t-if="application.qualified_area == True" style="color:white; background-color:green" align="center"><b>Match</b></td>
+                        <td t-else="application.qualified_area == False" style="color:white; background-color:red" align="center"><b>Not Match</b></td>
+                    </tr>
+                    <tr t-if="vacancy.ethnic_id and application.job_partner_id == partner_id">
+                        <td><strong>Job Ethnic</strong> <br/>
+                            <span t-field="vacancy.ethnic_id" /></td>
+                        <td><strong>Applicant Ethnic</strong> <br/>
+                            <span t-field="partner.ethnic_id" /></td>
+                        <td t-if="application.qualified_ethnic == True" style="color:white; background-color:green" align="center"><b>Match</b></td>
+                        <td t-else="application.qualified_ethnic == False" style="color:white; background-color:red" align="center"><b>Not Match</b></td>
+                    </tr>
+                    <tr t-if="vacancy.religion_id and application.job_partner_id == partner_id">
+                        <td><strong>Job Religion</strong> <br/>
+                            <span t-field="vacancy.religion_id" /></td>
+                        <td><strong>Applicant Religion</strong> <br/>
+                            <span t-field="partner.religion_id" /></td>
+                        <td t-if="application.qualified_religion == True" style="color:white; background-color:green" align="center"><b>Match</b></td>
+                        <td t-else="application.qualified_religion == False" style="color:white; background-color:red" align="center"><b>Not Match</b></td>
+                    </tr>
+                    <t t-if="application.criteria_scores_ids">
+                        <tr>
+                            <th t-att-rowspan="len(application.criteria_scores_ids)+1" class="noborder">Criteria Match</th>
+                            <td colspan="2">
+                                <tr t-foreach="application.criteria_scores_ids" t-as="x">
+                                    <td><span t-field="x.criteria_id.classification_id"/></td>
+                                    <td t-if="x.score == 2" style="color:white; background-color:green" align="center"><b>Strong</b></td>
+                                    <td t-elif="x.score == 1" style="color:white; background-color:yellow" align="center"><b>Average</b></td>
+                                    <td t-elif="x.score == 0" style="color:white; background-color:red" align="center"><b>Weak</b></td>
+                                    <td t-else=""/>
+                                </tr>
+                            </td>
+                        </tr>
+                    </t>
+                    <t t-if="application.qualified_tool_ids">
+                        <tr>
+                            <th t-att-rowspan="len(application.qualified_tool_ids)+1" class="noborder">Required Tools</th>
+                            <td colspan="2">
+                                <tr t-foreach="application.qualified_tool_ids" t-as="x">
+                                    <td><span t-field="x.name"/></td>
+                                    <td t-if="x.qualified == True" style="color:white; background-color:green" align="center"><b>Qualified</b></td>
+                                    <td t-else="" style="color:white; background-color:red" align="center"><b>Not Qualified</b></td>
+                                </tr>
+                            </td>
+                        </tr>
+                    </t>
+                    <t t-if="application.qualified_certificate_ids">
+                        <tr>
+                            <th t-att-rowspan="len(application.qualified_certificate_ids)+1" class="noborder">Required Certificates</th>
+                            <td colspan="2">
+                                <tr t-foreach="application.qualified_certificate_ids" t-as="x">
+                                    <td><span t-field="x.name"/></td>
+                                    <td t-if="x.qualified == True" style="color:white; background-color:green" align="center"><b>Qualified</b></td>
+                                    <td t-else="" style="color:white; background-color:red" align="center"><b>Not Qualified</b></td>
+                                </tr>
+                            </td>
+                        </tr>
+                    </t>
+                    <t t-if="application.qualified_lisence_ids">
+                        <tr>
+                            <th t-att-rowspan="len(application.qualified_lisence_ids)+1" class="noborder">Required Lisences</th>
+                            <td colspan="2">
+                                <tr t-foreach="application.qualified_lisence_ids" t-as="x">
+                                    <td><span t-field="x.name"/></td>
+                                    <td t-if="x.qualified == True" style="color:white; background-color:green" align="center"><b>Qualified</b></td>
+                                    <td t-else="" style="color:white; background-color:red" align="center"><b>Not Qualified</b></td>
+                                </tr>
+                            </td>
+                        </tr>
+                    </t>
+                    <t t-if="application.qualified_driving_lisence_ids">
+                        <tr>
+                            <th t-att-rowspan="len(application.qualified_driving_lisence_ids)+1" class="noborder">Required Driving Lisences</th>
+                            <td colspan="2">
+                                <tr t-foreach="application.qualified_driving_lisence_ids" t-as="x">
+                                    <td><span t-field="x.name"/></td>
+                                    <td t-if="x.qualified == True" style="color:white; background-color:green" align="center"><b>Qualified</b></td>
+                                    <td t-else="" style="color:white; background-color:red" align="center"><b>Not Qualified</b></td>
+                                </tr>
+                            </td>
+                        </tr>
+                    </t>
+                    <t t-if="application.qualified_skill_ids">
+                        <tr>
+                            <th t-att-rowspan="len(application.qualified_skill_ids)+1" class="noborder">Required Skills</th>
+                            <td colspan="2">
+                                <tr t-foreach="application.qualified_skill_ids" t-as="x">
+                                    <td><span t-field="x.name"/></td>
+                                    <td t-if="x.qualified == True" style="color:white; background-color:green" align="center"><b>Qualified</b></td>
+                                    <td t-else="" style="color:white; background-color:red" align="center"><b>Not Qualified</b></td>
+                                </tr>
+                            </td>
+                        </tr>
+                    </t>
+                    <t t-if="application.qualified_langskill_ids">
+                        <tr>
+                            <th t-att-rowspan="len(application.qualified_langskill_ids)+1" class="noborder">Required Language Skills</th>
+                            <td colspan="2">
+                                <tr t-foreach="application.qualified_langskill_ids" t-as="x">
+                                    <td><span t-field="x.name"/></td>
+                                    <td t-if="x.qualified == True" style="color:white; background-color:green" align="center"><b>Qualified</b></td>
+                                    <td t-else="" style="color:white; background-color:red" align="center"><b>Not Qualified</b></td>
+                                </tr>
+                            </td>
+                        </tr>
+                    </t>
+                    <t t-if="application.qualified_comskill_ids">
+                        <tr>
+                            <th t-att-rowspan="len(application.qualified_comskill_ids)+1" class="noborder">Required Computer Skills</th>
+                            <td colspan="2">
+                                <tr t-foreach="application.qualified_comskill_ids" t-as="x">
+                                    <td><span t-field="x.name"/></td>
+                                    <td t-if="x.qualified == True" style="color:white; background-color:green" align="center"><b>Qualified</b></td>
+                                    <td t-else="" style="color:white; background-color:red" align="center"><b>Not Qualified</b></td>
+                                </tr>
+                            </td>
+                        </tr>
+                    </t>
+                    <t t-if="application.qualified_school_ids">
+                        <tr>
+                            <th t-att-rowspan="len(application.qualified_school_ids)+1" class="noborder">Qualified Schools</th>
+                            <td colspan="2">
+                                <tr t-foreach="application.qualified_school_ids" t-as="x">
+                                    <td><span t-field="x.name"/></td>
+                                    <td t-if="x.qualified == True" style="color:white; background-color:green" align="center"><b>Qualified</b></td>
+                                    <td t-else="" style="color:white; background-color:red" align="center"><b>Not Qualified</b></td>
+                                </tr>
+                            </td>
+                        </tr>
+                    </t>
+                    <t t-if="application.qualified_university_ids">
+                        <tr>
+                            <th t-att-rowspan="len(application.qualified_university_ids)+1" class="noborder">Qualified Universities</th>
+                            <td colspan="2">
+                                <tr t-foreach="application.qualified_university_ids" t-as="x">
+                                    <td>
+                                        <span t-if="x.object_id.degree_id"><span t-field="x.object_id.degree_id.name"/> </span>
+                                        <span t-if="x.object_id.faculty_id"><span t-field="x.object_id.faculty_id.name"/> </span>
+                                        <span t-if="x.object_id.major_id"><span t-field="x.object_id.major_id.name"/> </span>
+                                    </td>
+                                    <td t-if="x.qualified == True" style="color:white; background-color:green" align="center"><b>Qualified</b></td>
+                                    <td t-else="" style="color:white; background-color:red" align="center"><b>Not Qualified</b></td>
+                                </tr>
+                            </td>
+                        </tr>
+                    </t>
+                    <t t-if="application.qualified_experience_ids">
+                        <tr>
+                            <th t-att-rowspan="len(application.qualified_experience_ids)+1" class="noborder">Qualified Experiences</th>
+                            <td colspan="2">
+                                <tr t-foreach="application.qualified_experience_ids" t-as="x">
+                                    <td>
+                                        <span t-field="x.object_id.min_exp"/> year(s) of work 
+                                        <span t-if="x.object_id.joblevel_id">as <span t-field="x.object_id.joblevel_id.name"/> </span>
+                                        <span t-if="x.object_id.department_id">in department of <span t-field="x.object_id.department_id.name"/> </span>
+                                        <span t-if="x.object_id.industry_id">in industry of <span t-field="x.object_id.industry_id.name"/> </span>
+                                    </td>
+                                    <td t-if="x.qualified == True" style="color:white; background-color:green" align="center"><b><span t-field="x.age"/></b></td>
+                                    <td t-else="" style="color:white; background-color:red" align="center"><b><span t-field="x.age"/></b></td>
+                                </tr>
+                            </td>
+                        </tr>
+                    </t>
+                </table>
+                <div class="container mb16" t-if="partner_id == application.partner_id" align="center">
+                    <p><a t-if="application.status == 'draft'" t-attf-href="/my/home" class="btn btn-primary btn-lg">Edit My Profile</a></p>
+                    <p><a t-if="application.status == 'draft'" t-attf-href="/apply/vacancy/#{slug(vacancy)}" class="btn btn-default btn-lg">Refresh Application</a></p>
+                    <p><a t-if="application.status == 'draft'" t-attf-href="/submit/application/#{slug(application)}" class="btn btn-warning btn-lg">Submit Application</a></p>
+                    <p><a t-if="application.status not in ['draft', 'canceled']" t-attf-href="/cancel/application/#{slug(application)}" class="btn btn-danger btn-lg">Cancel Application</a></p>
+                </div>
+            </div>
+    </template>
+
+    <template id="application_form_view2">
+        <div class="oe_structure" t-if="application.status not in ['draft', 'canceled']">
+            <form t-attf-action="/submit/interview/#{slug(application)}" method="post" role="form" class="tag_text js_website_submit_form">
+            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                <table class="table container">
+                    <tr style="color: white; background-color:green"><td align="center"><h3>Interview</h3></td></tr>
+                    <tr><td>
+                            <textarea class="form-control" name="message" placeholder="Enter your message here..."/>
+                    </td></tr>
+                    <tr><td align="center">
+                            <button align="center" type="submit" t-attf-class="btn btn-primary">Submit</button>
+                    </td></tr>
+                </table>
+            </form>
+            <t t-call="website.pager" >
+                <t t-set="classname">float-right</t>
+            </t>
+            <table class="table container">
+                <thead>
+                    <tr style="color: white; background-color:green"><th colspan="2"><h3 align="center">Messages</h3></th></tr>
+                </thead>
+                <tbody>
+                    <t t-if="interview_ids" t-foreach="interview_ids" t-as="interview">
+                        <tr t-if="interview.writer_id == interview.interviewer_id" style="color: white; background-color:purple">
+                            <td><span t-field="interview.writer_id" /></td>
+                            <td align="right"><span t-field="interview.write_date" /></td>
+                        </tr>
+                        <tr t-else="" style="color: white; background-color:orange">
+                            <td><span t-field="interview.writer_id" /></td>
+                            <td align="right"><span t-field="interview.write_date" /></td>
+                        </tr>
+                        <tr style="background-color:lightgrey">
+                            <td colspan="2">
+                                <h5 t-field="interview.message" />
+<!--
+                                <span align="right"><a t-attf-href="/remove/message/#{slug(interview)}" class="btn btn-danger">remove</a></span>
+-->
+                            </td>
+                        </tr>
+                    </t>
+                    <t t-else="">
+                        <tr>
+                            <td colspan="2" align ="center">
+                                <h4>No Interview Message Yet</h4>
+                            </td>
+                        </tr>
+                    </t>
+                </tbody>
+            </table>
+            <t t-call="website.pager" >
+                <t t-set="classname">float-right</t>
+            </t>
+        </div>
+    </template>
+        
+    <template id="edit_my_info" name="My Informations">
+        <t t-call="portal.portal_layout">
+            <form t-attf-action="/submit/informations" method="post" role="form" class="tag_text js_website_submit_form">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                <input t-if="vacancy" type="hidden" name="vacancy" t-att-value="vacancy.id"/>
+                <input t-if="word" type="hidden" name="word" t-att-value="word"/>
+                <p t-call="matakarir.my_info" />
+                <div align="center">
+                    <button type="submit" t-attf-class="btn btn-primary" align="center">Submit</button>
+                </div>
+            </form>
+        </t>
+    </template>
+
+    <template id="edit_my_identity" name="My Identity">
+        <t t-call="portal.portal_layout">
+            <form t-attf-action="/submit/identity" method="post" role="form" class="tag_text js_website_submit_form">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                <input t-if="vacancy" type="hidden" name="vacancy" t-att-value="vacancy.id"/>
+                <input t-if="word" type="hidden" name="word" t-att-value="word"/>
+                <p t-call="matakarir.my_identity" />
+                <div align="center">
+                    <button type="submit" t-attf-class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </t>
+    </template>
+
+    <template id="edit_other_info" name="Extra Informations">
+        <t t-call="portal.portal_layout">
+            <form t-attf-action="/submit/otherinfo" method="post" role="form" class="tag_text js_website_submit_form">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                <input t-if="vacancy" type="hidden" name="vacancy" t-att-value="vacancy.id"/>
+                <input t-if="word" type="hidden" name="word" t-att-value="word"/>
+                <p t-call="matakarir.other_info" />
+                <div align="center">
+                    <button type="submit" t-attf-class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </t>
+    </template>
+
+</odoo>

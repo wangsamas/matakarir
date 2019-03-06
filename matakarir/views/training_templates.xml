@@ -1,0 +1,97 @@
+<odoo>
+    <data>
+        <template id="training" name="Trainings">
+            <t t-call="portal.portal_layout">
+                <t t-if="partner_id.training_ids" t-call="matakarir.training_table"/>
+                <h1 t-if="training_id" class="mt0">Edit Training</h1>
+                <h1 t-else="" class="mt0">New Training</h1>
+                <form t-attf-action="/save/training" method="post" role="form" class="tag_text js_website_submit_form">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <input t-if="training_id" type="hidden" name="training_id" t-att-value="training_id.id"/>
+                    <p t-call="matakarir.training_form"/>
+                    <div align="center">
+                        <a href="/my/home" class="btn btn-default">Cancel</a>
+                        <button type="submit" t-attf-class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </t>
+        </template>
+        
+        <template id="training_form">
+            <table class="table o_area_selections">
+                <t t-if="training_id">
+                    <tr>
+                        <td><strong>Training Institution</strong></td>
+                        <td colspan="2"><span t-field="object.name"/></td>
+                    </tr>
+                </t>
+                <t t-else="">
+                    <p t-call="matakarir.country_template" />
+                    <p t-call="matakarir.state_template" />
+                    <p t-call="matakarir.city_template" />
+                    <p t-call="matakarir.district_template" />
+                    <p t-call="matakarir.village_template" />
+                    <p t-call="matakarir.area_template" />
+                    <tr>
+                        <td><strong>Training Institution</strong></td>
+                        <td id="input_company" style="display:none;"><input type="text" name="company_name" class="form-control" placeholder="Training Institution..."/></td>
+                        <td>
+                            <select name="company" class="form-control">
+                                <option value="">Trainer...</option>
+                                <t t-foreach="companies or []" t-as="l">
+                                    <option t-att-value="l.id" t-att-selected="l.id == object.id if object else l.id == ''" t-att-data-country="l.country_id.id" t-att-data-state="l.state_id.id" t-att-data-city="l.city_id.id" t-att-data-district="l.district_id.id" t-att-data-village="l.village_id.id" t-att-data-area="l.area_id.id">
+                                        <t t-esc="l.name" />
+                                    </option>
+                                </t>
+                            </select>
+                        </td>
+                        <td><a href="#new_company" id="new_company"><i class="fa fa-plus-square"/>Add new</a></td>
+                    </tr>
+                </t>
+                <tr>
+                    <td><strong>Title</strong></td>
+                    <td t-if="training_id" colspan="2"><input type="text" name="title" class="form-control" t-att-value="training_id.title or title" /></td>
+                    <td t-else="" colspan="2"><input type="text" name="title" class="form-control" t-att-value="title" /></td>
+                </tr>
+                <tr>
+                    <td><strong>Status</strong></td>
+                    <td colspan="2">
+                        <select class="form-control" name="status" required="required">
+                            <option t-if="training_id" t-att-value="training_id.status">
+                                <t t-esc="{'graduate': 'Graduate', 
+                                          'drop': 'Drop', 
+                                          'progress': 'Progress'}[training_id.status]" />
+                            </option>
+                            <option t-else="" value=""></option>
+                            <option value="graduate">Graduate</option>
+                            <option value="drop">Drop</option>
+                            <option value="progress">Progress</option>
+                        </select>
+                    </td>                         
+                </tr>
+                <tr>
+                    <td><strong>Since</strong></td>
+                    <td t-if="training_id" colspan="2"><input type="date" name="since" class="form-control fa fa-calendar" t-att-value="training_id.since or since" required="required" /></td>
+                    <td t-else="" colspan="2"><input type="date" name="since" class="form-control fa fa-calendar" t-att-value="since" required="required" /></td>
+                </tr>
+                <tr>
+                    <td><strong>Until</strong></td>
+                    <td t-if="training_id" colspan="2"><input type="date" name="until" class="form-control fa fa-calendar" t-att-value="training_id.until or until" /></td>
+                    <td t-else="" colspan="2"><input type="date" name="until" class="form-control fa fa-calendar" t-att-value="until" /></td>
+                </tr>
+                <tr>
+                    <td><strong>Score</strong></td>
+                    <td t-if="training_id" colspan="2"><input type="tel" name="score" class="form-control" t-att-value="training_id.score or score" /></td>
+                    <td t-else="" colspan="2"><input type="tel" name="score" class="form-control" t-att-value="score" /></td>
+                </tr>
+                <tr>
+                    <td><strong>Schollarship</strong></td>
+                    <td t-if="training_id" colspan="2"><input type="checkbox" name="schollarship" t-att-checked="'checked' if training_id.schollarship else None" /></td>
+                    <td t-else="" colspan="2"><input type="checkbox" name="schollarship" t-att-value="schollarship" /></td>
+                </tr>
+            </table>
+        </template>
+        
+        
+    </data>
+</odoo>

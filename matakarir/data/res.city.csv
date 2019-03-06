@@ -1,0 +1,153 @@
+id,name,state_id/id
+Ambon,Ambon,base.state_id_ma
+Balikpapan,Balikpapan,base.state_id_ki
+BandaAceh,Banda Aceh,base.state_id_ac
+Bandung,Bandung,base.state_id_jb
+Bangil,Bangil,base.state_id_ji
+Bangkalan,Bangkalan,base.state_id_ji
+Banjar,Banjar,base.state_id_jb
+BanjarBaru,Banjar Baru,base.state_id_ks
+Banjarmasin,Banjarmasin,base.state_id_ks
+Banjarnegara,Banjarnegara,base.state_id_jt
+Banyumas,Banyumas,base.state_id_jt
+Batam,Batam,base.state_id_ri
+Batu,Batu,base.state_id_ji
+BauBau,Bau Bau,base.state_id_sg
+Bekasi,Bekasi,base.state_id_jb
+Bima,Bima,base.state_id_nb
+Binjai,Binjai,base.state_id_su
+Bitung,Bitung,base.state_id_sa
+Blitar,Blitar,base.state_id_ji
+Blora,Blora,base.state_id_jt
+Bogor,Bogor,base.state_id_jb
+Bojonegoro,Bojonegoro,base.state_id_ji
+Bondowoso,Bondowoso,base.state_id_ji
+Bontang,Bontang,base.state_id_ki
+Boyolali,Boyolali,base.state_id_jt
+Brebes,Brebes,base.state_id_jt
+BukitTinggi,Bukit Tinggi,base.state_id_sb
+Ciamis,Ciamis,base.state_id_jb
+Cianjur,Cianjur,base.state_id_jb
+Cilacap,Cilacap,base.state_id_jt
+Cilegon,Cilegon,base.state_id_bt
+Cimahi,Cimahi,base.state_id_jb
+Cirebon,Cirebon,base.state_id_jb
+Demak,Demak,base.state_id_jt
+Denpasar,Denpasar,base.state_id_ba
+Depok,Depok,base.state_id_jb
+Dumai,Dumai,base.state_id_ri
+Garut,Garut,base.state_id_jb
+Gorontalo,Gorontalo,base.state_id_sa
+Gresik,Gresik,base.state_id_ji
+Grobongan,Grobongan,base.state_id_jt
+Gunungsitoli,Gunungsitoli,base.state_id_su
+Indramayu,Indramayu,base.state_id_jb
+JakartaBarat,Jakarta Barat,base.state_id_jk
+JakartaPusat,Jakarta Pusat,base.state_id_jk
+JakartaSelatan,Jakarta Selatan,base.state_id_jk
+JakartaTimur,Jakarta Timur,base.state_id_jk
+JakartaUtara,Jakarta Utara,base.state_id_jk
+Jayapura,Jayapura,base.state_id_pa
+Jember,Jember,base.state_id_ji
+Jepara,Jepara,base.state_id_jt
+Jombang,Jombang,base.state_id_ji
+KabupatenBekasi,Kabupaten Bekasi,base.state_id_jb
+Karanganyar,Karanganyar,base.state_id_jt
+Karawang,Karawang,base.state_id_jb
+Kebumen,Kebumen,base.state_id_jt
+Kediri,Kediri,base.state_id_ji
+Kendal,Kendal,base.state_id_jt
+Kendari,Kendari,base.state_id_sg
+Klaten,Klaten,base.state_id_jt
+Kotamobagu,Kotamobagu,base.state_id_sa
+Kraksaan,Kraksaan,base.state_id_ji
+Kudus,Kudus,base.state_id_jt
+Kuningan,Kuningan,base.state_id_jb
+Kupang,Kupang,base.state_id_nt
+Lamongan,Lamongan,base.state_id_ji
+Langsa,Langsa,base.state_id_ac
+Lok,Lok,base.state_id_ac
+Lubuklinggau,Lubuklinggau,base.state_id_ss
+Lumajang,Lumajang,base.state_id_ji
+Madiun,Madiun,base.state_id_ji
+Magelang,Magelang,base.state_id_jt
+Magetan,Magetan,base.state_id_ji
+Majalengka,Majalengka,base.state_id_jb
+Makassar,Makassar,base.state_id_sn
+Malang,Malang,base.state_id_ji
+Manado,Manado,base.state_id_sa
+Mataram,Mataram,base.state_id_nb
+Metro,Metro,base.state_id_la
+Mojokerto,Mojokerto,base.state_id_ji
+Nganjuk,Nganjuk,base.state_id_ji
+Ngawi,Ngawi,base.state_id_ji
+Pacitan,Pacitan,base.state_id_ji
+Padang,Padang,base.state_id_sb
+Padangpanjang,Padangpanjang,base.state_id_sb
+Padangsidempuan,Padangsidempuan,base.state_id_su
+PagarAlam,Pagar Alam,base.state_id_ss
+Palangkaraya,Palangkaraya,base.state_id_kt
+Palembang,Palembang,base.state_id_ss
+Palopo,Palopo,base.state_id_sn
+Palu,Palu,base.state_id_sg
+Pamatangsiantar,Pamatangsiantar,base.state_id_su
+Pangandaran,Pangandaran,base.state_id_jb
+PangkalPinang,Pangkal Pinang,base.state_id_bb
+ParePare,Pare Pare,base.state_id_sn
+Pariaman,Pariaman,base.state_id_sb
+Pasuruan,Pasuruan,base.state_id_ji
+Pati,Pati,base.state_id_jt
+Payakumbuh,Payakumbuh,base.state_id_sb
+Pekalongan,Pekalongan,base.state_id_jt
+Pekanbaru,Pekanbaru,base.state_id_ri
+Pemalang,Pemalang,base.state_id_jt
+Pemekasan,Pemekasan,base.state_id_ji
+Ponorogo,Ponorogo,base.state_id_ji
+Pontianak,Pontianak,base.state_id_kb
+Prabumulih,Prabumulih,base.state_id_ss
+Probolinggo,Probolinggo,base.state_id_ji
+Purbalingga,Purbalingga,base.state_id_jt
+Purwakarta,Purwakarta,base.state_id_jb
+Purworejo,Purworejo,base.state_id_jt
+Rembang,Rembang,base.state_id_jt
+Sabang,Sabang,base.state_id_ac
+Salatiga,Salatiga,base.state_id_jt
+Samarinda,Samarinda,base.state_id_ki
+Sampang,Sampang,base.state_id_ji
+Sawahlunto,Sawahlunto,base.state_id_sb
+Semarang,Semarang,base.state_id_jt
+Serang,Serang,base.state_id_bt
+Sibolga,Sibolga,base.state_id_su
+Sidoarjo,Sidoarjo,base.state_id_ji
+Singkawang,Singkawang,base.state_id_kb
+Situbundo,Situbundo,base.state_id_ji
+Solo,Solo,base.state_id_jt
+Solok,Solok,base.state_id_sb
+Sorong,Sorong,base.state_id_pb
+Sragen,Sragen,base.state_id_jt
+Subang,Subang,base.state_id_jb
+Subulussalam,Subulussalam,base.state_id_ac
+Sukabumi,Sukabumi,base.state_id_jb
+Sukoharjo,Sukoharjo,base.state_id_jt
+Sumenep,Sumenep,base.state_id_ji
+SungaiPenuh,Sungai Penuh,base.state_id_ja
+Surabaya,Surabaya,base.state_id_ji
+Surakarta,Surakarta,base.state_id_jt
+Tanggerang,Tangerang,base.state_id_bt
+TanjungSelor,Tanjung Selor,base.state_id_ku
+Tanjungbalai,Tanjungbalai,base.state_id_su
+Tarakan,Tarakan,base.state_id_ku
+Tasikmalaya,Tasikmalaya,base.state_id_jb
+TebingTinggi,Tebing Tinggi,base.state_id_su
+Tegal,Tegal,base.state_id_jt
+Temanggung,Temanggung,base.state_id_jt
+Ternate,Ternate,base.state_id_mu
+Tidore,Tidore,base.state_id_mu
+Tomohon,Tomohon,base.state_id_sa
+Trenggalek,Trenggalek,base.state_id_ji
+Tual,Tual,base.state_id_ma
+Tuban,Tuban,base.state_id_ji
+Tulungagung,Tulungagung,base.state_id_ji
+Watampone,Watampone,base.state_id_sn
+Wonogiri,Wonogiri,base.state_id_jt
+Wonosobo,Wonosobo,base.state_id_jt

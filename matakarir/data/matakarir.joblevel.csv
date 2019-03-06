@@ -1,0 +1,16 @@
+id,sequence,name
+joblevel_1,10,Owner
+joblevel_2,20,Commissioner
+joblevel_3,30,Director
+joblevel_4,40,Chief
+joblevel_5,50,Advisor
+joblevel_6,60,Senior Manager
+joblevel_7,70,Manager
+joblevel_8,80,Junior Manager
+joblevel_9,90,Senior Supervisor
+joblevel_10,100,Supervisor
+joblevel_11,110,Junior Supervisor
+joblevel_12,120,Senior Staf
+joblevel_13,130,Staf
+joblevel_14,140,Junior Staf
+joblevel_15,150,Trainee

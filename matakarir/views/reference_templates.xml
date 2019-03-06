@@ -1,0 +1,114 @@
+<odoo>
+    <data>
+        <template id="tool" name="Tool">
+            <t t-call="portal.portal_layout">
+                <t t-if="partner_id.tools_ids" t-call="matakarir.tool_table"/>
+                <h1 t-if="ref_id" class="mt0">Edit Tool</h1>
+                <h1 t-else="" class="mt0">New Tool</h1>
+                <form t-attf-action="/save/tool" method="post" role="form" class="tag_text js_website_submit_form">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <input t-if="ref_id" type="hidden" name="ref_id" t-att-value="ref_id.id"/>
+                    <p t-call="matakarir.tool_form"/>
+                    <div align="center">
+                        <a href="/my/home" class="btn btn-default">Cancel</a>
+                        <button type="submit" t-attf-class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </t>
+        </template>
+        
+        <template id="tool_form">
+            <table class="table o_add_object">
+                <t t-if="tool_id">
+                    <tr>
+                        <td><strong>Tool</strong></td>
+                        <td colspan="2"><span t-field="object.name"/></td>
+                    </tr>
+                </t>
+                <t t-else="">
+                    <tr>
+                        <td><strong>Tool</strong></td>
+                        <td id="input_object" style="display:none;"><input type="text" class="form-control" name="object_name" placeholder="Tool Name..."/></td>
+                        <td>
+                            <select name="object_id" class="form-control">
+                                <option value="">Tool...</option>
+                                <t t-foreach="objects or []" t-as="l">
+                                    <option t-att-value="l.id" >
+                                        <t t-esc="l.name" />
+                                    </option>
+                                </t>
+                            </select>
+                        </td>
+                        <td><a href="#new_object" id="new_object"><i class="fa fa-plus-square"/>Add new</a></td>
+                    </tr>
+                </t>
+                <tr>
+                    <td><strong>Brand</strong></td>
+                    <td t-if="tool_id" colspan="2"><input type="text" name="name" class="form-control" t-att-value="tool_id.name" /></td>
+                    <td t-else="" colspan="2"><input type="text" name="name" class="form-control"/></td>
+                </tr>
+            </table>
+        </template>
+        
+        <template id="reference" name="Reference">
+            <t t-call="portal.portal_layout">
+                <t t-if="partner_id.reference_ids" t-call="matakarir.reference_table"/>
+                <h1 t-if="ref_id" class="mt0">Edit Reference</h1>
+                <h1 t-else="" class="mt0">New Reference</h1>
+                <form t-attf-action="/save/reference" method="post" role="form" class="tag_text js_website_submit_form">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <input t-if="ref_id" type="hidden" name="ref_id" t-att-value="ref_id.id"/>
+                    <p t-call="matakarir.reference_form"/>
+                    <div align="center">
+                        <a href="/my/home" class="btn btn-default">Cancel</a>
+                        <button type="submit" t-attf-class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </t>
+        </template>
+        
+        <template id="reference_form">
+            <table class="table o_add_skill">
+                <t t-if="ref_id">
+                    <tr>
+                        <td><strong>Relation</strong></td>
+                        <td colspan="2"><span t-field="ref_id.relation_id.name" /></td>
+                    </tr>
+                </t>
+                <t t-else="">
+                    <tr>
+                        <td><strong>Relation</strong></td>
+                        <td id="input_skill" style="display:none;"><input type="text" name="relation_name" class="form-control" placeholder="Relation Name..."/></td>
+                        <td>
+                            <select name="skill" class="form-control">
+                                <option value="">Relation...</option>
+                                <t t-foreach="skills or []" t-as="l">
+                                    <option t-att-value="l.id">
+                                        <t t-esc="l.name" />
+                                    </option>
+                                </t>
+                            </select>
+                        </td>
+                        <td><a href="#new_skill" id="new_skill"><i class="fa fa-plus-square"/>Add new</a></td>
+                    </tr>
+                </t>
+                <tr>
+                    <td><strong>Name</strong></td>
+                    <td t-if="ref_id" colspan="2"><input type="text" name="name" class="form-control" t-att-value="ref_id.name" required="required" /></td>
+                    <td t-else="" colspan="2"><input type="text" name="name" class="form-control" required="required" /></td>
+                </tr>
+                <tr>
+                    <td><strong>Phone</strong></td>
+                    <td t-if="ref_id" colspan="2"><input type="tel" name="phone" class="form-control" t-att-value="ref_id.phone" required="required" /></td>
+                    <td t-else="" colspan="2"><input type="tel" name="phone" class="form-control" required="required" /></td>
+                </tr>
+                <tr>
+                    <td><strong>Email</strong></td>
+                    <td t-if="ref_id" colspan="2"><input type="text" name="email" class="form-control" t-att-value="ref_id.email" required="required" /></td>
+                    <td t-else="" colspan="2"><input type="text" name="email" class="form-control" required="required"/></td>
+                </tr>
+            </table>
+        </template>
+        
+    </data>
+</odoo>

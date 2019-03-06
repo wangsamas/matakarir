@@ -1,0 +1,5 @@
+id,country_id/id,name
+sim1,base.id,SIM A
+sim2,base.id,SIM B1
+sim3,base.id,SIM B2
+sim4,base.id,SIM C
